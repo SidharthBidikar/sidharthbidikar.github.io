@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <head>
   <!-- Google Analytics (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
   <script>
@@ -11,7 +12,8 @@
   </script>
 
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2565993964252995" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2565993964252995"
+     crossorigin="anonymous"></script>
 
   <!-- Verification + Meta -->
   <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
@@ -25,321 +27,1975 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body>
-  <!-- NAV: dark to match royal-black theme -->
-  <nav class="bg-[#0D0D0D] text-[#F5F5F5] fixed w-full z-20 top-0 start-0 border-b border-white/10">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://Neurotools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="NeuroTools Logo" />
-      </a>
-      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button
-          data-collapse-toggle="navbar-sticky"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-300 rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
-          aria-controls="navbar-sticky" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
-          </svg>
-        </button>
-      </div>
+  </head>
+  <body>
+    <nav
+      class="bg-white :bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 :border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://Neurotools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="NeuroTools Logo" />
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 :text-gray-400 :hover:bg-gray-700 :focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white :bg-gray-800 md: :bg-gray-900 :border-gray-700"
+          >
+            <li>
+              <a
+                href="./index.html"
+                class="block py-2 px-3 text-black rounded md:bg-transparent md:text-black md:p-0 md: :text-blue-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="./about.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md: :hover:text-blue-500 :text-white :hover:bg-gray-700 :hover:text-white md: :hover:bg-transparent :border-gray-700"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contact.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md: :hover:text-blue-500 :text-white :hover:bg-gray-700 :hover:text-white md: :hover:bg-transparent :border-gray-700"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto -:text-white md:-:hover:text-blue-500 -:focus:text-white -:border-gray-700 -:hover:bg-gray-700 md:-:hover:bg-transparent"
+              >
+                ALL PDF TOOLS
+                <svg
+                  style="margin-top: 5px"
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 flex hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 -:bg-gray-700 -:divide-gray-600 mydrop"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 -:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="./imageresizer.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Image Resizer</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./imagecompression.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Images Compression</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftocsv.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO CSV</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftoexcel.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO EXCEL</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftohtml.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO HTML</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftojpg.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO JPG</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftojson.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO JSON</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftopng.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO PNG</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftoword.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO WORD</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftoxml.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO XML</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftozip.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO ZIP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftowebp.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO WEBP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pdftotext.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PDF TO TEXT</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./csvto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >CSV TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./excelto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >EXCEL TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./htmlto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >HTML TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./jpgto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >JPG TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./jsonto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >JSON TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./pngto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >PNG TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./speechto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >SPEECH TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./textto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >TEXT TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./webpto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >WEBP TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./xmlto.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >XML TO PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./mergepdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Merge PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./splitpdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Split PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./rotatepdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Rotate PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./deletepdfpages.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Delete PDF Pages</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./reorderpdfpages.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Reorder PDF Pages</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./addwatermarkpdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Add Watermark to PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./addpagenumberspdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Add Page Numbers to PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./lockpdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Lock PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./unlockpdf.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Unlock PDF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./editpdfmetadata.html"
+                      class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white"
+                      >Edit PDF Metadata</a
+                    >
+                  </li>
+                  <!-- START NEW TOOLS - DROPDOWN -->
+                  <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Word to PDF</a></li>
+                  <li><a href="./pdftoppt.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to PPT</a></li>
+                  <li><a href="./doctopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">DOC to PDF</a></li>
+                  <li><a href="./ppttopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PPT to PDF</a></li>
+                  <li><a href="./xpstopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">XPS to PDF</a></li>
+  
+                  <li><a href="./pdftodoc.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to DOC</a></li>
+                  <li><a href="./dwgtopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">DWG to PDF</a></li>
+                  <li><a href="./rtftopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">RTF to PDF</a></li>
+                  <li><a href="./pdftopsd.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to PSD</a></li>
+                  <li><a href="./shreelipitopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Shree Lipi to PDF</a></li>
+                  <li><a href="./youtubetomp3.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">YouTube to MP3</a></li>
+                  <li><a href="./pnrtopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PNR to PDF</a></li>
+                  <li><a href="./bintopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">BIN to PDF</a></li>
+                  <li><a href="./pdftocdr.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to Corel Draw</a></li>
+                  <li><a href="./pdftodxf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to DXF</a></li>
+                  <li><a href="./jfiftopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">JFIF to PDF</a></li>
+                  <li><a href="./ipynbtopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">IPYNB to PDF</a></li>
+                  <li><a href="./rartopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">RAR to PDF</a></li>
+                  <li><a href="./prntopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PRN to PDF</a></li>
+                  <li><a href="./pdftoaudio.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to Audio</a></li>
+                  <!-- END NEW TOOLS - DROPDOWN -->
+                  
+                  <!-- START: 10 NEWLY ADDED TOOLS - DROPDOWN -->
+                  <li><a href="./pdftopptx.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to PPTX</a></li>
+                  <li><a href="./pptxtopdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PPTX to PDF</a></li>
+                  <li><a href="./pdftoepub.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to ePub</a></li>
+                  <li><a href="./pdftomobi.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to MOBI</a></li>
+                  <li><a href="./pdftomarkdown.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to Markdown</a></li>
+                  <li><a href="./pdfrepair.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF Repair</a></li>
+                  <li><a href="./pdftotiff.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to TIFF</a></li>
+                  <li><a href="./pdftosvg.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF to SVG</a></li>
+                  <li><a href="./flattenpdf.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Flatten PDF</a></li>
+                  <li><a href="./pdfocr.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">PDF OCR</a></li>
+                  <!-- END: 10 NEWLY ADDED TOOLS - DROPDOWN -->
 
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
-          <li><a href="./index.html" class="block py-2 px-3 text-[#F5F5F5] md:p-0">Home</a></li>
-          <li><a href="./about.html" class="block py-2 px-3 text-[#F5F5F5]/80 hover:text-[#FACC15] md:p-0">About</a></li>
-          <li><a href="./contact.html" class="block py-2 px-3 text-[#F5F5F5]/80 hover:text-[#FACC15] md:p-0">Contact</a></li>
-
-          <!-- ALL PDF TOOLS -->
-          <li class="relative">
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 px-3 text-[#F5F5F5]/90 md:border-0 md:p-0">
-              ALL PDF TOOLS
-              <svg style="margin-top:5px" class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-              </svg>
-            </button>
-            <!-- Dropdown -->
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-[#151515] text-[#F5F5F5] divide-y divide-white/10 rounded-lg shadow w-44 mydrop">
-              <ul class="py-2 text-sm" aria-labelledby="dropdownLargeButton">
-                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-white/10">Image Resizer</a></li>
-                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-white/10">Images Compression</a></li>
-                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-white/10">PDF TO CSV</a></li>
-                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-white/10">PDF TO EXCEL</a></li>
-                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-white/10">PDF TO HTML</a></li>
-                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-white/10">PDF TO JPG</a></li>
-                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-white/10">PDF TO JSON</a></li>
-                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-white/10">PDF TO PNG</a></li>
-                <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-white/10">PDF TO WORD</a></li>
-                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-white/10">PDF TO XML</a></li>
-                <li><a href="./pdftozip.html" class="block px-4 py-2 hover:bg-white/10">PDF TO ZIP</a></li>
-                <li><a href="./pdftowebp.html" class="block px-4 py-2 hover:bg-white/10">PDF TO WEBP</a></li>
-                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-white/10">PDF TO TEXT</a></li>
-                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-white/10">CSV TO PDF</a></li>
-                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-white/10">EXCEL TO PDF</a></li>
-                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-white/10">HTML TO PDF</a></li>
-                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-white/10">JPG TO PDF</a></li>
-                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-white/10">JSON TO PDF</a></li>
-                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-white/10">PNG TO PDF</a></li>
-                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-white/10">SPEECH TO PDF</a></li>
-                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-white/10">TEXT TO PDF</a></li>
-                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-white/10">WEBP TO PDF</a></li>
-                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-white/10">XML TO PDF</a></li>
-                <li><a href="./mergepdf.html" class="block px-4 py-2 hover:bg-white/10">Merge PDF</a></li>
-                <li><a href="./splitpdf.html" class="block px-4 py-2 hover:bg-white/10">Split PDF</a></li>
-                <li><a href="./rotatepdf.html" class="block px-4 py-2 hover:bg-white/10">Rotate PDF</a></li>
-                <li><a href="./deletepdfpages.html" class="block px-4 py-2 hover:bg-white/10">Delete PDF Pages</a></li>
-                <li><a href="./reorderpdfpages.html" class="block px-4 py-2 hover:bg-white/10">Reorder PDF Pages</a></li>
-                <li><a href="./addwatermarkpdf.html" class="block px-4 py-2 hover:bg-white/10">Add Watermark to PDF</a></li>
-                <li><a href="./addpagenumberspdf.html" class="block px-4 py-2 hover:bg-white/10">Add Page Numbers to PDF</a></li>
-                <li><a href="./lockpdf.html" class="block px-4 py-2 hover:bg-white/10">Lock PDF</a></li>
-                <li><a href="./unlockpdf.html" class="block px-4 py-2 hover:bg-white/10">Unlock PDF</a></li>
-                <li><a href="./editpdfmetadata.html" class="block px-4 py-2 hover:bg-white/10">Edit PDF Metadata</a></li>
-
-                <!-- START NEW TOOLS - DROPDOWN -->
-                <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-white/10">Word to PDF</a></li>
-                <li><a href="./pdftoppt.html" class="block px-4 py-2 hover:bg-white/10">PDF to PPT</a></li>
-                <li><a href="./doctopdf.html" class="block px-4 py-2 hover:bg-white/10">DOC to PDF</a></li>
-                <li><a href="./ppttopdf.html" class="block px-4 py-2 hover:bg-white/10">PPT to PDF</a></li>
-                <li><a href="./xpstopdf.html" class="block px-4 py-2 hover:bg-white/10">XPS to PDF</a></li>
-                <li><a href="./pdftodoc.html" class="block px-4 py-2 hover:bg-white/10">PDF to DOC</a></li>
-                <li><a href="./dwgtopdf.html" class="block px-4 py-2 hover:bg-white/10">DWG to PDF</a></li>
-                <li><a href="./rtftopdf.html" class="block px-4 py-2 hover:bg-white/10">RTF to PDF</a></li>
-                <li><a href="./pdftopsd.html" class="block px-4 py-2 hover:bg-white/10">PDF to PSD</a></li>
-                <li><a href="./shreelipitopdf.html" class="block px-4 py-2 hover:bg-white/10">Shree Lipi to PDF</a></li>
-                <li><a href="./youtubetomp3.html" class="block px-4 py-2 hover:bg-white/10">YouTube to MP3</a></li>
-                <li><a href="./pnrtopdf.html" class="block px-4 py-2 hover:bg-white/10">PNR to PDF</a></li>
-                <li><a href="./bintopdf.html" class="block px-4 py-2 hover:bg-white/10">BIN to PDF</a></li>
-                <li><a href="./pdftocdr.html" class="block px-4 py-2 hover:bg-white/10">PDF to Corel Draw</a></li>
-                <li><a href="./pdftodxf.html" class="block px-4 py-2 hover:bg-white/10">PDF to DXF</a></li>
-                <li><a href="./jfiftopdf.html" class="block px-4 py-2 hover:bg-white/10">JFIF to PDF</a></li>
-                <li><a href="./ipynbtopdf.html" class="block px-4 py-2 hover:bg-white/10">IPYNB to PDF</a></li>
-                <li><a href="./rartopdf.html" class="block px-4 py-2 hover:bg-white/10">RAR to PDF</a></li>
-                <li><a href="./prntopdf.html" class="block px-4 py-2 hover:bg-white/10">PRN to PDF</a></li>
-                <li><a href="./pdftoaudio.html" class="block px-4 py-2 hover:bg-white/10">PDF to Audio</a></li>
-
-                <!-- 10 NEWLY ADDED TOOLS -->
-                <li><a href="./pdftopptx.html" class="block px-4 py-2 hover:bg-white/10">PDF to PPTX</a></li>
-                <li><a href="./pptxtopdf.html" class="block px-4 py-2 hover:bg-white/10">PPTX to PDF</a></li>
-                <li><a href="./pdftoepub.html" class="block px-4 py-2 hover:bg-white/10">PDF to ePub</a></li>
-                <li><a href="./pdftomobi.html" class="block px-4 py-2 hover:bg-white/10">PDF to MOBI</a></li>
-                <li><a href="./pdftomarkdown.html" class="block px-4 py-2 hover:bg-white/10">PDF to Markdown</a></li>
-                <li><a href="./pdfrepair.html" class="block px-4 py-2 hover:bg-white/10">PDF Repair</a></li>
-                <li><a href="./pdftotiff.html" class="block px-4 py-2 hover:bg-white/10">PDF to TIFF</a></li>
-                <li><a href="./pdftosvg.html" class="block px-4 py-2 hover:bg-white/10">PDF to SVG</a></li>
-                <li><a href="./flattenpdf.html" class="block px-4 py-2 hover:bg-white/10">Flatten PDF</a></li>
-                <li><a href="./pdfocr.html" class="block px-4 py-2 hover:bg-white/10">PDF OCR</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- TEXT TOOLS -->
-          <li>
-            <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown"
-              class="flex items-center justify-between w-full py-2 px-3 text-[#F5F5F5]/90 md:p-0">
-              Text & Content Tools ✒️
-              <svg style="margin-top: 5px" class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-              </svg>
-            </button>
-            <div id="textToolsDropdown" class="z-10 hidden font-normal bg-[#151515] text-[#F5F5F5] divide-y divide-white/10 rounded-lg shadow w-44 mydrop">
-              <ul class="py-2 text-sm" aria-labelledby="textToolsDropdownLink">
-                <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-white/10">Text Case Converter</a></li>
-                <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-white/10">Word/Character Counter</a></li>
-                <li><a href="./removeextraspaces.html" class="block px-4 py-2 hover:bg-white/10">Remove Extra Spaces</a></li>
-                <li><a href="./findandreplace.html" class="block px-4 py-2 hover:bg-white/10">Find and Replace Text</a></li>
-                <li><a href="./reversetext.html" class="block px-4 py-2 hover:bg-white/10">Reverse Text</a></li>
-                <li><a href="./texttoslug.html" class="block px-4 py-2 hover:bg-white/10">Text to Slug Generator</a></li>
-                <li><a href="./jsonformatter.html" class="block px-4 py-2 hover:bg-white/10">JSON Beautifier / Minifier</a></li>
-                <li><a href="./base64encoder.html" class="block px-4 py-2 hover:bg-white/10">Base64 Encoder / Decoder</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- CALCULATORS -->
-          <li>
-            <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown"
-              class="flex items-center justify-between w-full py-2 px-3 text-[#F5F5F5]/90 md:p-0">
-              Calculators 🧮
-              <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-              </svg>
-            </button>
-            <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-[#151515] text-[#F5F5F5] divide-y divide-white/10 rounded-lg shadow w-52 mydrop">
-              <ul class="py-2 text-sm" aria-labelledby="calculatorToolsDropdownLink">
-                <li><a href="#basic-calculators" class="block px-4 py-2 hover:bg-white/10">Basic Calculators</a></li>
-                <li><a href="#construction-calculators" class="block px-4 py-2 hover:bg-white/10">Construction Calculators</a></li>
-                <li><a href="#financial-calculators" class="block px-4 py-2 hover:bg-white/10">Financial Calculators</a></li>
-                <li><a href="#health-calculators" class="block px-4 py-2 hover:bg-white/10">Health Calculators</a></li>
-                <li><a href="#developer-calculators" class="block px-4 py-2 hover:bg-white/10">Developer Calculators</a></li>
-                <li><a href="#other-calculators" class="block px-4 py-2 hover:bg-white/10">Other Calculators</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div style="min-height: 100vh" class="bg-[#f5f5fa]">
-    <div class="relative isolate px-6 lg:px-8">
-      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"></div>
-      <div class="mx-auto pt-24 max-w-2xl">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mt-10">
-            All your PDF tools at NeuroTools.com 100% FREE!
-          </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Effortlessly convert, edit, and manage your PDF files with NeuroTools.com's comprehensive tools 100% FREE!
-          </p>
+                </ul>
+              </div>
+            </li>
+            <!-- START: TEXT TOOLS DROPDOWN -->
+            <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto -:text-white md:-:hover:text-blue-500 -:focus:text-white -:border-gray-700 -:hover:bg-gray-700 md:-:hover:bg-transparent">
+                    Text & Content Tools ✒️
+                    <svg style="margin-top: 5px" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="textToolsDropdown" class="z-10 flex hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 -:bg-gray-700 -:divide-gray-600 mydrop">
+                    <ul class="py-2 text-sm text-gray-700 -:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                        <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Text Case Converter</a></li>
+                        <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Word/Character Counter</a></li>
+                        <li><a href="./removeextraspaces.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Remove Extra Spaces</a></li>
+                        <li><a href="./findandreplace.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Find and Replace Text</a></li>
+                        <li><a href="./reversetext.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Reverse Text</a></li>
+                        <li><a href="./texttoslug.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Text to Slug Generator</a></li>
+                        <li><a href="./jsonformatter.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">JSON Beautifier / Minifier</a></li>
+                        <li><a href="./base64encoder.html" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Base64 Encoder / Decoder</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- END: TEXT TOOLS DROPDOWN -->
+            <!-- START: NEW CALCULATORS DROPDOWN -->
+            <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                    Calculators 🧮
+                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 -:bg-gray-700 -:divide-gray-600 mydrop">
+                    <ul class="py-2 text-sm text-gray-700 -:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                        <li><a href="#basic-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Basic Calculators</a></li>
+                        <li><a href="#construction-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Construction Calculators</a></li>
+                        <li><a href="#financial-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Financial Calculators</a></li>
+                        <li><a href="#health-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Health Calculators</a></li>
+                        <li><a href="#developer-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Developer Calculators</a></li>
+                        <li><a href="#other-calculators" class="block px-4 py-2 hover:bg-gray-100 -:hover:bg-gray-600 -:hover:text-white">Other Calculators</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- END: NEW CALCULATORS DROPDOWN -->
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- START: Search Bar -->
-    <div class="mx-auto max-w-3xl py-8 px-4 sm:px-6 lg:px-8">
-      <label for="toolSearch" class="sr-only">Search Tools</label>
-      <input
-        type="text" id="toolSearch"
-        placeholder="Search for a tool (e.g., PDF to Word, Merge PDF, Image Resizer...)"
-        class="w-full p-4 text-lg border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-        aria-label="Search for PDF tools" />
-      <p id="noResultsMessage" class="mt-4 text-lg text-gray-600 text-center hidden">No tools found matching your search.</p>
-    </div>
-    <!-- END: Search Bar -->
-
-    <!-- START: TOOL GRID -->
-    <div class="toollist" id="toollists">
-      <!-- … your long tool cards list remains unchanged … -->
-      <!-- I kept all the tool cards exactly as you provided -->
-      <!-- (omitted here for brevity—keep your entire list from your message) -->
-    </div>
-    <!-- END: TOOL GRID -->
-  </div>
-
-  <section id="features" class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20 mt-20">
-    <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Features</h2>
-      <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-        NeuroTools.com personalizes user experiences by understanding individual preferences, tailoring PDF tools and recommendations based on user behavior and historical data – 99% FREE!
-      </p>
-    </div>
-    <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-      <!-- Feature cards unchanged -->
-      <!-- … keep your feature cards exactly as given … -->
-    </div>
-  </section>
-
-  <div class="bg-[#f5f5fa] flex items-center justify-center min-h-[70vh]">
-    <div class="text-center max-w-4xl p-6">
-      <h1 class="sm:text-4xl font-bold text-gray-800 mb-4 text-2xl">
-        The PDF Converter Trusted by Millions – Now on NeuroTools.com
-      </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        Convert, edit, and manage documents effortlessly with the powerful PDF tools by NeuroTools.com. This free online tool supports multiple file types and PDF operations, ensuring smooth and accurate results. Whether you're working with JPG, PNG, DOCX, XLS, or need to merge, split, or secure PDFs, our fast and reliable platform guarantees high-quality results in seconds.
-      </p>
-      <div class="flex justify-center space-x-12">
-        <div class="flex flex-col items-center">
-          <img style="height: 30px" src="https://www.ilovepdf.com/img/logos/iso-logo.svg" alt="ISO 27001" class="mb-2" />
-        </div>
-        <div class="flex flex-col items-center">
-          <img style="height: 30px" src="https://www.ilovepdf.com/img/logos/ssl-encrypted-logo.svg" alt="SSL Encryption" class="mb-2" />
+    <div style="min-height: 100vh" class="bg-[#f5f5fa]">
+      <div class="relative isolate px-6 lg:px-8">
+        <div
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        ></div>
+        <div class="mx-auto pt-24 max-w-2xl">
+          <div class="text-center">
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mt-10"
+            >
+             All your PDF tools at NeuroTools.com 100% FREE!
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Effortlessly convert, edit, and manage your PDF files with NeuroTools.com's comprehensive tools  100% FREE!
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- SINGLE DARK FOOTER (old light footer removed) -->
-  <footer class="bg-[#0D0D0D] text-[#F5F5F5] mt-10 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-12 gap-8">
-      <!-- left: about -->
-      <div class="sm:col-span-7 text-center sm:text-left sm:border-r sm:border-white/10 sm:pr-8">
-        <img src="./One_Page-removebg-preview.png" alt="NeuroTools Footer Logo"
-             class="h-[60px] mx-auto mb-5 mix-blend-luminosity" style="mix-blend-mode:luminosity;" />
-        <p class="text-[#9CA3AF] text-sm mb-10 leading-relaxed">
-          Convert, edit, and manage your PDFs in seconds using the powerful and free PDF tools at NeuroTools.com.
-          Our platform supports all major file formats and PDF operations—text, images (JPG, PNG), spreadsheets
-          (XLS, XLSX), merging, splitting, and more—allowing for fast, high-quality results without losing formatting.
-          Whether you're managing office documents or personal files, our online tools make your work easier, faster,
-          and more efficient.
+      <!-- START: Search Bar -->
+      <div class="mx-auto max-w-3xl py-8 px-4 sm:px-6 lg:px-8">
+        <label for="toolSearch" class="sr-only">Search Tools</label>
+        <input
+          type="text"
+          id="toolSearch"
+          placeholder="Search for a tool (e.g., PDF to Word, Merge PDF, Image Resizer...)"
+          class="w-full p-4 text-lg border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+          aria-label="Search for PDF tools"
+        />
+        <p id="noResultsMessage" class="mt-4 text-lg text-gray-600 text-center hidden">No tools found matching your search.</p>
+      </div>
+      <!-- END: Search Bar -->
+
+      <div class="toollist" id="toollists">
+        <div class="singletools">
+          <a href="./imageresizer.html">
+            <div class="imgbox">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpW2d2GcowJjWNHeLXOoBmFphYHCXhIHzx9g&s"
+                alt=""
+              />
+            </div>
+            <h2>Image Resizer</h2>
+            <p>
+              Image Resizer Tool Quickly resize images online with our easy-to-use tool. Maintain high quality while adjusting dimensions for social media, websites, and more!
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./imagecompression.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1387/1387554.png"
+                alt=""
+              />
+            </div>
+            <h2>Image Compressor</h2>
+            <p>
+              Efficient Image Compressor Compress images fast without losing quality. Enjoy easy preview, a smooth progress bar, and instant downloads for perfectly optimized images.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftocsv.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8242/8242984.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO CSV</h2>
+            <p>
+              PDF to CSV Converter Easily extract tables and data from PDF files and convert them into CSV format for effortless data management and analysis.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftoexcel.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn.pixabay.com/photo/2021/01/30/12/15/excel-5963669_640.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO EXCEL</h2>
+            <p>
+              PDF to Excel Converter Easily convert PDFs to Excel with high accuracy, preserving data integrity and formatting for smooth spreadsheet integration.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftohtml.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp&w=256"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO HTML</h2>
+            <p>
+              PDF to HTML Converter Easily convert PDFs to HTML while preserving text, images, and formatting for a seamless, web-ready document experience.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftojpg.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/136/136524.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO JPG</h2>
+            <p>
+              PDF to JPG Converter Quickly convert PDFs to high-quality JPG images, preserving clarity and detail for easy sharing and versatile use.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftojson.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/136/136525.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO JSON</h2>
+            <p>
+              PDF to JSON Converter Efficiently convert PDFs to JSON format, extracting data into a structured, machine-readable form for easy integration and analysis.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftopng.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/29/29072.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO PNG</h2>
+            <p>
+              PDF to PNG Converter Transform PDFs into high-resolution PNG images, maintaining quality and detail for versatile digital use and easy sharing.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftoword.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbYQcLfUfqY6nAiwop5kkdkSvuKg0qzIc2TA&s"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO WORD</h2>
+            <p>
+              PDF to Word Converter Convert PDFs to editable MS Word documents with precision, preserving formatting and layout for smooth editing and content management.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftoxml.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5105/5105250.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO XML</h2>
+            <p>
+              Convert PDFs to XML format accurately, extracting structured data
+              for integration and analysis while preserving content integrity
+              and layout.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftozip.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/7817/7817526.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO ZIP</h2>
+            <p>
+              PDF to ZIP Converter Quickly compress PDF files into ZIP archives for easy storage and faster sharing. Our tool ensures efficient file size reduction without compromising document quality.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftowebp.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8263/8263085.png"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO WEBP</h2>
+            <p>
+             PDF to WebP Converter Efficiently convert PDFs to high-quality WebP images, reducing file size for optimal web performance and faster loading times.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftotext.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/026/221/337/non_2x/text-icon-symbol-design-illustration-vector.jpg"
+                alt=""
+              />
+            </div>
+            <h2>PDF TO TEXT</h2>
+            <p>
+              PDF to Editable Text Converter Quickly convert PDFs to editable text, preserving content accuracy for easy editing, repurposing, and efficient data management.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./csvto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8242/8242984.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>CSV TO PDF</h2>
+            <p>
+              CSV to PDF Converter Effortlessly transform CSV data into polished, professional PDFs. Perfect for creating clear documents from spreadsheets with a simple, fast, and accurate conversion process.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./excelto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn.pixabay.com/photo/2021/01/30/12/15/excel-5963669_640.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>EXCEL TO PDF</h2>
+            <p>
+              Excel to PDF Converter Easily convert Excel spreadsheets to professional PDFs, maintaining accurate formatting and delivering high-quality results—ideal for reports, presentations, and data sharing.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./htmlto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp&w=256"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>HTML TO PDF</h2>
+            <p>
+              HTML to PDF Converter Quickly convert HTML files to high-quality PDFs while preserving layouts, styles, and graphics. Generate professional, shareable documents with fast and reliable conversion.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./jpgto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/136/136524.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>JPG TO PDF</h2>
+            <p>
+              JPG to PDF Converter Quickly convert JPG images to PDF files while maintaining image quality and resolution. Create clean, professional PDFs for easy sharing and secure storage.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./jsonto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/136/136525.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>JSON TO PDF</h2>
+            <p>
+              JSON to PDF Converter Effortlessly convert JSON data into neatly formatted PDFs. Our tool ensures accurate data representation in a clean, professional layout—perfect for reports and documentation.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pngto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/29/29072.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>PNG TO PDF</h2>
+            <p>
+              PNG to PDF Converter Easily transform PNG images into high-quality PDFs. Our converter preserves image clarity and color, delivering professional and shareable documents quickly and efficiently.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./speechto.html">
+            <div class="imgbox">
+              <img
+                src="https://static.thenounproject.com/png/1202-200.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>SPEECH TO PDF</h2>
+            <p>
+              Speech Transcript to PDF Converter Effortlessly convert speech transcripts into polished PDFs. Our tool accurately formats spoken content into professional, readable documents—perfect for reports, presentations, and sharing.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./textto.html">
+            <div class="imgbox">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/026/221/337/non_2x/text-icon-symbol-design-illustration-vector.jpg"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>TEXT TO PDF</h2>
+            <p>
+              Plain Text to PDF Converter Easily transform plain text into polished PDFs with clean formatting and professional output—perfect for creating well-structured, shareable documents.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./webpto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8263/8263085.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>WEBP TO PDF</h2>
+            <p>
+              WebP to PDF Converter Efficiently convert WebP images to high-quality PDFs, maintaining visual clarity with optimized file size for easy sharing and fast loading.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./xmlto.html">
+            <div class="imgbox">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5105/5105250.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+            </div>
+            <h2>XML TO PDF</h2>
+            <p>
+              XML to PDF Converter Seamlessly convert XML files to professional PDFs. Our tool preserves formatting and design, delivering accurate, high-quality output perfect for reports, presentations, and online content.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./mergepdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2921/2921914.png"
+                alt=""
+              />
+            </div>
+            <h2>Merge PDF</h2>
+            <p>
+              Merge PDF Tool Combine multiple PDF files into a single document effortlessly. Maintain quality and order with our fast and user-friendly merger.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./splitpdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2921/2921908.png"
+                alt=""
+              />
+            </div>
+            <h2>Split PDF</h2>
+            <p>
+              Split PDF Tool Easily divide a PDF into multiple files. Select specific pages or ranges for quick and precise splitting with high-quality output.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./rotatepdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2099/2099058.png"
+                alt=""
+              />
+            </div>
+            <h2>Rotate PDF</h2>
+            <p>
+              Rotate PDF Tool Adjust the orientation of PDF pages effortlessly. Rotate single or multiple pages to ensure correct alignment for your documents.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./deletepdfpages.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3096/3096687.png"
+                alt=""
+              />
+            </div>
+            <h2>Delete PDF Pages</h2>
+            <p>
+              Delete PDF Pages Tool Remove unwanted pages from your PDF quickly. Select specific pages to delete and maintain document integrity with ease.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./reorderpdfpages.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2919/2919592.png"
+                alt=""
+              />
+            </div>
+            <h2>Reorder PDF Pages</h2>
+            <p>
+              Reorder PDF Pages Tool Easily rearrange pages in your PDF document. Drag and drop to customize the order for a polished, professional result.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./addwatermarkpdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3018/3018947.png"
+                alt=""
+              />
+            </div>
+            <h2>Add Watermark to PDF</h2>
+            <p>
+              Add Watermark to PDF Tool Apply text or image watermarks to your PDFs. Customize placement and opacity to protect or brand your documents.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./addpagenumberspdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2920/2920033.png"
+                alt=""
+              />
+            </div>
+            <h2>Add Page Numbers to PDF</h2>
+            <p>
+              Add Page Numbers to PDF Tool Insert page numbers to your PDFs with ease. Customize position, format, and style for professional-looking documents.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./lockpdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2889/2889863.png"
+                alt=""
+              />
+            </div>
+            <h2>Lock PDF</h2>
+            <p>
+              Lock PDF Tool Secure your PDFs with password protection. Restrict access or editing to keep your documents safe and confidential.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./unlockpdf.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2889/2889861.png"
+                alt=""
+              />
+            </div>
+            <h2>Unlock PDF</h2>
+            <p>
+              Unlock PDF Tool Remove password protection from PDFs quickly. Access locked documents with ease while maintaining file integrity.
+            </p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./editpdfmetadata.html">
+            <div class="imgbox">
+              <img
+                src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png"
+                alt=""
+              />
+              <img
+                style="height: 15px"
+                src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+                alt=""
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2920/2920027.png"
+                alt=""
+              />
+            </div>
+            <h2>Edit PDF Metadata</h2>
+            <p>
+              Edit PDF Metadata Tool Modify PDF metadata like title, author, and keywords. Enhance document organization and searchability with ease.
+            </p>
+          </a>
+        </div>
+        <!-- START NEW TOOLS - GRID -->
+        <div class="singletools">
+          <a href="./wordtopdf.html">
+            <div class="imgbox">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" alt="Word Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>Word to PDF</h2>
+            <p>Convert Word documents (.doc, .docx) to professional PDF files seamlessly.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftoppt.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="PPT Icon" />
+            </div>
+            <h2>PDF to PPT</h2>
+            <p>Transform PDF documents into editable PowerPoint presentations (.ppt, .pptx).</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./doctopdf.html">
+            <div class="imgbox">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" alt="DOC Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>DOC to PDF</h2>
+            <p>Convert .doc files to PDF format quickly and accurately.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./ppttopdf.html">
+            <div class="imgbox">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="PPT Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>PPT to PDF</h2>
+            <p>Convert PowerPoint presentations (.ppt, .pptx) to PDF for easy sharing.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./xpstopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/2991/2991112.png" alt="XPS Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>XPS to PDF</h2>
+            <p>Convert XPS files to universally accessible PDF documents.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftodoc.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" alt="DOC Icon" />
+            </div>
+            <h2>PDF to DOC</h2>
+            <p>Convert PDF files to editable Word documents (.doc format).</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./dwgtopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/136/136537.png" alt="DWG Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>DWG to PDF</h2>
+            <p>Convert DWG CAD files to PDF for easy viewing and sharing.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./rtftopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732240.png" alt="RTF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>RTF to PDF</h2>
+            <p>Convert Rich Text Format (.rtf) files to PDF documents.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftopsd.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://cdn.iconscout.com/icon/free/png-64-thumb/adobe-photoshop-461764.png" alt="PSD Icon" />
+            </div>
+            <h2>PDF to PSD</h2>
+            <p>Convert PDF files to layered PSD (Photoshop) files for advanced editing.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./shreelipitopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/2971/2971615.png" alt="Font Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>Shree Lipi to PDF</h2>
+            <p>Convert text typed in Shree Lipi fonts to a standard PDF document.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./youtubetomp3.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://cdn-icons-png.flaticon.com/512/3800/3800061.png" alt="MP3 Icon" />
+            </div>
+            <h2>YouTube to MP3</h2>
+            <p>Convert YouTube videos to high-quality MP3 audio (320kbps).</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pnrtopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/2933/2933707.png" alt="PNR Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>PNR to PDF</h2>
+            <p>Convert PNR (Passenger Name Record) details into a PDF document for easy record-keeping.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./bintopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/1000/1000990.png" alt="BIN Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>BIN to PDF</h2>
+            <p>Convert binary (.bin) files to PDF if they contain printable content.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftocdr.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://cdn.icon-icons.com/icons2/2699/PNG/64/coreldraw_logo_icon_170870.png" alt="CorelDraw Icon" />
+            </div>
+            <h2>PDF to Corel Draw (CDR)</h2>
+            <p>Convert PDF files to Corel Draw (.cdr) format for vector editing.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftodxf.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://cdn-icons-png.flaticon.com/512/136/136538.png" alt="DXF Icon" />
+            </div>
+            <h2>PDF to DXF</h2>
+            <p>Convert PDF drawings to DXF format for use in CAD software.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./jfiftopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/136/136524.png" alt="JFIF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>JFIF to PDF</h2>
+            <p>Convert JFIF (JPEG File Interchange Format) images to PDF documents.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./ipynbtopdf.html">
+            <div class="imgbox">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/100px-Jupyter_logo.svg.png" alt="IPYNB Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>IPYNB to PDF</h2>
+            <p>Convert Jupyter Notebook (.ipynb) files to PDF for sharing and printing.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./rartopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/909/909346.png" alt="RAR Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>RAR to PDF</h2>
+            <p>Convert supported files (images, documents) within RAR archives to PDF.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./prntopdf.html">
+            <div class="imgbox">
+              <img src="https://cdn-icons-png.flaticon.com/512/1055/1055006.png" alt="PRN Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+            </div>
+            <h2>PRN to PDF</h2>
+            <p>Convert PRN (printer) files to standard PDF documents.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./pdftoaudio.html">
+            <div class="imgbox">
+              <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+              <img src="https://cdn-icons-png.flaticon.com/512/2907/2907222.png" alt="Audio Icon" />
+            </div>
+            <h2>PDF to Audio</h2>
+            <p>Convert text content from PDF files into spoken audio (text-to-speech).</p>
+          </a>
+        </div>
+        <!-- END NEW TOOLS - GRID -->
+        
+        <!-- START: 10 NEWLY ADDED TOOLS - GRID -->
+        <div class="singletools">
+            <a href="./pdftopptx.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="PPTX Icon" />
+              </div>
+              <h2>PDF to PPTX</h2>
+              <p>Convert your PDF files into editable PowerPoint (.pptx) presentations, preserving layouts and graphics.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pptxtopdf.html">
+              <div class="imgbox">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/120px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="PPTX Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              </div>
+              <h2>PPTX to PDF</h2>
+              <p>Transform your PowerPoint (.pptx) presentations into high-quality PDFs for easy sharing and archiving.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdftoepub.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="ePub Icon" />
+              </div>
+              <h2>PDF to ePub</h2>
+              <p>Convert PDFs to the ePub format, perfect for reading on e-readers and mobile devices.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdftomobi.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" alt="MOBI/Kindle Icon" />
+              </div>
+              <h2>PDF to MOBI</h2>
+              <p>Convert your PDF documents to the MOBI format, optimized for Amazon Kindle devices.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdftomarkdown.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://cdn-icons-png.flaticon.com/512/991/991922.png" alt="Markdown Icon" />
+              </div>
+              <h2>PDF to Markdown</h2>
+              <p>Extract text and basic structure from a PDF and convert it to a clean Markdown (.md) file.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdfrepair.html">
+              <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Repair Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              </div>
+              <h2>PDF Repair Tool</h2>
+              <p>Attempt to fix and recover data from corrupted or damaged PDF files with our repair tool.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdftotiff.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://cdn-icons-png.flaticon.com/512/8243/8243022.png" alt="TIFF Icon" />
+              </div>
+              <h2>PDF to TIFF</h2>
+              <p>Convert each page of your PDF into a high-quality TIFF image, ideal for archival and printing.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdftosvg.html">
+              <div class="imgbox">
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://cdn-icons-png.flaticon.com/512/5611/5611025.png" alt="SVG Icon" />
+              </div>
+              <h2>PDF to SVG</h2>
+              <p>Convert PDF pages into scalable vector graphics (SVG) for high-resolution use in web and design.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./flattenpdf.html">
+              <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/3242/3242502.png" alt="Flatten Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              </div>
+              <h2>Flatten PDF</h2>
+              <p>Make your PDF static by merging all annotations, form fields, and layers into a single, non-interactive layer.</p>
+            </a>
+        </div>
+        <div class="singletools">
+            <a href="./pdfocr.html">
+              <div class="imgbox">
+                <img src="https://cdn-icons-png.flaticon.com/512/2550/2550713.png" alt="OCR Icon" />
+                <img style="height: 15px" src="https://cdn-icons-png.flaticon.com/512/32/32213.png" alt="Arrow Icon" />
+                <img src="https://png.pngtree.com/png-clipart/20220612/original/pngtree-pdf-file-icon-png-png-image_7965915.png" alt="PDF Icon" />
+              </div>
+              <h2>PDF OCR</h2>
+              <p>Use Optical Character Recognition (OCR) to turn scanned PDFs and images into searchable and selectable text.</p>
+            </a>
+        </div>
+        <!-- END: 10 NEWLY ADDED TOOLS - GRID -->
+
+        <!-- START: NEW TEXT & CONTENT TOOLS -->
+        <div style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+          <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">🔹 Text & Content Tools 🔹</h2>
+        </div>
+        
+        <div class="singletools">
+          <a href="./textcaseconverter.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🔄
+            </div>
+            <h2>Text Case Converter</h2>
+            <p>Easily convert text between UPPERCASE, lowercase, Title Case, and more.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./wordcounter.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🔢
+            </div>
+            <h2>Word & Character Counter</h2>
+            <p>Quickly count the number of words, characters, and paragraphs in your text.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./removeextraspaces.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🧹
+            </div>
+            <h2>Remove Extra Spaces</h2>
+            <p>Clean up your text by removing unnecessary extra spaces, tabs, and line breaks.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./findandreplace.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🔍
+            </div>
+            <h2>Find and Replace Text</h2>
+            <p>Instantly find specific words or phrases and replace them within your text.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./reversetext.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              ⏪
+            </div>
+            <h2>Reverse Text</h2>
+            <p>Flip your text backward in a single click. For example: txet esrever.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./texttoslug.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🔗
+            </div>
+            <h2>Text to Slug Generator</h2>
+            <p>Create clean, SEO-friendly URL slugs from your text or page titles.</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./jsonformatter.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              💅
+            </div>
+            <h2>JSON Beautifier & Minifier</h2>
+            <p>Format your JSON to be more readable (beautify) or compact it for production (minify).</p>
+          </a>
+        </div>
+        <div class="singletools">
+          <a href="./base64encoder.html">
+            <div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">
+              🔐
+            </div>
+            <h2>Base64 Encoder / Decoder</h2>
+            <p>Encode your data into Base64 format or decode Base64 strings back to their original form.</p>
+          </a>
+        </div>
+        <!-- END: NEW TEXT & CONTENT TOOLS -->
+
+        <!-- START: NEW CALCULATORS SECTION -->
+        <div id="basic-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+          <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">🔢 Basic Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./simple-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">➕</div><h2>Simple Calculator</h2><p>Perform basic arithmetic: addition, subtraction, multiplication, and division.</p></a></div>
+        <div class="singletools"><a href="./percentage-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">%</div><h2>Percentage Calculator</h2><p>Easily calculate percentages, percentage change, and fractions.</p></a></div>
+        <div class="singletools"><a href="./discount-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">📉</div><h2>Discount Calculator</h2><p>Find out the final price after a discount and how much you will save.</p></a></div>
+        <div class="singletools"><a href="./gst-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🇮🇳</div><h2>GST Calculator</h2><p>Calculate Goods and Services Tax for transactions in India.</p></a></div>
+        <div class="singletools"><a href="./emi-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🏠</div><h2>EMI Calculator</h2><p>Estimate your Equated Monthly Installment for loans.</p></a></div>
+        <div class="singletools"><a href="./currency-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💱</div><h2>Currency Converter</h2><p>Convert between different currencies with static rates.</p></a></div>
+        <div class="singletools"><a href="./age-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎂</div><h2>Age Calculator</h2><p>Find out your exact age in years, months, days, and even seconds.</p></a></div>
+        <div class="singletools"><a href="./bmi-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💪</div><h2>BMI Calculator</h2><p>Calculate your Body Mass Index to assess your weight status.</p></a></div>
+        <div class="singletools"><a href="./scientific-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🔬</div><h2>Scientific Calculator</h2><p>For complex calculations involving trigonometric, logarithmic, and exponential functions.</p></a></div>
+        <div class="singletools"><a href="./unit-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">📏</div><h2>Unit Converter</h2><p>Convert units of length, area, volume, weight, and temperature.</p></a></div>
+
+        <div id="construction-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">🏗️ Construction / Engineering Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./paint-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎨</div><h2>Paint Calculator</h2><p>Estimate the amount of paint needed to cover your walls.</p></a></div>
+        <div class="singletools"><a href="./tile-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🧱</div><h2>Tile Calculator</h2><p>Calculate how many tiles you need for a floor or wall.</p></a></div>
+        <div class="singletools"><a href="./concrete-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🏗️</div><h2>Concrete Calculator</h2><p>Determine the volume of concrete needed for your project.</p></a></div>
+        <div class="singletools"><a href="./bricks-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🧱</div><h2>Bricks Calculator</h2><p>Estimate the number of bricks required for a wall or construction.</p></a></div>
+        <div class="singletools"><a href="./steel-weight-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">⚖️</div><h2>Steel Weight Calculator</h2><p>Calculate the weight of steel bars, plates, and pipes.</p></a></div>
+
+        <div id="financial-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">📊 Financial Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./simple-interest-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💵</div><h2>Simple Interest Calculator</h2><p>Calculate interest on a principal amount at a simple rate.</p></a></div>
+        <div class="singletools"><a href="./compound-interest-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">📈</div><h2>Compound Interest Calculator</h2><p>Calculate interest on both the principal and the accumulated interest.</p></a></div>
+        <div class="singletools"><a href="./sip-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💹</div><h2>SIP Calculator</h2><p>Estimate the returns on your Systematic Investment Plan.</p></a></div>
+        <div class="singletools"><a href="./retirement-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🏖️</div><h2>Retirement Calculator</h2><p>Plan your finances to achieve your retirement goals.</p></a></div>
+        <div class="singletools"><a href="./fd-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💰</div><h2>FD Calculator</h2><p>Calculate the maturity amount of your Fixed Deposit.</p></a></div>
+        <div class="singletools"><a href="./income-tax-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🧾</div><h2>Income Tax Calculator</h2><p>Get a basic estimation of your income tax liability.</p></a></div>
+
+        <div id="health-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">❤️‍🩹 Health Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./calorie-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🍎</div><h2>Calorie Calculator</h2><p>Estimate your daily calorie needs for maintaining, losing, or gaining weight.</p></a></div>
+        <div class="singletools"><a href="./water-intake-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">💧</div><h2>Water Intake Calculator</h2><p>Determine your recommended daily water consumption.</p></a></div>
+        <div class="singletools"><a href="./ideal-body-weight-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎯</div><h2>Ideal Body Weight Calculator</h2><p>Find your ideal body weight based on height and gender.</p></a></div>
+        <div class="singletools"><a href="./pregnancy-due-date-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">👶</div><h2>Pregnancy Due Date Calculator</h2><p>Estimate your baby's due date based on your last menstrual period.</p></a></div>
+        <div class="singletools"><a href="./body-fat-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">📊</div><h2>Body Fat Percentage Calculator</h2><p>Estimate your body fat percentage using standard formulas.</p></a></div>
+
+        <div id="developer-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">🖥️ Developer/Tech Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./hex-to-rgb-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎨</div><h2>Hex to RGB Converter</h2><p>Convert HEX color codes to their RGB equivalents.</p></a></div>
+        <div class="singletools"><a href="./rgb-to-hex-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎨</div><h2>RGB to HEX Converter</h2><p>Convert RGB color codes to their HEX equivalents.</p></a></div>
+        <div class="singletools"><a href="./binary-to-decimal-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🔟</div><h2>Binary to Decimal Converter</h2><p>Convert binary numbers (base-2) to decimal (base-10).</p></a></div>
+        <div class="singletools"><a href="./decimal-to-binary-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">✌️</div><h2>Decimal to Binary Converter</h2><p>Convert decimal numbers (base-10) to binary (base-2).</p></a></div>
+        <div class="singletools"><a href="./base64-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🔐</div><h2>Base64 Encode/Decode</h2><p>Encode text to Base64 or decode it back to text.</p></a></div>
+
+        <div id="other-calculators" style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 3rem; margin-bottom: 1rem;">
+            <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">🔧 Other Useful Calculators</h2>
+        </div>
+        <div class="singletools"><a href="./date-difference-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">📅</div><h2>Date Difference Calculator</h2><p>Calculate the duration between two dates.</p></a></div>
+        <div class="singletools"><a href="./love-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">❤️</div><h2>Love Percentage Calculator</h2><p>Calculate a love percentage for fun between two names.</p></a></div>
+        <div class="singletools"><a href="./random-number-generator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🎲</div><h2>Random Number Generator</h2><p>Generate random numbers within a specified range.</p></a></div>
+        <div class="singletools"><a href="./time-zone-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🌍</div><h2>Time Zone Converter</h2><p>Convert time between different time zones (static data).</p></a></div>
+        <div class="singletools"><a href="./speed-converter.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">🏎️</div><h2>Speed Converter</h2><p>Convert between different units of speed (e.g., KM/H to M/S).</p></a></div>
+        <div class="singletools"><a href="./fuel-consumption-calculator.html"><div class="imgbox" style="font-size: 50px; display: flex; align-items: center; justify-content: center;">⛽</div><h2>Fuel Consumption Calculator</h2><p>Calculate your vehicle's fuel efficiency and consumption.</p></a></div>
+        <!-- END: NEW CALCULATORS SECTION -->
+
+      </div>
+    </div>
+
+    <section
+      id="features"
+      class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20 mt-20"
+    >
+      <div
+        class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
+      >
+        <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+          Features
+        </h2>
+        <p
+          class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+        >
+          NeuroTools.com personalizes user experiences by understanding individual preferences, tailoring PDF tools and recommendations based on user behavior and historical data – 99% FREE!
         </p>
       </div>
-      <!-- right: contact -->
-      <div class="sm:col-span-5 text-center">
-        <div class="text-sm uppercase text-[#C084FC] font-bold tracking-wide">Contact Us</div>
-        <ul class="mt-3 space-y-2">
-          <li><a class="transition-colors hover:text-[#FACC15]" href="#">Goa, India</a></li>
-          <li><a class="transition-colors hover:text-[#FACC15]" href="#">fast.deals017@gmail.com</a></li>
-        </ul>
+      <div
+        class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
+      >
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
+              <path
+                d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"
+              ></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Multi-format Conversion</h3>
+              <p class="text-sm text-muted-foreground">
+                Convert PDFs to Word, Excel, PPT, images, & more at NeuroTools.com – 99% FREE!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
+              <path
+                d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a22.73 22.73 0 0 0-3.113.538 15.02 15.02 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.64 25.64 0 0 1-4.412.005 26.64 26.64 0 0 1-1.183-1.86c-.372-.64-.71-1.29-1.018-1.946a25.17 25.17 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25.245 25.245 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a23.966 23.966 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23.142 23.142 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a25.819 25.819 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143a22.005 22.005 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.185 1.185 0 0 1-.553-.132c-.666-.380-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895-1.095-1.345-1.565-.455-.47-.91-.993-1.36-1.565z"
+              ></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Batch Conversion</h3>
+              <p class="text-sm">
+                Batch convert PDFs fast at NeuroTools.com – 99% FREE!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
+              <path
+                d="M0 12C0 5.373 5.373 0 12 0c4.873 0 9.067 2.904 10.947 7.077l-15.87 15.87a11.981 11.981 0 0 1-1.935-1.099L14.99 12H12l-8.485 8.485A11.962 11.962 0 0 1 0 12Zm12.004 12L24 12.004C23.998 18.628 18.628 23.998 12.004 24Z"
+              ></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">High-quality Output</h3>
+              <p class="text-sm text-muted-foreground">
+                Keep PDF formatting, fonts, & images intact with NeuroTools.com – 99% FREE!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
+              <path
+                d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+              ></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Fast Processing</h3>
+              <p class="text-sm text-muted-foreground">
+                EFast PDF conversions with NeuroTools.com – 99% FREE!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              class="h-12 w-12 fill-current"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">Secure File Handling</h3>
+              <p class="text-sm text-muted-foreground">
+                Secure PDFs with encryption & auto-deletion at NeuroTools.com – 99% FREE!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+        >
+          <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+            <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
+              <path
+                d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"
+              ></path>
+            </svg>
+            <div class="space-y-2">
+              <h3 class="font-bold">User-friendly Interface</h3>
+              <p class="text-sm text-muted-foreground">
+                Intuitive design makes conversion simple, even for non-technical
+                users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-[#f5f5fa] flex items-center justify-center min-h-[70vh]">
+      <div class="text-center max-w-4xl p-6">
+        <h1 class="sm:text-4xl font-bold text-gray-800 mb-4 text-2xl">
+          The PDF Converter Trusted by Millions – Now on NeuroTools.com
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Convert, edit, and manage documents effortlessly with the powerful PDF tools by NeuroTools.com. This free online tool supports multiple file types and PDF operations, ensuring smooth and accurate results. Whether you're working with JPG, PNG, DOCX, XLS, or need to merge, split, or secure PDFs, our fast and reliable platform guarantees high-quality results in seconds.
+        </p>
+        <div class="flex justify-center space-x-12">
+         
+          <div class="flex flex-col items-center">
+            <img
+              style="height: 30px"
+              src="https://www.ilovepdf.com/img/logos/iso-logo.svg"
+              alt="ISO 27001"
+              class="mb-2"
+            />
+          
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              style="height: 30px"
+              src="https://www.ilovepdf.com/img/logos/ssl-encrypted-logo.svg"
+              alt="SSL Encryption"
+              class="mb-2"
+            />
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="py-5 text-center text-xs text-[#9CA3AF] border-t border-white/10">
-      Copyright © 2024 NeuroTools.com
-      <span class="hidden sm:inline"> • </span>
-      <br class="sm:hidden"> All Rights Reserved
+    <div class="bg-gray-100">
+      <div
+        class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto"
+      >
+          <center>
+        <div class="p-5 sm:w-2/12 border-r">
+          <div class="text-sm uppercase text-[#e5322d] font-bold">Menu</div>
+          <ul>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="./index.html">Home</a>
+            </li>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="./about.html">About</a>
+            </li>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="./contact.html">Contact</a>
+            </li>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="./privacy-policy.html">Privacy Policy</a>
+            </li>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="./disclaimer.html">Disclaimer</a>
+            </li>
+          </ul>
+        </div></center>
+        <div class="p-5 sm:w-7/12 border-r text-center">
+          <img
+            style="
+              height: 60px;
+              margin: auto;
+              margin-bottom: 20px;
+              mix-blend-mode: multiply;
+            "
+            src="./One_Page-removebg-preview.png"
+            alt="NeuroTools Footer Logo"
+          />
+          <p class="text-gray-500 text-sm mb-10">
+            Convert, edit, and manage your PDFs in seconds using the powerful and free PDF tools at NeuroTools.com. Our platform supports all major file formats and PDF operations—text, images (JPG, PNG), spreadsheets (XLS, XLSX), merging, splitting, and more—allowing for fast, high-quality results without losing formatting. Whether you're managing office documents or personal files, our online tools make your work easier, faster, and more efficient.
+          </p>
+        </div>
+        <center>
+        <div class="p-5 sm:w-3/12">
+          <div class="text-sm uppercase text-[#e5322d] font-bold">
+            Contact Us
+          </div>
+          <ul>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="#"
+                >Goa, India</a
+              >
+            </li>
+            <li class="my-2">
+              <a class="hover:text-[#e5322d]" href="#">fast.deals017@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </center>
+        <div class="my-5">
+         <center>Copyright © 2024 NeuroTools.com <br> All Rights Reserved</center>
+        </div>
+      </div>
     </div>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <!-- START: Search Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('toolSearch');
+        const toolListContainer = document.getElementById('toollists');
+        const noResultsMessage = document.getElementById('noResultsMessage');
+        
+        // Ensure all required elements are present
+        if (!searchInput || !toolListContainer || !noResultsMessage) {
+          console.warn("Search functionality cannot be initialized: one or more required DOM elements are missing.");
+          return;
+        }
+        
+        const tools = Array.from(toolListContainer.getElementsByClassName('singletools'));
 
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+        if (tools.length === 0) {
+            console.warn("Search functionality: No tools found to search.");
+            // return; // Might still want the noResultsMessage to work if search is typed
+        }
 
-  <!-- START: Search Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const searchInput = document.getElementById('toolSearch');
-      const toolListContainer = document.getElementById('toollists');
-      const noResultsMessage = document.getElementById('noResultsMessage');
+        searchInput.addEventListener('input', function () {
+          const searchTerm = searchInput.value.toLowerCase().trim();
+          let foundTools = 0;
 
-      if (!searchInput || !toolListContainer || !noResultsMessage) {
-        console.warn("Search functionality cannot be initialized: one or more required DOM elements are missing.");
-        return;
-      }
+          tools.forEach(function (tool) {
+            const titleElement = tool.querySelector('h2');
+            const descriptionElement = tool.querySelector('p');
+            const linkElement = tool.querySelector('a');
+            
+            let toolText = '';
 
-      const tools = Array.from(toolListContainer.getElementsByClassName('singletools'));
-      if (tools.length === 0) {
-        console.warn("Search functionality: No tools found to search.");
-      }
-
-      searchInput.addEventListener('input', function () {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        let foundTools = 0;
-
-        tools.forEach(function (tool) {
-          const titleElement = tool.querySelector('h2');
-          const descriptionElement = tool.querySelector('p');
-          const linkElement = tool.querySelector('a');
-
-          let toolText = '';
-          if (titleElement) toolText += titleElement.textContent.toLowerCase() + ' ';
-          if (descriptionElement) toolText += descriptionElement.textContent.toLowerCase() + ' ';
-          if (linkElement && linkElement.getAttribute('href')) {
-            const hrefPath = linkElement.getAttribute('href');
-            const fileNameMatch = hrefPath.match(/[^/\\&?]+\.(html|htm)/);
-            if (fileNameMatch && fileNameMatch[0]) {
-              let baseName = fileNameMatch[0].substring(0, fileNameMatch[0].lastIndexOf('.'));
-              baseName = baseName.replace(/to/g, ' to ');
-              baseName = baseName.replace(/([A-Z])/g, ' $1').trim();
-              toolText += baseName.toLowerCase() + ' ';
+            if (titleElement) {
+              toolText += titleElement.textContent.toLowerCase() + ' ';
             }
-          }
+            if (descriptionElement) {
+              toolText += descriptionElement.textContent.toLowerCase() + ' ';
+            }
+            if (linkElement && linkElement.getAttribute('href')) {
+              const hrefPath = linkElement.getAttribute('href');
+              // Extract file name from href as potential search keyword, e.g., "pdftoword" from "./pdftoword.html"
+              const fileNameMatch = hrefPath.match(/[^/\\&?]+\.(html|htm)/); // Matches filename.html or filename.htm
+              if (fileNameMatch && fileNameMatch[0]) {
+                  let baseName = fileNameMatch[0].substring(0, fileNameMatch[0].lastIndexOf('.')); // Remove extension
+                  // Add spaces around "to" for better matching, e.g. "pdftoword" -> "pdf to word"
+                  baseName = baseName.replace(/to/g, ' to '); 
+                  // Handle camelCase or PascalCase by inserting spaces, e.g., "imageResizer" -> "image Resizer"
+                  baseName = baseName.replace(/([A-Z])/g, ' $1').trim(); 
+                  toolText += baseName.toLowerCase() + ' ';
+              }
+            }
 
-          if (toolText.includes(searchTerm)) {
-            tool.style.display = '';
-            foundTools++;
+            if (toolText.includes(searchTerm)) {
+              tool.style.display = ''; // Revert to CSS defined display (e.g., block, flex, grid-item)
+              foundTools++;
+            } else {
+              tool.style.display = 'none';
+            }
+          });
+
+          if (foundTools === 0 && searchTerm !== '') {
+            noResultsMessage.classList.remove('hidden');
           } else {
-            tool.style.display = 'none';
+            noResultsMessage.classList.add('hidden');
           }
         });
-
-        if (foundTools === 0 && searchTerm !== '') {
-          noResultsMessage.classList.remove('hidden');
-        } else {
-          noResultsMessage.classList.add('hidden');
-        }
       });
-    });
-  </script>
-  <!-- END: Search Script -->
-</body>
+    </script>
+    <!-- END: Search Script -->
+  </body>
 </html>
