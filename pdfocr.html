@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Free PDF to OCR Converter - Make Scanned PDFs Searchable & Editable</title>
+    <meta name="description" content="Use our free online PDF to OCR tool to convert any scanned PDF or image-based PDF into searchable and editable text. Fast, secure, and no installation required. Supports multiple languages.">
+    <meta name="keywords" content="pdf to ocr, convert pdf to ocr, ocr pdf, free pdf ocr, online pdf to ocr, make pdf searchable, scanned pdf to text, extract text from pdf, image to text, optical character recognition, editable pdf">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="./css/style.css" /> <!-- Aapki existing CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom Styles for Loader and Progress */
+        #uploader.ondragover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e5e7eb;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #3b82f6;
+            width: 0%;
+            transition: width 0.2s ease-in-out;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation Bar (Aapke existing code se) -->
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+        </a>
+        <div class="flex md:order-2">
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+            <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Home</a></li>
+            <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+            <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Tool Section -->
+        <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800">PDF to OCR Converter</h1>
+                <p class="text-lg text-gray-600 mt-2">Extract text from scanned PDFs and images, making them searchable and editable.</p>
+            </div>
+
+            <!-- Uploader -->
+            <div id="uploader" class="border-4 border-dashed border-gray-300 rounded-lg p-10 text-center cursor-pointer">
+                <input type="file" id="fileInput" class="hidden" accept="application/pdf">
+                <label for="fileInput" class="cursor-pointer">
+                    <svg class="mx-auto h-16 w-16 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="mt-4 text-2xl font-semibold text-gray-700">Choose a PDF file or drag it here</p>
+                    <p class="mt-1 text-sm text-gray-500">100% Free & Secure. Files are processed in your browser.</p>
+                </label>
+            </div>
+
+            <!-- Language Selection -->
+            <div id="options-container" class="mt-6 text-center hidden">
+                <label for="lang" class="block text-lg font-medium text-gray-700 mb-2">Select Document Language:</label>
+                <select id="lang" class="mx-auto max-w-xs block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <option value="eng" selected>English</option>
+                    <option value="hin">Hindi (हिन्दी)</option>
+                    <option value="spa">Spanish</option>
+                    <option value="fra">French</option>
+                    <option value="deu">German</option>
+                    <option value="ara">Arabic</option>
+                    <option value="chi_sim">Chinese (Simplified)</option>
+                    <option value="rus">Russian</option>
+                    <!-- Add more languages as needed -->
+                </select>
+                <button id="startButton" class="mt-4 px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Start OCR
+                </button>
+            </div>
+
+            <!-- Processing View -->
+            <div id="processing" class="hidden mt-8 text-center">
+                <p id="status" class="text-lg font-semibold text-gray-700 mb-4">Initializing...</p>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar">0%</div>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="results" class="hidden mt-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">OCR Result</h2>
+                <div class="relative">
+                    <textarea id="resultText" class="w-full h-96 p-4 border border-gray-300 rounded-md font-mono text-sm bg-gray-50" readonly></textarea>
+                    <button id="copyButton" class="absolute top-2 right-2 px-3 py-1 bg-gray-200 text-gray-700 text-sm font-semibold rounded hover:bg-gray-300">Copy</button>
+                </div>
+                <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <button id="downloadTxt" class="w-full sm:w-auto px-6 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700">Download as .txt</button>
+                    <button id="downloadDocx" class="w-full sm:w-auto px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Download as .docx</button>
+                    <button id="startOver" class="w-full sm:w-auto px-6 py-2 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-600">Start Over</button>
+                </div>
+            </div>
+             <div id="error-message" class="hidden mt-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center"></div>
+        </div>
+
+        <!-- SEO Article Section -->
+        <article class="max-w-4xl mx-auto p-6 mt-12 bg-white rounded-lg shadow-lg prose lg:prose-xl">
+            <h2 class="text-3xl font-bold">The Ultimate Guide to PDF to OCR: Unlocking Your Documents</h2>
+            <p>In today's digital world, the Portable Document Format (PDF) is king. It's the standard for sharing documents while preserving formatting. However, not all PDFs are created equal. Many, especially those created from scanners or cameras, are essentially "images" of text. You can't search, copy, or edit the words within them. This is where **PDF to OCR** technology comes in, and our free online tool is here to help you unlock the potential of your documents.</p>
+
+            <h3 class="text-2xl font-semibold">What is OCR (Optical Character Recognition)?</h3>
+            <p><strong>Optical Character Recognition (OCR)</strong> is a technology that converts different types of documents, such as scanned paper documents, PDFs created from images, or photos, into editable and searchable data. When you **convert a PDF to OCR**, the software "reads" the document, identifies characters (letters, numbers, and symbols), and transforms them into actual text that a computer can understand and manipulate. It's like giving your computer eyes to read documents that were previously just static pictures.</p>
+
+            <h3 class="text-2xl font-semibold">Why Do You Need to Convert a PDF to OCR? The Benefits are Clear</h3>
+            <p>You might be wondering, "Why should I use a <strong>PDF OCR</strong> tool?" The advantages are numerous and can significantly boost your productivity, whether you're a student, a professional, or just someone managing personal documents.</p>
+            <ul>
+                <li><strong>Make PDFs Searchable:</strong> This is the most significant benefit. Imagine having a 100-page scanned report and needing to find a specific name or phrase. Without OCR, you'd have to read it all manually. After you **OCR a PDF**, you can simply use Ctrl+F (or Cmd+F) to find what you need in seconds.</li>
+                <li><strong>Enable Editing and Copy-Pasting:</strong> A scanned PDF is a locked box. An OCR'd PDF is a treasure chest. You can easily copy paragraphs, quotes, or data for use in other documents, or even edit the text directly (after exporting to a format like .docx).</li>
+                <li><strong>Improve Accessibility:</strong> Screen readers, which are vital for visually impaired users, cannot read image-based PDFs. OCR technology makes these documents accessible by converting the images of text into actual text that a screen reader can announce.</li>
+                <li><strong>Efficient Data Extraction:</strong> Businesses often deal with thousands of invoices, receipts, and forms in PDF format. A **free PDF OCR online** tool allows for the automated extraction of key information like invoice numbers, dates, and amounts, saving countless hours of manual data entry.</li>
+                <li><strong>Reduce Physical Storage:</strong> By digitizing and making paper documents searchable through OCR, you can create a powerful digital archive, reducing the need for physical file cabinets and making document retrieval instantaneous.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold">How to Use Our Free Online PDF to OCR Tool</h3>
+            <p>We've designed our tool to be incredibly simple and user-friendly. You don't need to install any software or have any technical expertise. Here’s a step-by-step guide to **extract text from your PDF**:</p>
+            <ol>
+                <li><strong>Upload Your PDF:</strong> Click the upload area or simply drag and drop your scanned PDF file onto the page.</li>
+                <li><strong>Select the Language:</strong> For the highest accuracy, choose the primary language of your document from the dropdown menu. This tells the OCR engine which character set to look for. Our tool supports many languages, including English, Hindi, Spanish, and more.</li>
+                <li><strong>Start the OCR Process:</strong> Click the "Start OCR" button. You'll see a live progress bar showing you the status as the tool works its magic. The entire process happens securely within your browser.</li>
+                <li><strong>Get Your Text:</strong> Once complete, the extracted text will appear in a text box. You can now copy it, or use the buttons to download it as a `.txt` or `.docx` file for further editing.</li>
+            </ol>
+            
+            <h3 class="text-2xl font-semibold">Security and Privacy: Our Top Priority</h3>
+            <p>When dealing with documents, security is paramount. Many online tools require you to upload your files to their servers, where you lose control over your data. Our approach is different. We use powerful JavaScript libraries like Tesseract.js and PDF.js that run **directly in your web browser**. This means:</p>
+            <ul>
+                <li>Your files never leave your computer.</li>
+                <li>There is no risk of your data being stored or viewed by third parties.</li>
+                <li>The process is completely private and secure.</li>
+            </ul>
+            <p>You get the power of a desktop application with the convenience of a **free online PDF to OCR** service, without compromising on security.</p>
+            
+            <h3 class="text-2xl font-semibold">Understanding OCR Accuracy and Limitations</h3>
+            <p>While modern OCR technology is incredibly powerful, its accuracy depends heavily on the quality of the source document. To get the best results when you **convert a PDF to OCR**, keep the following in mind:</p>
+            <ul>
+                <li><strong>Image Quality:</strong> Clear, high-resolution scans (300 DPI is recommended) produce the most accurate results. Blurry, skewed, or poorly lit documents will be harder for the OCR engine to read.</li>
+                <li><strong>Font and Layout:</strong> Standard, clear fonts are easier to recognize than highly stylized, handwritten, or very small fonts. Complex layouts with multiple columns, tables, and interspersed images can also pose a challenge.</li>
+                <li><strong>Language Selection:</strong> Choosing the correct language is crucial. If you try to OCR a Spanish document using the English language setting, the results will be a jumble of incorrect characters.</li>
+            </ul>
+            <p>Our tool provides excellent accuracy for most standard documents. For highly complex or poor-quality files, you may need to do some manual proofreading and correction after the OCR process.</p>
+
+            <h3 class="text-2xl font-semibold">Frequently Asked Questions (FAQ) about PDF to OCR</h3>
+            <h4>Is it really free to OCR a PDF with this tool?</h4>
+            <p>Yes, absolutely. Our tool is 100% free to use with no hidden charges, watermarks, or page limits. We believe powerful tools should be accessible to everyone.</p>
+            <h4>What is the best way to make a PDF searchable?</h4>
+            <p>The best and most effective way to **make a PDF searchable** is to process it with an OCR tool like this one. It analyzes the images of text and embeds an invisible, searchable text layer into the document, or allows you to export the raw text.</p>
+            <h4>Can you convert a scanned PDF to an editable Word document?</h4>
+            <p>Yes. After our tool extracts the text using OCR, you can use the "Download as .docx" button. This will give you a Microsoft Word file containing all the recognized text, which you can then easily edit, format, and save.</p>
+            <h4>How does this "scanned PDF to text" conversion work?</h4>
+            <p>The tool first renders each page of your PDF into a high-quality image. Then, the Tesseract.js OCR engine scans this image, recognizes patterns that match characters, and converts these patterns back into digital text, which is then presented to you.</p>
+
+            <h3 class="text-2xl font-semibold">Conclusion: Your Go-To Tool for Document Digitization</h3>
+            <p>Stop wasting time manually retyping or struggling to find information in your scanned documents. With our free, secure, and powerful **PDF to OCR converter**, you can instantly transform any image-based PDF into a fully searchable, editable, and accessible resource. Bookmark this page and empower yourself with the ability to unlock the text within your documents anytime, anywhere. Try it now and experience the difference!</p>
+        </article>
+    </main>
+
+    <!-- Footer (Aapke existing code se) -->
+    <div class="bg-gray-200 mt-12">
+        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
+            <div class="p-5 sm:w-7/12 border-r text-center mx-auto">
+                <img style="height: 60px; margin: auto; margin-bottom: 20px; mix-blend-mode: multiply;" src="./One_Page-removebg-preview.png" alt="OnePageTools Footer Logo" />
+                <p class="text-gray-500 text-sm mb-10">OnePageTools.com provides a suite of free, secure, and powerful online tools to manage your documents. All processing is done client-side for maximum privacy.</p>
+                <div class="my-5">
+                    <center>Copyright © 2024 OnePageTools.com <br> All Rights Reserved</center>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Libraries (Free & Client-Side) -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js' defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    
+    <script>
+        // Set the worker script path for pdf.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.worker.min.js`;
+
+        // DOM Elements
+        const uploader = document.getElementById('uploader');
+        const fileInput = document.getElementById('fileInput');
+        const optionsContainer = document.getElementById('options-container');
+        const startButton = document.getElementById('startButton');
+        const processing = document.getElementById('processing');
+        const statusEl = document.getElementById('status');
+        const progressBar = document.getElementById('progressBar');
+        const results = document.getElementById('results');
+        const resultText = document.getElementById('resultText');
+        const copyButton = document.getElementById('copyButton');
+        const downloadTxt = document.getElementById('downloadTxt');
+        const downloadDocx = document.getElementById('downloadDocx');
+        const startOver = document.getElementById('startOver');
+        const langSelect = document.getElementById('lang');
+        const errorMessage = document.getElementById('error-message');
+
+        let currentFile = null;
+
+        // Event Listeners
+        uploader.addEventListener('click', () => fileInput.click());
+        uploader.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploader.classList.add('ondragover');
+        });
+        uploader.addEventListener('dragleave', () => uploader.classList.remove('ondragover'));
+        uploader.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploader.classList.remove('ondragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+        fileInput.addEventListener('change', (e) => {
+             if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+        
+        startButton.addEventListener('click', processFile);
+        copyButton.addEventListener('click', copyToClipboard);
+        downloadTxt.addEventListener('click', downloadAsTxt);
+        downloadDocx.addEventListener('click', downloadAsDocx);
+        startOver.addEventListener('click', resetUI);
+
+        function handleFile(file) {
+            if (file && file.type === 'application/pdf') {
+                currentFile = file;
+                errorMessage.classList.add('hidden');
+                uploader.classList.add('hidden');
+                optionsContainer.classList.remove('hidden');
+            } else {
+                showError('Please select a valid PDF file.');
+                currentFile = null;
+            }
+        }
+
+        async function processFile() {
+            if (!currentFile) return;
+
+            optionsContainer.classList.add('hidden');
+            processing.classList.remove('hidden');
+            results.classList.add('hidden');
+            resultText.value = '';
+            
+            const lang = langSelect.value;
+            let fullText = '';
+
+            try {
+                const fileReader = new FileReader();
+                fileReader.readAsArrayBuffer(currentFile);
+
+                fileReader.onload = async (e) => {
+                    const typedarray = new Uint8Array(e.target.result);
+                    const pdf = await pdfjsLib.getDocument(typedarray).promise;
+                    const numPages = pdf.numPages;
+
+                    for (let i = 1; i <= numPages; i++) {
+                        statusEl.textContent = `Processing page ${i} of ${numPages}...`;
+                        const page = await pdf.getPage(i);
+                        const viewport = page.getViewport({ scale: 2.0 }); // Higher scale for better quality
+                        const canvas = document.createElement('canvas');
+                        const context = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        await page.render({ canvasContext: context, viewport: viewport }).promise;
+                        
+                        const imageData = canvas.toDataURL('image/png');
+                        
+                        const { data: { text } } = await Tesseract.recognize(imageData, lang, {
+                            logger: m => {
+                                if (m.status === 'recognizing text') {
+                                    const progress = (m.progress * 100).toFixed(2);
+                                    progressBar.style.width = `${progress}%`;
+                                    progressBar.textContent = `${progress}%`;
+                                }
+                            }
+                        });
+                        fullText += text + '\n\n--- Page ' + i + ' ---\n\n';
+                    }
+                    
+                    resultText.value = fullText;
+                    processing.classList.add('hidden');
+                    results.classList.remove('hidden');
+                };
+
+            } catch(err) {
+                console.error(err);
+                showError('An error occurred during processing. The PDF might be corrupted or protected.');
+                resetUI();
+            }
+        }
+
+        function copyToClipboard() {
+            navigator.clipboard.writeText(resultText.value).then(() => {
+                copyButton.textContent = 'Copied!';
+                setTimeout(() => { copyButton.textContent = 'Copy'; }, 2000);
+            });
+        }
+
+        function downloadAsTxt() {
+            const blob = new Blob([resultText.value], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentFile.name.replace('.pdf', '')}_ocr.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadAsDocx() {
+            const paragraphs = resultText.value.split('\n').map(p => new docx.Paragraph({
+                children: [new docx.TextRun(p)]
+            }));
+
+            const doc = new docx.Document({
+                sections: [{
+                    children: paragraphs,
+                }],
+            });
+
+            docx.Packer.toBlob(doc).then(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${currentFile.name.replace('.pdf', '')}_ocr.docx`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.remove('hidden');
+        }
+
+        function resetUI() {
+            currentFile = null;
+            fileInput.value = '';
+            resultText.value = '';
+            uploader.classList.remove('hidden');
+            optionsContainer.classList.add('hidden');
+            processing.classList.add('hidden');
+            results.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            progressBar.style.width = '0%';
+            progressBar.textContent = '0%';
+            statusEl.textContent = 'Initializing...';
+        }
+    </script>
+
+</body>
+</html>

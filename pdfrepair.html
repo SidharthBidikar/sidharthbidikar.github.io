@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Free PDF Repair Tool - Fix & Recover Corrupted PDF Files Online</title>
+    <meta name="description" content="Our free online PDF repair tool helps you fix and recover data from corrupted or damaged PDF files. Secure, browser-based, and no installation needed. Fix PDFs that won't open or show errors.">
+    <meta name="keywords" content="pdf repair, fix corrupted pdf, pdf repair tool, online pdf repair, recover pdf data, damaged pdf file, pdf not opening, pdf file repair, rebuild pdf, repair pdf online, free pdf repair">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="./css/style.css" /> <!-- Aapki existing CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Professional UI with animations */
+        :root {
+            --primary-color: #dc2626; /* Red-600 for "repair" */
+            --primary-hover: #ef4444; /* Red-500 */
+            --primary-light: #fee2e2; /* Red-100 */
+        }
+        #uploader {
+            transition: all 0.3s ease;
+            animation: pulse-border 2.5s infinite;
+        }
+        #uploader.ondragover {
+            border-color: var(--primary-hover);
+            background-color: var(--primary-light);
+            animation: none;
+        }
+        @keyframes pulse-border {
+            0% { border-color: #d1d5db; }
+            50% { border-color: var(--primary-color); }
+            100% { border-color: #d1d5db; }
+        }
+        .progress-bar {
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-in-out;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .preview-canvas {
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .prose h2, .prose h3 {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation Bar (Aapke existing code se) -->
+    <nav class="bg-white fixed w-full z-30 top-0 start-0 border-b border-gray-200 shadow-sm">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+        </a>
+        <div class="flex md:order-2">
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+            <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Home</a></li>
+            <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+            <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Tool Section -->
+        <div class="max-w-4xl mx-auto p-6 md:p-8 bg-white rounded-xl shadow-2xl mt-10">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">Online PDF Repair Tool</h1>
+                <p class="text-lg text-gray-600 mt-3">Automatically fix corrupted PDFs by rebuilding and recovering your valuable data.</p>
+            </div>
+
+            <!-- UI States Container -->
+            <div id="tool-container">
+                <!-- Uploader State -->
+                <div id="uploader">
+                    <div class="border-4 border-dashed border-gray-300 rounded-lg p-10 text-center cursor-pointer">
+                        <input type="file" id="fileInput" class="hidden" accept="application/pdf">
+                        <label for="fileInput" class="cursor-pointer">
+                            <svg class="mx-auto h-16 w-16 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15l-3-3m0 0l-3 3m3-3v6.75" /></svg>
+                            <p class="mt-4 text-2xl font-semibold text-gray-700">Choose a Corrupted PDF</p>
+                            <p class="mt-1 text-sm text-gray-500">Or drag and drop it here to start the repair.</p>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Processing State -->
+                <div id="processing" class="hidden text-center p-8">
+                    <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-red-600 mx-auto"></div>
+                    <p id="status" class="text-xl font-semibold text-gray-700 mt-6">Repairing your PDF...</p>
+                    <div class="w-full bg-gray-200 rounded-full h-4 mt-4">
+                        <div id="progressBar" class="progress-bar h-4 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Results State -->
+                <div id="results" class="hidden text-center p-4">
+                    <div class="mx-auto w-24 h-24">
+                        <svg class="w-full h-full text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mt-4">Repair Successful!</h2>
+                    <p id="recovery-stats" class="text-md text-gray-600 mt-2"></p>
+                    <div class="mt-6 flex flex-col items-center gap-6">
+                        <canvas id="preview-canvas" class="w-full max-w-md rounded-lg preview-canvas"></canvas>
+                        <a id="downloadButton" class="w-full max-w-xs px-10 py-4 btn-primary text-white font-bold text-lg rounded-lg shadow-lg" href="#" download>Download Repaired PDF</a>
+                        <button id="startOverButton" class="text-gray-600 hover:text-gray-900 font-semibold">Repair Another File</button>
+                    </div>
+                </div>
+            </div>
+            <div id="error-message" class="hidden mt-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center font-medium"></div>
+        </div>
+
+        <!-- SEO Article Section -->
+        <article class="max-w-4xl mx-auto p-6 md:p-8 mt-12 bg-white rounded-xl shadow-lg prose lg:prose-xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold">The Definitive Guide to PDF Repair: Fixing the Unfixable</h2>
+            <p>
+                We've all been there. You have an important contract, a critical report, or a precious scanned memory in a PDF file. You double-click to open it, only to be met with a soul-crushing error message: "The file is damaged and could not be repaired," or "There was an error opening this document." This moment of digital dread is surprisingly common. But don't despair—in many cases, your file isn't lost forever. With the right approach and a powerful **PDF repair tool**, you can often fix the corrupted file and recover your valuable data.
+            </p>
+
+            <h3 class="text-2xl font-semibold">Why Do PDF Files Get Corrupted?</h3>
+            <p>
+                Understanding the cause can help in preventing future issues. A PDF file is a complex structure of objects, cross-reference tables, and streams. If any part of this structure is damaged, the entire file can become unreadable. Common culprits include:
+            </p>
+            <ul>
+                <li><strong>Incomplete Downloads:</strong> If your internet connection drops while downloading a PDF, the file may be incomplete and thus corrupted.</li>
+                <li><strong>Hard Drive or Storage Errors:</strong> Bad sectors on a hard drive or issues with a USB flash drive can corrupt parts of a file stored on it.</li>
+                <li><strong>Improper File Transfer:</strong> Errors during copying or moving a file, especially over a network, can introduce corruption.</li>
+                <li><strong>Software Crashes:</strong> If the software creating or editing the PDF (like Adobe Acrobat or your browser) crashes during a save operation, the file can be left in an inconsistent, damaged state.</li>
+                <li><strong>Virus or Malware Attacks:</strong> Malicious software can sometimes target and damage files on your system, including PDFs.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold">How Our Online PDF Repair Tool Works: The "Rebuilding" Method</h3>
+            <p>
+                A truly **damaged PDF file** often has a broken internal map (the cross-reference table or "xref"). PDF readers rely on this map to find where pages, images, and text are located. If the map is broken, the reader gets lost.
+            </p>
+            <p>
+                Our **free PDF repair tool** uses an intelligent "rebuilding" technique. Instead of trying to patch the broken map, it does something smarter:
+            </p>
+            <ol>
+                <li><strong>It Scans the File:</strong> The tool meticulously scans the entire file, ignoring the broken map, and looks for recognizable pieces of data—like complete pages, images, and text blocks.</li>
+                <li><strong>It Salvages the Content:</strong> It carefully extracts every intact page it can find, preserving the original content and layout.</li>
+                <li><strong>It Builds a New, Clean PDF:</strong> The tool then creates a brand new, perfectly structured, error-free PDF document from scratch.</li>
+                <li><strong>It Inserts the Salvaged Content:</strong> Finally, it places all the recovered pages into this new, clean file.</li>
+            </ol>
+            <blockquote>
+                <p>This process effectively discards the corrupted structure of the old file and wraps your valuable content in a new, perfectly working structure. This is why it's so effective at fixing a wide range of common PDF errors.</p>
+            </blockquote>
+
+            <h3 class="text-2xl font-semibold">Your Security is Our Priority: A 100% Client-Side Solution</h3>
+            <p>
+                When you need to **repair a PDF online**, the biggest concern is often privacy. What happens to your confidential file? Many online services require you to upload your document to their servers, where you lose control over it.
+            </p>
+            <p>
+                We've eliminated this risk. Our tool uses cutting-edge JavaScript libraries (`pdf-lib.js` and `pdf.js`) that run entirely within your web browser. This means your file is opened, repaired, and saved directly on your computer. **Your sensitive data never leaves your device**, guaranteeing complete confidentiality and security.
+            </p>
+
+            <h3 class="text-2xl font-semibold">A Step-by-Step Guide to Fixing Your Damaged PDF</h3>
+            <p>
+                We've made the process incredibly simple. No technical knowledge is required.
+            </p>
+            <ul>
+                <li><strong>Step 1: Upload Your File:</strong> Drag and drop your corrupted PDF onto the designated area, or click to select it from your computer.</li>
+                <li><strong>Step 2: Let the Magic Happen:</strong> The repair process starts automatically. You'll see a live status as our tool scans, salvages, and rebuilds your file.</li>
+                <li><strong>Step 3: Preview and Download:</strong> Once complete, you'll see a success message, a preview of the first recovered page, and statistics on how many pages were saved. Click the "Download Repaired PDF" button to save your fixed file.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold">What Can and Can't Be Recovered? (Managing Expectations)</h3>
+            <p>
+                Our **PDF file repair** technique is powerful, but not magic. It's important to understand its capabilities:
+            </p>
+            <p>
+                <strong>What can usually be recovered:</strong>
+            </p>
+            <ul>
+                <li>Complete pages with their original text, images, and layout.</li>
+                <li>Vector graphics and shapes.</li>
+                <li>Basic document structure.</li>
+            </ul>
+            <p>
+                <strong>What might be lost:</strong>
+            </p>
+            <ul>
+                <li>Pages that are themselves severely damaged within the file's data stream.</li>
+                <li>Interactive form fields, comments, and annotations.</li>
+                <li>Advanced features like JavaScript or embedded 3D models.</li>
+                <li>Document metadata (like Author, Title, etc.), as a new file is created.</li>
+            </ul>
+            <p>
+                Essentially, the tool focuses on recovering the most important part: the visible content of your pages.
+            </p>
+
+            <h3 class="text-2xl font-semibold">Frequently Asked Questions (FAQ) about PDF Repair</h3>
+            <h4>Is this online PDF repair tool truly free?</h4>
+            <p>Yes, 100%. There are no hidden costs, subscriptions, or limitations. Our goal is to provide a valuable, accessible tool for everyone.</p>
+
+            <h4>My PDF is password-protected. Can you repair it?</h4>
+            <p>No. For security reasons, our tool cannot process encrypted or password-protected files. You must first remove the password using the original password before attempting a repair.</p>
+
+            <h4>What if the tool says my file cannot be repaired?</h4>
+            <p>This means the file is so severely corrupted that even our advanced scanning cannot find any salvageable page data. This can happen with files that are mostly empty (0 KB) or have been completely overwritten with garbage data.</p>
+            
+            <h4>How can I prevent my PDFs from getting corrupted in the future?</h4>
+            <p>Always ensure downloads are 100% complete. Use the "Safely Eject" option for USB drives. Maintain a good antivirus program, and regularly back up your important files to a separate location or cloud service.</p>
+
+            <h3>Conclusion: Breathe New Life into Your Damaged Files</h3>
+            <p>
+                A corrupted PDF doesn't have to be a dead end. With our free, secure, and powerful **online PDF repair tool**, you have an excellent chance of recovering your work and peace of mind. By intelligently rebuilding your file's structure around its salvageable content, we offer a robust solution to a frustrating problem. Bookmark this page, and the next time a PDF refuses to open, you'll know exactly where to turn.
+            </p>
+        </article>
+    </main>
+
+    <!-- Footer (Aapke existing code se) -->
+    <div class="bg-gray-200 mt-12">
+        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 text-center mx-auto">
+             <img style="height: 60px; margin: auto; margin-bottom: 20px; mix-blend-mode: multiply;" src="./One_Page-removebg-preview.png" alt="OnePageTools Footer Logo" />
+            <p class="text-gray-500 text-sm mb-10">OnePageTools.com provides a suite of free, secure, and powerful online tools to manage your documents. All processing is done client-side for maximum privacy.</p>
+            <div class="my-5">
+                <center>Copyright © 2024 OnePageTools.com <br> All Rights Reserved</center>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Libraries (Free & Client-Side) -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    
+    <script>
+        // PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.worker.min.js`;
+
+        // DOM Elements
+        const uploader = document.getElementById('uploader');
+        const fileInput = document.getElementById('fileInput');
+        const processing = document.getElementById('processing');
+        const statusEl = document.getElementById('status');
+        const progressBar = document.getElementById('progressBar');
+        const results = document.getElementById('results');
+        const recoveryStats = document.getElementById('recovery-stats');
+        const previewCanvas = document.getElementById('preview-canvas');
+        const downloadButton = document.getElementById('downloadButton');
+        const startOverButton = document.getElementById('startOverButton');
+        const errorMessage = document.getElementById('error-message');
+
+        // Event Listeners
+        uploader.addEventListener('click', () => fileInput.click());
+        uploader.addEventListener('dragover', (e) => { e.preventDefault(); uploader.classList.add('ondragover'); });
+        uploader.addEventListener('dragleave', () => uploader.classList.remove('ondragover'));
+        uploader.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploader.classList.remove('ondragover');
+            if (e.dataTransfer.files.length > 0) handleFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', (e) => {
+             if (e.target.files.length > 0) handleFile(e.target.files[0]);
+        });
+        
+        startOverButton.addEventListener('click', resetUI);
+
+        function handleFile(file) {
+            if (file && file.type === 'application/pdf') {
+                resetUI();
+                uploader.classList.add('hidden');
+                processing.classList.remove('hidden');
+                repairPDF(file);
+            } else {
+                showError('Please select a valid PDF file.');
+            }
+        }
+
+        async function repairPDF(file) {
+            try {
+                updateProgress(5, 'Reading file...');
+                const fileBuffer = await file.arrayBuffer();
+                
+                updateProgress(15, 'Loading document structure...');
+                // Load with pdf-lib. It has a robust parser.
+                const sourceDoc = await PDFLib.PDFDocument.load(fileBuffer, { 
+                    ignoreEncryption: true // Try to process even if encrypted, though it will likely fail on content.
+                });
+
+                const sourcePageCount = sourceDoc.getPageCount();
+                if(sourcePageCount === 0) {
+                     showError('This PDF file contains no pages that could be read.');
+                     return;
+                }
+                
+                updateProgress(30, 'Creating new, clean PDF...');
+                const newDoc = await PDFLib.PDFDocument.create();
+                
+                // Get page indices to copy
+                const pageIndices = Array.from({ length: sourcePageCount }, (_, i) => i);
+                
+                const copiedPages = await newDoc.copyPages(sourceDoc, pageIndices);
+                
+                let pagesAdded = 0;
+                for(let i=0; i < copiedPages.length; i++) {
+                    const page = copiedPages[i];
+                    try {
+                        newDoc.addPage(page);
+                        pagesAdded++;
+                    } catch (e) {
+                         console.warn(`Could not add page ${i+1}. It might be too corrupted.`);
+                    }
+                    const progress = 30 + (60 * ((i + 1) / copiedPages.length));
+                    updateProgress(progress, `Salvaging page ${i + 1} of ${copiedPages.length}...`);
+                }
+
+                if (pagesAdded === 0) {
+                     showError('No pages could be successfully recovered from this PDF.');
+                     return;
+                }
+                
+                updateProgress(95, 'Saving repaired file...');
+                const newPdfBytes = await newDoc.save();
+                const newPdfBlob = new Blob([newPdfBytes], { type: 'application/pdf' });
+                
+                displayResults(newPdfBlob, sourcePageCount, pagesAdded, file.name);
+
+            } catch (err) {
+                console.error('Repair failed:', err);
+                showError('Could not repair the PDF. The file may be too severely damaged or is password-protected.');
+            }
+        }
+
+        async function displayResults(pdfBlob, originalPages, recoveredPages, originalName) {
+            processing.classList.add('hidden');
+            results.classList.remove('hidden');
+
+            recoveryStats.textContent = `Successfully recovered ${recoveredPages} out of ${originalPages} pages.`;
+            
+            const downloadUrl = URL.createObjectURL(pdfBlob);
+            downloadButton.href = downloadUrl;
+            downloadButton.download = `${originalName.replace(/\.pdf$/i, '')}-repaired.pdf`;
+
+            // Render preview of the NEW PDF
+            try {
+                const doc = await pdfjsLib.getDocument(await pdfBlob.arrayBuffer()).promise;
+                const page = await doc.getPage(1);
+                const viewport = page.getViewport({ scale: 1.5 });
+                
+                const context = previewCanvas.getContext('2d');
+                previewCanvas.height = viewport.height;
+                previewCanvas.width = viewport.width;
+
+                await page.render({ canvasContext: context, viewport: viewport }).promise;
+            } catch (e) {
+                console.error("Could not render preview:", e);
+                // Hide canvas if preview fails
+                previewCanvas.style.display = 'none';
+            }
+        }
+        
+        function updateProgress(percent, status) {
+            progressBar.style.width = `${percent}%`;
+            statusEl.textContent = status;
+        }
+
+        function showError(message) {
+            processing.classList.add('hidden');
+            errorMessage.textContent = message;
+            errorMessage.classList.remove('hidden');
+            // Give a button to try again in error state
+            errorMessage.innerHTML += `<br><button onclick="resetUI()" class="mt-4 text-blue-600 hover:underline font-bold">Try another file</button>`;
+        }
+
+        function resetUI() {
+            fileInput.value = '';
+            uploader.classList.remove('hidden');
+            uploader.classList.remove('ondragover');
+            processing.classList.add('hidden');
+            results.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            if (downloadButton.href) {
+                URL.revokeObjectURL(downloadButton.href);
+            }
+            updateProgress(0, 'Initializing...');
+        }
+    </script>
+</body>
+</html>

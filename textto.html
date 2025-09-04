@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to PDF Converter Online - Free Tool to Convert Text to PDF</title>
+  <meta name="description" content="Convert text to PDF online for free with our advanced Text to PDF converter. Create professional PDF documents from text files or direct input with customizable formatting, fonts, and layouts.">
+  <meta name="keywords" content="Text to PDF converter, convert text to PDF online, free text to PDF tool, text to PDF creator, text to PDF free, text to PDF generator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PDF Converter Team">
+  <meta property="og:title" content="Text to PDF Converter Online - Free Tool">
+  <meta property="og:description" content="Easily convert text files or typed text to PDF documents with our free online tool. Customize fonts, page sizes, margins, and more for professional outputs.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Text+to+PDF+Converter">
+  <meta property="og:url" content="https://onepagetools.com/textto.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .loading-spinner { display: none; border: 4px solid #f3f3f3; border-top: 4px solid #4f46e5; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+    .gradient-bg { background: linear-gradient(135deg, #f3f4f6, #e0e7ff); }
+    textarea { resize: vertical; }
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="PDF Converter Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100">Image Compressor</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100">PDF to CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Excel</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100">PDF to PNG</a></li>
+                <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Word</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to XML</a></li>
+                <li><a href="./pdftozip.html" class="block px-4 py-2 hover:bg-gray-100">PDF to ZIP</a></li>
+                <li><a href="./pdftowebp.html" class="block px-4 py-2 hover:bg-gray-100">PDF to WEBP</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Text</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100">CSV to PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100">Excel to PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100">HTML to PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100">JPG to PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100">JSON to PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100">PNG to PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100">Speech to PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100">Text to PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100">WEBP to PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100">XML to PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-20">
+    <div class="container max-w-4xl p-6 bg-white rounded-lg shadow-lg fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">Text to PDF Converter</h1>
+      <p class="text-center text-gray-600 mb-6">Convert text files or typed text into professional PDF documents with customizable fonts, page sizes, margins, and formatting. Perfect for reports, notes, and documentation.</p>
+
+      <!-- Input Options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Text Input</h3>
+          <div class="space-y-4">
+            <div>
+              <label for="fileInput" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale cursor-pointer inline-block">Upload Text File (.txt)</label>
+              <input type="file" id="fileInput" accept=".txt" style="display: none;" aria-label="Upload text file">
+            </div>
+            <div>
+              <label for="textInput" class="block text-sm font-medium text-gray-700 mb-2">Or Type/Paste Text</label>
+              <textarea id="textInput" class="w-full p-4 border rounded-xl min-h-[200px] focus:ring-2 focus:ring-indigo-600" placeholder="Enter your text here..." aria-label="Text input for PDF conversion"></textarea>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="formatText('bold')" class="py-2 px-4 bg-gray-200 rounded-lg hover:bg-gray-300">Bold</button>
+              <button onclick="formatText('italic')" class="py-2 px-4 bg-gray-200 rounded-lg hover:bg-gray-300">Italic</button>
+              <button onclick="formatText('underline')" class="py-2 px-4 bg-gray-200 rounded-lg hover:bg-gray-300">Underline</button>
+              <button onclick="formatText('bullet')" class="py-2 px-4 bg-gray-200 rounded-lg hover:bg-gray-300">Bullet</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">PDF Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Page Size</label>
+              <select id="pageSize" class="w-full p-2 border rounded-lg">
+                <option value="A4">A4</option>
+                <option value="Letter">Letter</option>
+                <option value="Legal">Legal</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Orientation</label>
+              <select id="orientation" class="w-full p-2 border rounded-lg">
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Font</label>
+              <select id="font" class="w-full p-2 border rounded-lg">
+                <option value="Helvetica">Helvetica</option>
+                <option value="TimesRoman">Times</option>
+                <option value="Courier">Courier</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Font Size</label>
+              <input type="number" id="fontSize" class="w-full p-2 border rounded-lg" min="8" max="72" value="12">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Margin (mm)</label>
+              <input type="number" id="margin" class="w-full p-2 border rounded-lg" min="0" max="50" value="10">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Line Spacing</label>
+              <input type="number" id="lineSpacing" class="w-full p-2 border rounded-lg" min="1" max="3" step="0.1" value="1.2">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Text Color</label>
+              <input type="color" id="textColor" class="w-full p-1 border rounded-lg" value="#000000">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Page Background Color</label>
+              <input type="color" id="bgColor" class="w-full p-1 border rounded-lg" value="#FFFFFF">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">PDF Title</label>
+              <input type="text" id="pdfTitle" class="w-full p-2 border rounded-lg" placeholder="Document Title">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Author</label>
+              <input type="text" id="author" class="w-full p-2 border rounded-lg" placeholder="Author Name">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview and Actions -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-3">Preview</h3>
+        <div id="preview" class="w-full p-4 border rounded-xl min-h-[200px] bg-gray-50"></div>
+      </div>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="generatePDF()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale flex items-center gap-2" id="convertButton">
+          <span id="convertText">Download PDF</span>
+          <span id="loadingSpinner" class="loading-spinner"></span>
+        </button>
+        <button onclick="downloadText()" class="py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale">Download Text</button>
+        <button onclick="copyToClipboard()" class="py-3 px-5 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 btn hover-scale">Copy to Clipboard</button>
+        <button onclick="resetAll()" class="py-3 px-5 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn hover-scale">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using a Text to PDF Converter Online</h2>
+    <p>Converting text to PDF is a powerful way to create professional, shareable documents from text files or direct input. A <strong>Text to PDF converter</strong> transforms plain text into polished PDF files, ideal for reports, notes, contracts, or personal documentation. Our <a href="#convertButton">free Text to PDF tool</a> offers a fast, user-friendly solution to <strong>convert text to PDF online</strong>. This comprehensive guide explores the benefits of using a <strong>Text to PDF converter online</strong>, how to use it effectively, and tips to optimize your PDF creation for various purposes.</p>
+
+    <h3>Why Use a Text to PDF Converter?</h3>
+    <p>Converting text to PDF offers numerous advantages for individuals and professionals. Here’s why you should use a <strong>free Text to PDF tool</strong>:</p>
+    <ul>
+      <li><strong>Efficiency</strong>: Quickly transform text files or typed text into PDFs, saving time over manual formatting.</li>
+      <li><strong>Professional Documentation</strong>: Create polished PDFs for reports, presentations, or contracts.</li>
+      <li><strong>Universal Compatibility</strong>: PDFs are accessible on any device, ensuring consistent formatting.</li>
+      <li><strong>No Software Installation</strong>: Our <strong>Text to PDF converter online</strong> works in your browser, requiring no downloads.</li>
+      <li><strong>Customizable Outputs</strong>: Adjust fonts, page sizes, margins, colors, and formatting for tailored documents.</li>
+      <li><strong>Accessibility</strong>: Ideal for users who need accessible tools for document creation.</li>
+    </ul>
+    <p>By using our <strong>Text to PDF converter</strong>, you can streamline document creation and enhance productivity.</p>
+
+    <h3>How to Use Our Free Text to PDF Converter</h3>
+    <p>Our <strong>Text to PDF tool</strong> is designed for simplicity and flexibility. Follow these steps to <strong>convert text to PDF online</strong>:</p>
+    <ol>
+      <li><strong>Input Text</strong>: Upload a .txt file or type/paste text directly into the textarea.</li>
+      <li><strong>Format Text</strong>: Apply bold, italic, underline, or bullet points to enhance readability.</li>
+      <li><strong>Configure PDF Settings</strong>: Choose page size, orientation, font, font size, margins, line spacing, colors, and metadata (title, author).</li>
+      <li><strong>Preview Content</strong>: Review the formatted text in the preview section.</li>
+      <li><strong>Download or Export</strong>: Click “Download PDF” to generate a PDF, “Download Text” for a .txt file, or “Copy to Clipboard” to copy the text.</li>
+      <li><strong>Reset as Needed</strong>: Use the “Reset” button to clear inputs and settings.</li>
+    </ol>
+    <p>With these steps, you can <strong>convert text to PDF free</strong> in minutes, making our tool a top choice for <strong>Text to PDF creation</strong>.</p>
+
+    <h3>Who Benefits from a Text to PDF Converter?</h3>
+    <p>Our <strong>Text to PDF converter online</strong> serves a wide range of users:</p>
+    <ul>
+      <li><strong>Students</strong>: Create PDF study notes or assignments from text drafts.</li>
+      <li><strong>Professionals</strong>: Generate reports, proposals, or contracts in PDF format.</li>
+      <li><strong>Writers</strong>: Convert manuscripts or drafts to PDFs for sharing or publishing.</li>
+      <li><strong>Administrators</strong>: Produce official documents like memos or forms from text.</li>
+      <li><strong>Individuals with Disabilities</strong>: Use accessible text input for document creation.</li>
+      <li><strong>Educators</strong>: Create PDF handouts or lesson plans from text content.</li>
+    </ul>
+    <p>Our <strong>free Text to PDF tool</strong> simplifies documentation for all users, regardless of technical expertise.</p>
+
+    <h3>Key Features of Our Text to PDF Converter</h3>
+    <p>Our <strong>Text to PDF converter online</strong> offers robust features to meet diverse needs:</p>
+    <ul>
+      <li><strong>Dual Input Modes</strong>: Upload text files or type/paste text directly.</li>
+      <li><strong>Text Formatting</strong>: Apply bold, italic, underline, or bullet points for professional documents.</li>
+      <li><strong>Customizable PDFs</strong>: Adjust page size, orientation, font, font size, margins, line spacing, colors, and metadata.</li>
+      <li><strong>Export Options</strong>: Download as PDF or text, or copy to clipboard for flexibility.</li>
+      <li><strong>Auto-Save</strong>: Save text and settings locally to prevent data loss.</li>
+      <li><strong>Preview Mode</strong>: View formatted text before generating the PDF.</li>
+      <li><strong>Accessibility</strong>: ARIA labels and keyboard navigation for inclusive use.</li>
+      <li><strong>Secure Processing</strong>: All processing is done in the browser for data privacy.</li>
+    </ul>
+    <p>These features make our tool ideal for anyone looking to <strong>convert text to PDF online</strong> efficiently.</p>
+
+    <h3>Tips for Optimizing Text to PDF Conversion</h3>
+    <p>To maximize the effectiveness of our <strong>Text to PDF converter</strong>, consider these tips:</p>
+    <ul>
+      <li><strong>Format Text Carefully</strong>: Use bold or bullets to organize content for readability.</li>
+      <li><strong>Choose Readable Fonts</strong>: Select fonts like Helvetica for clarity and professionalism.</li>
+      <li><strong>Adjust Margins</strong>: Use appropriate margins (e.g., 10mm) for a balanced layout.</li>
+      <li><strong>Test Colors</strong>: Ensure text and background colors have sufficient contrast for readability.</li>
+      <li><strong>Preview Before Downloading</strong>: Check the preview to confirm formatting and content.</li>
+      <li><strong>Use Metadata</strong>: Add a title and author for professional documentation.</li>
+      <li><strong>Combine with Other Tools</strong>: Use our <a href="./pdftotext.html">PDF to Text</a> converter for reverse conversions.</li>
+    </ul>
+
+    <h3>Why PDF is Ideal for Text Conversion</h3>
+    <p>PDF is a versatile format for presenting text content. Here’s why it’s ideal:</p>
+    <ul>
+      <li><strong>Universal Compatibility</strong>: PDFs can be opened on any device or platform.</li>
+      <li><strong>Fixed Formatting</strong>: Maintains text formatting across devices.</li>
+      <li><strong>Professional Appearance</strong>: PDFs look polished for reports or documentation.</li>
+      <li><strong>Security</strong>: PDFs are less editable, protecting content integrity.</li>
+      <li><strong>Archival Quality</strong>: PDFs are suitable for long-term document storage.</li>
+    </ul>
+    <p>Our <strong>Text to PDF converter online</strong> leverages PDF’s strengths to deliver high-quality documents.</p>
+
+    <h3>Comparing Text to PDF Converters</h3>
+    <p>Not all <strong>Text to PDF converters</strong> offer the same functionality. Here’s how our tool stands out:</p>
+    <ul>
+      <li><strong>Free Access</strong>: No subscriptions or hidden fees, unlike some premium tools.</li>
+      <li><strong>Browser-Based</strong>: No software installation required, unlike desktop applications.</li>
+      <li><strong>Formatting Options</strong>: Support for bold, italic, underline, and bullets, unlike basic converters.</li>
+      <li><strong>Customizable Output</strong>: Options for fonts, page sizes, margins, colors, and metadata provide flexibility.</li>
+      <li><strong>Preview Feature</strong>: Preview content before downloading, unlike many tools.</li>
+      <li><strong>User-Friendly Interface</strong>: Intuitive design with real-time feedback and controls.</li>
+      <li><strong>Secure Processing</strong>: Local browser processing ensures data privacy.</li>
+    </ul>
+    <p>Our <strong>free Text to PDF tool</strong> offers a balance of functionality, ease of use, and performance, making it ideal for all users.</p>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Here are answers to common questions about using a <strong>Text to PDF converter online</strong>:</p>
+    <h4>1. Is the Text to PDF converter free?</h4>
+    <p>Yes, our <strong>Text to PDF free</strong> tool has no subscriptions or hidden costs.</p>
+    <h4>2. Can I upload files other than .txt?</h4>
+    <p>Currently, only .txt files are supported to ensure compatibility.</p>
+    <h4>3. Can I format the text?</h4>
+    <p>Yes, you can apply bold, italic, underline, or bullet points to the text.</p>
+    <h4>4. Does it support large text inputs?</h4>
+    <p>Yes, the tool automatically adds pages for large text inputs.</p>
+    <h4>5. Is my data secure?</h4>
+    <p>All processing is done in your browser, ensuring your data remains private.</p>
+    <h4>6. What if I need a different format?</h4>
+    <p>Try our <a href="./pdftotext.html">PDF to Text</a> or <a href="./speechto.html">Speech to PDF</a> converters for alternative conversions.</p>
+
+    <h3>Advanced Use Cases for Text to PDF Conversion</h3>
+    <p>Our <strong>Text to PDF converter</strong> supports a variety of advanced scenarios:</p>
+    <ul>
+      <li><strong>Business Reports</strong>: Convert meeting notes or data summaries to PDFs for professional sharing.</li>
+      <li><strong>Academic Notes</strong>: Create PDF study guides or lecture notes from text drafts.</li>
+      <li><strong>Legal Documents</strong>: Generate contracts or agreements in PDF format from text.</li>
+      <li><strong>Creative Writing</strong>: Export stories or scripts as PDFs for publishing or review.</li>
+      <li><strong>Accessibility</strong>: Assist users with disabilities in creating formatted documents.</li>
+    </ul>
+
+    <h3>How Text to PDF Conversion Enhances Productivity</h3>
+    <p>Productivity is a priority for professionals handling documentation. Our <strong>Text to PDF converter online</strong> boosts efficiency by:</p>
+    <ul>
+      <li>Automating text-to-PDF conversion for quick document creation.</li>
+      <li>Enabling text formatting for polished outputs.</li>
+      <li>Providing customizable PDF settings for specific needs.</li>
+      <li>Offering multiple export options for flexibility.</li>
+      <li>Supporting auto-save to prevent data loss.</li>
+    </ul>
+    <p>With our tool, you can focus on content creation rather than manual formatting.</p>
+
+    <h3>Best Practices for Text to PDF Conversion</h3>
+    <p>To achieve optimal results, follow these best practices:</p>
+    <ul>
+      <li><strong>Use Clean Text</strong>: Ensure text files are free of unwanted characters or encoding issues.</li>
+      <li><strong>Organize Content</strong>: Use formatting to structure content for clarity.</li>
+      <li><strong>Choose Appropriate Settings</strong>: Select page sizes and fonts that suit your document’s purpose.</li>
+      <li><strong>Preview Content</strong>: Always check the preview to ensure accuracy.</li>
+      <li><strong>Save Regularly</strong>: Rely on auto-save to preserve your work.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>Converting text to PDFs has never been easier. With our <strong>Text to PDF converter online</strong>, you can <strong>convert text to PDF free</strong>, customize your output, and create professional documents for any purpose. Whether you’re a student, professional, or creative, our <strong>free Text to PDF tool</strong> offers the features and flexibility you need. Try it now and transform your text into polished PDFs!</p>
+    <p><a href="https://onepagetools.com/textto.html" class="text-indigo-600 hover:underline">Start converting your text to PDFs today</a> and streamline your documentation workflow.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script>
+    let textContent = '';
+
+    // File upload handler
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      if (!file.name.endsWith('.txt')) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid File',
+          text: 'Please upload a .txt file.',
+        });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        textContent = e.target.result;
+        document.getElementById('textInput').value = textContent;
+        updatePreview();
+        saveProgress();
+      };
+      reader.readAsText(file);
+    });
+
+    // Text input handler
+    document.getElementById('textInput').addEventListener('input', function() {
+      textContent = this.value;
+      updatePreview();
+      saveProgress();
+    });
+
+    // Format text
+    function formatText(type) {
+      const textarea = document.getElementById('textInput');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const selectedText = textarea.value.substring(start, end);
+      let newText = '';
+
+      if (type === 'bold') {
+        newText = `**${selectedText}**`;
+      } else if (type === 'italic') {
+        newText = `*${selectedText}*`;
+      } else if (type === 'underline') {
+        newText = `__${selectedText}__`;
+      } else if (type === 'bullet') {
+        newText = `- ${selectedText}`;
+      }
+
+      textarea.value = textarea.value.substring(0, start) + newText + textarea.value.substring(end);
+      textContent = textarea.value;
+      updatePreview();
+      saveProgress();
+    }
+
+    // Update preview
+    function updatePreview() {
+      const preview = document.getElementById('preview');
+      let html = textContent.replace(/\n/g, '<br>');
+      html = html.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+      html = html.replace(/\*(.*?)\*/g, '<i>$1</i>');
+      html = html.replace(/__(.*?)__/g, '<u>$1</u>');
+      html = html.replace(/^- (.*)$/gm, '• $1');
+      preview.innerHTML = html;
+    }
+
+    // Generate PDF
+    async function generatePDF() {
+      if (!textContent.trim()) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Text',
+          text: 'Please upload a text file or enter text to convert.',
+        });
+        return;
+      }
+
+      const convertButton = document.getElementById('convertButton');
+      const convertText = document.getElementById('convertText');
+      const loadingSpinner = document.getElementById('loadingSpinner');
+      convertButton.disabled = true;
+      convertText.textContent = 'Generating PDF...';
+      loadingSpinner.style.display = 'inline-block';
+
+      try {
+        const pdfDoc = await PDFLib.PDFDocument.create();
+        const font = await pdfDoc.embedFont(PDFLib.StandardFonts[document.getElementById('font').value]);
+        const fontSize = parseInt(document.getElementById('fontSize').value);
+        const margin = parseInt(document.getElementById('margin').value);
+        const lineSpacing = parseFloat(document.getElementById('lineSpacing').value);
+        const textColor = hexToRgb(document.getElementById('textColor').value);
+        const bgColor = hexToRgb(document.getElementById('bgColor').value);
+        const pageSize = document.getElementById('pageSize').value.toUpperCase();
+        const orientation = document.getElementById('orientation').value;
+        const pdfTitle = document.getElementById('pdfTitle').value || 'Document';
+        const author = document.getElementById('author').value || 'Text to PDF Converter';
+
+        const pageDimensions = PDFLib.PageSizes[pageSize];
+        const page = pdfDoc.addPage(pageDimensions);
+        const { width, height } = page.getSize();
+        let y = height - margin;
+        const lineHeight = fontSize * lineSpacing;
+
+        page.setFont(font);
+        page.setFontSize(fontSize);
+        page.setFontColor(PDFLib.rgb(textColor.r / 255, textColor.g / 255, textColor.b / 255));
+        page.drawRectangle({
+          x: 0,
+          y: 0,
+          width: width,
+          height: height,
+          color: PDFLib.rgb(bgColor.r / 255, bgColor.g / 255, bgColor.b / 255),
+        });
+
+        const lines = textContent.split('\n');
+        lines.forEach(line => {
+          let formattedLine = line;
+          let isBold = false;
+          let isItalic = false;
+          let isUnderline = false;
+
+          if (line.startsWith('- ')) {
+            formattedLine = `• ${line.substring(2)}`;
+          }
+          if (line.match(/\*\*.*\*\*/)) {
+            isBold = true;
+            formattedLine = formattedLine.replace(/\*\*(.*?)\*\*/g, '$1');
+          }
+          if (line.match(/\*.*\*/)) {
+            isItalic = true;
+            formattedLine = formattedLine.replace(/\*(.*?)\*/g, '$1');
+          }
+          if (line.match(/__.*__/)) {
+            isUnderline = true;
+            formattedLine = formattedLine.replace(/__(.*?)__/g, '$1');
+          }
+
+          if (y - lineHeight < margin) {
+            page.addPage(pageDimensions);
+            y = height - margin;
+            page.setFont(font);
+            page.setFontSize(fontSize);
+            page.setFontColor(PDFLib.rgb(textColor.r / 255, textColor.g / 255, textColor.b / 255));
+            page.drawRectangle({
+              x: 0,
+              y: 0,
+              width: width,
+              height: height,
+              color: PDFLib.rgb(bgColor.r / 255, bgColor.g / 255, bgColor.b / 255),
+            });
+          }
+
+          page.drawText(formattedLine, {
+            x: margin,
+            y: y,
+            size: fontSize,
+            font: font,
+            color: PDFLib.rgb(textColor.r / 255, textColor.g / 255, textColor.b / 255),
+          });
+
+          if (isUnderline) {
+            const textWidth = font.widthOfTextAtSize(formattedLine, fontSize);
+            page.drawLine({
+              start: { x: margin, y: y - 1 },
+              end: { x: margin + textWidth, y: y - 1 },
+              thickness: 1,
+              color: PDFLib.rgb(textColor.r / 255, textColor.g / 255, textColor.b / 255),
+            });
+          }
+
+          y -= lineHeight;
+        });
+
+        pdfDoc.setTitle(pdfTitle);
+        pdfDoc.setAuthor(author);
+        pdfDoc.setSubject('Text to PDF Document');
+        pdfDoc.setKeywords(['text to pdf', 'converter', 'online']);
+
+        const pdfBytes = await pdfDoc.save();
+        download(pdfBytes, `${pdfTitle || 'converted'}.pdf`, 'application/pdf');
+        Swal.fire({
+          icon: 'success',
+          title: 'PDF Generated',
+          text: 'Your PDF has been downloaded successfully.',
+        });
+      } catch (error) {
+        console.error('PDF generation error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Generation Failed',
+          text: 'An error occurred while generating the PDF. Please try again.',
+        });
+      } finally {
+        convertButton.disabled = false;
+        convertText.textContent = 'Download PDF';
+        loadingSpinner.style.display = 'none';
+      }
+    }
+
+    // Download text
+    function downloadText() {
+      if (!textContent.trim()) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Text',
+          text: 'Please upload a text file or enter text to download.',
+        });
+        return;
+      }
+      const blob = new Blob([textContent], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'text.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      Swal.fire({
+        icon: 'success',
+        title: 'Text Downloaded',
+        text: 'Your text file has been downloaded successfully.',
+      });
+    }
+
+    // Copy to clipboard
+    function copyToClipboard() {
+      if (!textContent.trim()) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Text',
+          text: 'Please upload a text file or enter text to copy.',
+        });
+        return;
+      }
+      navigator.clipboard.writeText(textContent).then(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Copied',
+          text: 'Text copied to clipboard!',
+        });
+      }).catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Copy Failed',
+          text: 'Failed to copy text to clipboard.',
+        });
+      });
+    }
+
+    // Reset all
+    function resetAll() {
+      textContent = '';
+      document.getElementById('textInput').value = '';
+      document.getElementById('fileInput').value = '';
+      document.getElementById('preview').innerHTML = '';
+      document.getElementById('pageSize').value = 'A4';
+      document.getElementById('orientation').value = 'portrait';
+      document.getElementById('font').value = 'Helvetica';
+      document.getElementById('fontSize').value = '12';
+      document.getElementById('margin').value = '10';
+      document.getElementById('lineSpacing').value = '1.2';
+      document.getElementById('textColor').value = '#000000';
+      document.getElementById('bgColor').value = '#FFFFFF';
+      document.getElementById('pdfTitle').value = '';
+      document.getElementById('author').value = '';
+      localStorage.removeItem('textToPDFContent');
+      localStorage.removeItem('textToPDFSettings');
+      Swal.fire({
+        icon: 'info',
+        title: 'Reset',
+        text: 'All inputs and settings have been reset.',
+      });
+    }
+
+    // Save progress
+    function saveProgress() {
+      textContent = document.getElementById('textInput').value;
+      const settings = {
+        pageSize: document.getElementById('pageSize').value,
+        orientation: document.getElementById('orientation').value,
+        font: document.getElementById('font').value,
+        fontSize: document.getElementById('fontSize').value,
+        margin: document.getElementById('margin').value,
+        lineSpacing: document.getElementById('lineSpacing').value,
+        textColor: document.getElementById('textColor').value,
+        bgColor: document.getElementById('bgColor').value,
+        pdfTitle: document.getElementById('pdfTitle').value,
+        author: document.getElementById('author').value,
+      };
+      localStorage.setItem('textToPDFContent', textContent);
+      localStorage.setItem('textToPDFSettings', JSON.stringify(settings));
+    }
+
+    // Load progress
+    function loadProgress() {
+      const savedContent = localStorage.getItem('textToPDFContent');
+      const savedSettings = localStorage.getItem('textToPDFSettings');
+      if (savedContent) {
+        textContent = savedContent;
+        document.getElementById('textInput').value = savedContent;
+        updatePreview();
+      }
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.getElementById('pageSize').value = settings.pageSize || 'A4';
+        document.getElementById('orientation').value = settings.orientation || 'portrait';
+        document.getElementById('font').value = settings.font || 'Helvetica';
+        document.getElementById('fontSize').value = settings.fontSize || '12';
+        document.getElementById('margin').value = settings.margin || '10';
+        document.getElementById('lineSpacing').value = settings.lineSpacing || '1.2';
+        document.getElementById('textColor').value = settings.textColor || '#000000';
+        document.getElementById('bgColor').value = settings.bgColor || '#FFFFFF';
+        document.getElementById('pdfTitle').value = settings.pdfTitle || '';
+        document.getElementById('author').value = settings.author || '';
+      }
+    }
+
+    // Hex to RGB
+    function hexToRgb(hex) {
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      return { r, g, b };
+    }
+
+    // Download function
+    function download(data, filename, type) {
+      const blob = new Blob([data], { type: type });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+    }
+
+    // Initialize on load
+    window.onload = loadProgress;
+  </script>
+</body>
+</html>

@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Free PDF to PPT Converter - Convert PDF to PowerPoint Online">
+    <meta name="description" content="Convert PDF to PPT online with our free PDF to PowerPoint converter. Fast, secure, and 100% client-side with text extraction, page reordering, and customizable slides.">
+    <meta name="keywords" content="convert PDF to PPT, PDF to PPT online, free PDF to PPT converter, PDF to PowerPoint converter, online PDF to PPT tool, convert PDF to PowerPoint, best free PDF to PPT tool, how to turn PDF into PowerPoint, export PDF as PPT, convert PDF to PPTX">
+    <title>Free PDF to PPT Converter - Convert PDF to PowerPoint Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F8FAFC;
+            color: #1A202C;
+            line-height: 1.6;
+        }
+
+        /* Navigation Header */
+        nav {
+            background: #1E88E5;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInNav 0.6s ease-out forwards;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 400;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #42A5F5;
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #42A5F5;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 220px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #1E88E5;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .hamburger span {
+            background: white;
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+
+        #nav-toggle {
+            display: none;
+        }
+
+        #nav-toggle:checked ~ .nav-menu {
+            display: flex;
+        }
+
+        #nav-toggle:checked ~ .hamburger span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+
+        #nav-toggle:checked ~ .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #nav-toggle:checked ~ .hamburger span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 8px;
+        }
+
+        /* Main Header */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1E88E5, #42A5F5);
+            color: white;
+            border-radius: 12px;
+            margin: 30px 0 40px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInHeader 1s ease-out forwards;
+        }
+
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0;
+            animation: slideUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        header p {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin: 0;
+            max-width: 700px;
+            animation: slideUp 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        header .header-icon {
+            width: 70px;
+            height: 70px;
+            background: url('https://via.placeholder.com/70?text=📄') center/cover no-repeat;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: parallaxIcon 1.2s ease-out forwards;
+            transition: transform 0.3s ease;
+        }
+
+        header .header-icon:hover {
+            transform: scale(1.15);
+        }
+
+        /* Converter Section */
+        .converter {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .converter h2 {
+            font-size: 2em;
+            font-weight: 500;
+            color: #1A202C;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .drop-zone {
+            border: 2px dashed #90CAF9;
+            border-radius: 10px;
+            padding: 50px;
+            text-align: center;
+            cursor: pointer;
+            background: #F8FAFC;
+            transition: all 0.3s ease;
+            animation: fadeInSection 0.8s ease-out forwards;
+        }
+
+        .drop-zone:hover,
+        .drop-zone.dragover {
+            border-color: #1E88E5;
+            background: #E3F2FD;
+            transform: scale(1.02);
+        }
+
+        .drop-zone p {
+            font-size: 1.1em;
+            color: #4A5568;
+        }
+
+        .settings {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInSection 0.8s ease-out forwards;
+        }
+
+        .settings label {
+            font-weight: 500;
+            color: #1A202C;
+            margin-right: 10px;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            border: 1px solid #CBD5E0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: #1E88E5;
+            outline: none;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #1E88E5;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        button {
+            background: linear-gradient(135deg, #1E88E5, #42A5F5);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        button:disabled {
+            background: #CBD5E0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .thumbnail {
+            position: relative;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            cursor: move;
+            opacity: 0;
+            animation: fadeInThumbnail 0.6s ease-out forwards;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .thumbnail-checkbox {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            accent-color: #1E88E5;
+        }
+
+        .thumbnail p {
+            font-size: 0.9em;
+            color: #4A5568;
+            text-align: center;
+            padding: 8px;
+            margin: 0;
+        }
+
+        .progress {
+            height: 24px;
+            background: #E2E8F0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+            display: none;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #1E88E5;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #1A202C;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .file-info, .error, .status {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 1em;
+        }
+
+        .file-info {
+            color: #4A5568;
+        }
+
+        .error {
+            color: #E53E3E;
+        }
+
+        .status {
+            color: #38A169;
+        }
+
+        /* Article Section */
+        .article {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .article.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article h2 {
+            font-size: 2em;
+            font-weight: 500;
+            color: #1A202C;
+            margin-bottom: 20px;
+        }
+
+        .article h3 {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #1A202C;
+            margin: 20px 0 15px;
+        }
+
+        .article p {
+            font-size: 1em;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .article ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .article ul li {
+            margin-bottom: 10px;
+            color: #4A5568;
+        }
+
+        .faq {
+            margin-top: 30px;
+        }
+
+        .faq details {
+            margin-bottom: 15px;
+            background: #F8FAFC;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq details:hover {
+            transform: translateY(-2px);
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: #1A202C;
+            font-size: 1.1em;
+        }
+
+        .faq p {
+            margin-top: 10px;
+            color: #4A5568;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1A202C;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            white-space: nowrap;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeInTooltip 0.3s ease forwards;
+        }
+
+        /* Animations */
+        @keyframes slideInNav {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInHeader {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes parallaxIcon {
+            from { opacity: 0; transform: translateY(50px) scale(0.8); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes fadeInSection {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInThumbnail {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInTooltip {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            nav, header, header h1, header p, header .header-icon,
+            .drop-zone, .settings, .thumbnail, .article, .dropdown-menu,
+            button, .faq details, .tooltip:hover::after {
+                animation: none;
+                transition: none;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1E88E5;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                transform: none;
+                opacity: 1;
+                display: none;
+                background: #42A5F5;
+                border-radius: 8px;
+            }
+
+            .dropdown:hover .dropdown-menu,
+            .dropdown:focus-within .dropdown-menu {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            header {
+                padding: 50px 15px;
+                margin: 20px 0 30px;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+                max-width: 90%;
+            }
+
+            header .header-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .converter {
+                padding: 20px;
+            }
+
+            .converter h2 {
+                font-size: 1.6em;
+            }
+
+            .drop-zone {
+                padding: 30px;
+            }
+
+            .thumbnails {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .settings {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+
+            .article {
+                padding: 20px;
+            }
+
+            .article h2 {
+                font-size: 1.6em;
+            }
+
+            .article h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">PDF Converter</a>
+            <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation menu">
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">PDF Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pdf-to-word">PDF to Word</a></li>
+                        <li><a href="/pdf-to-excel">PDF to Excel</a></li>
+                        <li><a href="/pdf-compressor">PDF Compressor</a></li>
+                        <li><a href="/pdf-merger">PDF Merger</a></li>
+                        <li><a href="/pdf-splitter">PDF Splitter</a></li>
+                        <li><a href="/pdf-editor">PDF Editor</a></li>
+                        <li><a href="/pdf-to-image">PDF to Image</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-icon" aria-label="PDF to PPT Converter Icon"></div>
+            <h1>Free PDF to PPT Converter</h1>
+            <p>Convert PDF to PowerPoint Online - Fast, Secure, and Free</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="converter">
+            <h2>Convert PDF to PPT Online</h2>
+            <div class="drop-zone" id="dropZone">
+                <p>Drag & drop PDF file(s) here or click to upload</p>
+                <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+            </div>
+            <div class="file-info" id="fileInfo"></div>
+            <div class="error" id="error"></div>
+            <div class="status" id="status"></div>
+            <div class="progress" id="progress">
+                <div class="progress-bar" id="progressBar"></div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+
+            <div class="settings">
+                <div>
+                    <label for="pageRange">Page Range (e.g., 1-5,7,9-10):</label>
+                    <input type="text" id="pageRange" placeholder="e.g., 1-5,7,9-10" data-tooltip="Enter page ranges or individual pages">
+                </div>
+                <div>
+                    <label for="slideSize">Slide Size:</label>
+                    <select id="slideSize" data-tooltip="Choose slide aspect ratio">
+                        <option value="4:3">Standard (4:3)</option>
+                        <option value="16:9">Widescreen (16:9)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="imageQuality">Image Quality:</label>
+                    <select id="imageQuality" data-tooltip="Higher quality increases file size">
+                        <option value="0.5">Low</option>
+                        <option value="1.0" selected>Medium</option>
+                        <option value="1.5">High</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="includeText">Include Text:</label>
+                    <input type="checkbox" id="includeText" data-tooltip="Extract text to editable slides">
+                </div>
+                <div>
+                    <label for="outputName">Output File Name:</label>
+                    <input type="text" id="outputName" placeholder="converted_presentation" data-tooltip="Customize PPTX file name">
+                </div>
+                <div>
+                    <label for="thumbnailSize">Thumbnail Size:</label>
+                    <input type="range" id="thumbnailSize" min="100" max="300" value="160" data-tooltip="Adjust thumbnail size">
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="tooltip" data-tooltip="Select or deselect all pages" onclick="toggleSelectAll()">Select All</button>
+                <button class="tooltip" data-tooltip="Convert selected pages to PPTX" id="convertBtn" onclick="convertToPPT()">Convert to PPT</button>
+                <button class="tooltip" data-tooltip="Export selected pages as PNG images" onclick="exportAsPNG()">Export as PNG</button>
+                <button class="tooltip" data-tooltip="Clear all files and settings" onclick="resetAll()">Reset</button>
+            </div>
+
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+
+        <div class="article">
+            <h2>How to Convert PDF to PPT: A Comprehensive Guide</h2>
+            <p>Converting a PDF to a PowerPoint presentation (PPT or PPTX) is a valuable skill for professionals, students, and educators who need to repurpose content for presentations. Our <strong>free PDF to PPT converter</strong> makes it easy to <strong>convert PDF to PPT online</strong> without any software downloads or server uploads. This guide explains how to <strong>convert PDF to PowerPoint</strong>, the benefits of using an <strong>online PDF to PPT tool</strong>, and why our tool stands out as the <strong>best free PDF to PPT tool</strong>.</p>
+
+            <h3>Why Convert PDF to PPT?</h3>
+            <p>PDFs are great for sharing documents, but they’re not ideal for presentations. PowerPoint, on the other hand, is designed for dynamic, editable slides. When you <strong>convert PDF to PPT</strong>, you can transform static documents into engaging presentations. Here are some reasons to use a <strong>PDF to PowerPoint converter</strong>:</p>
+            <ul>
+                <li><strong>Editability:</strong> PowerPoint slides allow you to modify text, images, and layouts easily.</li>
+                <li><strong>Presentation-ready:</strong> Convert reports, manuals, or whitepapers into slide decks for meetings or classes.</li>
+                <li><strong>Flexibility:</strong> Add animations, transitions, and speaker notes to enhance your presentation.</li>
+                <li><strong>Compatibility:</strong> PPTX files are widely supported across platforms like Microsoft PowerPoint and Google Slides.</li>
+            </ul>
+            <p>With our <strong>free PDF to PPT converter</strong>, you can <strong>convert PDF to PPT online</strong> in seconds, all within your browser.</p>
+
+            <h3>Benefits of Using an Online PDF to PPT Tool</h3>
+            <p>An <strong>online PDF to PPT tool</strong> offers unmatched convenience and efficiency. Here’s why you should choose our <strong>PDF to PowerPoint converter</strong>:</p>
+            <ul>
+                <li><strong>No Software Installation:</strong> No need to download bulky software. Our tool runs entirely in your browser.</li>
+                <li><strong>Free and Accessible:</strong> Our <strong>free PDF to PPT converter</strong> is available to everyone, with no hidden costs.</li>
+                <li><strong>Privacy First:</strong> Since everything happens client-side, your files never leave your device, ensuring maximum security.</li>
+                <li><strong>Offline Capability:</strong> Once loaded, our tool works offline, making it ideal for users with limited internet access.</li>
+                <li><strong>Cross-Platform:</strong> Use it on Windows, macOS, Linux, or even mobile devices.</li>
+            </ul>
+            <p>By choosing to <strong>convert PDF to PPT online</strong>, you save time and avoid the hassle of complex software.</p>
+
+            <h3>How Our Free PDF to PPT Converter Works</h3>
+            <p>Our <strong>PDF to PowerPoint converter</strong> is designed to be intuitive and efficient. Here’s a step-by-step guide to <strong>how to turn PDF into PowerPoint</strong> using our tool:</p>
+            <ol>
+                <li><strong>Upload Your PDF:</strong> Drag and drop your PDF file(s) into the designated area or click to select them from your device.</li>
+                <li><strong>Preview Pages:</strong> The tool renders thumbnails of each PDF page, allowing you to see the content before conversion.</li>
+                <li><strong>Select Pages:</strong> Choose pages via checkboxes, page range input, or drag to reorder them.</li>
+                <li><strong>Customize Settings:</strong> Select slide size, image quality, and whether to include editable text.</li>
+                <li><strong>Convert to PPTX:</strong> Click the “Convert to PPT” button to generate a PPTX file with each selected page as a slide.</li>
+                <li><strong>Download:</strong> Save the generated PPTX file or PNG images to your device.</li>
+                <li><strong>Reset:</strong> Clear the tool to start over with a new PDF if needed.</li>
+            </ol>
+            <p>This process ensures you can <strong>export PDF as PPT</strong> quickly and efficiently, all while maintaining high-quality output.</p>
+
+            <h3>Comparison of PDF to PPT Tools</h3>
+            <p>There are several tools available to <strong>convert PDF to PPTX</strong>, but not all are created equal. Here’s a brief comparison:</p>
+            <ul>
+                <li><strong>Desktop Software (e.g., Adobe Acrobat):</strong> Powerful but expensive and requires installation.</li>
+                <li><strong>Other Online Tools:</strong> Many require file uploads to servers, raising privacy concerns, or charge fees for full functionality.</li>
+                <li><strong>Our Free PDF to PPT Converter:</strong> Completely free, client-side, and privacy-focused, with advanced features like text extraction and page reordering.</li>
+            </ul>
+            <p>Our <strong>online PDF to PPT tool</strong> stands out as the <strong>best free PDF to PPT tool</strong> because it balances ease of use, security, and functionality.</p>
+
+            <h3>Safety, Privacy, and Offline Benefits</h3>
+            <p>When you <strong>convert PDF to PPT online</strong>, privacy is a top concern. Our tool addresses this by processing everything in your browser. Here’s why our <strong>PDF to PowerPoint converter</strong> is safe:</p>
+            <ul>
+                <li><strong>No File Uploads:</strong> Your PDF never leaves your device, eliminating the risk of data leaks.</li>
+                <li><strong>Offline Functionality:</strong> After loading the page, you can disconnect from the internet and still use the tool.</li>
+                <li><strong>No Tracking:</strong> We don’t collect any data about you or your files.</li>
+                <li><strong>Open-Source Libraries:</strong> We use trusted, free libraries like PDF.js and PPTXGenJS, ensuring transparency.</li>
+            </ul>
+            <p>These features make our <strong>free PDF to PPT converter</strong> ideal for users who prioritize security and want to <strong>convert PDF to PowerPoint</strong> without compromising privacy.</p>
+
+            <h3>Why Choose Our Online PDF to PPT Tool?</h3>
+            <p>Our <strong>online PDF to PPT tool</strong> is designed with the user in mind. Whether you’re a student preparing a presentation, a professional repurposing a report, or an educator creating teaching materials, our tool makes it easy to <strong>convert PDF to PPTX</strong>. Here’s what sets us apart:</p>
+            <ul>
+                <li><strong>User-Friendly Interface:</strong> Drag-and-drop functionality, page previews, and reordering make the process intuitive.</li>
+                <li><strong>High-Quality Output:</strong> Each PDF page is converted into a clear, professional-looking slide with optional editable text.</li>
+                <li><strong>Customizable:</strong> Adjust slide size, image quality, and page order for full control.</li>
+                <li><strong>Fast and Free:</strong> No delays, no costs—just instant results.</li>
+            </ul>
+            <p>Ready to get started? <strong>Try our free PDF to PPT converter now!</strong></p>
+
+            <h3>Common Use Cases for Converting PDF to PPT</h3>
+            <p>Here are some scenarios where you might need to <strong>convert PDF to PowerPoint</strong>:</p>
+            <ul>
+                <li><strong>Business Presentations:</strong> Turn annual reports or marketing materials into engaging slide decks.</li>
+                <li><strong>Educational Materials:</strong> Convert lecture notes or textbooks into slides for classroom use.</li>
+                <li><strong>Training Sessions:</strong> Transform training manuals into interactive presentations.</li>
+                <li><strong>Personal Projects:</strong> Create slideshows from PDFs for events or personal use.</li>
+            </ul>
+            <p>With our <strong>free PDF to PPT converter</strong>, you can handle all these use cases effortlessly.</p>
+
+            <h3>Tips for Better PDF to PPT Conversion</h3>
+            <p>To get the best results when you <strong>convert PDF to PPT online</strong>, follow these tips:</p>
+            <ul>
+                <li><strong>Check PDF Quality:</strong> Ensure your PDF has clear text and images for optimal slide output.</li>
+                <li><strong>Select Relevant Pages:</strong> Use the page range input or drag-and-drop reordering to include only the pages you need.</li>
+                <li><strong>Optimize File Size:</strong> Large PDFs may take longer to process, so compress them if necessary.</li>
+                <li><strong>Test the Output:</strong> Open the generated PPTX in PowerPoint or Google Slides to verify the results.</li>
+            </ul>
+            <p>These tips will help you <strong>export PDF as PPT</strong> with professional-quality results.</p>
+
+            <div class="faq">
+                <h3>Frequently Asked Questions</h3>
+                <details>
+                    <summary>Is this PDF to PPT converter really free?</summary>
+                    <p>Yes, our <strong>free PDF to PPT converter</strong> is completely free to use with no hidden fees or subscriptions. Everything runs in your browser, so there’s no cost involved.</p>
+                </details>
+                <details>
+                    <summary>Do I need to upload my PDF to a server?</summary>
+                    <p>No, our <strong>PDF to PowerPoint converter</strong> processes everything client-side. Your files stay on your device, ensuring maximum privacy.</p>
+                </details>
+                <details>
+                    <summary>Can I select specific pages to convert?</summary>
+                    <p>Absolutely! Our <strong>online PDF to PPT tool</strong> lets you preview, select, and reorder pages using checkboxes or a page range input.</p>
+                </details>
+                <details>
+                    <summary>Does this tool work offline?</summary>
+                    <p>Yes, once the page is loaded, you can use our <strong>free PDF to PPT converter</strong> offline, making it convenient for users with limited internet access.</p>
+                </details>
+                <details>
+                    <summary>Can I extract text from PDFs?</summary>
+                    <p>Yes, our tool allows you to extract text from PDF pages and include it as editable text in your PowerPoint slides.</p>
+                </details>
+            </div>
+
+            <p><strong>Try our free PDF to PPT converter now!</strong> Convert your PDFs to professional PowerPoint presentations in just a few clicks. No software, no uploads, just results.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://unpkg.com/pptxgenjs@3.10.0/dist/pptxgen.bundle.js"></script>
+    <script>
+        let pdfDocs = [];
+        let totalPages = 0;
+        const maxFileSize = 10 * 1024 * 1024; // 10MB
+        let pageOrder = [];
+
+        // Initialize elements
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const thumbnailsContainer = document.getElementById('thumbnails');
+        const fileInfo = document.getElementById('fileInfo');
+        const error = document.getElementById('error');
+        const status = document.getElementById('status');
+        const pageRange = document.getElementById('pageRange');
+        const slideSize = document.getElementById('slideSize');
+        const imageQuality = document.getElementById('imageQuality');
+        const includeText = document.getElementById('includeText');
+        const outputName = document.getElementById('outputName');
+        const thumbnailSize = document.getElementById('thumbnailSize');
+
+        // Load saved settings
+        function loadSettings() {
+            const savedSlideSize = localStorage.getItem('slideSize') || '4:3';
+            const savedImageQuality = localStorage.getItem('imageQuality') || '1.0';
+            const savedIncludeText = localStorage.getItem('includeText') === 'true';
+            slideSize.value = savedSlideSize;
+            imageQuality.value = savedImageQuality;
+            includeText.checked = savedIncludeText;
+        }
+
+        // Save settings
+        function saveSettings() {
+            localStorage.setItem('slideSize', slideSize.value);
+            localStorage.setItem('imageQuality', imageQuality.value);
+            localStorage.setItem('includeText', includeText.checked);
+        }
+
+        // Initialize drag-and-drop for thumbnails
+        function initDragAndDrop() {
+            const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.style.animationDelay = `${index * 0.1}s`; // Stagger thumbnails
+                thumbnail.draggable = true;
+                thumbnail.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', e.target.dataset.page);
+                    e.target.style.opacity = '0.5';
+                });
+                thumbnail.addEventListener('dragend', (e) => {
+                    e.target.style.opacity = '1';
+                });
+                thumbnail.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                });
+                thumbnail.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    const fromPage = e.dataTransfer.getData('text/plain');
+                    const toPage = e.target.closest('.thumbnail').dataset.page;
+                    reorderPages(fromPage, toPage);
+                });
+            });
+        }
+
+        // Reorder pages
+        function reorderPages(fromPage, toPage) {
+            const fromIndex = pageOrder.findIndex(p => p.page === parseInt(fromPage));
+            const toIndex = pageOrder.findIndex(p => p.page === parseInt(toPage));
+            if (fromIndex !== -1 && toIndex !== -1) {
+                const [moved] = pageOrder.splice(fromIndex, 1);
+                pageOrder.splice(toIndex, 0, moved);
+                renderThumbnails();
+            }
+        }
+
+        // Initialize
+        loadSettings();
+        thumbnailSize.addEventListener('input', () => {
+            thumbnailsContainer.style.gridTemplateColumns = `repeat(auto-fill, minmax(${thumbnailSize.value}px, 1fr))`;
+        });
+
+        // Drag & drop events
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        // Handle multiple files
+        async function handleFiles(files) {
+            try {
+                error.textContent = '';
+                status.textContent = '';
+                if (files.length === 0) {
+                    throw new Error('No files selected');
+                }
+
+                let fileNames = [];
+                pdfDocs = [];
+                pageOrder = [];
+                totalPages = 0;
+
+                for (const file of files) {
+                    if (file.type !== 'application/pdf') {
+                        throw new Error('Please upload only PDF files');
+                    }
+                    if (file.size > maxFileSize) {
+                        throw new Error(`File ${file.name} exceeds 10MB limit`);
+                    }
+                    fileNames.push(`${file.name} (${(file.size/1024/1024).toFixed(2)} MB)`);
+                }
+                fileInfo.textContent = fileNames.join(', ');
+
+                document.getElementById('progress').style.display = 'block';
+                progressBar.style.width = '0%';
+                progressText.textContent = '0%';
+
+                for (const file of files) {
+                    const reader = new FileReader();
+                    await new Promise(resolve => {
+                        reader.onload = async () => {
+                            const pdfData = new Uint8Array(reader.result);
+                            const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+                            pdfDocs.push({ pdf, fileName: file.name });
+                            for (let i = 1; i <= pdf.numPages; i++) {
+                                pageOrder.push({ pdfIndex: pdfDocs.length - 1, page: i });
+                                totalPages++;
+                            }
+                            resolve();
+                        };
+                        reader.readAsArrayBuffer(file);
+                    });
+                }
+
+                await renderThumbnails();
+                document.getElementById('progress').style.display = 'none';
+                status.textContent = 'PDF(s) loaded successfully!';
+            } catch (err) {
+                showError(err.message);
+            }
+        }
+
+        // Render thumbnails
+        async function renderThumbnails() {
+            thumbnailsContainer.innerHTML = '';
+            let processed = 0;
+
+            for (const pageInfo of pageOrder) {
+                const { pdfIndex, page } = pageInfo;
+                const pdf = pdfDocs[pdfIndex].pdf;
+                const pageObj = await pdf.getPage(page);
+                const scale = parseFloat(imageQuality.value) * 0.2;
+                const viewport = pageObj.getViewport({ scale });
+
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                await pageObj.render({
+                    canvasContext: context,
+                    viewport: viewport
+                }).promise;
+
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail';
+                thumbnail.dataset.page = `${pdfIndex}:${page}`;
+                thumbnail.innerHTML = `
+                    <input type="checkbox" class="thumbnail-checkbox" checked data-page="${pdfIndex}:${page}">
+                    <img src="${canvas.toDataURL()}">
+                    <p>${pdfDocs[pdfIndex].fileName} - Page ${page}</p>
+                `;
+                thumbnailsContainer.appendChild(thumbnail);
+
+                processed++;
+                progressBar.style.width = `${(processed/totalPages)*100}%`;
+                progressText.textContent = `${Math.round((processed/totalPages)*100)}%`;
+            }
+
+            initDragAndDrop();
+            updateProgress();
+            thumbnailsContainer.style.gridTemplateColumns = `repeat(auto-fill, minmax(${thumbnailSize.value}px, 1fr))`;
+        }
+
+        // Parse page range input
+        function parsePageRange(range) {
+            const pages = [];
+            const ranges = range.split(',').map(r => r.trim());
+            for (const r of ranges) {
+                if (r.includes('-')) {
+                    const [start, end] = r.split('-').map(n => parseInt(n));
+                    if (isNaN(start) || isNaN(end) || start < 1 || end > totalPages || start > end) continue;
+                    for (let i = start; i <= end; i++) {
+                        pages.push(i);
+                    }
+                } else {
+                    const page = parseInt(r);
+                    if (!isNaN(page) && page >= 1 && page <= totalPages) {
+                        pages.push(page);
+                    }
+                }
+            }
+            return [...new Set(pages)]; // Remove duplicates
+        }
+
+        // Handle page range input
+        pageRange.addEventListener('input', () => {
+            const pages = parsePageRange(pageRange.value);
+            thumbnailsContainer.querySelectorAll('.thumbnail-checkbox').forEach(checkbox => {
+                const [pdfIndex, page] = checkbox.dataset.page.split(':').map(Number);
+                const pageNum = pageOrder.findIndex(p => p.pdfIndex === pdfIndex && p.page === page) + 1;
+                checkbox.checked = pages.includes(pageNum);
+            });
+            updateProgress();
+        });
+
+        // Convert to PPT
+        async function convertToPPT() {
+            try {
+                if (!window.PptxGenJS) {
+                    throw new Error('PptxGenJS library not loaded. Please check your internet connection.');
+                }
+                const pptx = new PptxGenJS();
+                const selectedPages = Array.from(thumbnailsContainer.querySelectorAll('.thumbnail-checkbox:checked'))
+                    .map(checkbox => checkbox.dataset.page);
+                if (selectedPages.length === 0) {
+                    throw new Error('Please select at least one page to convert');
+                }
+
+                document.getElementById('progress').style.display = 'block';
+                progressBar.style.width = '0%';
+                progressText.textContent = '0%';
+
+                const slideDimensions = slideSize.value === '16:9' ? { w: 13.33, h: 7.5 } : { w: 10, h: 7.5 };
+                for (const [index, pageId] of selectedPages.entries()) {
+                    const [pdfIndex, pageNum] = pageId.split(':').map(Number);
+                    const page = await pdfDocs[pdfIndex].pdf.getPage(pageNum);
+                    const scale = parseFloat(imageQuality.value);
+                    const viewport = page.getViewport({ scale });
+
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    const slide = pptx.addSlide();
+                    slide.addImage({
+                        data: canvas.toDataURL(),
+                        x: 0.5,
+                        y: 0.5,
+                        w: slideDimensions.w - 1,
+                        h: slideDimensions.h - 1
+                    });
+
+                    if (includeText.checked) {
+                        const textContent = await page.getTextContent();
+                        const text = textContent.items.map(item => item.str).join(' ');
+                        if (text.trim()) {
+                            slide.addText(text, {
+                                x: 0.5,
+                                y: slideDimensions.h - 1.5,
+                                w: slideDimensions.w - 1,
+                                h: 1,
+                                fontSize: 12,
+                                color: '000000'
+                            });
+                        }
+                    }
+
+                    progressBar.style.width = `${((index + 1)/selectedPages.length)*100}%`;
+                    progressText.textContent = `${Math.round(((index + 1)/selectedPages.length)*100)}%`;
+                }
+
+                const fileName = outputName.value.trim() || 'converted_presentation';
+                pptx.writeFile({ fileName: `${fileName}.pptx` });
+                status.textContent = 'Conversion complete! PPTX file downloaded.';
+                document.getElementById('progress').style.display = 'none';
+                saveSettings();
+            } catch (err) {
+                showError(err.message);
+            }
+        }
+
+        // Export as PNG
+        async function exportAsPNG() {
+            try {
+                const selectedPages = Array.from(thumbnailsContainer.querySelectorAll('.thumbnail-checkbox:checked'))
+                    .map(checkbox => checkbox.dataset.page);
+                if (selectedPages.length === 0) {
+                    throw new Error('Please select at least one page to export');
+                }
+
+                document.getElementById('progress').style.display = 'block';
+                progressBar.style.width = '0%';
+                progressText.textContent = '0%';
+
+                for (const [index, pageId] of selectedPages.entries()) {
+                    const [pdfIndex, pageNum] = pageId.split(':').map(Number);
+                    const page = await pdfDocs[pdfIndex].pdf.getPage(pageNum);
+                    const scale = parseFloat(imageQuality.value);
+                    const viewport = page.getViewport({ scale });
+
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+
+                    const link = document.createElement('a');
+                    link.href = canvas.toDataURL('image/png');
+                    link.download = `${outputName.value.trim() || 'page'}_${pageNum}.png`;
+                    link.click();
+
+                    progressBar.style.width = `${((index + 1)/selectedPages.length)*100}%`;
+                    progressText.textContent = `${Math.round(((index + 1)/selectedPages.length)*100)}%`;
+                }
+
+                status.textContent = 'PNG export complete!';
+                document.getElementById('progress').style.display = 'none';
+            } catch (err) {
+                showError(err.message);
+            }
+        }
+
+        // Toggle select all
+        function toggleSelectAll() {
+            const checkboxes = thumbnailsContainer.querySelectorAll('.thumbnail-checkbox');
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            checkboxes.forEach(checkbox => checkbox.checked = !allChecked);
+            updateProgress();
+        }
+
+        // Update progress
+        function updateProgress() {
+            const selected = thumbnailsContainer.querySelectorAll('.thumbnail-checkbox:checked').length;
+            progressBar.style.width = `${(selected/totalPages)*100}%`;
+            progressText.textContent = `${Math.round((selected/totalPages)*100)}%`;
+        }
+
+        // Reset all
+        function resetAll() {
+            pdfDocs = [];
+            totalPages = 0;
+            pageOrder = [];
+            fileInfo.textContent = '';
+            thumbnailsContainer.innerHTML = '';
+            error.textContent = '';
+            status.textContent = '';
+            document.getElementById('progress').style.display = 'none';
+            fileInput.value = '';
+            pageRange.value = '';
+            outputName.value = '';
+            thumbnailsContainer.style.gridTemplateColumns = `repeat(auto-fill, minmax(${thumbnailSize.value}px, 1fr))`;
+        }
+
+        // Show error
+        function showError(message) {
+            error.textContent = message;
+            status.textContent = '';
+            document.getElementById('progress').style.display = 'none';
+        }
+
+        // Viewport animation for article sections
+        function handleScroll() {
+            const articles = document.querySelectorAll('.article');
+            articles.forEach(article => {
+                const rect = article.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    article.classList.add('in-view');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

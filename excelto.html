@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel to PDF Converter Online - Free Tool to Convert Excel to PDF</title>
+  <meta name="description" content="Convert Excel to PDF online for free with our advanced Excel to PDF converter. Transform Excel spreadsheets into professional PDF documents with customizable layouts and styles.">
+  <meta name="keywords" content="Excel to PDF converter, convert Excel to PDF online, free Excel to PDF tool, Excel to PDF creator, Excel to PDF free, Excel spreadsheet to PDF">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PDF Converter Team">
+  <meta property="og:title" content="Excel to PDF Converter Online - Free Tool">
+  <meta property="og:description" content="Easily convert Excel files to PDF documents with our free online tool. Customize page size, font, and table styles, and download as PDFs or ZIP archives.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Excel+to+PDF+Converter">
+  <meta property="og:url" content="https://onepagetools.com/excelto.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .progress-bar { background: linear-gradient(to right, #4f46e5, #7c3aed); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.1); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+    .preview-table { max-height: 300px; overflow-y: auto; }
+    .gradient-bg { background: linear-gradient(135deg, #f3f4f6, #e0e7ff); }
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="PDF Converter Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100">Image Compressor</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100">PDF to CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Excel</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100">PDF to PNG</a></li>
+                <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Word</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to XML</a></li>
+                <li><a href="./pdftozip.html" class="block px-4 py-2 hover:bg-gray-100">PDF to ZIP</a></li>
+                <li><a href="./pdftowebp.html" class="block px-4 py-2 hover:bg-gray-100">PDF to WEBP</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Text</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100">CSV to PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100">Excel to PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100">HTML to PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100">JPG to PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100">JSON to PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100">PNG to PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100">Speech to PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100">Text to PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100">WEBP to PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100">XML to PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-20">
+    <div class="container max-w-4xl p-6 bg-white rounded-lg shadow-lg fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">Excel to PDF Converter</h1>
+      <p class="text-center text-gray-500 mb-6">Convert Excel spreadsheets to professional PDF documents with customizable layouts, fonts, and table styles, perfect for reports, invoices, and data sharing.</p>
+
+      <!-- File Upload Section -->
+      <div class="drop-zone border-4 border-dashed border-gray-200 rounded-xl p-12 text-center mb-8 transition-colors duration-300 hover:border-blue-400" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+        <label for="excelFiles" class="inline-block w-full py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full cursor-pointer hover:bg-indigo-700 btn hover-scale">
+          Choose Excel Files
+        </label>
+        <input type="file" id="excelFiles" accept=".xlsx, .xls" multiple class="hidden" onchange="previewFiles()">
+        <p class="text-gray-500 mt-2">or drag and drop Excel files here (supports multiple files, max 25MB each)</p>
+      </div>
+
+      <!-- Conversion Settings -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Conversion Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Page Size</label>
+              <select id="pageSize" class="w-full p-2 border rounded-lg">
+                <option value="A4">A4</option>
+                <option value="Letter">Letter</option>
+                <option value="Legal">Legal</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Orientation</label>
+              <select id="orientation" class="w-full p-2 border rounded-lg">
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Font Size</label>
+              <input type="number" id="fontSize" class="w-full p-2 border rounded-lg" min="8" max="20" value="10">
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Table Styling</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="useHeaders">
+              <label class="text-gray-600">Treat First Row as Headers</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="drawBorders">
+              <label class="text-gray-600">Draw Table Borders</label>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Header Color</label>
+              <input type="color" id="headerColor" class="w-full p-2 border rounded-lg" value="#4f46e5">
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="downloadZip">
+              <label class="text-gray-600">Download as ZIP Archive</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="previewData">
+              <label class="text-gray-600">Preview Data Before Conversion</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sheet Selection -->
+      <div id="sheetSelection" class="bg-gray-50 p-4 rounded-lg mb-6 hidden">
+        <h3 class="text-lg font-semibold mb-3">Sheet Selection</h3>
+        <div id="sheetOptions" class="space-y-2"></div>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewContainer" class="mb-6"></div>
+      <div id="dataPreview" class="hidden preview-table bg-gray-50 p-4 rounded-lg mb-6 overflow-x-auto"></div>
+
+      <!-- Progress Bar -->
+      <div id="progressBar" class="hidden bg-gray-200 rounded-full h-2.5 mb-4">
+        <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-300 progress-bar" style="width: 0%"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="convertExcels()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale" id="convertButton" disabled>
+          Convert to PDF
+        </button>
+        <a id="downloadZipButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale">
+          Download ZIP
+        </a>
+        <button onclick="resetAll()" class="py-3 px-5 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn hover-scale">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using an Excel to PDF Converter Online</h2>
+    <p>Excel spreadsheets are powerful for data management, but sharing or presenting them often requires a more professional format like PDF. An <strong>Excel to PDF converter</strong> transforms Excel files into well-formatted PDF documents, ideal for reports, invoices, or archival purposes. Our <a href="#excelFiles">free Excel to PDF tool</a> provides a fast, user-friendly solution to <strong>convert Excel to PDF online</strong>. This comprehensive guide explores the benefits of using an <strong>Excel to PDF converter online</strong>, how to use it effectively, and tips to optimize your PDF creation for various purposes.</p>
+
+    <h3>Why Use an Excel to PDF Converter?</h3>
+    <p>Converting Excel files to PDFs offers numerous advantages for businesses, analysts, and professionals. Here’s why you should use a <strong>free Excel to PDF tool</strong>:</p>
+    <ul>
+      <li><strong>Professional Presentation</strong>: PDFs provide a polished, shareable format for spreadsheets, reports, or invoices.</li>
+      <li><strong>Cross-Platform Compatibility</strong>: PDFs can be viewed on any device without compatibility issues.</li>
+      <li><strong>Batch Processing</strong>: Convert multiple Excel files to PDFs simultaneously, saving time for large datasets.</li>
+      <li><strong>No Software Installation</strong>: Our <strong>Excel to PDF converter online</strong> works in your browser, requiring no downloads.</li>
+      <li><strong>Customizable Layouts</strong>: Adjust fonts, page sizes, and table styles for tailored outputs.</li>
+      <li><strong>Secure Sharing</strong>: PDFs are less editable, ensuring data integrity when shared.</li>
+    </ul>
+    <p>By using our <strong>Excel to PDF converter</strong>, you can create professional documents from spreadsheets effortlessly.</p>
+
+    <h3>How to Use Our Free Excel to PDF Converter</h3>
+    <p>Our <strong>Excel to PDF tool</strong> is designed for simplicity and flexibility. Follow these steps to <strong>convert Excel to PDF online</strong>:</p>
+    <ol>
+      <li><strong>Upload Excel Files</strong>: Click “Choose Excel Files” or drag and drop files into the upload area. Supports multiple files (.xlsx, .xls), each up to 25MB.</li>
+      <li><strong>Select Sheets</strong>: Choose specific sheets from multi-sheet Excel files for conversion.</li>
+      <li><strong>Configure Settings</strong>: Specify page size, orientation, font size, and table styling options.</li>
+      <li><strong>Preview Data</strong>: Enable the preview option to review parsed Excel data in a table format.</li>
+      <li><strong>Convert and Download</strong>: Click “Convert to PDF” to process the files. Download individual PDFs or a ZIP archive.</li>
+      <li><strong>Reset as Needed</strong>: Use the “Reset” button to clear inputs and start over.</li>
+    </ol>
+    <p>With these steps, you can <strong>convert Excel to PDF free</strong> in minutes, making our tool a top choice for <strong>Excel to PDF creation</strong>.</p>
+
+    <h3>Who Benefits from an Excel to PDF Converter?</h3>
+    <p>Our <strong>Excel to PDF converter online</strong> serves a wide range of users:</p>
+    <ul>
+      <li><strong>Data Analysts</strong>: Convert datasets to PDFs for reports or presentations.</li>
+      <li><strong>Business Professionals</strong>: Create invoices, financial reports, or client summaries from Excel data.</li>
+      <li><strong>Accountants</strong>: Transform financial spreadsheets into shareable PDF documents.</li>
+      <li><strong>Educators</strong>: Convert student data or research datasets to PDFs for documentation.</li>
+      <li><strong>Marketers</strong>: Generate campaign performance reports from Excel exports.</li>
+      <li><strong>Developers</strong>: Automate data presentation for stakeholders using PDF outputs.</li>
+    </ul>
+    <p>Our <strong>free Excel to PDF tool</strong> simplifies document creation for all users, regardless of technical expertise.</p>
+
+    <h3>Key Features of Our Excel to PDF Converter</h3>
+    <p>Our <strong>Excel to PDF converter online</strong> offers robust features to meet diverse needs:</p>
+    <ul>
+      <li><strong>Batch Conversion</strong>: Process multiple Excel files at once and download as individual PDFs or a ZIP archive.</li>
+      <li><strong>Sheet Selection</strong>: Choose specific sheets from multi-sheet Excel files for targeted conversion.</li>
+      <li><strong>Customizable Output</strong>: Adjust page size, orientation, font size, and table styles for professional results.</li>
+      <li><strong>Data Preview</strong>: Review parsed Excel data before conversion to ensure accuracy.</li>
+      <li><strong>Drag-and-Drop Interface</strong>: Streamline uploads with an intuitive design.</li>
+      <li><strong>Header Styling</strong>: Treat the first row as headers with bold text and custom colors.</li>
+      <li><strong>Pagination</strong>: Automatically split large datasets across multiple PDF pages.</li>
+      <li><strong>Secure Processing</strong>: Files are processed in the browser for data privacy.</li>
+    </ul>
+    <p>These features make our tool ideal for anyone looking to <strong>convert Excel to PDF online</strong> efficiently.</p>
+
+    <h3>Tips for Optimizing Excel to PDF Conversion</h3>
+    <p>To maximize the effectiveness of our <strong>Excel to PDF converter</strong>, consider these tips:</p>
+    <ul>
+      <li><strong>Validate Excel Data</strong>: Ensure spreadsheets are properly formatted to avoid parsing errors.</li>
+      <li><strong>Select Relevant Sheets</strong>: Convert only the necessary sheets to reduce processing time.</li>
+      <li><strong>Adjust Font Size</strong>: Use smaller fonts (e.g., 8pt) for dense data or larger fonts (e.g., 12pt) for readability.</li>
+      <li><strong>Choose Page Size</strong>: Select A4 for standard documents or Letter for US formats.</li>
+      <li><strong>Use Headers</strong>: Enable headers for clarity in reports or invoices.</li>
+      <li><strong>Preview Data</strong>: Verify parsed data to catch formatting issues before conversion.</li>
+      <li><strong>Combine with Other Tools</strong>: Use our <a href="./pdftoexcel.html">PDF to Excel</a> converter for reverse conversions.</li>
+    </ul>
+
+    <h3>Why PDF is Ideal for Excel Conversion</h3>
+    <p>PDF is a versatile format for presenting Excel data. Here’s why it’s ideal:</p>
+    <ul>
+      <li><strong>Universal Compatibility</strong>: PDFs can be opened on any device or platform.</li>
+      <li><strong>Fixed Formatting</strong>: Maintains table layouts and styles across devices.</li>
+      <li><strong>Professional Appearance</strong>: PDFs look polished for client-facing documents.</li>
+      <li><strong>Security</strong>: PDFs are less editable, protecting data integrity.</li>
+      <li><strong>Archival Quality</strong>: PDFs are suitable for long-term document storage.</li>
+    </ul>
+    <p>Our <strong>Excel to PDF converter online</strong> leverages PDF’s strengths to deliver high-quality documents.</p>
+
+    <h3>Comparing Excel to PDF Converters</h3>
+    <p>Not all <strong>Excel to PDF converters</strong> offer the same functionality. Here’s how our tool stands out:</p>
+    <ul>
+      <li><strong>Free Access</strong>: No subscriptions or hidden fees, unlike some premium tools.</li>
+      <li><strong>Browser-Based</strong>: No software installation required, unlike desktop applications.</li>
+      <li><strong>Batch Processing</strong>: Convert multiple Excel files at once, a feature not always available in free tools.</li>
+      <li><strong>Customizable Output</strong>: Options for page size, fonts, and table styles provide flexibility.</li>
+      <li><strong>Sheet Selection</strong>: Convert specific sheets, unlike basic converters that process all sheets.</li>
+      <li><strong>User-Friendly Interface</strong>: Intuitive design with drag-and-drop, previews, and bulk downloads.</li>
+      <li><strong>Secure Processing</strong>: Local browser processing ensures data privacy.</li>
+    </ul>
+    <p>Our <strong>free Excel to PDF tool</strong> offers a balance of functionality, ease of use, and performance, making it ideal for all users.</p>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Here are answers to common questions about using an <strong>Excel to PDF converter online</strong>:</p>
+    <h4>1. Is the Excel to PDF converter free?</h4>
+    <p>Yes, our <strong>Excel to PDF free</strong> tool has no subscriptions or hidden costs.</p>
+    <h4>2. Can I convert multiple Excel files at once?</h4>
+    <p>Absolutely! Upload multiple Excel files and convert them to PDFs in one go.</p>
+    <h4>3. Can I select specific sheets for conversion?</h4>
+    <p>Yes, choose individual sheets from multi-sheet Excel files for targeted conversion.</p>
+    <h4>4. Does the converter support large Excel files?</h4>
+    <p>Yes, it supports files up to 25MB, with pagination for large datasets.</p>
+    <h4>5. Is my data secure?</h4>
+    <p>All processing is done in your browser, ensuring your files remain private.</p>
+    <h4>6. What if I need a different format?</h4>
+    <p>Try our <a href="./csvto.html">CSV to PDF</a> or <a href="./textto.html">Text to PDF</a> converters for alternative inputs.</p>
+
+    <h3>Advanced Use Cases for Excel to PDF Conversion</h3>
+    <p>Our <strong>Excel to PDF converter</strong> supports a variety of advanced scenarios:</p>
+    <ul>
+      <li><strong>Financial Reporting</strong>: Convert financial spreadsheets to PDFs for audits or client reports.</li>
+      <li><strong>Data Archiving</strong>: Create PDF archives of datasets for long-term storage.</li>
+      <li><strong>Invoicing</strong>: Generate professional invoices from Excel data for businesses.</li>
+      <li><strong>Academic Research</strong>: Present research data in PDF format for publications.</li>
+      <li><strong>Marketing</strong>: Convert campaign metrics to PDFs for stakeholder presentations.</li>
+    </ul>
+
+    <h3>How Excel to PDF Conversion Enhances Productivity</h3>
+    <p>Productivity is a priority for professionals handling data. Our <strong>Excel to PDF converter online</strong> boosts efficiency by:</p>
+    <ul>
+      <li>Automating Excel-to-PDF conversion for multiple files.</li>
+      <li>Enabling batch processing for high-volume tasks.</li>
+      <li>Providing customizable outputs for specific needs.</li>
+      <li>Offering previews to ensure accuracy before conversion.</li>
+      <li>Supporting ZIP downloads for bulk PDF management.</li>
+    </ul>
+    <p>With our tool, you can focus on data presentation rather than conversion.</p>
+
+    <h3>Best Practices for Excel to PDF Conversion</h3>
+    <p>To achieve optimal results, follow these best practices:</p>
+    <ul>
+      <li><strong>Ensure Clean Excel Files</strong>: Use properly formatted spreadsheets with consistent data.</li>
+      <li><strong>Validate Data</strong>: Use the preview feature to check parsed data before conversion.</li>
+      <li><strong>Optimize Styling</strong>: Use headers and borders for clarity in professional documents.</li>
+      <li><strong>Choose Layout</strong>: Select landscape for wide tables or portrait for narrow ones.</li>
+      <li><strong>Test Outputs</strong>: Verify PDFs for readability and formatting accuracy.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>Converting Excel files to PDFs doesn’t have to be a complex task. With our <strong>Excel to PDF converter online</strong>, you can <strong>convert Excel to PDF free</strong>, customize your output, and create professional documents for any purpose. Whether you’re a business professional, analyst, or educator, our <strong>free Excel to PDF tool</strong> offers the features and flexibility you need. Try it now and elevate your data presentation!</p>
+    <p><a href="https://onepagetools.com/excelto.html" class="text-indigo-600 hover:underline">Start converting your Excel files to PDFs today</a> and streamline your document workflow.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    let files = [];
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('dragover');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+      const uploadedFiles = e.dataTransfer.files;
+      if (uploadedFiles.length) {
+        document.getElementById('excelFiles').files = uploadedFiles;
+        previewFiles();
+      }
+    }
+
+    function previewFiles() {
+      const fileInput = document.getElementById('excelFiles');
+      const previewContainer = document.getElementById('previewContainer');
+      const sheetSelection = document.getElementById('sheetSelection');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      files = [];
+      previewContainer.innerHTML = '';
+      sheetSelection.classList.add('hidden');
+      downloadZipButton.classList.add('hidden');
+
+      if (fileInput.files.length) {
+        Array.from(fileInput.files).forEach((file, index) => {
+          if (!file.name.match(/\.(xlsx|xls)$/i)) {
+            Swal.fire('Invalid File', `${file.name} is not an Excel file.`, 'error');
+            return;
+          }
+          if (file.size > 25 * 1024 * 1024) {
+            Swal.fire('File Too Large', `${file.name} exceeds 25MB.`, 'error');
+            return;
+          }
+          const fileData = {
+            file,
+            name: file.name,
+            id: `file-${index}`,
+            status: 'Pending',
+            workbook: null,
+            sheets: [],
+            selectedSheets: []
+          };
+          files.push(fileData);
+          renderPreview(fileData);
+          parseExcel(fileData);
+        });
+      }
+      document.getElementById('convertButton').disabled = files.length === 0;
+    }
+
+    function renderPreview(fileData) {
+      const previewContainer = document.getElementById('previewContainer');
+      const div = document.createElement('div');
+      div.className = 'flex justify-between items-center bg-gray-50 p-4 rounded-lg mb-2 scale-in';
+      div.innerHTML = `
+        <p class="text-gray-600">${fileData.name} (${(fileData.file.size / 1024 / 1024).toFixed(2)}MB)</p>
+        <div class="flex items-center gap-2">
+          <p id="${fileData.id}-status" class="text-gray-500">${fileData.status}</p>
+        </div>
+      `;
+      previewContainer.appendChild(div);
+    }
+
+    function parseExcel(fileData) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const data = new Uint8Array(event.target.result);
+          const workbook = XLSX.read(data, { type: 'array' });
+          fileData.workbook = workbook;
+          fileData.sheets = workbook.SheetNames;
+          fileData.selectedSheets = [...workbook.SheetNames];
+          renderSheetSelection();
+          if (document.getElementById('previewData').checked) {
+            renderDataPreview();
+          }
+        } catch (error) {
+          Swal.fire('Parsing Error', `Failed to parse ${fileData.name}: ${error.message}`, 'error');
+          document.getElementById(`${fileData.id}-status`).textContent = 'Error';
+        }
+      };
+      reader.readAsArrayBuffer(fileData.file);
+    }
+
+    function renderSheetSelection() {
+      const sheetOptions = document.getElementById('sheetOptions');
+      const sheetSelection = document.getElementById('sheetSelection');
+      sheetOptions.innerHTML = '';
+      if (files.some(f => f.sheets.length > 1)) {
+        sheetSelection.classList.remove('hidden');
+      }
+      files.forEach((fileData, fileIndex) => {
+        if (fileData.sheets.length > 1) {
+          const div = document.createElement('div');
+          div.innerHTML = `<p class="font-medium text-gray-700 mb-2">${fileData.name}</p>`;
+          fileData.sheets.forEach((sheet, sheetIndex) => {
+            const checkbox = document.createElement('div');
+            checkbox.className = 'flex items-center gap-2';
+            checkbox.innerHTML = `
+              <input type="checkbox" id="sheet-${fileIndex}-${sheetIndex}" ${fileData.selectedSheets.includes(sheet) ? 'checked' : ''}>
+              <label for="sheet-${fileIndex}-${sheetIndex}" class="text-gray-600">${sheet}</label>
+            `;
+            checkbox.querySelector('input').addEventListener('change', (e) => {
+              if (e.target.checked) {
+                fileData.selectedSheets.push(sheet);
+              } else {
+                fileData.selectedSheets = fileData.selectedSheets.filter(s => s !== sheet);
+              }
+            });
+            div.appendChild(checkbox);
+          });
+          sheetOptions.appendChild(div);
+        }
+      });
+    }
+
+    function renderDataPreview() {
+      const dataPreview = document.getElementById('dataPreview');
+      dataPreview.innerHTML = '';
+      dataPreview.classList.remove('hidden');
+      files.forEach(fileData => {
+        if (fileData.workbook) {
+          fileData.selectedSheets.forEach(sheetName => {
+            const worksheet = fileData.workbook.Sheets[sheetName];
+            const sheetData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+            const table = document.createElement('table');
+            table.className = 'min-w-full divide-y divide-gray-200';
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+            sheetData.slice(0, 5).forEach((row, index) => {
+              const tr = document.createElement('tr');
+              row.forEach(cell => {
+                const td = index === 0 && document.getElementById('useHeaders').checked ? document.createElement('th') : document.createElement('td');
+                td.className = index === 0 && document.getElementById('useHeaders').checked ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : 'px-6 py-4 whitespace-nowrap text-sm text-gray-500';
+                td.textContent = cell || '';
+                tr.appendChild(td);
+              });
+              if (index === 0 && document.getElementById('useHeaders').checked) {
+                thead.appendChild(tr);
+              } else {
+                tbody.appendChild(tr);
+              }
+            });
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            dataPreview.appendChild(table);
+          });
+        }
+      });
+    }
+
+    async function convertExcels() {
+      if (!files.length) {
+        Swal.fire('No Files', 'Please upload at least one Excel file.', 'error');
+        return;
+      }
+
+      const progressBar = document.getElementById('progressBar');
+      const progressFill = progressBar.querySelector('div');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      const pageSize = document.getElementById('pageSize').value;
+      const orientation = document.getElementById('orientation').value;
+      const fontSize = parseInt(document.getElementById('fontSize').value);
+      const useHeaders = document.getElementById('useHeaders').checked;
+      const drawBorders = document.getElementById('drawBorders').checked;
+      const headerColor = document.getElementById('headerColor').value;
+      const downloadZip = document.getElementById('downloadZip').checked;
+      const zip = new JSZip();
+      let progress = 0;
+      let hasValidOutputs = false;
+      progressBar.classList.remove('hidden');
+      progressFill.style.width = '0%';
+
+      function updateProgress() {
+        progress += 100 / files.length / 10;
+        progressFill.style.width = `${Math.min(progress, 100)}%`;
+        if (progress < 100) {
+          requestAnimationFrame(updateProgress);
+        }
+      }
+
+      requestAnimationFrame(updateProgress);
+
+      for (let i = 0; i < files.length; i++) {
+        const fileData = files[i];
+        try {
+          document.getElementById(`${fileData.id}-status`).textContent = 'Processing...';
+          if (!fileData.workbook) {
+            throw new Error('Excel data not parsed.');
+          }
+
+          const pdfDoc = await PDFLib.PDFDocument.create();
+          const pageDimensions = pageSize === 'A4' ? [595, 842] : pageSize === 'Letter' ? [612, 792] : [612, 1008];
+          const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+          const boldFont = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+          const margin = 50;
+          const cellPadding = 5;
+          const rowHeight = fontSize + 10;
+
+          for (const sheetName of fileData.selectedSheets) {
+            const worksheet = fileData.workbook.Sheets[sheetName];
+            const sheetData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+            let y = pageDimensions[1] - margin;
+            let currentPage = pdfDoc.addPage(orientation === 'portrait' ? pageDimensions : [pageDimensions[1], pageDimensions[0]]);
+            const { width, height } = currentPage.getSize();
+            const maxRowsPerPage = Math.floor((height - 2 * margin) / rowHeight);
+
+            sheetData.forEach((row, rowIndex) => {
+              if (y < margin + rowHeight) {
+                currentPage = pdfDoc.addPage(orientation === 'portrait' ? pageDimensions : [pageDimensions[1], pageDimensions[0]]);
+                y = height - margin;
+              }
+
+              const cellWidth = (width - 2 * margin) / row.length;
+              let x = margin;
+
+              row.forEach((cell, cellIndex) => {
+                const text = cell ? cell.toString() : '';
+                const isHeader = rowIndex === 0 && useHeaders;
+                currentPage.drawText(text, {
+                  x: x + cellPadding,
+                  y,
+                  size: fontSize,
+                  font: isHeader ? boldFont : font,
+                  color: isHeader ? PDFLib.rgb(...hexToRgb(headerColor)) : PDFLib.rgb(0, 0, 0),
+                  maxWidth: cellWidth - 2 * cellPadding
+                });
+
+                if (drawBorders) {
+                  currentPage.drawRectangle({
+                    x,
+                    y: y - 2,
+                    width: cellWidth,
+                    height: rowHeight,
+                    borderWidth: 1,
+                    borderColor: PDFLib.rgb(0.5, 0.5, 0.5)
+                  });
+                }
+
+                x += cellWidth;
+              });
+
+              y -= rowHeight;
+            });
+          }
+
+          const pdfBytes = await pdfDoc.save();
+          const fileName = `${fileData.name.replace(/\.(xlsx|xls)$/i, '')}.pdf`;
+          const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+
+          if (downloadZip) {
+            zip.file(fileName, blob);
+          } else {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.click();
+          }
+
+          const statusDiv = document.getElementById(`${fileData.id}-status`).parentElement;
+          statusDiv.innerHTML = `<p id="${fileData.id}-status" class="text-gray-500">Converted</p>`;
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = fileName;
+          link.className = 'text-blue-600 hover:underline';
+          link.textContent = fileName;
+          statusDiv.appendChild(link);
+
+          document.getElementById(`${fileData.id}-status`).textContent = 'Converted';
+          hasValidOutputs = true;
+
+          if (i === files.length - 1 && hasValidOutputs && downloadZip) {
+            const zipBlob = await zip.generateAsync({ type: 'blob' });
+            downloadZipButton.href = URL.createObjectURL(zipBlob);
+            downloadZipButton.download = 'pdf_files.zip';
+            downloadZipButton.classList.remove('hidden');
+            Swal.fire('Success!', 'All files converted successfully.', 'success');
+          } else if (i === files.length - 1 && hasValidOutputs) {
+            Swal.fire('Success!', 'All files converted successfully.', 'success');
+          }
+        } catch (error) {
+          console.error(`Error processing ${fileData.name}:`, error);
+          document.getElementById(`${fileData.id}-status`).textContent = 'Error';
+          Swal.fire('Error', `Failed to process ${fileData.name}.`, 'error');
+        }
+      }
+
+      progressBar.classList.add('hidden');
+      progressFill.style.width = '0%';
+    }
+
+    function hexToRgb(hex) {
+      const r = parseInt(hex.slice(1, 3), 16) / 255;
+      const g = parseInt(hex.slice(3, 5), 16) / 255;
+      const b = parseInt(hex.slice(5, 7), 16) / 255;
+      return [r, g, b];
+    }
+
+    function resetAll() {
+      files = [];
+      document.getElementById('previewContainer').innerHTML = '';
+      document.getElementById('excelFiles').value = '';
+      document.getElementById('pageSize').value = 'A4';
+      document.getElementById('orientation').value = 'portrait';
+      document.getElementById('fontSize').value = '10';
+      document.getElementById('useHeaders').checked = false;
+      document.getElementById('drawBorders').checked = false;
+      document.getElementById('headerColor').value = '#4f46e5';
+      document.getElementById('downloadZip').checked = false;
+      document.getElementById('previewData').checked = false;
+      document.getElementById('dataPreview').innerHTML = '';
+      document.getElementById('dataPreview').classList.add('hidden');
+      document.getElementById('sheetSelection').classList.add('hidden');
+      document.getElementById('downloadZipButton').classList.add('hidden');
+      document.getElementById('progressBar').classList.add('hidden');
+      document.getElementById('convertButton').disabled = true;
+    }
+  </script>
+</body>
+</html>

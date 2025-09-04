@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Title Tag -->
+    <title>Online Image Resizer - Resize Images in Seconds | OnePageTools</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Resize images online for free with our professional image resizer tool. Compress, crop, and adjust photos easily for web, social media, or personal use.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="online image resizer, resize image online free, image compressor, photo resizer tool, resize images for web, image editor, free image resizer, jpg resizer, png image resize">
+
+    <!-- Author -->
+    <meta name="author" content="OnePageTools Team">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.onepagetools.com/image-resizer">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Online Image Resizer - Resize Photos Instantly | OnePageTools">
+    <meta property="og:description" content="Resize photos quickly and easily with our free online image resizer tool. Works with JPG, PNG, and WebP formats. Try it now on OnePageTools.">
+    <meta property="og:url" content="https://www.onepagetools.com/image-resizer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.onepagetools.com/assets/images/image-resizer-banner.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Image Resizer Tool | OnePageTools">
+    <meta name="twitter:description" content="Resize any image online in seconds without losing quality. Free, fast, and mobile-friendly image resizing tool by OnePageTools.">
+    <meta name="twitter:image" content="https://www.onepagetools.com/assets/images/image-resizer-banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN (Replace with local setup in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated-entry { animation: fadeIn 0.5s ease-out; }
+        .drop-zone { transition: all 0.3s ease; }
+        .drop-zone.dragover { border-color: #4F46E5; background-color: rgba(79, 70, 229, 0.1); }
+        .tooltip:hover .tooltip-text { opacity: 1; visibility: visible; }
+        canvas { image-rendering: high-quality; }
+        .filter-btn.active { background-color: #4F46E5; color: white; }
+        .article-section { max-width: 800px; margin: 0 auto; }
+        .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+        .article-section ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+        .nav-transition { transition: all 0.3s ease; }
+        .nav-link:hover { color: #4F46E5; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-gray-50 transition-colors duration-300">
+    <!-- Header -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 animated-entry">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="./index.html" class="flex-shrink-0">
+                        <img class="h-12 w-auto" src="One_Page-removebg-preview.png" alt="OnePageTools Logo">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="./index.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Home</a>
+                        <a href="./about.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">About</a>
+                        <a href="./contact.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Contact</a>
+                        <div class="relative">
+                            <button id="toolsDropdown" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center nav-transition" aria-expanded="false" aria-haspopup="true">
+                                Tools
+                                <i class="fas fa-chevron-down ml-2"></i>
+                            </button>
+                            <div id="toolsDropdownMenu" class="absolute hidden mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="toolsDropdown">
+                                    <a href="./imageresizer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                                    <a href="./imagecompressor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                                    <a href="./jpgtopng.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                                    <a href="./pngtojpg.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="text-gray-900 hover:text-blue-500 p-2 rounded-full" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="-mr-2 flex md:hidden">
+                        <button id="mobileMenuButton" type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <i class="fas fa-bars h-6 w-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="./index.html" class="nav-link text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium nav-transition">Home</a>
+                <a href="./about.html" class="nav-link text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium nav-transition">About</a>
+                <a href="./contact.html" class="nav-link text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium nav-transition">Contact</a>
+                <div>
+                    <button id="mobileToolsDropdown" class="nav-link text-gray-900 hover:bg-gray-100 flex items-center w-full px-3 py-2 rounded-md text-base font-medium nav-transition">
+                        Tools
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div id="mobileToolsDropdownMenu" class="hidden pl-4 space-y-1">
+                        <a href="./imageresizer.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                        <a href="./imagecompressor.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                        <a href="./jpgtopng.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                        <a href="./pngtojpg.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-20">
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8 animated-entry">
+            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Professional Online Image Resizer</h1>
+
+            <!-- Drag & Drop Zone -->
+            <div class="drop-zone rounded-lg p-8 text-center mb-8 cursor-pointer border-2 border-dashed"
+                ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+                <div class="space-y-4">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-blue-500" alt="Upload icon for image resizer"></i>
+                    <p class="text-gray-600">Drag & Drop your image here</p>
+                    <p class="text-gray-400 text-sm">or</p>
+                    <label class="inline-block px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors cursor-pointer">
+                        Browse Files
+                        <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleImageUpload(event)">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Controls Section -->
+                <div class="md:col-span-1 space-y-6">
+                    <!-- Resize Controls -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-4">Resize Settings</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <label class="text-gray-600">Width (px)</label>
+                                <input type="number" id="width" class="w-24 px-3 py-2 border rounded-lg" min="1" onchange="updateSize('width')">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <label class="text-gray-600">Height (px)</label>
+                                <input type="number" id="height" class="w-24 px-3 py-2 border rounded-lg" min="1" onchange="updateSize('height')">
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" id="lockAspect" checked onchange="toggleAspectLock()">
+                                <label class="text-gray-600">Lock Aspect Ratio</label>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <label class="text-gray-600">Quality: <span id="qualityValue">90</span>%</label>
+                                <input type="range" id="quality" min="1" max="100" value="90" class="w-32" oninput="updateQuality()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adjustment Controls -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-4">Image Adjustments</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Brightness</span>
+                                <input type="range" id="brightness" min="0" max="200" value="100" class="w-32" oninput="applyFilters()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Contrast</span>
+                                <input type="range" id="contrast" min="0" max="200" value="100" class="w-32" oninput="applyFilters()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Saturation</span>
+                                <input type="range" id="saturation" min="0" max="200" value="100" class="w-32" oninput="applyFilters()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Sharpness</span>
+                                <input type="range" id="sharpness" min="0" max="10" value="0" class="w-32" oninput="applyFilters()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Hue</span>
+                                <input type="range" id="hue" min="0" max="360" value="0" class="w-32" oninput="applyFilters()">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Opacity</span>
+                                <input type="range" id="opacity" min="0" max="100" value="100" class="w-32" oninput="applyFilters()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Format Selection -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-4">Output Format</h3>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button onclick="setFormat('jpg')" class="format-btn bg-blue-500 text-white p-2 rounded">JPG</button>
+                            <button onclick="setFormat('png')" class="format-btn bg-gray-200 p-2 rounded">PNG</button>
+                            <button onclick="setFormat('webp')" class="format-btn bg-gray-200 p-2 rounded">WEBP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Section -->
+                <div class="md:col-span-2">
+                    <div class="sticky top-20">
+                        <div class="image-preview-container bg-gray-100 rounded-lg p-4">
+                            <canvas id="canvas" class="max-w-full mx-auto"></canvas>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                            <button onclick="resetAll()" class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+                                <i class="fas fa-undo mr-2"></i>Reset
+                            </button>
+                            <button onclick="downloadImage()" class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                                <i class="fas fa-download mr-2"></i>Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Features -->
+            <div class="mt-12 grid md:grid-cols-3 gap-6">
+                <!-- Rotation & Flip -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4">Rotation & Flip</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="rotateImage(-90)" class="p-2 bg-white rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-undo"></i> Left
+                        </button>
+                        <button onclick="rotateImage(90)" class="p-2 bg-white rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-redo"></i> Right
+                        </button>
+                        <button onclick="flipImage('horizontal')" class="p-2 bg-white rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-arrows-alt-h"></i> Flip X
+                        </button>
+                        <button onclick="flipImage('vertical')" class="p-2 bg-white rounded-lg hover:bg-gray-100">
+                            <i class="fas fa-arrows-alt-v"></i> Flip Y
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4">Preset Filters</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="applyPresetFilter('none')" class="filter-btn bg-blue-500 text-white p-2 rounded">Original</button>
+                        <button onclick="applyPresetFilter('grayscale')" class="filter-btn bg-gray-200 p-2 rounded">Grayscale</button>
+                        <button onclick="applyPresetFilter('sepia')" class="filter-btn bg-gray-200 p-2 rounded">Sepia</button>
+                        <button onclick="applyPresetFilter('vintage')" class="filter-btn bg-gray-200 p-2 rounded">Vintage</button>
+                        <button onclick="applyPresetFilter('invert')" class="filter-btn bg-gray-200 p-2 rounded">Invert</button>
+                        <button onclick="applyPresetFilter('blur')" class="filter-btn bg-gray-200 p-2 rounded">Blur</button>
+                        <button onclick="applyPresetFilter('polaroid')" class="filter-btn bg-gray-200 p-2 rounded">Polaroid</button>
+                        <button onclick="applyPresetFilter('high-contrast')" class="filter-btn bg-gray-200 p-2 rounded">High Contrast</button>
+                        <button onclick="applyPresetFilter('faded')" class="filter-btn bg-gray-200 p-2 rounded">Faded</button>
+                    </div>
+                </div>
+
+                <!-- Metadata Info -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4">Image Info</h3>
+                    <div id="metadata" class="text-sm space-y-2">
+                        <div>Dimensions: <span id="dimensions">-</span></div>
+                        <div>File Size: <span id="fileSize">-</span></div>
+                        <div>Format: <span id="originalFormat">-</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO-Friendly Article -->
+        <div class="article-section mt-12">
+            <h2>Ultimate Guide to Using an Online Image Resizer Tool</h2>
+            <p>In today’s digital age, images play a critical role in everything from social media marketing to website design. However, managing image sizes, formats, and quality can be a challenge. That’s where an <strong>online image resizer</strong> comes in. Our <a href="#canvas">free photo resizer tool</a> is designed to make image editing simple, fast, and accessible for everyone. Whether you’re a blogger, a small business owner, or just someone looking to optimize images for personal use, this guide will walk you through everything you need to know about resizing images online.</p>
+
+            <h3>Why Use an Online Image Resizer?</h3>
+            <p>Using a <strong>photo resizer tool</strong> offers numerous benefits, especially when you need to prepare images for specific platforms or purposes. Here are some key reasons why resizing images online is a game-changer:</p>
+            <ul>
+                <li><strong>Faster Website Loading</strong>: Large images can slow down your website, negatively impacting user experience and SEO rankings. An <strong>image compressor</strong> reduces file sizes without sacrificing quality, ensuring your site loads quickly.</li>
+                <li><strong>Social Media Optimization</strong>: Platforms like Instagram, Facebook, and Twitter have specific image size requirements. A <strong>resize image online free</strong> tool helps you adjust dimensions to fit perfectly.</li>
+                <li><strong>Storage Efficiency</strong>: Smaller image files take up less space on your device or cloud storage, making it easier to manage your digital assets.</li>
+                <li><strong>Professional Quality</strong>: With features like brightness, contrast, and preset filters, you can enhance images to look professional without needing advanced software.</li>
+                <li><strong>Accessibility</strong>: No downloads or installations are required. Our <strong>free image resizer</strong> works directly in your browser, making it convenient for users worldwide.</li>
+            </ul>
+
+            <h3>How to Use Our Free Image Resizer Tool</h3>
+            <p>Our <strong>online image resizer</strong> is user-friendly and packed with features to help you achieve the perfect image. Here’s a step-by-step guide to using it:</p>
+            <ol>
+                <li><strong>Upload Your Image</strong>: Drag and drop your image into the designated area or click “Browse Files” to select an image from your device. The tool supports popular formats like JPG, PNG, and WEBP.</li>
+                <li><strong>Adjust Dimensions</strong>: Enter the desired width and height in pixels. Use the “Lock Aspect Ratio” option to maintain the image’s proportions, ensuring it doesn’t get distorted.</li>
+                <li><strong>Apply Adjustments</strong>: Fine-tune your image with sliders for brightness, contrast, saturation, sharpness, hue, and opacity. These tools allow you to enhance the image’s appearance to suit your needs.</li>
+                <li><strong>Choose a Preset Filter</strong>: Apply creative filters like grayscale, sepia, or vintage to give your image a unique look. These are perfect for social media posts or artistic projects.</li>
+                <li><strong>Select Output Format</strong>: Choose between JPG, PNG, or WEBP. JPG is great for photos, PNG for transparent backgrounds, and WEBP for web-optimized images.</li>
+                <li><strong>Download Your Image</strong>: Once you’re satisfied, click the “Download” button to save your resized and edited image. Adjust the quality slider to balance file size and clarity.</li>
+            </ol>
+            <p>With these steps, you can <strong>resize images for web</strong>, social media, or any other purpose in just a few minutes.</p>
+
+            <h3>Who Can Benefit from an Image Resizer?</h3>
+            <p>An <strong>image editor</strong> like ours is versatile and caters to a wide range of users. Here are some examples:</p>
+            <ul>
+                <li><strong>Bloggers and Content Creators</strong>: Optimize images for blog posts to improve page load times and SEO performance.</li>
+                <li><strong>E-commerce Businesses</strong>: Resize product images to fit online store requirements while maintaining high quality.</li>
+                <li><strong>Social Media Managers</strong>: Create perfectly sized images for posts, stories, and ads across platforms.</li>
+                <li><strong>Photographers</strong>: Adjust image sizes and apply filters for client deliverables or portfolios.</li>
+                <li><strong>Students and Professionals</strong>: Prepare images for presentations, reports, or personal projects with ease.</li>
+            </ul>
+            <p>No matter your background, our <strong>free image resizer</strong> is designed to meet your needs without requiring technical expertise.</p>
+
+            <h3>Top Features of Our Photo Resizer Tool</h3>
+            <p>Our tool stands out due to its comprehensive feature set, making it one of the best <strong>online image resizers</strong> available. Here’s what you get:</p>
+            <ul>
+                <li><strong>Drag-and-Drop Interface</strong>: Upload images effortlessly with a simple drag-and-drop feature.</li>
+                <li><strong>Advanced Adjustments</strong>: Fine-tune brightness, contrast, saturation, and more for professional results.</li>
+                <li><strong>Preset Filters</strong>: Apply creative effects like polaroid, high-contrast, or faded to enhance your images.</li>
+                <li><strong>Rotation and Flip</strong>: Rotate images by 90 degrees or flip them horizontally/vertically for perfect orientation.</li>
+                <li><strong>Multiple Output Formats</strong>: Choose from JPG, PNG, or WEBP to suit your project requirements.</li>
+                <li><strong>Quality Control</strong>: Adjust the quality slider to balance file size and image clarity.</li>
+            </ul>
+            <p>These features make our tool a one-stop solution for anyone looking to <strong>resize images online free</strong>.</p>
+
+            <h3>Tips for Optimizing Images for the Web</h3>
+            <p>Resizing images for the web is crucial for performance and user experience. Here are some expert tips to get the most out of our <strong>image compressor</strong>:</p>
+            <ul>
+                <li><strong>Choose the Right Dimensions</strong>: Check the platform’s recommended image sizes (e.g., 1200x630 for Facebook posts) before resizing.</li>
+                <li><strong>Use WEBP for Web</strong>: WEBP offers smaller file sizes with comparable quality, making it ideal for websites.</li>
+                <li><strong>Compress Without Losing Quality</strong>: Start with a quality setting of 80-90% and adjust as needed to find the perfect balance.</li>
+                <li><strong>Optimize Alt Text</strong>: If you’re adding images to a website, use descriptive alt text (e.g., “resized product photo for e-commerce”) to improve SEO.</li>
+                <li><strong>Test Load Times</strong>: After resizing, test your website’s load time using tools like Google PageSpeed Insights to ensure optimal performance.</li>
+            </ul>
+
+            <h3>Frequently Asked Questions (FAQs)</h3>
+            <p>Here are some common questions about using an <strong>online image resizer</strong>:</p>
+            <h4>1. Is the image resizer tool really free?</h4>
+            <p>Yes, our <strong>free image resizer</strong> is completely free to use with no hidden costs or subscriptions.</p>
+            <h4>2. Can I resize images for social media?</h4>
+            <p>Absolutely! Our tool allows you to set custom dimensions to match the requirements of platforms like Instagram, Twitter, and LinkedIn.</p>
+            <h4>3. Does resizing affect image quality?</h4>
+            <p>With our quality slider, you can control the balance between file size and clarity, ensuring minimal quality loss.</p>
+            <h4>4. What formats are supported?</h4>
+            <p>The tool supports JPG, PNG, and WEBP, covering the most common image formats for web and personal use.</p>
+            <h4>5. Can I edit multiple images at once?</h4>
+            <p>Currently, the tool processes one image at a time, but you can upload and edit multiple images sequentially.</p>
+
+            <h3>Conclusion</h3>
+            <p>Resizing images doesn’t have to be complicated or expensive. With our <strong>online image resizer</strong>, you can quickly adjust image sizes, apply professional edits, and optimize files for any purpose—all for free. Whether you’re preparing images for a website, social media, or personal projects, our <strong>photo resizer tool</strong> offers the flexibility and features you need to get the job done. Try it today and experience the ease of resizing images online!</p>
+            <p><a href="#canvas" class="text-blue-500 hover:underline">Start resizing your images now</a> and take control of your digital content.</p>
+        </div>
+    </div>
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let currentImage = null;
+        let aspectRatio = 1;
+        let isAspectLocked = true;
+        let currentRotation = 0;
+        let currentFormat = 'jpg';
+        let flipState = { h: 1, v: 1 };
+        let currentPresetFilter = 'none';
+
+        // Initialize
+        function init() {
+            initNavigation();
+            initDarkMode();
+            setFormat('jpg');
+            applyPresetFilter('none');
+            document.querySelectorAll('input, button').forEach(control => {
+                control.disabled = true;
+            });
+            document.getElementById('fileInput').disabled = false;
+        }
+
+        // Navigation
+        function initNavigation() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const toolsDropdown = document.getElementById('toolsDropdown');
+            const toolsDropdownMenu = document.getElementById('toolsDropdownMenu');
+            const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+            const mobileToolsDropdownMenu = document.getElementById('mobileToolsDropdownMenu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-bars');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-times');
+            });
+
+            toolsDropdown.addEventListener('click', () => {
+                const isExpanded = toolsDropdown.getAttribute('aria-expanded') === 'true';
+                toolsDropdown.setAttribute('aria-expanded', !isExpanded);
+                toolsDropdownMenu.classList.toggle('hidden');
+            });
+
+            mobileToolsDropdown.addEventListener('click', () => {
+                mobileToolsDropdownMenu.classList.toggle('hidden');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-down');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-up');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!toolsDropdown.contains(e.target)) {
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                }
+                if (!mobileToolsDropdown.contains(e.target)) {
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+        }
+
+        // Dark Mode
+        function initDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark');
+                toggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+                const isDark = document.body.classList.contains('dark');
+                toggle.querySelector('i').classList.toggle('fa-moon', !isDark);
+                toggle.querySelector('i').classList.toggle('fa-sun', isDark);
+                localStorage.setItem('darkMode', isDark);
+            });
+        }
+
+        // Image Upload Handlers
+        function handleImageUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = new Image();
+                img.onload = () => {
+                    currentImage = img;
+                    aspectRatio = img.width / img.height;
+                    updateCanvasSize(img.width, img.height);
+                    updateMetadata(file);
+                    drawImage();
+                    enableControls();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file) handleImageUpload({ target: { files: [file] } });
+        }
+
+        // Size Controls
+        function updateSize(changedDimension) {
+            if (!currentImage) return;
+
+            if (isAspectLocked) {
+                if (changedDimension === 'width') {
+                    const newWidth = parseInt(document.getElementById('width').value);
+                    document.getElementById('height').value = Math.round(newWidth / aspectRatio);
+                } else {
+                    const newHeight = parseInt(document.getElementById('height').value);
+                    document.getElementById('width').value = Math.round(newHeight * aspectRatio);
+                }
+            }
+            drawImage();
+        }
+
+        function toggleAspectLock() {
+            isAspectLocked = !isAspectLocked;
+        }
+
+        // Image Manipulation
+        function drawImage() {
+            if (!currentImage) return;
+
+            const width = parseInt(document.getElementById('width').value) || currentImage.naturalWidth;
+            const height = parseInt(document.getElementById('height').value) || currentImage.naturalHeight;
+
+            canvas.width = width;
+            canvas.height = height;
+
+            ctx.clearRect(0, 0, width, height);
+            ctx.save();
+
+            // Apply transformations (rotation and flip)
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(currentRotation * Math.PI / 180);
+            ctx.scale(flipState.h, flipState.v);
+
+            // Apply filters
+            const filterString = computeFilters();
+            ctx.filter = filterString || 'none';
+
+            // Draw the image
+            ctx.drawImage(currentImage, -width / 2, -height / 2, width, height);
+            ctx.restore();
+        }
+
+        function computeFilters() {
+            if (!currentImage) return '';
+
+            // Get adjustment values
+            const brightness = document.getElementById('brightness').value;
+            const contrast = document.getElementById('contrast').value;
+            const saturation = document.getElementById('saturation').value;
+            const sharpness = document.getElementById('sharpness').value;
+            const hue = document.getElementById('hue').value;
+            const opacity = document.getElementById('opacity').value;
+
+            let filterString = '';
+
+            // Apply preset filter
+            switch (currentPresetFilter) {
+                case 'none':
+                    break;
+                case 'grayscale':
+                    filterString = `grayscale(100%)`;
+                    break;
+                case 'sepia':
+                    filterString = `sepia(100%)`;
+                    break;
+                case 'vintage':
+                    filterString = `contrast(120%) saturate(120%) sepia(30%)`;
+                    break;
+                case 'invert':
+                    filterString = `invert(100%)`;
+                    break;
+                case 'blur':
+                    filterString = `blur(5px)`;
+                    break;
+                case 'polaroid':
+                    filterString = `contrast(110%) brightness(110%) sepia(20%)`;
+                    break;
+                case 'high-contrast':
+                    filterString = `contrast(150%) brightness(90%) saturate(150%)`;
+                    break;
+                case 'faded':
+                    filterString = `opacity(70%) contrast(90%) brightness(120%)`;
+                    break;
+            }
+
+            // Apply manual adjustments
+            if (currentPresetFilter === 'none' || brightness != 100 || contrast != 100 || saturation != 100 || hue != 0 || opacity != 100 || sharpness > 0) {
+                filterString += ` 
+                    brightness(${brightness}%)
+                    contrast(${contrast}%)
+                    saturate(${saturation}%)
+                    hue-rotate(${hue}deg)
+                    opacity(${opacity}%)
+                `;
+                if (sharpness > 0) {
+                    filterString += ` contrast(${100 + sharpness * 10}%)`;
+                }
+            }
+
+            return filterString.trim();
+        }
+
+        function applyFilters() {
+            drawImage();
+        }
+
+        // Preset Filters
+        function applyPresetFilter(filter) {
+            currentPresetFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('bg-blue-500', btn.textContent.toLowerCase() === filter);
+                btn.classList.toggle('text-white', btn.textContent.toLowerCase() === filter);
+                btn.classList.toggle('bg-gray-200', btn.textContent.toLowerCase() !== filter);
+            });
+            drawImage();
+        }
+
+        // Format Handling
+        function setFormat(format) {
+            currentFormat = format;
+            document.querySelectorAll('.format-btn').forEach(btn => {
+                btn.classList.toggle('bg-blue-500', btn.textContent.toLowerCase() === format);
+                btn.classList.toggle('text-white', btn.textContent.toLowerCase() === format);
+                btn.classList.toggle('bg-gray-200', btn.textContent.toLowerCase() !== format);
+            });
+        }
+
+        // Download
+        function downloadImage() {
+            if (!currentImage) return;
+
+            const quality = document.getElementById('quality').value / 100;
+            const mimeType = `image/${currentFormat}`;
+
+            canvas.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.download = `resized-image.${currentFormat}`;
+                a.href = url;
+                a.click();
+                URL.revokeObjectURL(url);
+            }, mimeType, quality);
+        }
+
+        // Reset
+        function resetAll() {
+            if (!currentImage) return;
+
+            document.getElementById('width').value = currentImage.naturalWidth;
+            document.getElementById('height').value = currentImage.naturalHeight;
+            document.getElementById('brightness').value = 100;
+            document.getElementById('contrast').value = 100;
+            document.getElementById('saturation').value = 100;
+            document.getElementById('sharpness').value = 0;
+            document.getElementById('hue').value = 0;
+            document.getElementById('opacity').value = 100;
+            document.getElementById('quality').value = 90;
+            currentRotation = 0;
+            flipState = { h: 1, v: 1 };
+            currentPresetFilter = 'none';
+            setFormat('jpg');
+            updateQuality();
+            applyPresetFilter('none');
+            drawImage();
+        }
+
+        // Helper Functions
+        function updateCanvasSize(width, height) {
+            canvas.width = width;
+            canvas.height = height;
+            document.getElementById('width').value = width;
+            document.getElementById('height').value = height;
+        }
+
+        function updateMetadata(file) {
+            document.getElementById('dimensions').textContent = 
+                `${currentImage.naturalWidth}x${currentImage.naturalHeight}`;
+            document.getElementById('fileSize').textContent = 
+                `${(file.size / 1024).toFixed(1)} KB`;
+            document.getElementById('originalFormat').textContent = 
+                file.type.split('/')[1].toUpperCase();
+        }
+
+        function updateQuality() {
+            document.getElementById('qualityValue').textContent = 
+                document.getElementById('quality').value;
+        }
+
+        function enableControls() {
+            document.querySelectorAll('input, button').forEach(control => {
+                control.disabled = false;
+            });
+        }
+
+        // Image Transformation
+        function rotateImage(degrees) {
+            currentRotation += degrees;
+            drawImage();
+        }
+
+        function flipImage(direction) {
+            flipState[direction === 'horizontal' ? 'h' : 'v'] *= -1;
+            drawImage();
+        }
+
+        init();
+    </script>

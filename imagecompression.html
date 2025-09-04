@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <title>Image Compressor Online - Free Tool to Reduce Image Size</title>
+  <meta name="description" content="Compress images online for free with our advanced image compressor. Reduce image size, resize, crop, watermark, and optimize photos for web, social media, and more with high quality.">
+  <meta name="keywords" content="image compressor online, compress images online free, photo compressor tool, reduce image size, optimize images for web, free image compressor, image resizer, image optimization tool">
+  <meta name="author" content="EasyResize Team">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.easyresize.com/image-compressor">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Image Compressor Online - Free & Fast Photo Compression">
+  <meta property="og:description" content="Compress images online with our free tool. Reduce file size, resize, crop, watermark, and optimize for web and social media with high quality.">
+  <meta property="og:url" content="https://www.easyresize.com/image-compressor">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.easyresize.com/assets/images/compressor-banner.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Image Compressor Tool">
+  <meta name="twitter:description" content="Compress images instantly with our free, user-friendly tool. Perfect for web, social media, and more.">
+  <meta name="twitter:image" content="https://www.easyresize.com/assets/images/compressor-banner.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Flowbite for Dropdowns -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+  <!-- Cropper.js for Cropping -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" integrity="sha512-hCAwZ0eN4D2aU9l9qC3kB2fC7WauZ8N4qD35AtPh2b+drV76YDH4kb2yT2lNywcY0IJSQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js" integrity="sha512-9K6N7s1L+eGk2S7uD0fOLgVRsK4rCU3rMbkp7LNGs4n0TBw//CZ+2p2O6N7Y1==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .progress-bar { background: linear-gradient(to right, #4f46e5, #7c3aed); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.1); }
+    .filter-btn.active { background-color: #4f46e5; color: white; }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: 700; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; margin-left: 2rem; margin-bottom: 1rem; }
+    .nav-transition { transition: all 0.3s ease; }
+    .nav-link:hover { color: #3b82f6; transform: translateY(-2px); }
+    .cropper-container { max-width: 100%; margin: 0 auto; }
+    .error-message { color: #dc2626; font-size: 0.875rem; margin-top: 0.5rem; }
+    .watermark-preview { position: relative; width: 100%; height: 192px; overflow: hidden; }
+    .watermark-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .dark .bg-gray-50 { background-color: #1f2937; }
+    .dark .bg-white { background-color: #111827; }
+    .dark .text-gray-800 { color: #f3f4f6; }
+    .dark .text-gray-500 { color: #9ca3af; }
+    .dark .border-gray-300 { border-color: #4b5563; }
+    .progress-container { display: none; }
+    .progress-container.active { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 animate-fade-in">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="EasyResize Logo" class="h-12 w-auto">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button id="darkModeToggle" class="text-gray-500 dark:text-gray-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="./index.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition">About</a>
+          </li>
+          <li>
+            <a href="./contact.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition">Contact</a>
+          </li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="nav-link flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white dark:hover:text-blue-500 nav-transition">
+              ALL PDF TOOLS
+              <svg style="margin-top: 5px" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownNavbarLink">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Images Compression</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO EXCEL</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO PNG</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO XML</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO ZIP</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WEBP</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO TEXT</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CSV TO PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">EXCEL TO PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">HTML TO PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">JPG TO PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">JSON TO PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PNG TO PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SPEECH TO PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">TEXT TO PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">WEBP TO PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">XML TO PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-24 pb-12">
+    <div class="container max-w-4xl p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg fade-in">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">Advanced Image Compressor</h1>
+      <p class="text-center text-gray-500 dark:text-gray-400 mb-6">Compress, resize, crop, watermark, and optimize images effortlessly for web, social media, and more.</p>
+
+      <!-- File Upload Section -->
+      <div class="drop-zone border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center mb-6" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+        <label for="uploadInput" class="inline-block w-full py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full cursor-pointer hover:bg-indigo-700 btn hover-scale">
+          Choose Images
+        </label>
+        <input type="file" id="uploadInput" accept="image/*" multiple class="hidden" onchange="previewImages()">
+        <p class="text-gray-500 dark:text-gray-400 mt-2">or drag and drop images here (supports multiple files, max 10MB each)</p>
+        <p id="errorMessage" class="error-message hidden"></p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-4" id="progressContainer">
+        <div id="progressBar" class="h-full progress-bar" style="width: 0%;"></div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Compression Settings -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Compression Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="text-gray-600 dark:text-gray-300">Quality (%)</label>
+              <input type="range" id="quality" min="10" max="100" value="70" class="w-full" oninput="updateQualityValue()">
+              <span id="qualityValue" class="text-gray-500 dark:text-gray-400">70%</span>
+            </div>
+            <div>
+              <label class="text-gray-600 dark:text-gray-300">Output Format</label>
+              <select id="format" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100">
+                <option value="jpeg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WEBP</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-gray-600 dark:text-gray-300">Social Media Presets</label>
+              <select id="presets" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" onchange="applyPreset()">
+                <option value="">Custom</option>
+                <option value="instagram">Instagram (1080x1080)</option>
+                <option value="twitter">Twitter (1200x675)</option>
+                <option value="linkedin">LinkedIn (1200x627)</option>
+                <option value="facebook">Facebook (1200x630)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resize & Crop Settings -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Resize & Crop Settings</h3>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <label class="text-gray-600 dark:text-gray-300">Width (px)</label>
+              <input type="number" id="width" class="w-24 p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" min="1" onchange="updateSize('width')">
+            </div>
+            <div class="flex items-center justify-between">
+              <label class="text-gray-600 dark:text-gray-300">Height (px)</label>
+              <input type="number" id="height" class="w-24 p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" min="1" onchange="updateSize('height')">
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="lockAspect" checked>
+              <label class="text-gray-600 dark:text-gray-300">Lock Aspect Ratio</label>
+            </div>
+            <button onclick="openCropper()" class="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Crop Image</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adjustments Section -->
+      <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Image Adjustments</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Brightness</label>
+            <input type="range" id="brightness" min="0" max="200" value="100" class="w-full" oninput="applyAdjustments()">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Contrast</label>
+            <input type="range" id="contrast" min="0" max="200" value="100" class="w-full" oninput="applyAdjustments()">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Saturation</label>
+            <input type="range" id="saturation" min="0" max="200" value="100" class="w-full" oninput="applyAdjustments()">
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-4 gap-2">
+          <button onclick="applyFilter('none')" class="filter-btn bg-indigo-600 text-white p-2 rounded scale-in">Original</button>
+          <button onclick="applyFilter('grayscale')" class="filter-btn bg-gray-200 dark:bg-gray-600 p-2 rounded scale-in">Grayscale</button>
+          <button onclick="applyFilter('sepia')" class="filter-btn bg-gray-200 dark:bg-gray-600 p-2 rounded scale-in">Sepia</button>
+          <button onclick="applyFilter('blur')" class="filter-btn bg-gray-200 dark:bg-gray-600 p-2 rounded scale-in">Blur</button>
+        </div>
+      </div>
+
+      <!-- Rotate & Flip Section -->
+      <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Rotate & Flip</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+          <button onclick="rotateImage(90)" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Rotate 90°</button>
+          <button onclick="rotateImage(180)" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Rotate 180°</button>
+          <button onclick="flipImage('horizontal')" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Flip Horizontal</button>
+          <button onclick="flipImage('vertical')" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Flip Vertical</button>
+        </div>
+      </div>
+
+      <!-- Watermark Section -->
+      <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Watermark</h3>
+        <div class="space-y-4">
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Watermark Text</label>
+            <input type="text" id="watermarkText" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" placeholder="Enter watermark text" oninput="updateWatermark()">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Font Size (px)</label>
+            <input type="number" id="watermarkSize" class="w-24 p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" min="10" value="30" oninput="updateWatermark()">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Opacity</label>
+            <input type="range" id="watermarkOpacity" min="0" max="1" step="0.1" value="0.5" class="w-full" oninput="updateWatermark()">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Position</label>
+            <select id="watermarkPosition" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" onchange="updateWatermark()">
+              <option value="center">Center</option>
+              <option value="top-left">Top Left</option>
+              <option value="top-right">Top Right</option>
+              <option value="bottom-left">Bottom Left</option>
+              <option value="bottom-right">Bottom Right</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Original and compressed previews will be dynamically added here -->
+      </div>
+
+      <!-- Cropper Modal -->
+      <div id="cropperModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-4xl w-full">
+          <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">Crop Image</h3>
+          <div class="relative w-full h-96">
+            <img id="cropperImage" src="" alt="Image to crop" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex justify-end gap-4 mt-4">
+            <button onclick="cancelCrop()" class="py-2 px-4 bg-gray-500 text-white rounded-lg hover:bg-gray-600 btn hover-scale">Cancel</button>
+            <button onclick="applyCrop()" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Apply Crop</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="undo()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale">
+          Undo
+        </button>
+        <button onclick="redo()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale">
+          Redo
+        </button>
+        <button onclick="compressImages()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale">
+          Compress Images
+        </button>
+        <button onclick="resetAll()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale">
+          Reset
+        </button>
+        <a id="downloadButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale">
+          Download Compressed Images
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using an Image Compressor Online in 2025</h2>
+    <p>In today’s digital landscape, images are the backbone of websites, social media, e-commerce, and personal projects. However, large image files can slow down page load times, consume excessive storage, and negatively impact user experience. This is where an <strong>image compressor online</strong> becomes essential. Our <a href="#uploadInput">free image compressor tool</a> empowers you to <strong>reduce image size</strong>, resize, crop, watermark, and optimize images with ease. Whether you’re a web developer, marketer, photographer, or casual user, this comprehensive guide explores why an <strong>image compressor</strong> is a must-have and how to leverage its features for maximum efficiency.</p>
+
+    <h3>Why You Need an Image Compressor</h3>
+    <p>Compressing images is more than just reducing file size—it’s about optimizing digital content for performance, accessibility, and aesthetics. Here are the key reasons to use a <strong>photo compressor tool</strong>:</p>
+    <ul>
+      <li><strong>Faster Website Loading</strong>: Large images increase load times, harming SEO rankings and user retention. An <strong>image compressor online</strong> reduces file sizes, boosting site speed and improving Google rankings.</li>
+      <li><strong>Social Media Optimization</strong>: Platforms like Instagram, Twitter, and LinkedIn impose size limits. Use our tool to <strong>compress images online free</strong> and meet these requirements without sacrificing quality.</li>
+      <li><strong>Storage Efficiency</strong>: Smaller images save space on devices, servers, or cloud storage, making it easier to manage large collections.</li>
+      <li><strong>Professional Enhancements</strong>: Adjust brightness, contrast, saturation, or add watermarks to ensure your images look polished and branded.</li>
+      <li><strong>No Software Installation</strong>: Our <strong>free image compressor</strong> operates in your browser, offering instant access without downloads.</li>
+      <li><strong>Batch Processing</strong>: Compress multiple images at once, saving time for bulk tasks.</li>
+    </ul>
+    <p>By using an <strong>image optimization tool</strong>, you can enhance performance across digital platforms while maintaining high-quality visuals.</p>
+
+    <h3>Features of Our Advanced Image Compressor</h3>
+    <p>Our <strong>image compressor online</strong> is packed with features designed to cater to diverse needs. Here’s what sets it apart:</p>
+    <ul>
+      <li><strong>Batch Compression</strong>: Upload multiple images and download them as a ZIP file, ideal for bulk processing.</li>
+      <li><strong>Customizable Quality</strong>: Adjust compression levels (10-100%) to balance file size and visual clarity.</li>
+      <li><strong>Resize and Crop</strong>: Resize images by width/height or crop interactively to focus on key areas.</li>
+      <li><strong>Watermarking</strong>: Add text watermarks with customizable font size, opacity, and position for branding.</li>
+      <li><strong>Image Adjustments</strong>: Fine-tune brightness, contrast, saturation, and apply filters (grayscale, sepia, blur).</li>
+      <li><strong>Rotate and Flip</strong>: Rotate images (90°, 180°, 270°) or flip them horizontally/vertically.</li>
+      <li><strong>Social Media Presets</strong>: Predefined sizes for Instagram (1080x1080), Twitter (1200x675), LinkedIn (1200x627), and Facebook (1200x630).</li>
+      <li><strong>Undo/Redo</strong>: Revert or reapply changes with a history stack.</li>
+      <li><strong>Format Conversion</strong>: Save images as JPG, PNG, or WEBP for versatility.</li>
+      <li><strong>Side-by-Side Previews</strong>: Compare original and compressed images with real-time file size data.</li>
+      <li><strong>Accessibility</strong>: Keyboard navigation and ARIA labels ensure usability for all users.</li>
+    </ul>
+    <p>These features make our tool the ultimate choice for anyone looking to <strong>reduce image size</strong> and enhance visuals.</p>
+
+    <h3>How to Use Our Free Image Compressor Tool</h3>
+    <p>Our <strong>photo compressor tool</strong> is intuitive and powerful. Follow these steps to optimize your images:</p>
+    <ol>
+      <li><strong>Upload Images</strong>: Click “Choose Images” or drag and drop files into the upload area. Supports JPG, PNG, WEBP, and multiple files (max 10MB each).</li>
+      <li><strong>Adjust Compression</strong>: Use the quality slider (10-100%) to control compression. 70% is a good starting point for balancing size and quality.</li>
+      <li><strong>Resize or Crop</strong>: Enter width/height or use the cropper to trim unwanted areas. Lock the aspect ratio to prevent distortion.</li>
+      <li><strong>Enhance Images</strong>: Adjust brightness, contrast, saturation, or apply filters. Add watermarks for branding.</li>
+      <li><strong>Rotate/Flip</strong>: Rotate or flip images as needed for correct orientation.</li>
+      <li><strong>Select Format</strong>: Choose JPG for photos, PNG for transparency, or WEBP for web optimization.</li>
+      <li><strong>Compress</strong>: Click “Compress Images” to process. View previews with file sizes.</li>
+      <li><strong>Download</strong>: Download individual images or a ZIP file for multiple images.</li>
+    </ol>
+    <p>With these steps, you can <strong>compress images online free</strong> and prepare them for any platform in minutes.</p>
+
+    <h3>Who Benefits from an Image Compressor?</h3>
+    <p>Our <strong>image compressor online</strong> serves a wide range of users:</p>
+    <ul>
+      <li><strong>Web Developers</strong>: Optimize images to improve site speed and SEO rankings.</li>
+      <li><strong>Social Media Marketers</strong>: Create fast-loading images for posts, ads, and stories.</li>
+      <li><strong>E-commerce Owners</strong>: Compress product photos to meet platform requirements while maintaining clarity.</li>
+      <li><strong>Photographers</strong>: Prepare portfolios or client deliverables with reduced file sizes.</li>
+      <li><strong>Bloggers</strong>: Enhance blog posts with optimized images for better reader experience.</li>
+      <li><strong>Students and Professionals</strong>: Optimize images for presentations, reports, or personal projects.</li>
+      <li><strong>Casual Users</strong>: Compress photos for sharing or storage without technical expertise.</li>
+    </ul>
+    <p>Whether you’re a professional or a beginner, our <strong>free image compressor</strong> simplifies image optimization.</p>
+
+    <h3>Benefits of Using Our Image Compressor</h3>
+    <p>Using an <strong>image optimization tool</strong> offers tangible benefits:</p>
+    <ul>
+      <li><strong>SEO Boost</strong>: Faster websites rank higher on Google, and compressed images contribute to speed.</li>
+      <li><strong>User Experience</strong>: Quick-loading images improve engagement and reduce bounce rates.</li>
+      <li><strong>Cost Savings</strong>: Smaller files reduce hosting and cloud storage costs.</li>
+      <li><strong>Versatility</strong>: Tools like cropping, watermarking, and format conversion make images versatile for various platforms.</li>
+      <li><strong>Time Efficiency</strong>: Batch processing and presets save time on repetitive tasks.</li>
+      <li><strong>Security</strong>: All processing is client-side, ensuring your images remain private.</li>
+    </ul>
+    <p>These advantages make our tool a go-to solution for <strong>compress images online free</strong>.</p>
+
+    <h3>Tips for Effective Image Optimization</h3>
+    <p>Maximize the potential of our <strong>photo compressor tool</strong> with these expert tips:</p>
+    <ul>
+      <li><strong>Choose the Right Format</strong>: Use WEBP for web images, JPG for photos, and PNG for graphics with transparency.</li>
+      <li><strong>Use Presets</strong>: Select social media presets to instantly resize for platforms like Instagram or Twitter.</li>
+      <li><strong>Balance Quality</strong>: Start with 70-80% quality and adjust to avoid visible degradation.</li>
+      <li><strong>Crop Strategically</strong>: Remove unnecessary areas to focus on key content and reduce file size.</li>
+      <li><strong>Add Watermarks</strong>: Protect your brand by adding subtle watermarks to images.</li>
+      <li><strong>Test Performance</strong>: Use tools like Google PageSpeed Insights to measure site speed after optimization.</li>
+      <li><strong>Use Alt Text</strong>: Add descriptive alt text (e.g., “optimized product image”) for SEO when using images on websites.</li>
+      <li><strong>Batch Process</strong>: Compress multiple images at once for efficiency in large projects.</li>
+    </ul>
+    <p>These strategies ensure your images are optimized for both performance and aesthetics.</p>
+
+    <h3>Comparing Image Compression Tools</h3>
+    <p>Not all <strong>image compressor online</strong> tools are equal. Here’s how ours stands out:</p>
+    <ul>
+      <li><strong>Free and Unlimited</strong>: No subscriptions or hidden fees, unlike some paid tools.</li>
+      <li><strong>Comprehensive Features</strong>: Combines compression, resizing, cropping, watermarking, and more in one platform.</li>
+      <li><strong>User-Friendly</strong>: Intuitive interface with drag-and-drop and presets, unlike complex software.</li>
+      <li><strong>Client-Side Processing</strong>: No image uploads to servers, ensuring privacy.</li>
+      <li><strong>Modern Design</strong>: Sleek, animated UI with dark mode support.</li>
+    </ul>
+    <p>Compared to alternatives, our <strong>free image compressor</strong> offers unmatched versatility and ease of use.</p>
+
+    <h3>Common Use Cases for Image Compression</h3>
+    <p>Here are practical scenarios where our <strong>photo compressor tool</strong> excels:</p>
+    <ul>
+      <li><strong>Website Optimization</strong>: Compress images to improve load times for blogs, portfolios, or e-commerce sites.</li>
+      <li><strong>Social Media Posts</strong>: Resize and compress images for Instagram stories, Twitter posts, or LinkedIn articles.</li>
+      <li><strong>Email Attachments</strong>: Reduce image sizes for faster email sending without quality loss.</li>
+      <li><strong>Product Listings</strong>: Optimize product photos for Amazon, eBay, or Shopify with watermarks.</li>
+      <li><strong>Personal Projects</strong>: Compress vacation photos for sharing or storage.</li>
+    </ul>
+    <p>These use cases highlight the tool’s flexibility for both professional and personal needs.</p>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Here are answers to common questions about our <strong>image compressor online</strong>:</p>
+    <h4>1. Is the image compressor tool really free?</h4>
+    <p>Yes, our <strong>free image compressor</strong> is 100% free with no limits or subscriptions.</p>
+    <h4>2. What image formats are supported?</h4>
+    <p>We support JPG, PNG, and WEBP, covering all major image types.</p>
+    <h4>3. Will compression reduce image quality?</h4>
+    <p>Our quality slider lets you control compression, ensuring minimal quality loss while reducing file size.</p>
+    <h4>4. Can I compress multiple images at once?</h4>
+    <p>Yes, upload multiple images and download them as a ZIP file after compression.</p>
+    <h4>5. Is my data secure?</h4>
+    <p>Absolutely. All processing happens in your browser, and no images are uploaded to servers.</p>
+    <h4>6. Can I add watermarks to my images?</h4>
+    <p>Yes, you can add customizable text watermarks with adjustable size, opacity, and position.</p>
+    <h4>7. How do social media presets work?</h4>
+    <p>Select a preset (e.g., Instagram) to automatically resize images to platform-specific dimensions.</p>
+
+    <h3>Conclusion</h3>
+    <p>In 2025, optimizing images is critical for digital success. Our <strong>image compressor online</strong> offers a free, powerful, and user-friendly solution to <strong>reduce image size</strong>, resize, crop, watermark, and enhance images for any purpose. Whether you’re optimizing for a website, social media, or personal use, our <strong>photo compressor tool</strong> delivers professional results with ease. With features like batch processing, social media presets, and client-side processing, it’s the ultimate <strong>image optimization tool</strong> for beginners and experts alike.</p>
+    <p><a href="#uploadInput" class="text-indigo-600 hover:underline">Start compressing your images now</a> and elevate your digital content effortlessly!</p>
+  </div>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "EasyResize Image Compressor",
+    "url": "https://www.easyresize.com/image-compressor",
+    "description": "Free online image compressor tool to reduce image size, resize, crop, watermark, and optimize for web and social media with high quality.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <script>
+    let images = [];
+    let aspectRatio = 1;
+    let isAspectLocked = true;
+    let currentFilter = 'none';
+    let cropper = null;
+    let history = [];
+    let historyIndex = -1;
+
+    // Initialize
+    function init() {
+      initDarkMode();
+      initEventListeners();
+      updateQualityValue();
+    }
+
+    // Dark Mode
+    function initDarkMode() {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark');
+        document.getElementById('darkModeToggle').querySelector('i').classList.replace('fa-moon', 'fa-sun');
+      }
+      document.getElementById('darkModeToggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        document.getElementById('darkModeToggle').querySelector('i').classList.toggle('fa-moon', !isDark);
+        document.getElementById('darkModeToggle').querySelector('i').classList.toggle('fa-sun', isDark);
+        localStorage.setItem('darkMode', isDark);
+      });
+    }
+
+    // Event Listeners
+    function initEventListeners() {
+      document.getElementById('lockAspect').addEventListener('change', () => {
+        isAspectLocked = document.getElementById('lockAspect').checked;
+      });
+      document.getElementById('uploadInput').addEventListener('change', previewImages);
+    }
+
+    // Drag and Drop
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('dragover');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+      const files = e.dataTransfer.files;
+      if (files.length) {
+        document.getElementById('uploadInput').files = files;
+        previewImages();
+      }
+    }
+
+    // Image Preview
+    function previewImages() {
+      const fileInput = document.getElementById('uploadInput');
+      const previewContainer = document.getElementById('previewContainer');
+      const downloadButton = document.getElementById('downloadButton');
+      const errorMessage = document.getElementById('errorMessage');
+      images = [];
+      previewContainer.innerHTML = '';
+      downloadButton.classList.add('hidden');
+      errorMessage.classList.add('hidden');
+
+      if (fileInput.files.length) {
+        let validFiles = Array.from(fileInput.files).filter(file => {
+          if (!file.type.startsWith('image/')) {
+            showError('Please upload valid image files (JPG, PNG, WEBP).');
+            return false;
+          }
+          if (file.size > 10 * 1024 * 1024) {
+            showError('Each image must be under 10MB.');
+            return false;
+          }
+          return true;
+        });
+
+        validFiles.forEach((file, index) => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const imgData = {
+              file,
+              src: e.target.result,
+              originalSize: (file.size / 1024).toFixed(1),
+              id: `img-${index}`,
+              transformations: { rotation: 0, flipH: 1, flipV: 1, crop: null }
+            };
+            images.push(imgData);
+            renderPreview(imgData);
+            saveState();
+            if (index === 0) {
+              const img = new Image();
+              img.src = imgData.src;
+              img.onload = () => {
+                aspectRatio = img.width / img.height;
+              };
+            }
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+    }
+
+    function renderPreview(imgData) {
+      const previewContainer = document.getElementById('previewContainer');
+      const div = document.createElement('div');
+      div.className = 'relative flex flex-col items-center bg-gray-50 dark:bg-gray-700 p-4 rounded-lg scale-in';
+      div.innerHTML = `
+        <h4 class="text-sm font-semibold mb-2 text-gray-800 dark:text-gray-100">Original</h4>
+        <div class="relative watermark-preview">
+          <img id="${imgData.id}-original" src="${imgData.src}" alt="Original Image Preview" class="max-w-full h-48 object-contain rounded-lg shadow-md">
+          <canvas id="${imgData.id}-watermark" class="watermark-canvas"></canvas>
+        </div>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Size: ${imgData.originalSize} KB</p>
+        <div class="mt-2">
+          <h4 class="text-sm font-semibold mb-2 text-gray-800 dark:text-gray-100">Compressed</h4>
+          <img id="${imgData.id}-compressed" src="" alt="Compressed Image Preview" class="max-w-full h-48 object-contain rounded-lg shadow-md hidden">
+          <p id="${imgData.id}-compressed-size" class="text-gray-500 dark:text-gray-400 text-sm">Size: -</p>
+        </div>
+      `;
+      previewContainer.appendChild(div);
+      applyAdjustments();
+      updateWatermark();
+    }
+
+    // Quality Slider
+    function updateQualityValue() {
+      document.getElementById('qualityValue').textContent = `${document.getElementById('quality').value}%`;
+      saveState();
+    }
+
+    // Resize
+    function updateSize(changedDimension) {
+      if (isAspectLocked && images.length) {
+        const widthInput = document.getElementById('width');
+        const heightInput = document.getElementById('height');
+        if (changedDimension === 'width' && widthInput.value) {
+          heightInput.value = Math.round(widthInput.value / aspectRatio);
+        } else if (changedDimension === 'height' && heightInput.value) {
+          widthInput.value = Math.round(heightInput.value * aspectRatio);
+        }
+        saveState();
+      }
+    }
+
+    // Social Media Presets
+    function applyPreset() {
+      const preset = document.getElementById('presets').value;
+      const widthInput = document.getElementById('width');
+      const heightInput = document.getElementById('height');
+      const lockAspect = document.getElementById('lockAspect');
+      lockAspect.checked = true;
+      isAspectLocked = true;
+
+      const presets = {
+        instagram: { width: 1080, height: 1080 },
+        twitter: { width: 1200, height: 675 },
+        linkedin: { width: 1200, height: 627 },
+        facebook: { width: 1200, height: 630 }
+      };
+
+      if (preset && presets[preset]) {
+        widthInput.value = presets[preset].width;
+        heightInput.value = presets[preset].height;
+        aspectRatio = presets[preset].width / presets[preset].height;
+        saveState();
+      }
+    }
+
+    // Image Adjustments
+    function applyAdjustments() {
+      images.forEach(imgData => {
+        const imgElement = document.getElementById(`${imgData.id}-original`);
+        if (imgElement) {
+          const brightness = document.getElementById('brightness').value;
+          const contrast = document.getElementById('contrast').value;
+          const saturation = document.getElementById('saturation').value;
+          imgElement.style.filter = `
+            brightness(${brightness}%)
+            contrast(${contrast}%)
+            saturate(${saturation}%)
+            ${currentFilter === 'grayscale' ? 'grayscale(100%)' : ''}
+            ${currentFilter === 'sepia' ? 'sepia(100%)' : ''}
+            ${currentFilter === 'blur' ? 'blur(5px)' : ''}
+          `;
+        }
+      });
+      saveState();
+    }
+
+    function applyFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === filter);
+        btn.classList.toggle('bg-indigo-600', btn.textContent.toLowerCase() === filter);
+        btn.classList.toggle('text-white', btn.textContent.toLowerCase() === filter);
+        btn.classList.toggle('bg-gray-200', btn.textContent.toLowerCase() !== filter);
+        btn.classList.toggle('dark:bg-gray-600', btn.textContent.toLowerCase() !== filter);
+      });
+      applyAdjustments();
+    }
+
+    // Rotate & Flip
+    function rotateImage(degrees) {
+      images.forEach(imgData => {
+        imgData.transformations.rotation = (imgData.transformations.rotation + degrees) % 360;
+        const imgElement = document.getElementById(`${imgData.id}-original`);
+        if (imgElement) {
+          imgElement.style.transform = `rotate(${imgData.transformations.rotation}deg) scale(${imgData.transformations.flipH}, ${imgData.transformations.flipV})`;
+        }
+      });
+      saveState();
+    }
+
+    function flipImage(direction) {
+      images.forEach(imgData => {
+        if (direction === 'horizontal') {
+          imgData.transformations.flipH *= -1;
+        } else {
+          imgData.transformations.flipV *= -1;
+        }
+        const imgElement = document.getElementById(`${imgData.id}-original`);
+        if (imgElement) {
+          imgElement.style.transform = `rotate(${imgData.transformations.rotation}deg) scale(${imgData.transformations.flipH}, ${imgData.transformations.flipV})`;
+        }
+      });
+      saveState();
+    }
+
+    // Cropper
+    function openCropper() {
+      if (!images.length) {
+        showError('Please upload an image first.');
+        return;
+      }
+
+      const modal = document.getElementById('cropperModal');
+      const cropperImage = document.getElementById('cropperImage');
+      
+      // Destroy previous cropper instance
+      if (cropper) {
+        cropper.destroy();
+        cropper = null;
+      }
+
+      // Set image source and show modal
+      cropperImage.src = images[0].src;
+      modal.classList.remove('hidden');
+
+      // Wait for image to load before initializing Cropper.js
+      cropperImage.onload = function () {
+        try {
+          cropper = new Cropper(cropperImage, {
+            aspectRatio: isAspectLocked ? aspectRatio : NaN,
+            viewMode: 1,
+            autoCropArea: 0.8,
+            responsive: true,
+            zoomable: true,
+            scalable: true,
+            checkCrossOrigin: false,
+            ready() {
+              console.log('Cropper initialized successfully');
+            },
+            cropend() {
+              console.log('Crop selection updated');
+            }
+          });
+        } catch (error) {
+          showError('Failed to initialize cropper. Please ensure the image is valid and try again.');
+          console.error('Cropper initialization error:', error.message);
+          closeCropper();
+        }
+      };
+
+      cropperImage.onerror = function () {
+        showError('Failed to load image for cropping. Please upload a valid image.');
+        console.error('Cropper image load error');
+        closeCropper();
+      };
+    }
+
+    function applyCrop() {
+      if (!cropper) {
+        showError('Cropper not initialized. Please try again.');
+        return;
+      }
+
+      try {
+        const croppedCanvas = cropper.getCroppedCanvas({
+          imageSmoothingEnabled: true,
+          imageSmoothingQuality: 'high'
+        });
+
+        if (croppedCanvas) {
+          const croppedDataUrl = croppedCanvas.toDataURL('image/jpeg', 0.9);
+          images.forEach(imgData => {
+            imgData.src = croppedDataUrl;
+            imgData.transformations.crop = cropper.getData();
+            const imgElement = document.getElementById(`${imgData.id}-original`);
+            if (imgElement) {
+              imgElement.src = croppedDataUrl;
+              // Update watermark canvas dimensions
+              const watermarkCanvas = document.getElementById(`${imgData.id}-watermark`);
+              const img = new Image();
+              img.src = croppedDataUrl;
+              img.onload = () => {
+                watermarkCanvas.width = img.width;
+                watermarkCanvas.height = img.height;
+                updateWatermark();
+              };
+            }
+          });
+          closeCropper();
+          saveState();
+        } else {
+          showError('Failed to crop image. Please try again.');
+        }
+      } catch (error) {
+        showError('Error applying crop. Please try again.');
+        console.error('Crop application error:', error);
+      }
+    }
+
+    function cancelCrop() {
+      closeCropper();
+    }
+
+    function closeCropper() {
+      if (cropper) {
+        cropper.destroy();
+        cropper = null;
+      }
+      document.getElementById('cropperModal').classList.add('hidden');
+      document.getElementById('cropperImage').src = '';
+    }
+
+    // Watermark
+    function updateWatermark() {
+      const text = document.getElementById('watermarkText').value;
+      const fontSize = parseInt(document.getElementById('watermarkSize').value) || 30;
+      const opacity = parseFloat(document.getElementById('watermarkOpacity').value) || 0.5;
+      const position = document.getElementById('watermarkPosition').value;
+
+      images.forEach(imgData => {
+        const watermarkCanvas = document.getElementById(`${imgData.id}-watermark`);
+        if (watermarkCanvas) {
+          const ctx = watermarkCanvas.getContext('2d');
+          ctx.clearRect(0, 0, watermarkCanvas.width, watermarkCanvas.height);
+
+          if (text) {
+            ctx.globalAlpha = opacity;
+            ctx.font = `${fontSize}px Inter`;
+            ctx.fillStyle = 'white';
+            ctx.textAlign = position.includes('right') ? 'right' : position.includes('left') ? 'left' : 'center';
+            ctx.textBaseline = position.includes('top') ? 'top' : position.includes('bottom') ? 'bottom' : 'middle';
+
+            const x = position.includes('left') ? 10 : position.includes('right') ? watermarkCanvas.width - 10 : watermarkCanvas.width / 2;
+            const y = position.includes('top') ? fontSize : position.includes('bottom') ? watermarkCanvas.height - 10 : watermarkCanvas.height / 2;
+
+            ctx.fillText(text, x, y);
+          }
+        }
+      });
+      saveState();
+    }
+
+    // Undo/Redo
+    function saveState() {
+      history = history.slice(0, historyIndex + 1);
+      history.push({
+        images: images.map(img => ({ ...img, src: img.src })),
+        settings: {
+          quality: document.getElementById('quality').value,
+          format: document.getElementById('format').value,
+          width: document.getElementById('width').value,
+          height: document.getElementById('height').value,
+          brightness: document.getElementById('brightness').value,
+          contrast: document.getElementById('contrast').value,
+          saturation: document.getElementById('saturation').value,
+          filter: currentFilter,
+          watermark: {
+            text: document.getElementById('watermarkText').value,
+            size: document.getElementById('watermarkSize').value,
+            opacity: document.getElementById('watermarkOpacity').value,
+            position: document.getElementById('watermarkPosition').value
+          }
+        }
+      });
+      historyIndex++;
+    }
+
+    function undo() {
+      if (historyIndex > 0) {
+        historyIndex--;
+        restoreState();
+      }
+    }
+
+    function redo() {
+      if (historyIndex < history.length - 1) {
+        historyIndex++;
+        restoreState();
+      }
+    }
+
+    function restoreState() {
+      const state = history[historyIndex];
+      images = state.images.map(img => ({ ...img }));
+      document.getElementById('quality').value = state.settings.quality;
+      updateQualityValue();
+      document.getElementById('format').value = state.settings.format;
+      document.getElementById('width').value = state.settings.width;
+      document.getElementById('height').value = state.settings.height;
+      document.getElementById('brightness').value = state.settings.brightness;
+      document.getElementById('contrast').value = state.settings.contrast;
+      document.getElementById('saturation').value = state.settings.saturation;
+      document.getElementById('watermarkText').value = state.settings.watermark.text;
+      document.getElementById('watermarkSize').value = state.settings.watermark.size;
+      document.getElementById('watermarkOpacity').value = state.settings.watermark.opacity;
+      document.getElementById('watermarkPosition').value = state.settings.watermark.position;
+      currentFilter = state.settings.filter;
+      applyFilter(currentFilter);
+      document.getElementById('previewContainer').innerHTML = '';
+      images.forEach(imgData => {
+        const img = new Image();
+        img.src = imgData.src;
+        img.onload = () => {
+          renderPreview(imgData);
+          const watermarkCanvas = document.getElementById(`${imgData.id}-watermark`);
+          watermarkCanvas.width = img.width;
+          watermarkCanvas.height = img.height;
+          updateWatermark();
+        };
+      });
+    }
+
+    // Compression
+    function compressImages() {
+      if (!images.length) {
+        showError('Please upload at least one image.');
+        return;
+      }
+
+      const progressContainer = document.getElementById('progressContainer');
+      const progressBar = document.getElementById('progressBar');
+      const downloadButton = document.getElementById('downloadButton');
+      progressContainer.classList.add('active');
+      progressBar.style.width = '0%';
+      let progress = 0;
+      const zip = new JSZip();
+
+      function updateProgress() {
+        progress += 100 / images.length / 10;
+        progressBar.style.width = `${Math.min(progress, 100)}%`;
+        if (progress < 100) {
+          requestAnimationFrame(updateProgress);
+        }
+      }
+
+      requestAnimationFrame(updateProgress);
+
+      images.forEach((imgData, index) => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.src = imgData.src;
+
+        img.onload = function () {
+          const widthInput = document.getElementById('width').value || img.width;
+          const heightInput = document.getElementById('height').value || img.height;
+          canvas.width = widthInput;
+          canvas.height = heightInput;
+
+          // Apply transformations
+          ctx.save();
+          ctx.translate(canvas.width / 2, canvas.height / 2);
+          ctx.rotate((imgData.transformations.rotation * Math.PI) / 180);
+          ctx.scale(imgData.transformations.flipH, imgData.transformations.flipV);
+          ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+          // Apply adjustments
+          const brightness = document.getElementById('brightness').value;
+          const contrast = document.getElementById('contrast').value;
+          const saturation = document.getElementById('saturation').value;
+          ctx.filter = `
+            brightness(${brightness}%)
+            contrast(${contrast}%)
+            saturate(${saturation}%)
+            ${currentFilter === 'grayscale' ? 'grayscale(100%)' : ''}
+            ${currentFilter === 'sepia' ? 'sepia(100%)' : ''}
+            ${currentFilter === 'blur' ? 'blur(5px)' : ''}
+          `;
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          ctx.restore();
+
+          // Apply watermark
+          const watermarkText = document.getElementById('watermarkText').value;
+          if (watermarkText) {
+            const fontSize = parseInt(document.getElementById('watermarkSize').value) || 30;
+            const opacity = parseFloat(document.getElementById('watermarkOpacity').value) || 0.5;
+            const position = document.getElementById('watermarkPosition').value;
+            ctx.globalAlpha = opacity;
+            ctx.font = `${fontSize}px Inter`;
+            ctx.fillStyle = 'white';
+            ctx.textAlign = position.includes('right') ? 'right' : position.includes('left') ? 'left' : 'center';
+            ctx.textBaseline = position.includes('top') ? 'top' : position.includes('bottom') ? 'bottom' : 'middle';
+            const x = position.includes('left') ? 10 : position.includes('right') ? canvas.width - 10 : canvas.width / 2;
+            const y = position.includes('top') ? fontSize : position.includes('bottom') ? canvas.height - 10 : canvas.height / 2;
+            ctx.fillText(watermarkText, x, y);
+          }
+
+          const quality = document.getElementById('quality').value / 100;
+          const format = document.getElementById('format').value;
+          canvas.toBlob(blob => {
+            if (blob) {
+              const compressedImg = document.getElementById(`${imgData.id}-compressed`);
+              const sizeElement = document.getElementById(`${imgData.id}-compressed-size`);
+              compressedImg.src = URL.createObjectURL(blob);
+              compressedImg.classList.remove('hidden');
+              sizeElement.textContent = `Size: ${(blob.size / 1024).toFixed(1)} KB`;
+              zip.file(`compressed-${index + 1}.${format}`, blob);
+
+              if (index === images.length - 1) {
+                zip.generateAsync({ type: 'blob' }).then(content => {
+                  downloadButton.href = URL.createObjectURL(content);
+                  downloadButton.download = 'compressed-images.zip';
+                  downloadButton.classList.remove('hidden');
+                  progressContainer.classList.remove('active');
+                });
+              }
+            } else {
+              showError('Failed to compress image. Please try again.');
+            }
+          }, `image/${format}`, quality);
+        };
+        img.onerror = function () {
+          showError('Failed to load image. Please try a different file.');
+        };
+      });
+    }
+
+    // Reset
+    function resetAll() {
+      images = [];
+      history = [];
+      historyIndex = -1;
+      document.getElementById('previewContainer').innerHTML = '';
+      document.getElementById('uploadInput').value = '';
+      document.getElementById('quality').value = 70;
+      document.getElementById('qualityValue').textContent = '70%';
+      document.getElementById('width').value = '';
+      document.getElementById('height').value = '';
+      document.getElementById('brightness').value = 100;
+      document.getElementById('contrast').value = 100;
+      document.getElementById('saturation').value = 100;
+      document.getElementById('presets').value = '';
+      document.getElementById('watermarkText').value = '';
+      document.getElementById('watermarkSize').value = 30;
+      document.getElementById('watermarkOpacity').value = 0.5;
+      document.getElementById('watermarkPosition').value = 'center';
+      document.getElementById('downloadButton').classList.add('hidden');
+      document.getElementById('progressContainer').classList.remove('active');
+      document.getElementById('progressBar').style.width = '0%';
+      document.getElementById('errorMessage').classList.add('hidden');
+      currentFilter = 'none';
+      applyFilter('none');
+      closeCropper();
+    }
+
+    // Error Handling
+    function showError(message) {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.textContent = message;
+      errorMessage.classList.remove('hidden');
+      setTimeout(() => errorMessage.classList.add('hidden'), 5000);
+    }
+
+    init();
+  </script>
+</body>
+</html>

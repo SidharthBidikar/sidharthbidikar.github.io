@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for GST Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator - Free Online GST Calculation Tool (India)</title>
+    <meta name="description" content="A powerful and free online GST Calculator for India. Instantly add or remove GST from any amount, with a clear breakdown of CGST and SGST. Supports all official GST rates.">
+    <meta name="keywords" content="gst calculator, calculate gst, gst rate calculator, online gst calculator, cgst sgst calculator, gst inclusive price calculator, gst amount calculator, india gst">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/gst-calculator.html">
+    <meta property="og:title" content="Online GST Calculator - Add & Remove GST Instantly">
+    <meta property="og:description" content="Easily calculate GST amounts with our versatile online tool. Add GST to a base price or extract GST from a total amount with a clear CGST/SGST breakdown.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=GST+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/gst-calculator.html">
+    <meta property="twitter:title" content="Online GST Calculator - Add & Remove GST Instantly">
+    <meta property="twitter:description" content="Easily calculate GST amounts with our versatile online tool. Add GST to a base price or extract GST from a total amount with a clear CGST/SGST breakdown.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=GST+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+      .rate-btn { transition: all 0.2s ease; }
+      .rate-btn.active { background-color: #4f46e5; color: white; }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-6xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">GST Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">Quickly add or remove GST from any amount with a clear breakdown of CGST and SGST.</p>
+              </div>
+        
+              <!-- Calculators Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  
+                  <!-- Add GST Calculator -->
+                  <div class="bg-gray-50 p-6 rounded-lg border border-gray-200" id="add-gst-calculator">
+                      <h3 class="text-xl font-bold text-gray-700 mb-4">Add GST</h3>
+                      <div class="space-y-4">
+                          <div>
+                              <label for="add-initial-amount" class="block text-sm font-medium text-gray-700">Initial Amount (₹)</label>
+                              <input type="number" id="add-initial-amount" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 1000">
+                          </div>
+                          <div>
+                              <label class="block text-sm font-medium text-gray-700">GST Rate (%)</label>
+                              <div class="mt-2 grid grid-cols-3 gap-2">
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="3">3%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="5">5%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="12">12%</button>
+                                  <button class="rate-btn active py-1 border border-gray-300 rounded-md" data-rate="18">18%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="28">28%</button>
+                                  <input type="number" id="add-gst-rate" value="18" class="p-1 border border-gray-300 rounded-md text-center" placeholder="Custom">
+                              </div>
+                          </div>
+                      </div>
+                      <div id="add-result" class="mt-6 p-4 bg-white rounded-lg border">
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">Base Amount:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">CGST:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">SGST/UTGST:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 text-indigo-600"><span class="font-semibold text-lg">Total Amount:</span><span class="font-bold text-lg">₹0.00</span></div>
+                      </div>
+                      <button class="btn w-full mt-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 clear-btn">Clear</button>
+                  </div>
+
+                  <!-- Remove GST Calculator -->
+                  <div class="bg-gray-50 p-6 rounded-lg border border-gray-200" id="remove-gst-calculator">
+                      <h3 class="text-xl font-bold text-gray-700 mb-4">Remove GST</h3>
+                       <div class="space-y-4">
+                          <div>
+                              <label for="remove-total-amount" class="block text-sm font-medium text-gray-700">GST Inclusive Amount (₹)</label>
+                              <input type="number" id="remove-total-amount" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 1180">
+                          </div>
+                          <div>
+                              <label class="block text-sm font-medium text-gray-700">GST Rate (%)</label>
+                              <div class="mt-2 grid grid-cols-3 gap-2">
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="3">3%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="5">5%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="12">12%</button>
+                                  <button class="rate-btn active py-1 border border-gray-300 rounded-md" data-rate="18">18%</button>
+                                  <button class="rate-btn py-1 border border-gray-300 rounded-md" data-rate="28">28%</button>
+                                  <input type="number" id="remove-gst-rate" value="18" class="p-1 border border-gray-300 rounded-md text-center" placeholder="Custom">
+                              </div>
+                          </div>
+                      </div>
+                      <div id="remove-result" class="mt-6 p-4 bg-white rounded-lg border">
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">Base Amount:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">CGST:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 border-b"><span class="text-gray-600">SGST/UTGST:</span><span class="font-bold text-gray-800">₹0.00</span></div>
+                          <div class="flex justify-between py-2 text-indigo-600"><span class="font-semibold text-lg">Total GST:</span><span class="font-bold text-lg">₹0.00</span></div>
+                      </div>
+                      <button class="btn w-full mt-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 clear-btn">Clear</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to India's GST and Our Online Calculator</h2>
+      <p>The Goods and Services Tax (GST) is a fundamental part of India's economy, affecting almost every purchase and sale. For consumers, it determines the final price of goods, and for businesses, it's a critical component of invoicing and tax filing. A reliable <strong>GST calculator</strong> is an essential tool that simplifies these complex calculations. This extensive guide will explain the intricacies of the Indian GST system and show you how to master calculations with our powerful <strong>online GST calculator</strong>.</p>
+    
+      <h3>How to Use Our Dual-Function GST Calculator</h3>
+      <p>Our tool is designed to be intuitive and handle the two most common GST calculations effortlessly.</p>
+      
+      <h4>1. Add GST (For Invoicing and Pre-Purchase Estimates)</h4>
+      <p>This function is perfect for businesses creating invoices or anyone who wants to know the final price of a product or service before tax is applied.</p>
+      <ol>
+          <li><strong>Enter the Initial Amount:</strong> In the "Add GST" calculator, input the base price (the value before GST is added).</li>
+          <li><strong>Select the GST Rate:</strong> Click one of the pre-set rate buttons (3%, 5%, 12%, 18%, 28%) for common items, or enter a custom rate in the input box. The 18% slab is selected by default as it's the most common.</li>
+          <li><strong>View the Detailed Results:</strong> The calculator instantly updates with a full breakdown. You will see:
+            <ul>
+                <li><strong>Base Amount:</strong> The original price you entered.</li>
+                <li><strong>CGST & SGST:</strong> The total GST amount is automatically split into Central GST and State GST, which is crucial for correct invoicing.</li>
+                <li><strong>Total Amount:</strong> The final, GST-inclusive price.</li>
+            </ul>
+          </li>
+      </ol>
+
+      <h4>2. Remove GST (For Finding the Base Price)</h4>
+      <p>This function is ideal for consumers who want to know the pre-tax cost of an item from a GST-inclusive price, or for businesses that need to determine the taxable value for their returns.</p>
+      <ol>
+        <li><strong>Enter the GST Inclusive Amount:</strong> In the "Remove GST" calculator, type the final price you paid or see on the label.</li>
+        <li><strong>Select the GST Rate:</strong> Choose the applicable GST rate for that item (e.g., 5% for footwear, 18% for most services).</li>
+        <li><strong>See the Clear Breakdown:</strong> The tool will instantly calculate and show you the original **Base Amount**, the **Total GST** that was included in the price, and a breakdown of the **CGST** and **SGST** components.</li>
+      </ol>
+      
+      <h3>A Deep Dive into the Indian GST System</h3>
+      <p>Launched on July 1, 2017, GST replaced a complex web of central and state taxes, such as VAT, Service Tax, Central Excise Duty, and more. The goal was to create a "One Nation, One Tax" system to simplify taxation, reduce corruption, and improve economic efficiency.</p>
+      
+      <h4>The Three Pillars of GST</h4>
+      <p>Our <strong>CGST SGST calculator</strong> shows a clear breakdown because the GST system is built on these three components:</p>
+      <ul>
+          <li><strong>CGST (Central Goods and Services Tax):</strong> This is the portion of the tax collected by the Central Government on intra-state (within the same state) transactions.</li>
+          <li><strong>SGST (State Goods and Services Tax):</strong> This is the portion collected by the State Government on intra-state transactions.</li>
+          <li><strong>IGST (Integrated Goods and Services Tax):</strong> This is levied on inter-state (between two different states) transactions and on imports. The rate of IGST is roughly equal to the CGST rate plus the SGST rate. It is collected by the Central Government and then distributed to the destination state.</li>
+      </ul>
+      <p>For any sale within a state, the GST rate is split equally. For example, on a product with an 18% GST rate, 9% goes to the Central Government as CGST and 9% goes to the State Government as SGST. Our calculator automatically does this 50/50 split for clarity.</p>
+
+      <h4>The GST Slabs: A Detailed Look</h4>
+      <p>The GST Council has categorized goods and services into different tax slabs to ensure essential items are taxed less and luxury items more. The current slabs are:</p>
+      <ul>
+        <li><strong>0% (Exempt):</strong> Essential goods like fresh milk, unpacked food grains, fruits, vegetables, salt, and educational/health services.</li>
+        <li><strong>3%:</strong> Gold, silver, other precious metals, and diamonds.</li>
+        <li><strong>5%:</strong> Common household necessities like sugar, tea, coffee, spices, footwear below ₹1000, and basic apparel. Also includes services like economy class air travel.</li>
+        <li><strong>12%:</strong> Processed foods like butter and cheese, mobile phones, computers, and services like non-air-conditioned restaurants.</li>
+        <li><strong>18%:</strong> This is the most common slab and is often considered the standard rate. It covers a vast range of goods and services, including electronics (laptops, TVs), software, professional services (consulting, accounting), and financial services.</li>
+        <li><strong>28%:</strong> Luxury and "sin" goods. This includes items like cars, air conditioners, cement, and tobacco products.</li>
+      </ul>
+
+      <h3>Understanding the GST Calculation Formulas</h3>
+      
+      <h4>Formula 1: How to Add GST (for a GST-exclusive price)</h4>
+      <p>This is used when you have the base price and need to find the final price.</p>
+      <ol>
+        <li><code>GST Amount = Base Amount × (GST Rate / 100)</code></li>
+        <li><code>Total Price = Base Amount + GST Amount</code></li>
+      </ol>
+
+      <h4>Formula 2: How to Remove GST (from a GST-inclusive price)</h4>
+      <p>This is the most crucial formula for finding the original, pre-tax value from a final price.</p>
+      <ol>
+        <li><code>Base Amount = GST Inclusive Price / (1 + (GST Rate / 100))</code></li>
+        <li><code>Total GST = GST Inclusive Price - Base Amount</code></li>
+      </ol>
+      <p>Our <strong>online GST calculator</strong> uses these precise formulas to give you accurate results every time.</p>
+      
+      <h3>Beyond Calculation: Input Tax Credit (ITC) and Composition Scheme</h3>
+      
+      <h4>What is Input Tax Credit (ITC)?</h4>
+      <p>ITC is the heart of the GST system. It allows a business to claim credit for the GST it paid on its inputs (raw materials, services, etc.) when it comes time to pay GST on its outputs (final product). This prevents "tax on tax" (cascading taxes) and ensures that tax is only levied on the value added at each stage of the supply chain. For example, if a shirt manufacturer pays GST on cotton, they can deduct that amount from the GST they collect on the final shirt, paying only the difference to the government.</p>
+
+      <h4>What is the Composition Scheme?</h4>
+      <p>This is a simplified scheme for small businesses with an annual turnover below a certain threshold (currently ₹1.5 crore for goods). Instead of collecting and paying GST at the standard rates, they can opt to pay a small, fixed percentage of their turnover as tax. They cannot, however, claim Input Tax Credit. It is designed to reduce the compliance burden on small taxpayers.</p>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>What is the difference between CGST, SGST, and IGST?</h4>
+      <p>CGST and SGST are levied on sales within the same state and are split between the central and state governments. IGST is levied on sales between different states and is collected by the central government.</p>
+      
+      <h4>How do I know which GST rate applies to my product?</h4>
+      <p>The GST rate is determined by the HSN (Harmonized System of Nomenclature) code for goods or the SAC (Services Accounting Code) for services. The most common rate for many goods and services is 18%. For specific items, you can check the official CBIC website.</p>
+      
+      <h4>Is this tool suitable for both consumers and businesses?</h4>
+      <p>Absolutely. Consumers can use the "Remove GST" calculator to understand the true cost of products. Businesses can use the "Add GST" calculator to create accurate invoices and the "Remove GST" calculator to determine taxable values for their returns.</p>
+      
+      <h4>Is this GST calculator free?</h4>
+      <p>Yes, our <strong>GST amount calculator</strong> is 100% free to use, with no limits.</p>
+
+      <h3>Conclusion</h3>
+      <p>Navigating the GST system is a daily reality for millions in India. A reliable <strong>GST calculator</strong> is an indispensable tool that brings clarity and accuracy to these financial calculations. By providing both "add" and "remove" functionalities and a clear breakdown of tax components, our tool serves as a comprehensive solution for everyone from individual shoppers to small business owners. Bookmark this page for all your future GST calculation needs and make tax math effortless.</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const formatCurrency = (value) => {
+            return value.toLocaleString('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        };
+        
+        // --- ADD GST CALCULATOR ---
+        const addGstCalculator = document.getElementById('add-gst-calculator');
+        const addInitialAmount = addGstCalculator.querySelector('#add-initial-amount');
+        const addGstRateInput = addGstCalculator.querySelector('#add-gst-rate');
+        const addRateBtns = addGstCalculator.querySelectorAll('.rate-btn');
+        const addResultContainer = addGstCalculator.querySelector('#add-result');
+        const addClearBtn = addGstCalculator.querySelector('.clear-btn');
+        
+        const calculateAddGst = () => {
+            const base = parseFloat(addInitialAmount.value) || 0;
+            const rate = parseFloat(addGstRateInput.value) || 0;
+            
+            if (base <= 0 || rate < 0) {
+                const results = addResultContainer.querySelectorAll('span.font-bold');
+                results.forEach(el => el.textContent = formatCurrency(0));
+                addResultContainer.querySelector('.text-indigo-600 .font-bold').textContent = formatCurrency(base);
+                return;
+            }
+
+            const gstAmount = base * (rate / 100);
+            const totalAmount = base + gstAmount;
+            const halfGst = gstAmount / 2;
+
+            addResultContainer.innerHTML = `
+              <div class="flex justify-between py-2 border-b"><span class="text-gray-600">Base Amount:</span><span class="font-bold text-gray-800">${formatCurrency(base)}</span></div>
+              <div class="flex justify-between py-2 border-b"><span class="text-gray-600">CGST (${rate/2}%):</span><span class="font-bold text-gray-800">${formatCurrency(halfGst)}</span></div>
+              <div class="flex justify-between py-2 border-b"><span class="text-gray-600">SGST/UTGST (${rate/2}%):</span><span class="font-bold text-gray-800">${formatCurrency(halfGst)}</span></div>
+              <div class="flex justify-between py-2 text-indigo-600"><span class="font-semibold text-lg">Total Amount:</span><span class="font-bold text-lg">${formatCurrency(totalAmount)}</span></div>
+            `;
+        };
+        
+        addInitialAmount.addEventListener('input', calculateAddGst);
+        addGstRateInput.addEventListener('input', () => {
+             addRateBtns.forEach(btn => {
+                 btn.classList.toggle('active', btn.dataset.rate === addGstRateInput.value);
+             });
+             calculateAddGst();
+        });
+        addRateBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                addRateBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                addGstRateInput.value = btn.dataset.rate;
+                calculateAddGst();
+            });
+        });
+        addClearBtn.addEventListener('click', () => {
+            addInitialAmount.value = '';
+            calculateAddGst();
+        });
+
+        // --- REMOVE GST CALCULATOR ---
+        const removeGstCalculator = document.getElementById('remove-gst-calculator');
+        const removeTotalAmount = removeGstCalculator.querySelector('#remove-total-amount');
+        const removeGstRateInput = removeGstCalculator.querySelector('#remove-gst-rate');
+        const removeRateBtns = removeGstCalculator.querySelectorAll('.rate-btn');
+        const removeResultContainer = removeGstCalculator.querySelector('#remove-result');
+        const removeClearBtn = removeGstCalculator.querySelector('.clear-btn');
+        
+        const calculateRemoveGst = () => {
+            const total = parseFloat(removeTotalAmount.value) || 0;
+            const rate = parseFloat(removeGstRateInput.value) || 0;
+            
+            if (total <= 0 || rate < 0) {
+                 const results = removeResultContainer.querySelectorAll('span.font-bold');
+                 results.forEach(el => el.textContent = formatCurrency(0));
+                 return;
+            }
+
+            const baseAmount = total / (1 + (rate / 100));
+            const gstAmount = total - baseAmount;
+            const halfGst = gstAmount / 2;
+
+            removeResultContainer.innerHTML = `
+                <div class="flex justify-between py-2 border-b"><span class="text-gray-600">Base Amount:</span><span class="font-bold text-gray-800">${formatCurrency(baseAmount)}</span></div>
+                <div class="flex justify-between py-2 border-b"><span class="text-gray-600">CGST (${rate/2}%):</span><span class="font-bold text-gray-800">${formatCurrency(halfGst)}</span></div>
+                <div class="flex justify-between py-2 border-b"><span class="text-gray-600">SGST/UTGST (${rate/2}%):</span><span class="font-bold text-gray-800">${formatCurrency(halfGst)}</span></div>
+                <div class="flex justify-between py-2 text-indigo-600"><span class="font-semibold text-lg">Total GST:</span><span class="font-bold text-lg">${formatCurrency(gstAmount)}</span></div>
+            `;
+        };
+        
+        removeTotalAmount.addEventListener('input', calculateRemoveGst);
+        removeGstRateInput.addEventListener('input', () => {
+            removeRateBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.rate === removeGstRateInput.value);
+            });
+            calculateRemoveGst();
+        });
+        removeRateBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                removeRateBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                removeGstRateInput.value = btn.dataset.rate;
+                calculateRemoveGst();
+            });
+        });
+         removeClearBtn.addEventListener('click', () => {
+            removeTotalAmount.value = '';
+            calculateRemoveGst();
+        });
+
+      });
+    </script>
+</body>
+</html>

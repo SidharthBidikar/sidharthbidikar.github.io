@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to JSON Converter Online - Free Tool to Extract PDF Data</title>
+  <meta name="description" content="Convert PDF to JSON online for free with our advanced PDF to JSON converter. Extract text, metadata, and layout data from PDFs into structured JSON format for applications and databases.">
+  <meta name="keywords" content="PDF to JSON converter, convert PDF to JSON online, free PDF to JSON tool, extract PDF to JSON, PDF to JSON free, PDF data extraction">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PDF Converter Team">
+  <meta property="og:title" content="PDF to JSON Converter Online - Free Tool">
+  <meta property="og:description" content="Easily convert PDF documents to structured JSON format with our free online tool. Perfect for developers integrating PDF data into applications.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PDF+to+JSON+Converter">
+  <meta property="og:url" content="https://onepagetools.com/pdftojson.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .progress-bar { background: linear-gradient(to right, #4f46e5, #7c3aed); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.1); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+    .json-editor { min-height: 300px; border: 1px solid #e5e7eb; border-radius: 8px; }
+    .gradient-bg { background: linear-gradient(135deg, #f3f4f6, #e0e7ff); }
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="PDF Converter Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100">Image Compressor</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100">PDF to CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Excel</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100">PDF to PNG</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to XML</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Text</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100">CSV to PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100">Excel to PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100">HTML to PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100">JPG to PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100">JSON to PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100">PNG to PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100">Speech to PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100">Text to PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100">WEBP to PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100">XML to PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-20">
+    <div class="container max-w-4xl p-6 bg-white rounded-lg shadow-lg fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">PDF to JSON Converter</h1>
+      <p class="text-center text-gray-500 mb-6">Convert PDF documents to structured JSON format, extracting text, metadata, and layout data for seamless integration into applications and databases.</p>
+
+      <!-- File Upload Section -->
+      <div class="drop-zone border-4 border-dashed border-gray-200 rounded-xl p-12 text-center mb-8 transition-colors duration-300 hover:border-blue-400" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+        <label for="pdfFiles" class="inline-block w-full py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full cursor-pointer hover:bg-indigo-700 btn hover-scale">
+          Choose PDFs
+        </label>
+        <input type="file" id="pdfFiles" accept="application/pdf" multiple class="hidden" onchange="previewFiles()">
+        <p class="text-gray-500 mt-2">or drag and drop PDF files here (supports multiple files, max 25MB each)</p>
+      </div>
+
+      <!-- Conversion Settings -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Conversion Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Page Range (e.g., 1-3, 5)</label>
+              <input type="text" id="pageRange" class="w-full p-2 border rounded-lg" placeholder="All pages">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">JSON Structure</label>
+              <select id="jsonStructure" class="w-full p-2 border rounded-lg">
+                <option value="text">Text Only</option>
+                <option value="metadata">Text + Metadata</option>
+                <option value="layout">Text + Layout Info</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">JSON Format</label>
+              <select id="jsonFormat" class="w-full p-2 border rounded-lg">
+                <option value="pretty">Pretty Printed</option>
+                <option value="minified">Minified</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Output Options</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="previewJson">
+              <label class="text-gray-600">Preview JSON Before Conversion</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="editJson">
+              <label class="text-gray-600">Edit JSON Output</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview and Editor Section -->
+      <div id="previewContainer" class="mb-6"></div>
+      <div id="jsonEditor" class="hidden bg-gray-50 p-4 rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-3">Preview/Edit JSON Content</h3>
+        <textarea id="jsonContent" class="json-editor w-full"></textarea>
+      </div>
+
+      <!-- Progress Bar -->
+      <div id="progressBar" class="hidden bg-gray-200 rounded-full h-2.5 mb-4">
+        <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-300 progress-bar" style="width: 0%"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="convertPDFs()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale" id="convertButton" disabled>
+          Convert to JSON
+        </button>
+        <button onclick="copyToClipboard()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale">
+          Copy JSON Content
+        </button>
+        <a id="downloadZipButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale">
+          Download All Files (ZIP)
+        </a>
+        <button onclick="resetAll()" class="py-3 px-5 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn hover-scale">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using a PDF to JSON Converter Online</h2>
+    <p>PDF documents are excellent for sharing static content, but extracting their data for programmatic use often requires conversion to a structured format like JSON. A <strong>PDF to JSON converter</strong> transforms PDF text, metadata, and layout information into JSON, enabling seamless integration into applications, databases, or APIs. Our <a href="#pdfFiles">free PDF to JSON tool</a> offers a fast, user-friendly solution to <strong>convert PDF to JSON online</strong>, making it ideal for developers, data analysts, and businesses. This comprehensive guide explores the benefits of using a <strong>PDF to JSON converter online</strong>, how to use it effectively, and tips to optimize your data extraction for various applications.</p>
+
+    <h3>Why Use a PDF to JSON Converter?</h3>
+    <p>Converting PDFs to JSON format offers numerous advantages for data integration and processing. Here’s why you should use a <strong>free PDF to JSON tool</strong>:</p>
+    <ul>
+      <li><strong>Data Integration</strong>: JSON is widely supported by programming languages and databases, making it ideal for application development.</li>
+      <li><strong>Time Efficiency</strong>: Automate the extraction of text, metadata, and layout data, eliminating manual data entry.</li>
+      <li><strong>Structured Output</strong>: JSON’s hierarchical structure organizes PDF content for easy querying and processing.</li>
+      <li><strong>Batch Processing</strong>: Convert multiple PDFs simultaneously, saving time for large datasets.</li>
+      <li><strong>No Software Installation</strong>: Our <strong>PDF to JSON converter online</strong> works in your browser, requiring no downloads.</li>
+      <li><strong>Metadata Extraction</strong>: Capture page dimensions, fonts, and other metadata for advanced applications.</li>
+    </ul>
+    <p>By using our <strong>PDF to JSON converter</strong>, you can streamline data extraction for any programmatic use case.</p>
+
+    <h3>How to Use Our Free PDF to JSON Converter</h3>
+    <p>Our <strong>PDF to JSON tool</strong> is designed for simplicity and flexibility. Follow these steps to <strong>extract PDF to JSON</strong>:</p>
+    <ol>
+      <li><strong>Upload PDFs</strong>: Click “Choose PDFs” or drag and drop files into the upload area. Supports multiple PDFs, each up to 25MB.</li>
+      <li><strong>Configure Settings</strong>: Specify page ranges, select JSON structure (text-only, text with metadata, or text with layout info), and choose JSON format (pretty-printed or minified).</li>
+      <li><strong>Preview Content</strong>: Enable the preview option to review JSON content before conversion.</li>
+      <li><strong>Edit JSON (Optional)</strong>: Modify the JSON output in the CodeMirror editor if needed.</li>
+      <li><strong>Convert and Download</strong>: Click “Convert to JSON” to process the files. Download individual JSON files or a ZIP file for multiple files.</li>
+      <li><strong>Copy to Clipboard</strong>: Use the “Copy JSON Content” button to copy JSON data for quick integration.</li>
+    </ol>
+    <p>With these steps, you can <strong>convert PDF to JSON free</strong> in minutes, making our tool a top choice for <strong>PDF to JSON conversion</strong>.</p>
+
+    <h3>Who Benefits from a PDF to JSON Converter?</h3>
+    <p>Our <strong>PDF to JSON converter online</strong> serves a wide range of users:</p>
+    <ul>
+      <li><strong>Developers</strong>: Integrate PDF data into web applications, APIs, or databases.</li>
+      <li><strong>Data Analysts</strong>: Extract structured data from reports or forms for analysis in tools like Python or R.</li>
+      <li><strong>Business Professionals</strong>: Convert invoices, contracts, or forms into JSON for automated processing.</li>
+      <li><strong>Archivists</strong>: Transform historical documents into JSON for digital archives or search systems.</li>
+      <li><strong>Researchers</strong>: Extract data from academic papers or technical documents for computational analysis.</li>
+      <li><strong>Marketers</strong>: Convert marketing reports into JSON for integration with analytics platforms.</li>
+    </ul>
+    <p>Our <strong>free PDF to JSON tool</strong> simplifies data extraction for all users, regardless of technical expertise.</p>
+
+    <h3>Key Features of Our PDF to JSON Converter</h3>
+    <p>Our <strong>PDF to JSON converter online</strong> offers robust features to meet diverse needs:</p>
+    <ul>
+      <li><strong>Batch Conversion</strong>: Process multiple PDFs at once and download as a ZIP file.</li>
+      <li><strong>Customizable JSON Structure</strong>: Choose text-only, text with metadata, or text with layout information.</li>
+      <li><strong>Page Range Selection</strong>: Convert specific pages or ranges to focus on relevant data.</li>
+      <li><strong>JSON Preview</strong>: Review JSON content in a syntax-highlighted editor before downloading.</li>
+      <li><strong>Editable Output</strong>: Modify JSON content directly in the browser using CodeMirror.</li>
+      <li><strong>Drag-and-Drop Interface</strong>: Streamline uploads with an intuitive design.</li>
+      <li><strong>Metadata Support</strong>: Include page dimensions, font details, and text positioning in JSON.</li>
+      <li><strong>Secure Processing</strong>: Files are processed in the browser for data privacy.</li>
+    </ul>
+    <p>These features make our tool ideal for anyone looking to <strong>extract PDF to JSON</strong> efficiently.</p>
+
+    <h3>Tips for Optimizing PDF to JSON Conversion</h3>
+    <p>To maximize the effectiveness of our <strong>PDF to JSON converter</strong>, consider these tips:</p>
+    <ul>
+      <li><strong>Choose the Right Structure</strong>: Use text-only for simple data, metadata for document analysis, or layout info for precise positioning.</li>
+      <li><strong>Enable Pretty Printing</strong>: Use pretty-printed JSON for readability during development, or minified for production.</li>
+      <li><strong>Preview and Edit</strong>: Verify JSON content in the editor to ensure accuracy before downloading.</li>
+      <li><strong>Use Page Ranges</strong>: Focus on specific pages to reduce processing time and output size.</li>
+      <li><strong>Validate JSON</strong>: Test JSON output in your application to confirm compatibility.</li>
+      <li><strong>Combine with Other Tools</strong>: Use our <a href="./pdftotext.html">PDF to Text</a> tool for simpler text extraction if JSON is not required.</li>
+    </ul>
+
+    <h3>Why JSON is Ideal for PDF Data Extraction</h3>
+    <p>JSON (JavaScript Object Notation) is a lightweight, structured format perfect for extracting PDF data. Here’s why:</p>
+    <ul>
+      <li><strong>Universal Compatibility</strong>: Supported by all major programming languages and databases.</li>
+      <li><strong>Hierarchical Structure</strong>: Organizes data into nested objects for complex datasets.</li>
+      <li><strong>Lightweight</strong>: Efficient for data transfer and storage compared to XML.</li>
+      <li><strong>API Integration</strong>: Ideal for sending data to web APIs or microservices.</li>
+      <li><strong>Human-Readable</strong>: Easy to read and edit, especially with pretty-printing.</li>
+    </ul>
+    <p>Our <strong>PDF to JSON converter online</strong> leverages JSON’s strengths to deliver structured, usable data.</p>
+
+    <h3>Comparing PDF to JSON Converters</h3>
+    <p>Not all <strong>PDF to JSON converters</strong> offer the same functionality. Here’s how our tool stands out:</p>
+    <ul>
+      <li><strong>Free Access</strong>: No subscriptions or hidden fees, unlike some premium tools.</li>
+      <li><strong>Browser-Based</strong>: No software installation required, unlike desktop applications.</li>
+      <li><strong>Batch Processing</strong>: Convert multiple PDFs at once, a feature not always available in free tools.</li>
+      <li><strong>Customizable Output</strong>: Options for text, metadata, and layout data provide flexibility.</li>
+      <li><strong>User-Friendly Interface</strong>: Intuitive design with drag-and-drop, previews, and editing features.</li>
+      <li><strong>Secure Processing</strong>: Local browser processing ensures data privacy.</li>
+    </ul>
+    <p>Our <strong>free PDF to JSON tool</strong> offers a balance of functionality, ease of use, and performance, making it ideal for all users.</p>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Here are answers to common questions about using a <strong>PDF to JSON converter online</strong>:</p>
+    <h4>1. Is the PDF to JSON converter free?</h4>
+    <p>Yes, our <strong>PDF to JSON free</strong> tool has no subscriptions or hidden costs.</p>
+    <h4>2. Can I convert multiple PDFs at once?</h4>
+    <p>Absolutely! Upload multiple PDFs and download them as individual JSON files or a single ZIP file.</p>
+    <h4>3. What types of data can be extracted?</h4>
+    <p>Extract text, metadata (e.g., page dimensions, fonts), or layout information (e.g., text positioning).</p>
+    <h4>4. Can I edit the JSON output?</h4>
+    <p>Yes, use the CodeMirror editor to modify JSON content before downloading.</p>
+    <h4>5. Is my data secure?</h4>
+    <p>All processing is done in your browser, ensuring your files remain private.</p>
+    <h4>6. What if I need a different format?</h4>
+    <p>Try our <a href="./pdftoxml.html">PDF to XML</a> or <a href="./pdftocsv.html">PDF to CSV</a> converters for alternative structured formats.</p>
+
+    <h3>Advanced Use Cases for PDF to JSON Conversion</h3>
+    <p>Our <strong>PDF to JSON converter</strong> supports a variety of advanced scenarios:</p>
+    <ul>
+      <li><strong>API Development</strong>: Feed PDF data into REST APIs for dynamic applications.</li>
+      <li><strong>Data Analysis</strong>: Extract data from reports or forms for processing in analytical tools.</li>
+      <li><strong>Document Automation</strong>: Convert invoices or contracts into JSON for workflow automation.</li>
+      <li><strong>Digital Archives</strong>: Transform historical documents into JSON for searchable databases.</li>
+      <li><strong>Machine Learning</strong>: Prepare PDF data for training models or natural language processing.</li>
+    </ul>
+
+    <h3>How PDF to JSON Conversion Enhances Productivity</h3>
+    <p>Productivity is a priority for professionals handling data. Our <strong>PDF to JSON converter online</strong> boosts efficiency by:</p>
+    <ul>
+      <li>Reducing manual data entry time.</li>
+      <li>Enabling batch processing for high-volume tasks.</li>
+      <li>Providing editable JSON outputs for immediate use.</li>
+      <li>Supporting integration with APIs and databases.</li>
+      <li>Ensuring accurate data extraction for reliable results.</li>
+    </ul>
+    <p>With our tool, you can focus on data utilization rather than extraction.</p>
+
+    <h3>Best Practices for PDF to JSON Conversion</h3>
+    <p>To achieve optimal results, follow these best practices:</p>
+    <ul>
+      <li><strong>Ensure Clear PDFs</strong>: Use high-quality PDFs with readable text for accurate extraction.</li>
+      <li><strong>Validate JSON</strong>: Use the preview feature to check JSON structure and content accuracy.</li>
+      <li><strong>Choose Appropriate Structure</strong>: Select the JSON structure based on your application’s needs.</li>
+      <li><strong>Optimize for Size</strong>: Use minified JSON for large datasets to reduce file size.</li>
+      <li><strong>Test Integration</strong>: Verify JSON compatibility with your application or database.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>Extracting data from PDFs doesn’t have to be a complex task. With our <strong>PDF to JSON converter online</strong>, you can <strong>convert PDF to JSON free</strong>, customize your output, and create structured data for any application. Whether you’re a developer building APIs, an analyst processing reports, or a business automating workflows, our <strong>free PDF to JSON tool</strong> offers the features and flexibility you need. Try it now and unlock the power of structured data!</p>
+    <p><a href="https://onepagetools.com/pdftojson.html" class="text-indigo-600 hover:underline">Start converting your PDFs to JSON today</a> and simplify your data integration.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+    let files = [];
+    let editor = null;
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('dragover');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+      const uploadedFiles = e.dataTransfer.files;
+      if (uploadedFiles.length) {
+        document.getElementById('pdfFiles').files = uploadedFiles;
+        previewFiles();
+      }
+    }
+
+    function previewFiles() {
+      const fileInput = document.getElementById('pdfFiles');
+      const previewContainer = document.getElementById('previewContainer');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      files = [];
+      previewContainer.innerHTML = '';
+      downloadZipButton.classList.add('hidden');
+
+      if (fileInput.files.length) {
+        Array.from(fileInput.files).forEach((file, index) => {
+          if (file.type !== 'application/pdf') {
+            Swal.fire('Invalid File', `${file.name} is not a PDF file.`, 'error');
+            return;
+          }
+          if (file.size > 25 * 1024 * 1024) {
+            Swal.fire('File Too Large', `${file.name} exceeds 25MB.`, 'error');
+            return;
+          }
+          const fileData = {
+            file,
+            name: file.name,
+            id: `file-${index}`,
+            status: 'Pending',
+            outputBlob: null
+          };
+          files.push(fileData);
+          renderPreview(fileData);
+        });
+      }
+      document.getElementById('convertButton').disabled = files.length === 0;
+    }
+
+    function renderPreview(fileData) {
+      const previewContainer = document.getElementById('previewContainer');
+      const div = document.createElement('div');
+      div.className = 'flex justify-between items-center bg-gray-50 p-4 rounded-lg mb-2 scale-in';
+      div.innerHTML = `
+        <p class="text-gray-600">${fileData.name} (${(fileData.file.size / 1024 / 1024).toFixed(2)}MB)</p>
+        <div class="flex items-center gap-2">
+          <p id="${fileData.id}-status" class="text-gray-500">${fileData.status}</p>
+          <a id="${fileData.id}-download" href="#" download="${fileData.name.replace('.pdf', '')}.json" class="hidden text-blue-600 hover:underline">Download</a>
+        </div>
+      `;
+      previewContainer.appendChild(div);
+    }
+
+    async function convertPDFs() {
+      if (!files.length) {
+        Swal.fire('No Files', 'Please upload at least one PDF file.', 'error');
+        return;
+      }
+
+      const progressBar = document.getElementById('progressBar');
+      const progressFill = progressBar.querySelector('div');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      const pageRange = document.getElementById('pageRange').value;
+      const jsonStructure = document.getElementById('jsonStructure').value;
+      const jsonFormat = document.getElementById('jsonFormat').value;
+      const previewJson = document.getElementById('previewJson').checked;
+      const editJson = document.getElementById('editJson').checked;
+      const zip = new JSZip();
+      let progress = 0;
+      let hasValidOutputs = false;
+      progressBar.classList.remove('hidden');
+      progressFill.style.width = '0%';
+
+      function updateProgress() {
+        progress += 100 / files.length / 10;
+        progressFill.style.width = `${Math.min(progress, 100)}%`;
+        if (progress < 100) {
+          requestAnimationFrame(updateProgress);
+        }
+      }
+
+      requestAnimationFrame(updateProgress);
+
+      for (let i = 0; i < files.length; i++) {
+        const fileData = files[i];
+        try {
+          document.getElementById(`${fileData.id}-status`).textContent = 'Processing...';
+          const fileReader = new FileReader();
+          fileReader.onload = async function () {
+            const arrayBuffer = new Uint8Array(this.result);
+            const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
+            const pagesToProcess = pageRange ? parsePageRange(pageRange, pdf.numPages) : Array.from({ length: pdf.numPages }, (_, i) => i + 1);
+            const jsonData = [];
+
+            for (const pageNum of pagesToProcess) {
+              const page = await pdf.getPage(pageNum);
+              const textContent = await page.getTextContent();
+              const pageData = { page: pageNum };
+
+              if (jsonStructure === 'text') {
+                pageData.text = textContent.items.map(item => item.str).join(' ');
+              } else if (jsonStructure === 'metadata') {
+                pageData.text = textContent.items.map(item => item.str).join(' ');
+                pageData.metadata = {
+                  dimensions: page.view,
+                  fonts: [...new Set(textContent.items.map(item => item.fontName).filter(Boolean))]
+                };
+              } else if (jsonStructure === 'layout') {
+                pageData.text = textContent.items.map(item => ({
+                  content: item.str,
+                  position: { x: item.transform[4], y: item.transform[5] },
+                  font: item.fontName,
+                  size: item.height
+                }));
+              }
+
+              jsonData.push(pageData);
+            }
+
+            const jsonContent = JSON.stringify(jsonData, null, jsonFormat === 'pretty' ? 2 : 0);
+
+            if (previewJson && i === 0) {
+              if (!editor) {
+                editor = CodeMirror.fromTextArea(document.getElementById('jsonContent'), {
+                  mode: 'javascript',
+                  theme: 'default',
+                  lineNumbers: true,
+                  readOnly: !editJson
+                });
+              }
+              editor.setValue(jsonContent);
+              document.getElementById('jsonEditor').classList.remove('hidden');
+            }
+
+            const finalContent = (i === 0 && editor && editJson) ? editor.getValue() : jsonContent;
+            const outputBlob = new Blob([finalContent], { type: 'application/json' });
+            fileData.outputBlob = outputBlob;
+            zip.file(`${fileData.name.replace('.pdf', '')}.json`, outputBlob);
+
+            const downloadLink = document.getElementById(`${fileData.id}-download`);
+            downloadLink.href = URL.createObjectURL(outputBlob);
+            downloadLink.classList.remove('hidden');
+
+            document.getElementById(`${fileData.id}-status`).textContent = 'Converted';
+            hasValidOutputs = true;
+
+            if (i === files.length - 1 && hasValidOutputs) {
+              const zipBlob = await zip.generateAsync({ type: 'blob' });
+              downloadZipButton.href = URL.createObjectURL(zipBlob);
+              downloadZipButton.download = 'converted-files.zip';
+              downloadZipButton.classList.remove('hidden');
+              Swal.fire('Success!', 'All files converted successfully.', 'success');
+            }
+          };
+          fileReader.readAsArrayBuffer(fileData.file);
+        } catch (error) {
+          console.error(`Error processing ${fileData.name}:`, error);
+          document.getElementById(`${fileData.id}-status`).textContent = 'Error';
+          Swal.fire('Error', `Failed to process ${fileData.name}.`, 'error');
+        }
+      }
+
+      progressBar.classList.add('hidden');
+      progressFill.style.width = '0%';
+    }
+
+    function parsePageRange(range, totalPages) {
+      const pages = new Set();
+      const parts = range.split(',');
+      for (const part of parts) {
+        if (part.includes('-')) {
+          const [start, end] = part.split('-').map(Number);
+          for (let i = Math.max(1, start); i <= Math.min(totalPages, end); i++) {
+            pages.add(i);
+          }
+        } else {
+          const page = Number(part);
+          if (page >= 1 && page <= totalPages) {
+            pages.add(page);
+          }
+        }
+      }
+      return Array.from(pages).sort((a, b) => a - b);
+    }
+
+    function copyToClipboard() {
+      const jsonContent = editor ? editor.getValue() : '';
+      if (jsonContent) {
+        navigator.clipboard.writeText(jsonContent).then(() => {
+          Swal.fire('Success', 'JSON content copied to clipboard!', 'success');
+        });
+      } else {
+        Swal.fire('No Data', 'No JSON content available to copy.', 'warning');
+      }
+    }
+
+    function resetAll() {
+      files = [];
+      document.getElementById('previewContainer').innerHTML = '';
+      document.getElementById('pdfFiles').value = '';
+      document.getElementById('pageRange').value = '';
+      document.getElementById('jsonStructure').value = 'text';
+      document.getElementById('jsonFormat').value = 'pretty';
+      document.getElementById('previewJson').checked = false;
+      document.getElementById('editJson').checked = false;
+      document.getElementById('jsonEditor').classList.add('hidden');
+      if (editor) {
+        editor.setValue('');
+      }
+      document.getElementById('downloadZipButton').classList.add('hidden');
+      document.getElementById('progressBar').classList.add('hidden');
+      document.getElementById('convertButton').disabled = true;
+    }
+  </script>
+</body>
+</html>

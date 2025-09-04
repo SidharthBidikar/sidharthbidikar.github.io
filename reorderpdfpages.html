@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reorder PDF Pages Online - Free PDF Page Organizer</title>
+  <meta name="description" content="Easily reorder, arrange, and organize pages in your PDF files online for free. Drag and drop page thumbnails to change their order. Secure client-side processing, no uploads required.">
+  <meta name="keywords" content="Reorder PDF pages, PDF page reorder, arrange PDF pages, organize PDF pages, sort PDF pages, PDF page organizer, free PDF page manager, change PDF page order, PDF page sorter online, delete PDF pages">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="OnePageTools PDF Team">
+  <meta property="og:title" content="Reorder PDF Pages Online - Free & Easy PDF Page Arrangement">
+  <meta property="og:description" content="Change the order of pages in your PDF documents with our simple drag-and-drop interface. Free, secure, and works entirely in your browser. Organize your PDFs effortlessly.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Reorder+PDF+Pages">
+  <meta property="og:url" content="https://onepagetools.com/reorder-pdf-pages.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <!-- SortableJS for drag and drop -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover:not(:disabled) { transform: translateY(-2px); }
+    .btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .gradient-bg { background: linear-gradient(135deg, #F3E8FF, #E9D5FF); } /* हल्का बैंगनी ग्रेडिएंट */
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #9333EA; background-color: rgba(147, 51, 234, 0.1); } /* बैंगनी होवर */
+    
+    .page-thumbnail-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* थंबनेल आकार थोड़ा बढ़ाया */
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #D1D5DB; /* सीमा रंग */
+        border-radius: 0.5rem;
+        background-color: #F9FAFB; /* हल्का ग्रे पृष्ठभूमि */
+        min-height: 200px; /* खाली होने पर न्यूनतम ऊंचाई */
+    }
+    .page-item {
+        border: 2px solid #E5E7EB; /* सीमा */
+        border-radius: 0.375rem; /* गोल कोने */
+        padding: 0.5rem;
+        background-color: white;
+        text-align: center;
+        cursor: grab;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        position: relative; /* डिलीट बटन के लिए */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .page-item:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+    }
+    .page-item.sortable-ghost { /* ड्रैग करते समय प्लेसहोल्डर का स्टाइल */
+        opacity: 0.4;
+        background: #dadafb; /* हल्का बैंगनी प्लेसहोल्डर */
+        border-style: dashed;
+    }
+    .page-item canvas {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #F3F4F6; /* कैनवास के चारों ओर हल्की सीमा */
+        margin-bottom: 0.5rem;
+        display: block; /* अतिरिक्त स्पेस हटाने के लिए */
+        background-color: #E5E7EB; /* कैनवास लोड होने तक प्लेसहोल्डर रंग */
+    }
+    .page-item .page-info {
+        font-size: 0.75rem; /* 12px */
+        color: #4B5563; /* text-gray-600 */
+        width: 100%;
+    }
+    .page-item .page-number-display {
+        font-weight: 500; /* माध्यम */
+    }
+    .page-item .original-page-number {
+        font-size: 0.625rem; /* 10px */
+        color: #6B7280; /* text-gray-500 */
+    }
+    .delete-page-btn {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background-color: rgba(239, 68, 68, 0.8); /* लाल रंग, थोड़ी पारदर्शिता के साथ */
+        color: white;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid white;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        transition: background-color 0.2s, transform 0.2s;
+    }
+    .delete-page-btn:hover {
+        background-color: #DC2626; /* गहरा लाल */
+        transform: scale(1.1);
+    }
+    .progress-bar-animated { background: linear-gradient(to right, #A78BFA, #7C3AED); } /* गहरा बैंगनी ग्रेडिएंट */
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="OnePageTools Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" /></svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./reorderpdfpages.html" class="block px-4 py-2 hover:bg-gray-100">Reorder PDF Pages</a></li>
+                
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-20 pb-10">
+    <div class="container max-w-6xl p-6 bg-white rounded-lg shadow-xl fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">Reorder PDF Pages</h1>
+      <p class="text-center text-gray-600 mb-8">Easily change the order of pages in your PDF document. Drag and drop page thumbnails to rearrange them. You can also delete unwanted pages. All processing is done securely in your browser.</p>
+
+      <div id="dropZone" class="drop-zone border-4 border-dashed border-gray-200 rounded-xl p-10 text-center mb-6 transition-colors duration-300 hover:border-purple-400">
+        <label for="pdfFile" class="inline-block py-3 px-5 bg-purple-600 text-white font-semibold rounded-full cursor-pointer hover:bg-purple-700 btn">
+          Choose PDF File
+        </label>
+        <input type="file" id="pdfFile" accept="application/pdf" class="hidden">
+        <p class="text-gray-500 mt-2">or drag and drop a PDF file here (max 50MB)</p>
+        <p id="pdfFileName" class="mt-2 text-sm text-gray-600"></p>
+      </div>
+      
+      <div id="thumbnailInfo" class="text-sm text-gray-600 mb-2 text-center hidden">
+        Drag and drop pages to reorder them. Click the <span class="text-red-500 font-bold text-lg">×</span> on a thumbnail to delete a page.
+        <span id="pageCountInfo" class="block mt-1"></span>
+      </div>
+      <div id="pageThumbnailContainer" class="page-thumbnail-container mb-6 bg-gray-100 p-4 rounded-lg shadow-inner">
+        <p id="thumbnailPlaceholder" class="text-gray-400 text-center col-span-full py-10">Upload a PDF to see page thumbnails.</p>
+      </div>
+      
+      <div id="progressBarContainer" class="hidden bg-gray-200 rounded-full h-3 my-6">
+        <div id="progressBar" class="progress-bar-animated h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center mt-8">
+        <button id="savePdfButton" class="py-3 px-6 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 btn" disabled>
+          <svg class="inline w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Save Reordered PDF
+        </button>
+        <button id="resetButton" class="py-3 px-6 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article (जैसा पहले था, कोई बदलाव नहीं) -->
+  <div class="article-section px-4 sm:px-0">
+    <h2 class="text-gray-800">The Ultimate Guide to Reordering PDF Pages Online for Free</h2>
+    <p>PDF documents are a staple in both personal and professional environments for their reliability in preserving document formatting. However, there often comes a time when you need to <strong>reorder PDF pages</strong> to better suit your needs. Whether it's arranging chapters in a manuscript, organizing scanned documents, or preparing a presentation, the ability to <strong>arrange PDF pages</strong> is crucial. Our free online <strong>PDF page organizer</strong> provides an intuitive drag-and-drop interface to help you <strong>change PDF page order</strong> effortlessly and securely, all within your browser.</p>
+    <h3>Why Would You Need to Reorder PDF Pages?</h3>
+    <p>The necessity to <strong>sort PDF pages</strong> arises in various situations:</p>
+    <ul>
+      <li><strong>Incorrect Scan Order:</strong> When scanning multiple pages, they might not always end up in the correct sequence. A <strong>PDF page reorder</strong> tool allows you to fix this quickly.</li>
+      <li><strong>Report Compilation:</strong> Compiling different sections of a report or proposal often requires arranging pages from various sources into a logical flow.</li>
+      <li><strong>Presentation Preparation:</strong> You might need to change the sequence of slides or pages in a PDF presentation to match your speaking points.</li>
+      <li><strong>E-book or Manuscript Organization:</strong> Authors and editors frequently need to <strong>organize PDF pages</strong> corresponding to chapters or sections.</li>
+      <li><strong>Customizing Downloaded Documents:</strong> You might download a large PDF but only need certain pages in a specific order for printing or sharing.</li>
+      <li><strong>Correcting Assembled Documents:</strong> If a PDF was created by merging multiple files, the initial page order might not be ideal.</li>
+      <li><strong>Portfolio Arrangement:</strong> Designers or artists might want to reorder pages in their PDF portfolios to best showcase their work.</li>
+    </ul>
+    <p>Our <strong>free PDF page manager</strong> simplifies these tasks, making PDF organization accessible to everyone.</p>
+    <h3>How to Reorder PDF Pages Using Our Online Tool</h3>
+    <p>Our tool is designed with user-friendliness in mind. Here’s how you can easily <strong>change PDF page order online</strong>:</p>
+    <ol>
+      <li><strong>Upload Your PDF File:</strong> Click the "Choose PDF File" button or drag and drop your PDF document into the designated upload area. The name of your selected file will be displayed.</li>
+      <li><strong>View Page Thumbnails:</strong> Once the PDF is processed, you'll see thumbnails (small visual previews) of all the pages in your document, displayed in their current order.</li>
+      <li><strong>Reorder Pages:</strong>
+        <ul>
+          <li>Simply click and hold a page thumbnail.</li>
+          <li>Drag it to its new desired position among the other thumbnails.</li>
+          <li>Release the mouse button to drop the page into place.</li>
+          <li>Repeat this process for any other pages you wish to move.</li>
+        </ul>
+      </li>
+      <li><strong>(Optional) Delete Pages:</strong> Each page thumbnail will have a small delete icon (typically an <span class="text-red-500 font-bold">×</span>). Click this icon to remove any unwanted pages from your document before saving.</li>
+      <li><strong>Save Your Reordered PDF:</strong> Once you are satisfied with the new page arrangement, click the "Save Reordered PDF" button.</li>
+      <li><strong>Download:</strong> The tool will process your changes and initiate a download of the newly reordered PDF file. The filename will usually be appended with a suffix like "_reordered".</li>
+      <li><strong>Reset:</strong> If you want to start over with the original file or upload a new one, click the "Reset" button. This will clear the current PDF and page order.</li>
+    </ol>
+    <p>This intuitive drag-and-drop interface makes our <strong>PDF page sorter online</strong> exceptionally easy to use.</p>
+    <h3>Key Features of Our PDF Page Organizer</h3>
+    <p>Our tool offers several features to make PDF page management seamless:</p>
+    <ul>
+      <li><strong>Visual Thumbnails:</strong> Easily identify and select pages through clear visual previews.</li>
+      <li><strong>Drag-and-Drop Interface:</strong> The most intuitive way to <strong>reorder PDF pages</strong>. No need to manually type page numbers for complex rearrangements.</li>
+      <li><strong>Page Deletion:</strong> Remove unnecessary pages directly from the thumbnail view, streamlining your document.</li>
+      <li><strong>Client-Side Processing:</strong> All operations, from uploading to reordering and saving, happen directly in your web browser. Your files are never sent to an external server, ensuring maximum privacy and security.</li>
+      <li><strong>No Software Installation:</strong> Being a web-based tool, there's no need to download or install any software. Access it from any device with a modern browser.</li>
+      <li><strong>Fast Processing:</strong> Client-side operations are generally quick, especially for moderately sized PDFs.</li>
+      <li><strong>Free to Use:</strong> Our <strong>PDF page reorder</strong> service is completely free.</li>
+    </ul>
+    <h3>Benefits of Organizing Your PDF Pages</h3>
+    <p>Properly arranged PDF pages offer numerous advantages:</p>
+    <ul>
+      <li><strong>Improved Readability and Flow:</strong> A logically ordered document is easier for readers to understand and follow.</li>
+      <li><strong>Professionalism:</strong> Well-organized documents reflect attention to detail and professionalism, whether for business proposals, academic submissions, or personal use.</li>
+      <li><strong>Efficiency:</strong> Quickly find the information you need when pages are in the correct order, saving time and effort.</li>
+      <li><strong>Better Presentations:</strong> Ensure your PDF slides or presentation materials flow smoothly and logically.</li>
+      <li><strong>Optimized Printing:</strong> Arrange pages for specific printing needs, such as booklet printing or selecting only relevant sections.</li>
+    </ul>
+    <p>Using a tool to <strong>organize PDF pages</strong> can significantly enhance the quality and usability of your documents.</p>
+    <h3>Tips for Efficiently Reordering PDF Pages</h3>
+    <ul>
+      <li><strong>Know Your Goal:</strong> Before you start dragging pages, have a clear idea of the final order you want to achieve. It can be helpful to jot down the new sequence for complex documents.</li>
+      <li><strong>Work with Manageable Chunks:</strong> For very large PDFs, if you only need to reorder a specific section, consider splitting the PDF first, reordering the section, and then merging it back if necessary (using other PDF tools).</li>
+      <li><strong>Double-Check Before Saving:</strong> Quickly scan through the reordered thumbnails one last time to ensure everything is in the correct place and no essential pages were accidentally deleted.</li>
+      <li><strong>Consider File Size:</strong> Deleting unnecessary pages can significantly reduce the overall file size of your PDF, which is beneficial for sharing and storage.</li>
+      <li><strong>Save Intermediate Copies (for complex tasks):</strong> If you're performing a very complex reordering of a critical document, you might consider saving an intermediate version partway through.</li>
+    </ul>
+    <h3>Client-Side Processing: Why It Matters for Your Privacy</h3>
+    <p>When you use our tool to <strong>reorder PDF pages</strong>, the entire process happens on your own computer, within your web browser. This is a critical distinction from many online tools that require you to upload your files to their servers.</p>
+    <ul>
+      <li><strong>No Data Transfer:</strong> Your PDF file is not transmitted over the internet to a third-party server.</li>
+      <li><strong>Confidentiality Maintained:</strong> Since your document never leaves your device, its contents remain private and secure. This is especially important for sensitive or confidential information.</li>
+      <li><strong>No Residual Files on Servers:</strong> There's no risk of your files being stored or inadvertently retained on an external server after you're done.</li>
+    </ul>
+    <p>This client-side approach offers peace of mind, knowing your document's integrity and privacy are preserved while you <strong>arrange PDF pages</strong>.</p>
+    <h3>Frequently Asked Questions (FAQs) about Reordering PDF Pages</h3>
+    <h4>1. Is this PDF page reordering tool free?</h4>
+    <p>Yes, our online tool to <strong>reorder PDF pages</strong> is completely free to use, with no limitations or hidden costs.</p>
+    <h4>2. Do I need to install any software?</h4>
+    <p>No, this is an entirely browser-based tool. You don't need to download or install any software on your computer or mobile device.</p>
+    <h4>3. Are my PDF files safe and private?</h4>
+    <p>Absolutely. All processing is done locally in your browser. Your PDF files are never uploaded to our or any third-party server, ensuring maximum privacy and security.</p>
+    <h4>4. Is there a limit to the PDF file size or number of pages?</h4>
+    <p>While the processing is client-side, extremely large PDF files (e.g., many hundreds of pages or over 50MB, depending on your browser's capabilities) might cause performance issues or browser slowdowns. We recommend working with reasonably sized files for the best experience. A practical limit of around 50MB is often suggested.</p>
+    <h4>5. Can I also delete pages while reordering?</h4>
+    <p>Yes, our tool includes functionality to delete individual pages. Each page thumbnail will have a delete icon, allowing you to remove unwanted pages before saving the reordered document.</p>
+    <h4>6. Can I rotate pages as well?</h4>
+    <p>While this specific guide focuses on reordering and deletion, page rotation is a common related feature. Advanced versions of PDF page organizers often include rotation. (For this implementation, we've focused on reordering and deletion for simplicity, but rotation could be added).</p>
+    <h4>7. What happens to the original PDF file?</h4>
+    <p>Your original PDF file remains untouched on your device. Our tool creates a new PDF file with the reordered (and potentially deleted) pages, which you then download.</p>
+    <h4>8. Will reordering pages affect the quality of my PDF?</h4>
+    <p>No, reordering or deleting pages using `pdf-lib` does not affect the quality of the content (text, images, etc.) on the remaining pages. The integrity of each page is preserved.</p>
+    <h3>Conclusion: Effortlessly Organize Your PDF Documents</h3>
+    <p>The ability to <strong>reorder PDF pages</strong>, <strong>arrange PDF pages</strong>, and generally <strong>organize PDF pages</strong> is a fundamental requirement for anyone working regularly with PDF documents. Our free, secure, and user-friendly online <strong>PDF page organizer</strong> empowers you to take control of your document structure with a simple drag-and-drop interface and the added benefit of page deletion. By leveraging client-side processing, we ensure your documents remain private while providing a powerful tool for your PDF management needs.</p>
+    <p>Stop struggling with incorrectly ordered PDFs. <a href="#dropZone" class="text-purple-600 hover:underline font-semibold">Try our PDF Page Reorder tool today</a> and experience the simplicity of efficient PDF organization!</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SortableJS/1.15.0/Sortable.min.js"></script>
+
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        let PDFDocument;
+        try {
+            if (typeof PDFLib !== 'undefined') {
+                ({ PDFDocument } = PDFLib);
+                console.log("PDFLib PDFDocument destructured successfully.");
+            } else {
+                throw new Error("PDFLib is not defined.");
+            }
+        } catch (e) {
+            console.error("Initialization Error - Could not destructure PDFLib PDFDocument:", e);
+            Swal.fire("Library Error", "The PDF processing library (PDFLib) is not loaded correctly.", "error");
+            document.getElementById('savePdfButton').disabled = true;
+            return; 
+        }
+
+        let currentPdfFile = null;
+        let currentPdfJsDoc = null; // For pdf.js previews
+        let sortableInstance = null;
+
+        const dropZone = document.getElementById('dropZone');
+        const pdfFileInput = document.getElementById('pdfFile');
+        const pdfFileNameEl = document.getElementById('pdfFileName');
+        const pageThumbnailContainer = document.getElementById('pageThumbnailContainer');
+        const thumbnailPlaceholder = document.getElementById('thumbnailPlaceholder');
+        const thumbnailInfo = document.getElementById('thumbnailInfo');
+        const pageCountInfoEl = document.getElementById('pageCountInfo'); // पेज काउंट के लिए नया तत्व
+        
+        const savePdfButton = document.getElementById('savePdfButton');
+        const resetButton = document.getElementById('resetButton');
+        const progressBarContainer = document.getElementById('progressBarContainer');
+        const progressBar = document.getElementById('progressBar');
+
+        if (!dropZone || !pdfFileInput || !savePdfButton || !resetButton || !pageThumbnailContainer || !thumbnailPlaceholder || !thumbnailInfo) {
+            console.error("One or more essential UI elements are missing from the DOM.");
+            return;
+        }
+        
+        savePdfButton.disabled = true;
+
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); e.stopPropagation(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', (e) => { e.preventDefault(); e.stopPropagation(); dropZone.classList.remove('dragover'); });
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault(); e.stopPropagation(); dropZone.classList.remove('dragover');
+          const droppedFiles = e.dataTransfer.files;
+          if (droppedFiles.length > 0) { pdfFileInput.files = droppedFiles; handlePdfFileSelection(); }
+        });
+        pdfFileInput.addEventListener('change', handlePdfFileSelection);
+        savePdfButton.addEventListener('click', saveReorderedPdf);
+        resetButton.addEventListener('click', resetAll);
+
+        async function handlePdfFileSelection() {
+            if (pdfFileInput.files.length === 0) {
+                resetAllInternals(); return;
+            }
+            currentPdfFile = pdfFileInput.files[0];
+
+            if (currentPdfFile.type !== 'application/pdf') {
+                Swal.fire('Invalid File Type', `${currentPdfFile.name} is not a PDF.`, 'error');
+                resetAllInternals(); return;
+            }
+            if (currentPdfFile.size > 50 * 1024 * 1024) {
+                Swal.fire('File Too Large', `${currentPdfFile.name} exceeds 50MB limit.`, 'error');
+                resetAllInternals(); return;
+            }
+
+            pdfFileNameEl.textContent = `Selected: ${currentPdfFile.name}`;
+            pageThumbnailContainer.innerHTML = ''; 
+            thumbnailPlaceholder.classList.add('hidden');
+            thumbnailInfo.classList.remove('hidden');
+            savePdfButton.disabled = true;
+            progressBarContainer.classList.remove('hidden');
+            progressBar.style.width = '10%';
+
+            try {
+                const fileReader = new FileReader();
+                fileReader.onload = async function() {
+                    const typedArray = new Uint8Array(this.result);
+                    try {
+                        currentPdfJsDoc = await pdfjsLib.getDocument({ data: typedArray }).promise;
+                        updatePageCountDisplay();
+                        
+                        if (currentPdfJsDoc.numPages === 0) {
+                            Swal.fire('Empty PDF', 'The selected PDF has no pages.', 'warning');
+                            resetAllInternals(); return;
+                        }
+
+                        pageThumbnailContainer.innerHTML = ''; // सुनिश्चित करें कि यह लोड होने से पहले खाली है
+                        for (let i = 1; i <= currentPdfJsDoc.numPages; i++) {
+                            await renderPageThumbnail(i);
+                            progressBar.style.width = `${10 + (i / currentPdfJsDoc.numPages) * 80}%`;
+                        }
+                        
+                        if (sortableInstance) sortableInstance.destroy();
+                        sortableInstance = new Sortable(pageThumbnailContainer, {
+                            animation: 150,
+                            ghostClass: 'sortable-ghost',
+                            onEnd: updatePageNumbersAfterSort // सॉर्टिंग के बाद पेज नंबर अपडेट करें
+                        });
+                        updatePageNumbersAfterSort(); // प्रारंभिक नंबरिंग के लिए
+
+                        savePdfButton.disabled = pageThumbnailContainer.children.length === 0;
+                        progressBar.style.width = '100%';
+                        setTimeout(() => progressBarContainer.classList.add('hidden'), 500);
+                    } catch (pdfLoadError) {
+                         console.error("Error processing PDF with pdf.js:", pdfLoadError);
+                         let errorMsg = `Could not process PDF: ${pdfLoadError.message}`;
+                         if (pdfLoadError.name === 'PasswordException' || (pdfLoadError.message && pdfLoadError.message.toLowerCase().includes('password'))) {
+                             errorMsg = 'This PDF is password-protected and cannot be processed. Please unlock it first.';
+                         }
+                         Swal.fire('PDF Processing Error', errorMsg, 'error');
+                         resetAllInternals();
+                    }
+                };
+                fileReader.readAsArrayBuffer(currentPdfFile);
+            } catch (error) {
+                console.error("Error reading file:", error);
+                Swal.fire('File Read Error', `Could not read the selected file: ${error.message}`, 'error');
+                resetAllInternals();
+            }
+        }
+
+        async function renderPageThumbnail(pageNum) {
+            if (!currentPdfJsDoc) return;
+            try {
+                const page = await currentPdfJsDoc.getPage(pageNum);
+                const viewportScale = 0.25; // थंबनेल के लिए छोटा स्केल
+                const viewport = page.getViewport({ scale: viewportScale });
+                
+                const canvas = document.createElement('canvas');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                const context = canvas.getContext('2d');
+                
+                await page.render({ canvasContext: context, viewport: viewport }).promise;
+
+                const pageDiv = document.createElement('div');
+                pageDiv.className = 'page-item';
+                pageDiv.dataset.originalIndex = pageNum - 1; // मूल 0-आधारित इंडेक्स स्टोर करें
+
+                const pageInfoDiv = document.createElement('div');
+                pageInfoDiv.className = 'page-info';
+                
+                const pageNumText = document.createElement('span');
+                pageNumText.className = 'page-number-display block';
+                // प्रारंभिक क्रम संख्या (बाद में अपडेट होगी)
+                
+                const originalPageNumText = document.createElement('span');
+                originalPageNumText.className = 'original-page-number block';
+                originalPageNumText.textContent = `(Orig. ${pageNum})`;
+
+                pageInfoDiv.appendChild(pageNumText);
+                pageInfoDiv.appendChild(originalPageNumText);
+                
+                const deleteBtn = document.createElement('button');
+                deleteBtn.innerHTML = '×';
+                deleteBtn.className = 'delete-page-btn';
+                deleteBtn.title = `Delete Original Page ${pageNum}`;
+                deleteBtn.onclick = (e) => {
+                    e.stopPropagation(); 
+                    Swal.fire({
+                        title: 'Delete Page?',
+                        text: `Are you sure you want to delete original page ${pageNum}?`,
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            pageDiv.remove();
+                            updatePageNumbersAfterSort(); // शेष पेजों को पुनः नंबर दें
+                            updatePageCountDisplay();
+                            savePdfButton.disabled = pageThumbnailContainer.children.length === 0;
+                            if (pageThumbnailContainer.children.length === 0) {
+                                thumbnailPlaceholder.classList.remove('hidden');
+                                thumbnailInfo.classList.add('hidden');
+                            }
+                        }
+                    });
+                };
+
+                pageDiv.appendChild(canvas);
+                pageDiv.appendChild(pageInfoDiv);
+                pageDiv.appendChild(deleteBtn);
+                pageThumbnailContainer.appendChild(pageDiv);
+
+            } catch (error) {
+                console.error(`Error rendering thumbnail for page ${pageNum}:`, error);
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'page-item bg-red-100 p-2 rounded shadow text-red-700';
+                errorDiv.textContent = `Error: Page ${pageNum}`;
+                pageThumbnailContainer.appendChild(errorDiv);
+            }
+        }
+        
+        function updatePageNumbersAfterSort() {
+            const pageItems = pageThumbnailContainer.children;
+            for (let i = 0; i < pageItems.length; i++) {
+                const pageNumTextEl = pageItems[i].querySelector('.page-number-display');
+                if (pageNumTextEl) {
+                    pageNumTextEl.textContent = `New: ${i + 1}`;
+                }
+            }
+        }
+        
+        function updatePageCountDisplay() {
+            if (!pageCountInfoEl) { // यदि pageCountInfoEl परिभाषित नहीं है, तो उसे खोजें
+                const tempPageCountInfoEl = document.getElementById('pageCountInfo'); // आईडी बदलें यदि आवश्यक हो
+                if (tempPageCountInfoEl) pageCountInfoEl = tempPageCountInfoEl;
+            }
+            const count = pageThumbnailContainer.children.length;
+            const message = `${count} page${count !== 1 ? 's' : ''} in current order.`;
+            if (pageCountInfoEl) {
+                pageCountInfoEl.textContent = message;
+            } else if (thumbnailInfo) { // यदि विशिष्ट पेज काउंट तत्व नहीं है तो thumbnailInfo में जोड़ें
+                let countSpan = thumbnailInfo.querySelector('#pageCountSpan');
+                if (!countSpan) {
+                    countSpan = document.createElement('span');
+                    countSpan.id = 'pageCountSpan';
+                    countSpan.className = 'block mt-1';
+                    thumbnailInfo.appendChild(countSpan);
+                }
+                countSpan.textContent = message;
+            }
+        }
+
+
+        async function saveReorderedPdf() {
+            if (!currentPdfFile || pageThumbnailContainer.children.length === 0) {
+                Swal.fire('No Pages', 'No pages to save. Please upload a PDF and ensure pages are present.', 'warning');
+                return;
+            }
+
+            savePdfButton.disabled = true;
+            resetButton.disabled = true;
+            progressBarContainer.classList.remove('hidden');
+            progressBar.style.width = '10%';
+
+            try {
+                const existingPdfBytes = await currentPdfFile.arrayBuffer();
+                const sourcePdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true }); // स्रोत PDF को पुनः लोड करें
+                progressBar.style.width = '30%';
+
+                const newPdfDoc = await PDFDocument.create();
+                
+                const pageItems = Array.from(pageThumbnailContainer.children);
+                const newPageOrderOriginalIndices = pageItems.map(item => parseInt(item.dataset.originalIndex));
+                
+                if (newPageOrderOriginalIndices.length === 0) {
+                    throw new Error("No pages selected or all pages were deleted.");
+                }
+
+                console.log("Original indices of pages in new order (0-based):", newPageOrderOriginalIndices);
+
+                const copiedPages = await newPdfDoc.copyPages(sourcePdfDoc, newPageOrderOriginalIndices);
+                progressBar.style.width = '60%';
+
+                copiedPages.forEach(page => newPdfDoc.addPage(page));
+                progressBar.style.width = '80%';
+
+                const pdfBytes = await newPdfDoc.save();
+                progressBar.style.width = '100%';
+
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const newFileName = currentPdfFile.name.replace(/\.pdf$/i, '_reordered.pdf');
+                
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = newFileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+
+                Swal.fire('Success!', 'PDF pages reordered and file downloaded.', 'success');
+
+            } catch (error) {
+                console.error("Error reordering or saving PDF:", error);
+                Swal.fire('Error', `Could not reorder pages: ${error.message}`, 'error');
+            } finally {
+                savePdfButton.disabled = (pageThumbnailContainer.children.length === 0);
+                resetButton.disabled = false;
+                setTimeout(() => {
+                    progressBarContainer.classList.add('hidden');
+                    progressBar.style.width = '0%';
+                }, 1500);
+            }
+        }
+        
+        function resetAllInternals() {
+            currentPdfFile = null;
+            currentPdfJsDoc = null;
+            pdfFileNameEl.textContent = '';
+            pageThumbnailContainer.innerHTML = ''; 
+            thumbnailPlaceholder.textContent = 'Upload a PDF to see page thumbnails.';
+            thumbnailPlaceholder.classList.remove('hidden');
+            thumbnailInfo.classList.add('hidden');
+            pageCountInfoEl.textContent = ''; // या thumbnailInfo में पेज काउंट अपडेट करने वाले तत्व को खाली करें
+            
+            if (sortableInstance) {
+                sortableInstance.destroy();
+                sortableInstance = null;
+            }
+            savePdfButton.disabled = true;
+            progressBarContainer.classList.add('hidden');
+            progressBar.style.width = '0%';
+        }
+
+        function resetAll() {
+            pdfFileInput.value = ''; // फ़ाइल इनपुट साफ़ करें
+            resetAllInternals();
+            console.log("Form and state reset.");
+            Swal.fire('Reset', 'All selections and reordered pages cleared.', 'info');
+        }
+
+    });
+  </script>
+</body>
+</html>

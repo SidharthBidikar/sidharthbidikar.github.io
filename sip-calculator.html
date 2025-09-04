@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for SIP Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator - Calculate Mutual Fund & SIP Returns</title>
+    <meta name="description" content="A powerful and free online SIP calculator to forecast your mutual fund investment growth. Includes options for annual step-up to plan your financial goals accurately.">
+    <meta name="keywords" content="sip calculator, calculate sip returns, systematic investment plan, mutual fund calculator, sip returns calculator, online sip tool, investment calculator india">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/sip-calculator.html">
+    <meta property="og:title" content="Advanced SIP Calculator with Annual Step-up & Chart">
+    <meta property="og:description" content="Plan your financial future with our free SIP calculator. See how your monthly investments can grow over time with the power of compounding and annual step-up.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=SIP+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/sip-calculator.html">
+    <meta property="twitter:title" content="Advanced SIP Calculator with Annual Step-up & Chart">
+    <meta property="twitter:description" content="Plan your financial future with our free SIP calculator. See how your monthly investments can grow over time with the power of compounding and annual step-up.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=SIP+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-7xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">SIP Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">Plan your financial goals by calculating the future value of your SIP investments.</p>
+              </div>
+        
+              <!-- Calculator Body -->
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Inputs -->
+                <div class="lg:col-span-1 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-700 mb-6">Investment Details</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="monthly-investment" class="block text-sm font-medium text-gray-700">Monthly Investment (₹)</label>
+                            <input type="number" id="monthly-investment" value="5000" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="return-rate" class="block text-sm font-medium text-gray-700">Expected Return Rate (% p.a.)</label>
+                            <input type="number" id="return-rate" value="12" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="time-period" class="block text-sm font-medium text-gray-700">Time Period (Years)</label>
+                            <input type="number" id="time-period" value="15" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div>
+                            <label for="step-up" class="block text-sm font-medium text-gray-700">Annual Step-up (%) (Optional)</label>
+                            <input type="number" id="step-up" value="0" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="e.g., 10">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="lg:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-center">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-sm text-gray-600">Invested Amount</p>
+                            <p id="total-investment" class="text-2xl font-bold text-blue-800">₹0</p>
+                        </div>
+                        <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                            <p class="text-sm text-gray-600">Est. Returns</p>
+                            <p id="est-returns" class="text-2xl font-bold text-yellow-800">₹0</p>
+                        </div>
+                        <div class="p-4 bg-green-100 rounded-lg border border-green-200">
+                            <p class="text-sm text-gray-600">Maturity Value</p>
+                            <p id="total-value" class="text-2xl font-bold text-green-800">₹0</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <canvas id="sip-chart"></canvas>
+                    </div>
+                </div>
+              </div>
+              
+              <!-- Yearly Breakdown Table -->
+              <div class="mt-12">
+                  <h3 class="text-2xl font-bold text-gray-800 text-center mb-4">Yearly Investment Breakdown</h3>
+                  <div class="overflow-x-auto">
+                      <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                          <thead>
+                              <tr class="bg-gray-50">
+                                  <th class="py-2 px-4 border-b text-center text-xs font-medium text-gray-500 uppercase">Year</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Yearly Investment</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Interest Earned</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Closing Balance</th>
+                              </tr>
+                          </thead>
+                          <tbody id="breakdown-table-body"></tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to the SIP Calculator and Mutual Fund Investments</h2>
+      <p>A Systematic Investment Plan (SIP) is one of the most popular and effective ways for individuals in India to build wealth over the long term. It allows you to invest a fixed amount of money in mutual funds at regular intervals, typically monthly. The power of a SIP lies in two key principles: rupee cost averaging and the magic of compounding. A <strong>SIP calculator</strong> is an essential tool that helps you visualize this power, allowing you to forecast the future value of your monthly investments. This comprehensive guide will explain what a SIP is, how it works, and how to use our advanced <strong>mutual fund calculator</strong> to plan your financial goals.</p>
+    
+      <h3>How to Use Our Advanced SIP Calculator</h3>
+      <p>Our tool is designed to provide a clear and detailed projection of your investment journey.</p>
+      <ol>
+          <li><strong>Enter Monthly Investment:</strong> Input the amount you plan to invest each month via your SIP.</li>
+          <li><strong>Set Expected Return Rate:</strong> Enter the average annual return rate you expect from your mutual fund. Historically, equity mutual funds have delivered returns in the range of 12-15% over the long term, but this is not guaranteed.</li>
+          <li><strong>Define the Time Period:</strong> Enter the number of years you plan to stay invested.</li>
+          <li><strong>Add Annual Step-up (Advanced Feature):</strong> This is a powerful option for realistic planning. Enter the percentage by which you plan to increase your monthly SIP amount each year (e.g., 10% to match a salary hike). This can dramatically boost your final corpus. Leave it at 0 for a standard SIP.</li>
+          <li><strong>Analyze Your Results Instantly:</strong> The results update automatically, showing you:
+            <ul>
+              <li>A clear breakdown of your **Total Invested Amount**, the **Estimated Returns** (wealth gained), and the final **Maturity Value**.</li>
+              <li>A **pie chart** that visually represents the proportion of your own investment versus the wealth gained through compounding.</li>
+              <li>A **yearly breakdown table** detailing the growth of your investment year by year.</li>
+            </ul>
+          </li>
+      </ol>
+      
+      <h3>What is a Systematic Investment Plan (SIP)?</h3>
+      <p>A SIP is not an investment product itself; it is a method of investing in mutual funds. Instead of investing a large lump sum at once, you invest a smaller, fixed amount on a regular basis (usually monthly). This disciplined approach has two major advantages.</p>
+      
+      <h4>1. Rupee Cost Averaging</h4>
+      <p>The market is volatile; it goes up and down. When you invest a fixed amount every month, you automatically buy more units of a mutual fund when the price (Net Asset Value or NAV) is low, and fewer units when the price is high. Over time, this averages out your purchase cost and reduces the risk associated with trying to "time the market."</p>
+
+      <h4>2. The Power of Compounding</h4>
+      <p>As with any investment, the returns you earn on your SIP also start earning their own returns. The longer you stay invested, the more powerful this effect becomes. A <strong>SIP returns calculator</strong> demonstrates how, over 15-20 years, the "Estimated Returns" component can often become larger than the "Invested Amount" itself.</p>
+
+      <h3>The "Step-up SIP" Advantage</h3>
+      <p>A standard SIP involves investing the same amount every month. A **Step-up SIP** is a strategy where you increase your monthly investment amount by a fixed percentage each year. This is a highly effective strategy because:</p>
+      <ul>
+        <li>It aligns your investments with your income growth (e.g., annual salary increments).</li>
+        <li>It helps you reach your financial goals much faster.</li>
+        <li>It significantly boosts the power of compounding.</li>
+      </ul>
+      <p>Our calculator's "Annual Step-up" feature allows you to see the massive difference this small annual increase can make to your final wealth.</p>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>How accurate is this SIP calculator?</h4>
+      <p>The calculator's mathematical formula is accurate. However, the result is a projection based on the **Expected Return Rate** you enter. Real-world mutual fund returns are not guaranteed and can fluctuate. This tool should be used for estimation and planning, not as a guarantee of future returns.</p>
+      
+      <h4>What is a good expected return rate to use?</h4>
+      <p>For long-term investments in equity mutual funds, a rate of 10-12% is a realistic and commonly used assumption for calculations. High-risk funds may have higher potential, while debt funds will have lower expected returns.</p>
+      
+      <h4>Is this tool free?</h4>
+      <p>Yes, this <strong>online SIP tool</strong> is 100% free to use, with no limits.</p>
+      
+      <h4>Can I use this for a Lumpsum investment?</h4>
+      <p>While this tool is optimized for SIPs, you can simulate a lumpsum investment by setting the "Monthly Investment" and "Annual Step-up" to 0 and entering your lumpsum amount in the "Initial Principal" field of a compound interest calculator.</p>
+
+      <h3>Conclusion</h3>
+      <p>A Systematic Investment Plan is a disciplined and powerful way to build wealth over the long term. A <strong>SIP calculator</strong> is your best friend in this journey, helping you to set clear financial goals and understand how to achieve them. By visualizing the growth of your investments and seeing the impact of strategies like the annual step-up, our tool empowers you to make informed decisions and stay motivated on your path to financial freedom. Bookmark this page and start planning your investments today!</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Inputs
+        const monthlyInvestmentInput = document.getElementById('monthly-investment');
+        const returnRateInput = document.getElementById('return-rate');
+        const timePeriodInput = document.getElementById('time-period');
+        const stepUpInput = document.getElementById('step-up');
+        
+        // Results
+        const totalInvestmentEl = document.getElementById('total-investment');
+        const estReturnsEl = document.getElementById('est-returns');
+        const totalValueEl = document.getElementById('total-value');
+        const breakdownTableBody = document.getElementById('breakdown-table-body');
+        
+        // Chart
+        const chartCanvas = document.getElementById('sip-chart');
+        let sipChart;
+
+        const formatCurrency = (value) => {
+            return value.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
+        };
+
+        const calculate = () => {
+            let p = parseFloat(monthlyInvestmentInput.value) || 0;
+            const i = (parseFloat(returnRateInput.value) || 0) / 100;
+            const t = parseInt(timePeriodInput.value, 10) || 0;
+            const stepUp = (parseFloat(stepUpInput.value) || 0) / 100;
+
+            if (p <= 0 || i <= 0 || t <= 0) {
+                resetResults();
+                return;
+            }
+            
+            let totalInvested = 0;
+            let maturityValue = 0;
+            const breakdownData = [];
+            
+            for (let year = 1; year <= t; year++) {
+                const openingBalance = maturityValue;
+                const yearlyInvestment = p * 12;
+                
+                let yearlyBalance = openingBalance;
+                for (let month = 1; month <= 12; month++) {
+                    yearlyBalance = (yearlyBalance + p) * (1 + i / 12);
+                }
+                
+                maturityValue = yearlyBalance;
+                totalInvested += yearlyInvestment;
+                
+                breakdownData.push({
+                    year: year,
+                    yearlyInvestment: yearlyInvestment,
+                    closingBalance: maturityValue,
+                    openingBalance: openingBalance
+                });
+                
+                p *= (1 + stepUp);
+            }
+            
+            const totalReturns = maturityValue - totalInvested;
+            
+            totalInvestmentEl.textContent = formatCurrency(totalInvested);
+            estReturnsEl.textContent = formatCurrency(totalReturns);
+            totalValueEl.textContent = formatCurrency(maturityValue);
+            
+            updateChart(totalInvested, totalReturns);
+            renderBreakdownTable(breakdownData);
+        };
+        
+        const resetResults = () => {
+            totalInvestmentEl.textContent = formatCurrency(0);
+            estReturnsEl.textContent = formatCurrency(0);
+            totalValueEl.textContent = formatCurrency(0);
+            breakdownTableBody.innerHTML = '';
+            if (sipChart) {
+                sipChart.data.datasets[0].data = [0, 0];
+                sipChart.update();
+            }
+        };
+        
+        const updateChart = (invested, returns) => {
+            const data = {
+                labels: ['Total Investment', 'Estimated Returns'],
+                datasets: [{
+                    data: [invested, returns],
+                    backgroundColor: ['#4f46e5', '#10b981'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            };
+
+            if (sipChart) {
+                sipChart.data = data;
+                sipChart.update();
+            } else {
+                sipChart = new Chart(chartCanvas, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        cutout: '60%',
+                        plugins: {
+                            legend: { position: 'bottom' },
+                            tooltip: { callbacks: { label: (context) => `${context.label}: ${formatCurrency(context.raw)}` } }
+                        }
+                    }
+                });
+            }
+        };
+
+        const renderBreakdownTable = (data) => {
+            breakdownTableBody.innerHTML = '';
+            data.forEach(item => {
+                const interestEarned = item.closingBalance - item.openingBalance - item.yearlyInvestment;
+                const row = `
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-2 px-4 border-b text-center font-medium">${item.year}</td>
+                        <td class="py-2 px-4 border-b text-right">${formatCurrency(item.yearlyInvestment)}</td>
+                        <td class="py-2 px-4 border-b text-right text-green-600">${formatCurrency(interestEarned)}</td>
+                        <td class="py-2 px-4 border-b text-right font-bold">${formatCurrency(item.closingBalance)}</td>
+                    </tr>
+                `;
+                breakdownTableBody.innerHTML += row;
+            });
+        };
+
+        // Event Listeners
+        [monthlyInvestmentInput, returnRateInput, timePeriodInput, stepUpInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        // Initial Calculation
+        calculate();
+      });
+    </script>
+</body>
+</html>

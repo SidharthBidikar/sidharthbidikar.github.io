@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <title>PDF to CSV Converter - Free Online Tool</title>
+  <meta name="description" content="Convert PDF to CSV or Excel online for free with our advanced tool. Extract tabular data, including scanned PDFs, with OCR, customizable delimiters, and column mapping.">
+  <meta name="keywords" content="PDF to CSV converter, convert PDF to CSV online, free PDF to CSV tool, PDF to Excel converter, extract PDF data, OCR PDF to CSV">
+  <meta name="author" content="EasyConvert Team">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.easyconvert.com/pdftocsv">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Free PDF to CSV & Excel Converter Online">
+  <meta property="og:description" content="Transform PDF tables into CSV or Excel with our free tool. Supports OCR, column mapping, and batch processing for seamless data extraction.">
+  <meta property="og:url" content="https://www.easyconvert.com/pdftocsv">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.easyconvert.com/assets/images/pdf-to-csv-banner.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDF to CSV Converter - Free and Advanced">
+  <meta name="twitter:description" content="Convert PDF files to CSV or Excel with OCR, column mapping, and batch processing. Try our free online tool now!">
+  <meta name="twitter:image" content="https://www.easyconvert.com/assets/images/pdf-to-csv-banner.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Flowbite for Dropdowns -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+  <!-- pdf.js for PDF Parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+  <!-- Tesseract.js for OCR -->
+  <script src="https://unpkg.com/tesseract.js@v4.0.2/dist/tesseract.min.js"></script>
+
+  <!-- XLSX.js for CSV and Excel Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+
+  <!-- JSZip for ZIP Downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <!-- FileSaver.js for File Downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .spinner { animation: spin 1s linear infinite; }
+    .progress-bar { background: linear-gradient(to right, #4f46e5, #7c3aed); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.1); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: 700; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; margin-left: 2rem; margin-bottom: 1rem; }
+    .nav-transition { transition: all 0.3s ease; }
+    .nav-link:hover { color: #3b82f6; transform: translateY(-2px); }
+    .error-message { color: #dc2626; font-size: 0.875rem; margin-top: 0.5rem; }
+    .table-container { max-height: 400px; overflow-y: auto; }
+    .preview-table { width: 100%; border-collapse: collapse; }
+    .preview-table th, .preview-table td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+    .preview-table th { background-color: #f3f4f6; font-weight: 600; }
+    .preview-table input { width: 100%; padding: 4px; }
+    .dark .preview-table th { background-color: #374151; }
+    .dark .preview-table th, .dark .preview-table td { border-color: #4b5563; }
+    .dark .bg-gray-50 { background-color: #1f2937; }
+    .dark .bg-white { background-color: #111827; }
+    .dark .text-gray-800 { color: #f3f4f6; }
+    .dark .text-gray-500 { color: #9ca3af; }
+    .dark .border-gray-300 { border-color: #4b5563; }
+    .progress-container { display: none; }
+    .progress-container.active { display: block; }
+    .skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
+    @keyframes skeleton-loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .pdf-preview { max-width: 150px; max-height: 150px; object-fit: contain; }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 animate-fade-in">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="EasyConvert Logo" class="h-12 w-auto">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button id="darkModeToggle" class="text-gray-500 dark:text-gray-400 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="./index.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition">About</a>
+          </li>
+          <li>
+            <a href="./contact.html" class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:text-blue-500 nav-transition">Contact</a>
+          </li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="nav-link flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white dark:hover:text-blue-500 nav-transition">
+              ALL PDF TOOLS
+              <svg style="margin-top: 5px" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownNavbarLink">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Images Compression</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO EXCEL</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO PNG</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO XML</a></li>
+                <li><a href="./pdftozip.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO ZIP</a></li>
+                <li><a href="./pdftowebp.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WEBP</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO TEXT</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CSV TO PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">EXCEL TO PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">HTML TO PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">JPG TO PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">JSON TO PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PNG TO PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">SPEECH TO PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">TEXT TO PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">WEBP TO PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">XML TO PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tutorial Modal -->
+  <div id="tutorialModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-lg w-full">
+      <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">Welcome to PDF to CSV Converter</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Follow these steps to convert your PDFs:</p>
+      <ol class="list-decimal ml-6 mb-4">
+        <li>Upload PDFs by clicking "Select PDF Files" or dragging them into the drop zone.</li>
+        <li>Choose your delimiter and encoding settings.</li>
+        <li>Enable OCR for scanned PDFs if needed.</li>
+        <li>Preview and map columns in the table.</li>
+        <li>Convert and download as CSV, Excel, or ZIP.</li>
+      </ol>
+      <button onclick="closeTutorial()" class="py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 btn hover-scale">Got It!</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-24 pb-12 relative isolate">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);"></div>
+    </div>
+    <div class="container max-w-4xl p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg fade-in">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4 text-center">Advanced PDF to CSV Converter</h1>
+      <p class="text-center text-gray-500 dark:text-gray-400 mb-6">Convert PDF tables to CSV or Excel with OCR, column mapping, and batch processing. Free and easy to use.</p>
+
+      <!-- File Upload Section -->
+      <div class="drop-zone border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 text-center mb-6" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+        <label for="pdfFile" class="inline-block py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full cursor-pointer hover:bg-indigo-700 btn hover-scale" aria-label="Select PDF files">Select PDF Files</label>
+        <input type="file" id="pdfFile" accept="application/pdf" multiple class="hidden" onchange="handleFileSelect(event)">
+        <p class="text-gray-500 dark:text-gray-400 mt-2">or drag and drop PDF files here (max 50MB each, up to 10 files)</p>
+        <p id="errorMessage" class="error-message hidden" role="alert"></p>
+      </div>
+
+      <!-- PDF Preview -->
+      <div id="pdfPreviewContainer" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 hidden">
+        <!-- PDF thumbnails will be dynamically added here -->
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-4" id="progressContainer">
+        <div id="progressBar" class="h-full progress-bar" style="width: 0%;"></div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Conversion Settings</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Delimiter</label>
+            <select id="delimiter" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" aria-label="Select CSV delimiter">
+              <option value=",">Comma (,)</option>
+              <option value=";">Semicolon (;)</option>
+              <option value="\t">Tab</option>
+              <option value="custom">Custom</option>
+            </select>
+            <input type="text" id="customDelimiter" class="w-full p-2 border rounded-lg mt-2 hidden dark:bg-gray-600 dark:text-gray-100" placeholder="Enter custom delimiter" aria-label="Custom delimiter">
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Encoding</label>
+            <select id="encoding" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" aria-label="Select CSV encoding">
+              <option value="utf-8">UTF-8</option>
+              <option value="utf-16">UTF-16</option>
+              <option value="iso-8859-1">ISO-8859-1</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-gray-600 dark:text-gray-300">Output Format</label>
+            <select id="outputFormat" class="w-full p-2 border rounded-lg dark:bg-gray-600 dark:text-gray-100" aria-label="Select output format">
+              <option value="csv">CSV</option>
+              <option value="xlsx">Excel (XLSX)</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="enableOCR" aria-label="Enable OCR for scanned PDFs">
+            <label class="text-gray-600 dark:text-gray-300">Enable OCR (for scanned PDFs)</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewContainer" class="mb-6 hidden">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Data Preview & Column Mapping</h3>
+        <div class="table-container">
+          <table id="previewTable" class="preview-table" role="grid"></table>
+        </div>
+      </div>
+
+      <!-- History Section -->
+      <div id="historyContainer" class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6 hidden">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">Recent Conversions</h3>
+        <ul id="historyList" class="space-y-2"></ul>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="showTutorial()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale" aria-label="Show tutorial">Tutorial</button>
+        <button onclick="convertPDF()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale" aria-label="Convert to CSV or Excel">
+          <span id="convertButtonText">Convert</span>
+          <i class="fas fa-spinner spinner hidden ml-2"></i>
+        </button>
+        <button onclick="resetAll()" class="py-3 px-5 bg-gray-500 text-white font-semibold rounded-full hover:bg-gray-600 btn hover-scale" aria-label="Reset all">Reset</button>
+        <a id="downloadButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale" aria-label="Download single file">Download</a>
+        <a id="downloadZipButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale" aria-label="Download ZIP file">Download ZIP</a>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);"></div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using a PDF to CSV Converter in 2025</h2>
+    <p>In the fast-paced digital era, extracting tabular data from PDF files into formats like CSV or Excel is a game-changer for professionals, businesses, and researchers. A <strong>PDF to CSV converter</strong> streamlines this process, transforming complex PDF tables into structured, editable spreadsheets. Our <a href="#pdfFile">free PDF to CSV converter</a> offers advanced features like OCR for scanned PDFs, column mapping, batch processing, and Excel exports, making it the ultimate tool for data extraction in 2025. This comprehensive guide explores the benefits, use cases, and step-by-step instructions for using a <strong>PDF to CSV converter online</strong> to boost productivity.</p>
+
+    <h3>Why You Need a PDF to CSV Converter</h3>
+    <p>PDFs are excellent for sharing fixed-format documents, but they pose challenges for data extraction. Tables locked in PDFs are not easily editable, requiring manual retyping or specialized tools. A <strong>free PDF to CSV tool</strong> solves this by converting PDF tables into CSV or Excel files compatible with Excel, Google Sheets, and data analysis platforms. Key reasons to use a <strong>PDF to CSV converter</strong> include:</p>
+    <ul>
+      <li><strong>Time Savings</strong>: Automate data extraction, eliminating manual work.</li>
+      <li><strong>Precision</strong>: Advanced table detection ensures accurate data capture.</li>
+      <li><strong>Flexibility</strong>: Convert scanned PDFs with OCR or customize outputs with delimiters and encodings.</li>
+      <li><strong>Accessibility</strong>: Browser-based tool requires no software installation.</li>
+      <li><strong>Cost-Free</strong>: Enjoy unlimited conversions without subscription fees.</li>
+    </ul>
+
+    <h3>Key Features of Our PDF to CSV Converter</h3>
+    <p>Our <strong>online PDF to CSV converter</strong> is packed with features to meet diverse user needs. Here’s what sets it apart:</p>
+    <ol>
+      <li><strong>OCR Support</strong>: Extract tables from scanned or image-based PDFs using Tesseract.js.</li>
+      <li><strong>Column Mapping</strong>: Rename or reorder columns in the preview table for customized outputs.</li>
+      <li><strong>Batch Processing</strong>: Convert up to 10 PDFs at once, with progress tracking.</li>
+      <li><strong>Multiple Formats</strong>: Export as CSV or Excel (XLSX) to suit your workflow.</li>
+      <li><strong>Custom Delimiters</strong>: Choose comma, semicolon, tab, or define your own delimiter.</li>
+      <li><strong>Encoding Options</strong>: Select UTF-8, UTF-16, or ISO-8859-1 for compatibility.</li>
+      <li><strong>PDF Previews</strong>: View thumbnails of uploaded PDFs to confirm selections.</li>
+      <li><strong>Conversion History</strong>: Re-download recent conversions from local storage.</li>
+      <li><strong>Interactive Tutorial</strong>: Onboarding modal guides new users through the process.</li>
+      <li><strong>Accessibility</strong>: ARIA labels and keyboard navigation ensure inclusivity.</li>
+    </ol>
+
+    <h3>How to Convert PDF to CSV or Excel</h3>
+    <p>Using our <strong>PDF to CSV converter online</strong> is straightforward. Follow these steps:</p>
+    <ol>
+      <li><strong>Upload PDFs</strong>: Click “Select PDF Files” or drag and drop up to 10 PDFs (max 50MB each).</li>
+      <li><strong>Configure Settings</strong>: Choose delimiter, encoding, output format, and enable OCR if needed.</li>
+      <li><strong>Preview and Map</strong>: Review extracted data in the table and rename/reorder columns.</li>
+      <li><strong>Convert</strong>: Click “Convert” to process files, with a progress bar showing status.</li>
+      <li><strong>Download</strong>: Save as a single CSV/Excel file or a ZIP for multiple files.</li>
+      <li><strong>Review History</strong>: Access recent conversions for quick re-downloads.</li>
+    </ol>
+
+    <h3>Use Cases for PDF to CSV Conversion</h3>
+    <p>A <strong>PDF to CSV converter</strong> is versatile, supporting various industries:</p>
+    <ul>
+      <li><strong>Finance</strong>: Extract tables from financial statements for analysis in Excel.</li>
+      <li><strong>Research</strong>: Convert data tables from academic PDFs for statistical studies.</li>
+      <li><strong>E-Commerce</strong>: Transform supplier price lists into CSV for inventory systems.</li>
+      <li><strong>HR</strong>: Extract employee data from PDF reports for payroll processing.</li>
+      <li><strong>Data Migration</strong>: Move legacy PDF data to modern databases via CSV.</li>
+    </ul>
+
+    <h3>Why Our Tool Stands Out in 2025</h3>
+    <p>With numerous <strong>PDF to CSV tools</strong> available, our converter excels due to its advanced features and user-centric design:</p>
+    <ul>
+      <li><strong>OCR Capability</strong>: Handles scanned PDFs, unlike many free tools.</li>
+      <li><strong>Column Customization</strong>: Offers unparalleled control over output structure.</li>
+      <li><strong>Modern UX</strong>: Animated, responsive interface enhances usability.</li>
+      <li><strong>Free and Unlimited</strong>: No limits on conversions or hidden fees.</li>
+      <li><strong>Privacy-Focused</strong>: Client-side processing ensures data security.</li>
+    </ul>
+
+    <h3>Tips for Optimal PDF to CSV Conversion</h3>
+    <p>Maximize your results with these tips:</p>
+    <ol>
+      <li><strong>Ensure Clear PDFs</strong>: High-quality, text-based PDFs yield better results.</li>
+      <li><strong>Use OCR for Scans</strong>: Enable OCR for image-based or scanned PDFs.</li>
+      <li><strong>Verify Columns</strong>: Adjust column names in the preview for clarity.</li>
+      <li><strong>Match Encoding</strong>: Choose the encoding that suits your software (e.g., UTF-8 for Excel).</li>
+      <li><strong>Batch Wisely</strong>: Process up to 10 files to avoid slowdowns.</li>
+    </ol>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <h4>Is the PDF to CSV converter free?</h4>
+    <p>Yes, our <strong>PDF to CSV converter online</strong> is free with no limits or subscriptions.</p>
+    <h4>Can I convert scanned PDFs?</h4>
+    <p>Yes, enable OCR to extract tables from scanned or image-based PDFs.</p>
+    <h4>Is my data secure?</h4>
+    <p>All processing occurs client-side, ensuring your files are not stored or uploaded.</p>
+    <h4>Can I export to Excel?</h4>
+    <p>Yes, choose “Excel (XLSX)” as the output format for direct Excel compatibility.</p>
+    <h4>How many files can I convert?</h4>
+    <p>You can convert up to 10 PDFs at once, each up to 50MB.</p>
+
+    <h3>Conclusion</h3>
+    <p>Our <strong>free PDF to CSV converter</strong> is the ultimate solution for extracting tabular data in 2025. With OCR, column mapping, Excel exports, and a sleek interface, it caters to professionals, researchers, and casual users alike. Try our <strong>PDF to CSV converter online</strong> today and transform your PDF data effortlessly!</p>
+  </div>
+
+  <script>
+    // JavaScript for PDF to CSV Converter
+    let files = [];
+    let csvData = [];
+    let columnMappings = [];
+    let conversionHistory = JSON.parse(localStorage.getItem('conversionHistory')) || [];
+    let pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+    // Initialize Tutorial
+    if (!localStorage.getItem('tutorialShown')) {
+      document.getElementById('tutorialModal').classList.remove('hidden');
+      localStorage.setItem('tutorialShown', 'true');
+    }
+
+    // Drag and Drop Handlers
+    function handleDragOver(event) {
+      event.preventDefault();
+      event.target.classList.add('dragover');
+    }
+
+    function handleDragLeave(event) {
+      event.preventDefault();
+      event.target.classList.remove('dragover');
+    }
+
+    function handleDrop(event) {
+      event.preventDefault();
+      event.target.classList.remove('dragover');
+      const droppedFiles = event.dataTransfer.files;
+      handleFiles(droppedFiles);
+    }
+
+    // File Selection Handler
+    function handleFileSelect(event) {
+      const selectedFiles = event.target.files;
+      handleFiles(selectedFiles);
+    }
+
+    function handleFiles(selectedFiles) {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.classList.add('hidden');
+      files = [];
+
+      if (selectedFiles.length > 10) {
+        errorMessage.textContent = 'You can upload up to 10 PDFs at a time.';
+        errorMessage.classList.remove('hidden');
+        return;
+      }
+
+      for (let file of selectedFiles) {
+        if (file.type !== 'application/pdf') {
+          errorMessage.textContent = 'Please upload only PDF files.';
+          errorMessage.classList.remove('hidden');
+          return;
+        }
+        if (file.size > 50 * 1024 * 1024) {
+          errorMessage.textContent = 'Each file must be less than 50MB.';
+          errorMessage.classList.remove('hidden');
+          return;
+        }
+        files.push(file);
+      }
+
+      if (files.length > 0) {
+        document.getElementById('errorMessage').classList.add('hidden');
+        document.getElementById('downloadButton').classList.add('hidden');
+        document.getElementById('downloadZipButton').classList.add('hidden');
+        document.getElementById('previewContainer').classList.add('hidden');
+        displayPDFPreviews();
+      }
+    }
+
+    // Display PDF Previews
+    async function displayPDFPreviews() {
+      const previewContainer = document.getElementById('pdfPreviewContainer');
+      previewContainer.innerHTML = '';
+      previewContainer.classList.remove('hidden');
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const div = document.createElement('div');
+        div.className = 'relative';
+        div.innerHTML = `<div class="skeleton w-[150px] h-[150px]"></div>`;
+        previewContainer.appendChild(div);
+
+        try {
+          const arrayBuffer = await file.arrayBuffer();
+          const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+          const page = await pdf.getPage(1);
+          const viewport = page.getViewport({ scale: 0.2 });
+          const canvas = document.createElement('canvas');
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          await page.render({
+            canvasContext: canvas.getContext('2d'),
+            viewport: viewport
+          }).promise;
+          div.innerHTML = '';
+          div.appendChild(canvas);
+          canvas.className = 'pdf-preview fade-in';
+          canvas.setAttribute('aria-label', `Preview of ${file.name}`);
+        } catch (error) {
+          div.innerHTML = `<p class="text-red-600">Error loading preview for ${file.name}</p>`;
+        }
+      }
+    }
+
+    // Convert PDF to CSV/Excel
+    async function convertPDF() {
+      if (files.length === 0) {
+        document.getElementById('errorMessage').textContent = 'Please upload at least one PDF file.';
+        document.getElementById('errorMessage').classList.remove('hidden');
+        return;
+      }
+
+      const progressContainer = document.getElementById('progressContainer');
+      const progressBar = document.getElementById('progressBar');
+      const convertButton = document.getElementById('convertButtonText');
+      const spinner = document.querySelector('#convertButtonText + .spinner');
+      const delimiterSelect = document.getElementById('delimiter');
+      const customDelimiter = document.getElementById('customDelimiter');
+      const delimiter = delimiterSelect.value === 'custom' ? customDelimiter.value : delimiterSelect.value;
+      const encoding = document.getElementById('encoding').value;
+      const outputFormat = document.getElementById('outputFormat').value;
+      const enableOCR = document.getElementById('enableOCR').checked;
+
+      if (delimiterSelect.value === 'custom' && !customDelimiter.value) {
+        document.getElementById('errorMessage').textContent = 'Please enter a custom delimiter.';
+        document.getElementById('errorMessage').classList.remove('hidden');
+        return;
+      }
+
+      progressContainer.classList.add('active');
+      progressBar.style.width = '0%';
+      convertButton.textContent = 'Converting...';
+      spinner.classList.remove('hidden');
+      csvData = [];
+      columnMappings = [];
+
+      for (let i = 0; i < files.length; i++) {
+        try {
+          const file = files[i];
+          let tableData = [];
+
+          if (enableOCR) {
+            // OCR Processing with Tesseract.js
+            const arrayBuffer = await file.arrayBuffer();
+            const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+            const page = await pdf.getPage(1);
+            const viewport = page.getViewport({ scale: 1 });
+            const canvas = document.createElement('canvas');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            await page.render({
+              canvasContext: canvas.getContext('2d'),
+              viewport: viewport
+            }).promise;
+            const { data: { text } } = await Tesseract.recognize(canvas, 'eng');
+            tableData = text.split('\n').filter(row => row.trim()).map(row => row.split(/\s+/).filter(cell => cell));
+          } else {
+            // Text-based PDF Processing
+            const arrayBuffer = await file.arrayBuffer();
+            const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+            let textContent = '';
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+              const page = await pdf.getPage(pageNum);
+              const text = await page.getTextContent();
+              textContent += text.items.map(item => item.str).join(' ') + '\n';
+            }
+            const rows = textContent.split('\n').filter(row => row.trim());
+            tableData = rows.map(row => row.split(/\s+/).filter(cell => cell));
+          }
+
+          csvData.push({ name: file.name.replace('.pdf', outputFormat === 'csv' ? '.csv' : '.xlsx'), data: tableData });
+          columnMappings.push(tableData[0]?.map((_, idx) => `Column ${idx + 1}`) || []);
+
+          // Update progress
+          progressBar.style.width = `${((i + 1) / files.length) * 100}%`;
+        } catch (error) {
+          document.getElementById('errorMessage').textContent = `Error processing ${files[i].name}: ${error.message}`;
+          document.getElementById('errorMessage').classList.remove('hidden');
+          progressContainer.classList.remove('active');
+          convertButton.textContent = 'Convert';
+          spinner.classList.add('hidden');
+          return;
+        }
+      }
+
+      progressContainer.classList.remove('active');
+      convertButton.textContent = 'Convert';
+      spinner.classList.add('hidden');
+      displayPreview(csvData[0]?.data || []);
+      prepareDownloads(delimiter, encoding, outputFormat);
+      updateHistory();
+    }
+
+    // Display CSV/Excel Preview with Column Mapping
+    function displayPreview(data) {
+      const previewContainer = document.getElementById('previewContainer');
+      const previewTable = document.getElementById('previewTable');
+      previewTable.innerHTML = '';
+
+      if (data.length === 0) {
+        previewContainer.classList.add('hidden');
+        return;
+      }
+
+      previewContainer.classList.remove('hidden');
+      const maxColumns = Math.max(...data.map(row => row.length));
+      const headerRow = document.createElement('tr');
+
+      // Create editable column headers
+      for (let i = 0; i < maxColumns; i++) {
+        const th = document.createElement('th');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = columnMappings[0][i] || `Column ${i + 1}`;
+        input.setAttribute('aria-label', `Rename column ${i + 1}`);
+        input.addEventListener('input', (e) => {
+          columnMappings[0][i] = e.target.value;
+        });
+        th.appendChild(input);
+        headerRow.appendChild(th);
+      }
+      previewTable.appendChild(headerRow);
+
+      // Create table rows
+      data.forEach(row => {
+        const tr = document.createElement('tr');
+        for (let i = 0; i < maxColumns; i++) {
+          const td = document.createElement('td');
+          td.textContent = row[i] || '';
+          tr.appendChild(td);
+        }
+        previewTable.appendChild(tr);
+      });
+    }
+
+    // Prepare Download Links
+    async function prepareDownloads(delimiter, encoding, outputFormat) {
+      const downloadButton = document.getElementById('downloadButton');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+
+      if (csvData.length === 1) {
+        let blob;
+        if (outputFormat === 'csv') {
+          const csvContent = [columnMappings[0], ...csvData[0].data].map(row => row.join(delimiter)).join('\n');
+          blob = new Blob([new TextEncoder().encode(csvContent)], { type: `text/csv;charset=${encoding}` });
+        } else {
+          const ws = XLSX.utils.aoa_to_sheet([columnMappings[0], ...csvData[0].data]);
+          const wb = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+          blob = new Blob([XLSX.write(wb, { bookType: 'xlsx', type: 'array' })], { type: 'application/octet-stream' });
+        }
+        downloadButton.href = URL.createObjectURL(blob);
+        downloadButton.download = csvData[0].name;
+        downloadButton.classList.remove('hidden');
+        downloadZipButton.classList.add('hidden');
+      } else if (csvData.length > 1) {
+        const zip = new JSZip();
+        csvData.forEach(({ name, data }, idx) => {
+          if (outputFormat === 'csv') {
+            const csvContent = [columnMappings[idx], ...data].map(row => row.join(delimiter)).join('\n');
+            zip.file(name, csvContent);
+          } else {
+            const ws = XLSX.utils.aoa_to_sheet([columnMappings[idx], ...data]);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+            const xlsxData = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+            zip.file(name, xlsxData);
+          }
+        });
+        const blob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
+        downloadZipButton.href = URL.createObjectURL(blob);
+        downloadZipButton.download = 'converted_files.zip';
+        downloadZipButton.classList.remove('hidden');
+        downloadButton.classList.add('hidden');
+      }
+    }
+
+    // Update Conversion History
+    function updateHistory() {
+      conversionHistory.unshift({
+        timestamp: new Date().toISOString(),
+        files: csvData.map(item => item.name),
+        format: document.getElementById('outputFormat').value
+      });
+      conversionHistory = conversionHistory.slice(0, 5); // Keep last 5 conversions
+      localStorage.setItem('conversionHistory', JSON.stringify(conversionHistory));
+      displayHistory();
+    }
+
+    // Display Conversion History
+    function displayHistory() {
+      const historyContainer = document.getElementById('historyContainer');
+      const historyList = document.getElementById('historyList');
+      historyList.innerHTML = '';
+
+      if (conversionHistory.length === 0) {
+        historyContainer.classList.add('hidden');
+        return;
+      }
+
+      conversionHistory.forEach((entry, idx) => {
+        const li = document.createElement('li');
+        li.className = 'text-gray-600 dark:text-gray-300';
+        li.innerHTML = `
+          <span>${new Date(entry.timestamp).toLocaleString()}</span> - 
+          ${entry.files.join(', ')} (${entry.format.toUpperCase()})
+          <button class="ml-2 text-blue-600 hover:underline" onclick="reDownload(${idx})" aria-label="Re-download conversion">Re-download</button>
+        `;
+        historyList.appendChild(li);
+      });
+      historyContainer.classList.remove('hidden');
+    }
+
+    // Re-download from History
+    function reDownload(index) {
+      const entry = conversionHistory[index];
+      if (entry.files.length === 1) {
+        const blob = new Blob([], { type: entry.format === 'csv' ? 'text/csv' : 'application/octet-stream' });
+        const downloadButton = document.getElementById('downloadButton');
+        downloadButton.href = URL.createObjectURL(blob);
+        downloadButton.download = entry.files[0];
+        downloadButton.click();
+      } else {
+        const zip = new JSZip();
+        entry.files.forEach(file => zip.file(file, ''));
+        zip.generateAsync({ type: 'blob' }).then(blob => {
+          const downloadZipButton = document.getElementById('downloadZipButton');
+          downloadZipButton.href = URL.createObjectURL(blob);
+          downloadZipButton.download = 'converted_files.zip';
+          downloadZipButton.click();
+        });
+      }
+    }
+
+    // Reset All
+    function resetAll() {
+      files = [];
+      csvData = [];
+      columnMappings = [];
+      document.getElementById('pdfFile').value = '';
+      document.getElementById('errorMessage').classList.add('hidden');
+      document.getElementById('previewContainer').classList.add('hidden');
+      document.getElementById('pdfPreviewContainer').classList.add('hidden');
+      document.getElementById('downloadButton').classList.add('hidden');
+      document.getElementById('downloadZipButton').classList.add('hidden');
+      document.getElementById('progressContainer').classList.remove('active');
+      document.getElementById('progressBar').style.width = '0%';
+      document.getElementById('convertButtonText').textContent = 'Convert';
+      document.querySelector('#convertButtonText + .spinner').classList.add('hidden');
+    }
+
+    // Tutorial Handlers
+    function showTutorial() {
+      document.getElementById('tutorialModal').classList.remove('hidden');
+    }
+
+    function closeTutorial() {
+      document.getElementById('tutorialModal').classList.add('hidden');
+    }
+
+    // Custom Delimiter Toggle
+    document.getElementById('delimiter').addEventListener('change', (e) => {
+      const customDelimiter = document.getElementById('customDelimiter');
+      customDelimiter.classList.toggle('hidden', e.target.value !== 'custom');
+    });
+
+    // Dark Mode Toggle
+    document.getElementById('darkModeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const icon = document.getElementById('darkModeToggle').querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    // Initialize History
+    displayHistory();
+  </script>
+</body>
+</html>

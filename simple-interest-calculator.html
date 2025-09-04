@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for Simple Interest Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator - Free Online Tool</title>
+    <meta name="description" content="A powerful and free online simple interest calculator to find the interest and final amount for your loan or investment. Includes a visual chart and detailed breakdown.">
+    <meta name="keywords" content="simple interest calculator, calculate simple interest, interest calculator, si calculator, principal and interest, online interest tool">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/simple-interest-calculator.html">
+    <meta property="og:title" content="Advanced Simple Interest Calculator with Chart">
+    <meta property="og:description" content="Easily calculate simple interest, total amount, and see a breakdown by year, month, and day with our comprehensive online tool.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Simple+Interest+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/simple-interest-calculator.html">
+    <meta property="twitter:title" content="Advanced Simple Interest Calculator with Chart">
+    <meta property="twitter:description" content="Easily calculate simple interest, total amount, and see a breakdown by year, month, and day with our comprehensive online tool.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Simple+Interest+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-6xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Simple Interest Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">Calculate simple interest, total amount, and see a detailed breakdown of your investment or loan.</p>
+              </div>
+        
+              <!-- Calculator Body -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Inputs -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-700">Investment Details</h3>
+                        <select id="currency-select" class="p-2 border-gray-300 rounded-md">
+                            <option value="INR">INR (₹)</option>
+                            <option value="USD">USD ($)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label for="principal" class="block text-sm font-medium text-gray-700">Principal Amount</label>
+                            <input type="number" id="principal" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="e.g., 100000">
+                        </div>
+                        <div>
+                            <label for="rate" class="block text-sm font-medium text-gray-700">Annual Interest Rate (%)</label>
+                            <input type="number" id="rate" class="input-field mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="e.g., 8.5">
+                        </div>
+                         <div>
+                            <label class="block text-sm font-medium text-gray-700">Time Period</label>
+                             <div class="grid grid-cols-3 gap-2 mt-1">
+                                <input type="number" id="years" class="input-field p-2 border border-gray-300 rounded-md" placeholder="Years">
+                                <input type="number" id="months" class="input-field p-2 border border-gray-300 rounded-md" placeholder="Months">
+                                <input type="number" id="days" class="input-field p-2 border border-gray-300 rounded-md" placeholder="Days">
+                             </div>
+                        </div>
+                    </div>
+                    <button id="clear-btn" class="btn w-full mt-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600">Clear All</button>
+                </div>
+
+                <!-- Results -->
+                <div class="space-y-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-56 h-56"><canvas id="si-chart"></canvas></div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-sm text-gray-500">Principal Amount</p>
+                            <p id="principal-result" class="text-2xl font-semibold text-gray-800">₹0.00</p>
+                        </div>
+                        <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                            <p class="text-sm text-gray-500">Total Interest</p>
+                            <p id="interest-result" class="text-2xl font-semibold text-gray-800">₹0.00</p>
+                        </div>
+                         <div class="p-4 bg-green-100 text-green-800 rounded-lg col-span-full text-center">
+                            <p class="font-semibold">Total Amount</p>
+                            <p id="total-amount" class="text-4xl font-bold">₹0.00</p>
+                        </div>
+                    </div>
+                     <div class="p-4 bg-gray-100 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">Interest Breakdown</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-600">Per Year:</span><span id="yearly-interest" class="font-medium text-gray-800">₹0.00</span></div>
+                            <div class="flex justify-between"><span class="text-gray-600">Per Month:</span><span id="monthly-interest" class="font-medium text-gray-800">₹0.00</span></div>
+                            <div class="flex justify-between"><span class="text-gray-600">Per Day:</span><span id="daily-interest" class="font-medium text-gray-800">₹0.00</span></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to the Simple Interest Calculator</h2>
+      <p>Simple interest is one of the most fundamental concepts in finance, forming the basis for many types of loans, investments, and savings accounts. Unlike compound interest, it is calculated only on the original principal amount. A <strong>simple interest calculator</strong> is an essential tool for students learning finance, individuals planning investments, and anyone taking out a simple loan. This comprehensive guide will explain the simple interest formula, its applications, how it differs from compound interest, and how to use our powerful <strong>online interest tool</strong> for quick and accurate calculations.</p>
+    
+      <h3>How to Use Our Simple Interest Calculator</h3>
+      <p>Our tool is designed to be flexible and provide a detailed breakdown of your calculation.</p>
+      <ol>
+          <li><strong>Select Currency:</strong> Choose your preferred currency, such as INR (₹) or USD ($).</li>
+          <li><strong>Enter Principal Amount:</strong> This is the initial amount of your loan or investment.</li>
+          <li><strong>Enter Annual Interest Rate:</strong> Input the yearly interest rate in percent.</li>
+          <li><strong>Enter Time Period:</strong> You can enter the duration in any combination of years, months, and days for a highly precise calculation.</li>
+          <li><strong>View Your Results Instantly:</strong> The results update automatically as you type, showing you:
+            <ul>
+              <li>A **pie chart** visualizing the split between the Principal Amount and the Total Interest.</li>
+              <li>The **Principal Amount**, **Total Interest**, and the **Total Amount** (Principal + Interest).</li>
+              <li>A detailed **Interest Breakdown** showing the interest earned per year, month, and day.</li>
+            </ul>
+          </li>
+      </ol>
+      
+      <h3>The Core Formula: How to Calculate Simple Interest</h3>
+      <p>The beauty of simple interest lies in its straightforward formula. A <strong>SI calculator</strong> uses this formula to determine the interest earned.</p>
+      <code>Simple Interest (SI) = P × R × T</code>
+      <p>Where:</p>
+      <ul>
+          <li><strong>P</strong> = Principal Amount (the initial sum of money)</li>
+          <li><strong>R</strong> = Annual Interest Rate (in decimal form, so R = rate% / 100)</li>
+          <li><strong>T</strong> = Time Period (in years)</li>
+      </ul>
+      <p>The total amount at the end of the period is:</p>
+      <code>Total Amount = Principal + Simple Interest</code>
+      
+      <h4>Handling Complex Time Periods</h4>
+      <p>Our calculator makes it easy to handle time periods that aren't in whole years. It converts the months and days into a fraction of a year before applying the formula:</p>
+      <code>T = Years + (Months / 12) + (Days / 365)</code>
+      <p>This ensures maximum accuracy for your calculations.</p>
+      
+      <h3>Simple Interest vs. Compound Interest: The Key Difference</h3>
+      <p>This is the most critical concept to understand in personal finance.</p>
+      <ul>
+        <li><strong>Simple Interest:</strong> Is calculated **only on the original principal amount**. The interest earned each year is the same. For example, ₹1,000 at 10% simple interest will earn ₹100 every year.</li>
+        <li><strong>Compound Interest:</strong> Is calculated on the **principal amount plus the accumulated interest** from previous periods. It's often called "interest on interest." For example, ₹1,000 at 10% compound interest will earn ₹100 in the first year. In the second year, it will earn 10% on ₹1,100 (the original principal + first year's interest), which is ₹110. This compounding effect can lead to significantly higher returns over long periods.</li>
+      </ul>
+      <p>Simple interest is easier to calculate but generally yields lower returns for investments compared to compound interest.</p>
+
+      <h3>Practical Applications of a Simple Interest Calculator</h3>
+      <p>While most modern financial products use compound interest, a <strong>simple interest calculator</strong> is still highly relevant in many scenarios:</p>
+      <ul>
+          <li><strong>Short-Term Loans:</strong> Many short-term personal loans or loans from informal lenders are calculated using simple interest.</li>
+          <li><strong>Car Loans:</strong> Some car financing deals, especially in certain regions, might use a simple interest model for their calculations.</li>
+          <li><strong>Educational Purposes:</strong> It is the first type of interest taught in schools and is fundamental to understanding more complex financial concepts.</li>
+          <li><strong>Basic Investment Projections:</strong> To get a quick, conservative estimate of returns without the complexity of compounding.</li>
+      </ul>
+      
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>How do I calculate simple interest for a period in months?</h4>
+      <p>To do this manually, you must convert the months into years by dividing by 12. For example, 6 months is `6 / 12 = 0.5` years. Our calculator does this automatically when you enter a value in the "Months" field.</p>
+      
+      <h4>Is this online interest tool free?</h4>
+      <p>Yes, this calculator is 100% free to use, with no limits.</p>
+      
+      <h4>Does this calculator handle compound interest?</h4>
+      <p>No, this tool is specifically a **simple interest calculator**. Compound interest calculations require a different formula and are typically found in a separate, dedicated "Compound Interest Calculator."</p>
+
+      <h3>Conclusion</h3>
+      <p>Understanding simple interest is the first step toward financial literacy. Our **Simple Interest Calculator** provides a clear, accurate, and visually intuitive way to see how interest accumulates over time. By breaking down the results into yearly, monthly, and daily figures and visualizing the outcome with a chart, this tool empowers you to make informed decisions about your loans and investments. Bookmark this page for all your simple interest calculation needs.</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Inputs
+        const principalInput = document.getElementById('principal');
+        const rateInput = document.getElementById('rate');
+        const yearsInput = document.getElementById('years');
+        const monthsInput = document.getElementById('months');
+        const daysInput = document.getElementById('days');
+        const currencySelect = document.getElementById('currency-select');
+        const clearBtn = document.getElementById('clear-btn');
+
+        // Results
+        const principalResultEl = document.getElementById('principal-result');
+        const interestResultEl = document.getElementById('interest-result');
+        const totalAmountEl = document.getElementById('total-amount');
+        const yearlyInterestEl = document.getElementById('yearly-interest');
+        const monthlyInterestEl = document.getElementById('monthly-interest');
+        const dailyInterestEl = document.getElementById('daily-interest');
+        
+        // Chart
+        const chartCanvas = document.getElementById('si-chart');
+        let siChart;
+
+        const formatCurrency = (value) => {
+            const currency = currencySelect.value;
+            return value.toLocaleString(currency === 'INR' ? 'en-IN' : 'en-US', { 
+                style: 'currency', 
+                currency: currency, 
+                minimumFractionDigits: 2, 
+                maximumFractionDigits: 2 
+            });
+        };
+
+        const calculate = () => {
+            const P = parseFloat(principalInput.value) || 0;
+            const R = parseFloat(rateInput.value) || 0;
+            const years = parseFloat(yearsInput.value) || 0;
+            const months = parseFloat(monthsInput.value) || 0;
+            const days = parseFloat(daysInput.value) || 0;
+
+            if (P <= 0 || R <= 0 || (years <= 0 && months <= 0 && days <= 0)) {
+                resetResults();
+                return;
+            }
+
+            const T = years + (months / 12) + (days / 365);
+            const rateDecimal = R / 100;
+            
+            const interest = P * rateDecimal * T;
+            const totalAmount = P + interest;
+
+            principalResultEl.textContent = formatCurrency(P);
+            interestResultEl.textContent = formatCurrency(interest);
+            totalAmountEl.textContent = formatCurrency(totalAmount);
+
+            const yearlyInterest = P * rateDecimal;
+            yearlyInterestEl.textContent = formatCurrency(yearlyInterest);
+            monthlyInterestEl.textContent = formatCurrency(yearlyInterest / 12);
+            dailyInterestEl.textContent = formatCurrency(yearlyInterest / 365);
+
+            updateChart(P, interest);
+        };
+        
+        const resetResults = () => {
+             principalResultEl.textContent = formatCurrency(0);
+             interestResultEl.textContent = formatCurrency(0);
+             totalAmountEl.textContent = formatCurrency(0);
+             yearlyInterestEl.textContent = formatCurrency(0);
+             monthlyInterestEl.textContent = formatCurrency(0);
+             dailyInterestEl.textContent = formatCurrency(0);
+             if (siChart) {
+                siChart.data.datasets[0].data = [0, 0];
+                siChart.update();
+             }
+        };
+        
+        const updateChart = (principal, interest) => {
+            const data = {
+                labels: ['Principal Amount', 'Total Interest'],
+                datasets: [{
+                    data: [principal, interest],
+                    backgroundColor: ['#4338ca', '#f59e0b'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            };
+
+            if (siChart) {
+                siChart.data = data;
+                siChart.update();
+            } else {
+                siChart = new Chart(chartCanvas, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        cutout: '60%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { boxWidth: 12, font: { size: 12 } }
+                            }
+                        }
+                    }
+                });
+            }
+        };
+        
+        const clearAll = () => {
+            principalInput.value = '';
+            rateInput.value = '';
+            yearsInput.value = '';
+            monthsInput.value = '';
+            daysInput.value = '';
+            resetResults();
+        };
+
+        [principalInput, rateInput, yearsInput, monthsInput, daysInput, currencySelect].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+        clearBtn.addEventListener('click', clearAll);
+
+        calculate();
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Neuro Tools</title>
+    <meta name="description" content="Read the privacy policy for NeuroTools.com to understand how we handle your data, ensure privacy, and protect your information while using our free online tools.">
+    <meta name="keywords" content="privacy policy, onepagetools privacy, online tools privacy, image resizer privacy, data protection">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NeuroTools Team">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animated-entry { animation: fadeIn 0.5s ease-out; }
+        .nav-transition { transition: all 0.3s ease; }
+        .nav-link:hover { color: #4F46E5; transform: translateY(-2px); }
+        .policy-section { max-width: 800px; margin: 0 auto; }
+        .policy-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .policy-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .policy-section p { margin-bottom: 1rem; line-height: 1.6; }
+        .policy-section ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 animated-entry">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="./index.html" class="flex-shrink-0">
+                        <img class="h-12 w-auto" src="https://via.placeholder.com/60?text=Logo" alt="NeuroTools Logo">
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="./index.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Home</a>
+                        <a href="./about.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">About</a>
+                        <a href="./contact.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Contact</a>
+                        <!-- Dropdown for Tools -->
+                        <div class="relative">
+                            <button id="toolsDropdown" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center nav-transition" aria-expanded="false" aria-haspopup="true">
+                                Tools
+                                <i class="fas fa-chevron-down ml-2"></i>
+                            </button>
+                            <div id="toolsDropdownMenu" class="absolute hidden mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="toolsDropdown">
+                                    <a href="./imageresizer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                                    <a href="./imagecompressor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                                    <a href="./jpgtopng.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                                    <a href="./pngtojpg.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobileMenuButton" type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="./index.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">Home</a>
+                <a href="./about.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">About</a>
+                <a href="./contact.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">Contact</a>
+                <!-- Mobile Dropdown for Tools -->
+                <div>
+                    <button id="mobileToolsDropdown" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 flex items-center w-full px-3 py-2 rounded-md text-base font-medium nav-transition">
+                        Tools
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div id="mobileToolsDropdownMenu" class="hidden pl-4 space-y-1">
+                        <a href="./imageresizer.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                        <a href="./imagecompressor.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                        <a href="./jpgtopng.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                        <a href="./pngtojpg.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-20">
+        <div class="policy-section bg-white rounded-xl shadow-lg p-8 animated-entry">
+            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Privacy Policy</h1>
+            <p class="text-gray-600 mb-6">Last Updated: May 20, 2025</p>
+
+            <h2>Introduction</h2>
+            <p>At NeuroTools.com ("we," "us," or "our"), we are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our website and online tools, including our Image Resizer, Image Compressor, and format conversion tools. Our tools are designed to process images entirely in your browser, ensuring that your data remains private and secure. This policy outlines what data we collect (if any), how we use it, and your rights regarding your information.</p>
+
+            <h3>1. Information We Collect</h3>
+            <p>Our tools operate client-side, meaning that image processing occurs directly in your browser. As a result, we collect minimal information:</p>
+            <ul>
+                <li><strong>No Image Data</strong>: Images you upload to our tools (e.g., for resizing or compression) are not sent to our servers or stored by us. All processing happens locally in your browser.</li>
+                <li><strong>Website Usage Data</strong>: We may collect non-personal information about how you interact with our website, such as page views, time spent on pages, and browser type, through third-party analytics services (see Section 3).</li>
+                <li><strong>Cookies</strong>: We may use cookies or similar technologies to enhance your experience, such as remembering your preferences or analyzing site performance (see Section 4).</li>
+                <li><strong>Contact Information</strong>: If you contact us via email or our contact form, we may collect your name, email address, and any information you provide to respond to your inquiry.</li>
+            </ul>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>The limited information we collect is used to:</p>
+            <ul>
+                <li><strong>Provide and Improve Services</strong>: Analyze website usage to enhance our tools and user experience.</li>
+                <li><strong>Respond to Inquiries</strong>: Use contact information to reply to your questions or feedback.</li>
+                <li><strong>Ensure Functionality</strong>: Use cookies to maintain site functionality, such as saving your tool preferences.</li>
+            </ul>
+            <p>We do not store or process your images or any personal data derived from them. All image-related operations are performed locally on your device.</p>
+
+            <h3>3. Third-Party Services</h3>
+            <p>We may use third-party services to support our website, such as:</p>
+            <ul>
+                <li><strong>Analytics Providers</strong>: Tools like Google Analytics may collect anonymized data about site usage (e.g., page visits, device type) to help us understand user behavior and improve our services. These providers have their own privacy policies.</li>
+                <li><strong>Content Delivery Networks (CDNs)</strong>: We use CDNs (e.g., Cloudflare) to deliver website content efficiently. These services may collect IP addresses or other technical data as part of their operations.</li>
+            </ul>
+            <p>We ensure that any third-party services we use comply with applicable data protection standards.</p>
+
+            <h3>4. Cookies and Tracking Technologies</h3>
+            <p>We may use cookies or similar technologies to:</p>
+            <ul>
+                <li><strong>Essential Cookies</strong>: Enable core website functionality, such as remembering your tool settings.</li>
+                <li><strong>Analytics Cookies</strong>: Collect anonymized data to analyze site performance and user engagement.</li>
+            </ul>
+            <p>You can manage cookie preferences through your browser settings. Note that disabling cookies may affect the functionality of our website. For more information, see our <a href="./cookie-policy.html" class="text-blue-500 hover:underline">Cookie Policy</a>.</p>
+
+            <h3>5. Data Sharing</h3>
+            <p>We do not sell, trade, or share your personal information with third parties, except:</p>
+            <ul>
+                <li><strong>With Service Providers</strong>: Third-party services (e.g., analytics or CDNs) may process technical data on our behalf, as described in Section 3.</li>
+                <li><strong>For Legal Reasons</strong>: We may disclose information if required by law or to protect our rights, safety, or property.</li>
+            </ul>
+            <p>Since we do not store your images or personal data, there is no image-related information to share.</p>
+
+            <h3>6. Data Security</h3>
+            <p>We take reasonable measures to protect the limited data we collect (e.g., contact information or analytics data), including:</p>
+            <ul>
+                <li>Using secure protocols (e.g., HTTPS) for website communication.</li>
+                <li>Limiting data collection to what is necessary.</li>
+                <li>Regularly reviewing third-party services for compliance with security standards.</li>
+            </ul>
+            <p>However, no online service is completely secure. Since our tools process images client-side, your image data remains under your control and is not transmitted to us.</p>
+
+            <h3>7. Your Rights</h3>
+            <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+            <ul>
+                <li><strong>Access</strong>: Request details about the data we hold about you (if any).</li>
+                <li><strong>Correction</strong>: Request corrections to inaccurate data.</li>
+                <li><strong>Deletion</strong>: Request deletion of data we may have (e.g., contact information from inquiries).</li>
+                <li><strong>Opt-Out</strong>: Opt out of cookies or analytics tracking via your browser settings.</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:privacy@neurotools.com" class="text-blue-500 hover:underline">privacy@neurotools.com</a>. Since we do not store image data, there is no image-related data to access or delete.</p>
+
+            <h3>8. Children’s Privacy</h3>
+            <p>Our website and tools are not intended for children under 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us at <a href="mailto:privacy@neurotools.com" class="text-blue-500 hover:underline">privacy@neurotools.com</a>.</p>
+
+            <h3>9. International Users</h3>
+            <p>NeuroTools.com is operated from [Country/Region, e.g., India]. If you access our website from outside this region, your data may be processed in accordance with local laws. By using our tools, you consent to this processing. Our client-side tools ensure that your image data remains local to your device, regardless of your location.</p>
+
+            <h3>10. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of significant changes by posting the updated policy on this page with a revised "Last Updated" date. Please review this policy periodically.</p>
+
+            <h3>11. Contact Us</h3>
+            <p>If you have questions or concerns about this Privacy Policy or our practices, please contact us:</p>
+            <ul>
+                <li><strong>Email</strong>: <a href="mailto:privacy@neurotools.com" class="text-blue-500 hover:underline">privacy@neurotools.com</a></li>
+                <li><strong>Website</strong>: <a href="./contact.html" class="text-blue-500 hover:underline">Contact Form</a></li>
+            </ul>
+            <p>We aim to respond to all inquiries within [e.g., 7 business days].</p>
+        </div>
+    </div>
+
+    <script>
+        // Header Navigation
+        function initNavigation() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const toolsDropdown = document.getElementById('toolsDropdown');
+            const toolsDropdownMenu = document.getElementById('toolsDropdownMenu');
+            const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+            const mobileToolsDropdownMenu = document.getElementById('mobileToolsDropdownMenu');
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-bars');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Toggle desktop tools dropdown
+            toolsDropdown.addEventListener('click', () => {
+                const isExpanded = toolsDropdown.getAttribute('aria-expanded') === 'true';
+                toolsDropdown.setAttribute('aria-expanded', !isExpanded);
+                toolsDropdownMenu.classList.toggle('hidden');
+            });
+
+            // Toggle mobile tools dropdown
+            mobileToolsDropdown.addEventListener('click', () => {
+                mobileToolsDropdownMenu.classList.toggle('hidden');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-down');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-up');
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toolsDropdown.contains(e.target)) {
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                }
+                if (!mobileToolsDropdown.contains(e.target)) {
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            initNavigation();
+        }
+
+        init();
+    </script>
+</body>
+</html>

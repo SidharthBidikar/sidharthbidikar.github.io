@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for EMI Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator - Calculate Loan EMI for Home, Car, Personal Loan</title>
+    <meta name="description" content="A powerful and free online EMI calculator to easily calculate your Equated Monthly Installment for home loans, car loans, and personal loans. Includes a visual chart and amortization schedule.">
+    <meta name="keywords" content="emi calculator, calculate emi, loan emi calculator, home loan emi calculator, car loan emi, personal loan emi calculator, amortization schedule, online emi tool, loan calculator india">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/emi-calculator.html">
+    <meta property="og:title" content="Advanced EMI Calculator with Chart & Amortization Schedule">
+    <meta property="og:description" content="Plan your loans better with our free EMI calculator. Instantly calculate your monthly payments, total interest, and see a year-wise breakdown.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=EMI+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/emi-calculator.html">
+    <meta property="twitter:title" content="Advanced EMI Calculator with Chart & Amortization Schedule">
+    <meta property="twitter:description" content="Plan your loans better with our free EMI calculator. Instantly calculate your monthly payments, total interest, and see a year-wise breakdown.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=EMI+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+      .result-value { color: #4f46e5; }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-6xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">EMI Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">Plan your loans with confidence. Calculate your monthly EMI, total interest, and see a full amortization schedule.</p>
+              </div>
+        
+              <!-- Calculator Body -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <!-- Inputs Column -->
+                  <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                      <h3 class="text-xl font-bold text-gray-700 mb-6">Loan Details</h3>
+                      <div class="space-y-6">
+                          <!-- Loan Amount -->
+                          <div>
+                              <div class="flex justify-between items-center">
+                                  <label for="loan-amount" class="block text-sm font-medium text-gray-700">Loan Amount</label>
+                                  <span class="text-lg font-semibold text-indigo-600">₹ <span id="loan-amount-text">25,00,000</span></span>
+                              </div>
+                              <input type="range" id="loan-amount" min="100000" max="20000000" step="50000" value="2500000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mt-2">
+                          </div>
+
+                          <!-- Interest Rate -->
+                          <div>
+                              <div class="flex justify-between items-center">
+                                  <label for="interest-rate" class="block text-sm font-medium text-gray-700">Interest Rate</label>
+                                  <span class="text-lg font-semibold text-indigo-600"><span id="interest-rate-text">8.5</span> %</span>
+                              </div>
+                              <input type="range" id="interest-rate" min="5" max="20" step="0.1" value="8.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mt-2">
+                          </div>
+
+                          <!-- Loan Tenure -->
+                          <div>
+                              <div class="flex justify-between items-center">
+                                  <label for="loan-tenure" class="block text-sm font-medium text-gray-700">Loan Tenure (Years)</label>
+                                  <span class="text-lg font-semibold text-indigo-600"><span id="loan-tenure-text">20</span> Years</span>
+                              </div>
+                              <input type="range" id="loan-tenure" min="1" max="30" step="1" value="20" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mt-2">
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Results Column -->
+                  <div class="flex flex-col items-center justify-center">
+                      <div class="w-64 h-64 mb-6">
+                          <canvas id="emi-chart"></canvas>
+                      </div>
+                      <div class="text-center">
+                          <p class="text-lg text-gray-600">Monthly EMI</p>
+                          <p id="emi-result" class="text-4xl font-bold text-gray-800 mb-4">₹ 0</p>
+                          <div class="flex space-x-6 justify-center">
+                              <div class="text-left">
+                                  <p class="text-sm text-gray-500">Total Interest</p>
+                                  <p id="total-interest-result" class="text-xl font-semibold text-indigo-600">₹ 0</p>
+                              </div>
+                              <div class="text-left">
+                                  <p class="text-sm text-gray-500">Total Payable</p>
+                                  <p id="total-payment-result" class="text-xl font-semibold text-gray-800">₹ 0</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Amortization Schedule -->
+              <div class="mt-12">
+                  <h3 class="text-2xl font-bold text-gray-800 text-center mb-4">Amortization Schedule (Year-wise)</h3>
+                  <div class="overflow-x-auto">
+                      <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                          <thead>
+                              <tr class="bg-gray-50">
+                                  <th class="py-2 px-4 border-b text-left text-xs font-medium text-gray-500 uppercase">Year</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Principal Paid</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Interest Paid</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Total Payment</th>
+                                  <th class="py-2 px-4 border-b text-right text-xs font-medium text-gray-500 uppercase">Balance</th>
+                              </tr>
+                          </thead>
+                          <tbody id="amortization-table-body">
+                              <!-- Rows will be generated by JS -->
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to EMI Calculation</h2>
+      <p>Buying a home, a car, or funding your education often involves taking a loan. The most crucial part of managing that loan is understanding your Equated Monthly Installment, or EMI. An <strong>EMI calculator</strong> is a vital financial tool that helps you see exactly how much you'll need to pay each month, how much interest you'll pay over the loan's lifetime, and how your payments are broken down. This comprehensive guide will explain the intricacies of EMI, show you how to use our powerful <strong>loan EMI calculator</strong>, and empower you to make smarter financial decisions.</p>
+    
+      <h3>How to Use Our Advanced EMI Calculator</h3>
+      <p>Our tool is designed to be interactive and insightful, giving you a complete picture of your loan.</p>
+      <ol>
+          <li><strong>Adjust Loan Amount:</strong> Use the top slider to set your desired loan amount. You can see the exact value update in real-time. This is perfect for a <strong>home loan EMI calculator</strong> where amounts are large.</li>
+          <li><strong>Set the Interest Rate:</strong> Drag the second slider to set the annual interest rate offered by your bank.</li>
+          <li><strong>Choose the Loan Tenure:</strong> Use the third slider to set the loan period in years.</li>
+          <li><strong>Analyze Your Results Instantly:</strong>
+            <ul>
+              <li><strong>Monthly EMI:</strong> The primary result shows your fixed monthly payment.</li>
+              <li><strong>Visual Breakdown:</strong> The pie chart instantly visualizes the split between the total principal (the amount you borrowed) and the total interest you'll pay.</li>
+              <li><strong>Total Payments:</strong> You can see the total interest and the total amount you will have paid back by the end of the loan.</li>
+            </ul>
+          </li>
+          <li><strong>Review the Amortization Schedule:</strong> Scroll down to see a year-wise table showing how much principal and interest you pay each year, and your remaining balance.</li>
+      </ol>
+      
+      <h3>What is EMI? A Simple Explanation</h3>
+      <p>EMI stands for Equated Monthly Installment. It is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. EMIs are used to pay off both interest and principal each month so that over a specified number of years, the loan is paid off in full.</p>
+      <p>Each EMI payment consists of two parts:</p>
+      <ul>
+          <li><strong>Principal Repayment:</strong> The portion of the payment that goes towards reducing your outstanding loan amount.</li>
+          <li><strong>Interest Payment:</strong> The portion of the payment that is the cost of borrowing the money, paid to the lender.</li>
+      </ul>
+      <p>In the beginning of a loan, the interest component of the EMI is large, and the principal component is small. As the loan matures, this ratio reverses.</p>
+
+      <h3>The Formula Behind the EMI Calculator</h3>
+      <p>While our tool does the heavy lifting, understanding the formula can provide deeper insight. The mathematical formula to <strong>calculate EMI</strong> is:</p>
+      <code>EMI = P × r × (1 + r)^n / ((1 + r)^n - 1)</code>
+      <p>Where:</p>
+      <ul>
+          <li><strong>P</strong> = Principal loan amount</li>
+          <li><strong>r</strong> = Monthly interest rate (annual rate divided by 12)</li>
+          <li><strong>n</strong> = Number of monthly installments (loan tenure in years multiplied by 12)</li>
+      </ul>
+      <p>For example, for a ₹25,00,000 loan for 20 years at 8.5% annual interest:</p>
+      <ul>
+        <li>P = 25,00,000</li>
+        <li>r = (8.5 / 100) / 12 = 0.007083</li>
+        <li>n = 20 * 12 = 240 months</li>
+      </ul>
+      <p>Plugging these into the formula gives you the exact EMI, a complex calculation that our <strong>online EMI tool</strong> does in milliseconds.</p>
+
+      <h3>Understanding the Amortization Schedule</h3>
+      <p>An amortization schedule is a table that details each periodic payment on a loan. It shows how much of each payment goes towards interest and how much goes towards paying down the principal. Our calculator provides a year-wise summary, which is incredibly useful for:</p>
+      <ul>
+        <li><strong>Financial Planning:</strong> Seeing how quickly your principal balance decreases over time.</li>
+        <li><strong>Prepayment Strategy:</strong> If you plan to make extra payments, the schedule helps you understand how much interest you can save.</li>
+        <li><strong>Tax Purposes:</strong> For home loans, the interest paid portion is often tax-deductible. The schedule clearly shows the total interest paid each financial year.</li>
+      </ul>
+
+      <h3>Types of Loans Where an EMI Calculator is Useful</h3>
+      <p>This tool is versatile and can be used for various types of loans in India:</p>
+      <ul>
+          <li><strong>Home Loan EMI Calculator:</strong> Plan for your dream home by understanding the long-term financial commitment.</li>
+          <li><strong>Car Loan EMI Calculator:</strong> Determine the affordability of a new or used car.</li>
+          <li><strong>Personal Loan EMI Calculator:</strong> Calculate payments for personal expenses like weddings, vacations, or medical emergencies.</li>
+          <li><strong>Education Loan Calculator:</strong> Plan for tuition fees and other educational expenses.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>How does changing the loan tenure affect my EMI?</h4>
+      <p>A longer tenure (e.g., 30 years) will result in a lower monthly EMI, but you will pay significantly more in total interest over the life of the loan. A shorter tenure (e.g., 15 years) will have a higher EMI, but you will save a substantial amount of interest and own your asset sooner. Use our calculator's sliders to see this effect in real-time.</p>
+      
+      <h4>What is the difference between a flat rate and a reducing balance rate?</h4>
+      <p>Our calculator uses the **reducing balance rate**, which is the standard for almost all home and car loans today. In this method, interest is calculated each month on the outstanding loan balance. A "flat rate" calculates interest on the initial full loan amount for the entire tenure, which is much more expensive and less common now.</p>
+      
+      <h4>Is this tool free to use?</h4>
+      <p>Yes, our <strong>loan calculator for India</strong> is 100% free, with no hidden charges or limits.</p>
+      
+      <h4>Can I use this calculator for any currency?</h4>
+      <p>While the interface is set to Indian Rupees (₹) to be most relevant for the Indian context, the mathematical formula is universal. You can input values for any currency (Dollars, Euros, etc.) and the resulting EMI will be in that same currency.</p>
+
+      <h3>Conclusion</h3>
+      <p>Taking out a loan is a major financial decision. An <strong>EMI calculator</strong> is your first and most important step towards financial literacy and responsible borrowing. By providing a clear, visual, and detailed breakdown of your loan, our tool empowers you to compare offers, plan your budget, and take control of your financial future. Bookmark this page and use it to plan every loan with clarity and confidence.</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const loanAmountSlider = document.getElementById('loan-amount');
+        const interestRateSlider = document.getElementById('interest-rate');
+        const loanTenureSlider = document.getElementById('loan-tenure');
+        
+        const loanAmountText = document.getElementById('loan-amount-text');
+        const interestRateText = document.getElementById('interest-rate-text');
+        const loanTenureText = document.getElementById('loan-tenure-text');
+        
+        const emiResultEl = document.getElementById('emi-result');
+        const totalInterestResultEl = document.getElementById('total-interest-result');
+        const totalPaymentResultEl = document.getElementById('total-payment-result');
+        
+        const amortizationTableBody = document.getElementById('amortization-table-body');
+        const chartCanvas = document.getElementById('emi-chart');
+        let emiChart;
+
+        const formatCurrency = (value) => {
+            return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value);
+        };
+
+        const calculateAndDisplay = () => {
+            const P = parseFloat(loanAmountSlider.value);
+            const annualRate = parseFloat(interestRateSlider.value);
+            const tenureYears = parseInt(loanTenureSlider.value, 10);
+
+            loanAmountText.textContent = P.toLocaleString('en-IN');
+            interestRateText.textContent = annualRate.toFixed(1);
+            loanTenureText.textContent = tenureYears;
+
+            if (P <= 0 || annualRate <= 0 || tenureYears <= 0) return;
+
+            const r = (annualRate / 100) / 12; // Monthly interest rate
+            const n = tenureYears * 12; // Total number of months
+
+            const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            
+            if (isNaN(emi) || !isFinite(emi)) {
+                emiResultEl.textContent = '₹ 0';
+                totalInterestResultEl.textContent = '₹ 0';
+                totalPaymentResultEl.textContent = '₹ 0';
+                return;
+            }
+
+            const totalPayment = emi * n;
+            const totalInterest = totalPayment - P;
+
+            emiResultEl.textContent = formatCurrency(emi);
+            totalInterestResultEl.textContent = formatCurrency(totalInterest);
+            totalPaymentResultEl.textContent = formatCurrency(totalPayment);
+            
+            updateChart(P, totalInterest);
+            generateAmortizationSchedule(P, emi, r, n);
+        };
+        
+        const updateChart = (principal, interest) => {
+            const data = {
+                labels: ['Principal Amount', 'Total Interest'],
+                datasets: [{
+                    data: [principal, interest],
+                    backgroundColor: ['#4f46e5', '#f59e0b'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            };
+
+            if (emiChart) {
+                emiChart.data = data;
+                emiChart.update();
+            } else {
+                emiChart = new Chart(chartCanvas, {
+                    type: 'doughnut',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        cutout: '60%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    boxWidth: 12,
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        };
+
+        const generateAmortizationSchedule = (principal, emi, monthlyRate, totalMonths) => {
+            amortizationTableBody.innerHTML = '';
+            let balance = principal;
+            let yearlyPrincipal = 0;
+            let yearlyInterest = 0;
+
+            for (let i = 1; i <= totalMonths; i++) {
+                const interestForMonth = balance * monthlyRate;
+                const principalForMonth = emi - interestForMonth;
+                balance -= principalForMonth;
+                
+                yearlyPrincipal += principalForMonth;
+                yearlyInterest += interestForMonth;
+
+                if (i % 12 === 0 || i === totalMonths) {
+                    const year = Math.ceil(i / 12);
+                    const row = `
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b text-center">${year}</td>
+                            <td class="py-2 px-4 border-b text-right">${formatCurrency(yearlyPrincipal)}</td>
+                            <td class="py-2 px-4 border-b text-right">${formatCurrency(yearlyInterest)}</td>
+                            <td class="py-2 px-4 border-b text-right">${formatCurrency(yearlyPrincipal + yearlyInterest)}</td>
+                            <td class="py-2 px-4 border-b text-right">${formatCurrency(Math.max(0, balance))}</td>
+                        </tr>
+                    `;
+                    amortizationTableBody.innerHTML += row;
+                    yearlyPrincipal = 0;
+                    yearlyInterest = 0;
+                }
+            }
+        };
+
+        [loanAmountSlider, interestRateSlider, loanTenureSlider].forEach(slider => {
+            slider.addEventListener('input', calculateAndDisplay);
+        });
+
+        // Initial Calculation
+        calculateAndDisplay();
+      });
+    </script>
+</body>
+</html>

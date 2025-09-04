@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for Scientific Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator - Free Online Math & Engineering Tool</title>
+    <meta name="description" content="A powerful and free online scientific calculator with advanced functions like trigonometry, logarithms, factorials, and memory. Perfect for students, engineers, and scientists.">
+    <meta name="keywords" content="scientific calculator, online scientific calculator, math calculator online, engineering calculator, trigonometry calculator, log calculator, free scientific calculator">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/scientific-calculator.html">
+    <meta property="og:title" content="Advanced Online Scientific Calculator with History">
+    <meta property="og:description" content="Perform complex mathematical calculations with our feature-rich scientific calculator. Includes trig functions, logs, powers, roots, and memory.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Scientific+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/scientific-calculator.html">
+    <meta property="twitter:title" content="Advanced Online Scientific Calculator with History">
+    <meta property="twitter:description" content="Perform complex mathematical calculations with our feature-rich scientific calculator. Includes trig functions, logs, powers, roots, and memory.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Scientific+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+      
+      .calculator-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
+      .calc-btn { transition: all 0.2s; font-size: 0.9rem; font-weight: 500;}
+      .calc-btn:active { transform: scale(0.95); }
+      .angle-btn.active { background-color: #4f46e5; color: white; }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-5xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Scientific Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">A powerful online calculator for all your math, engineering, and science needs.</p>
+              </div>
+        
+              <!-- Calculator Body -->
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                  <div class="md:col-span-3">
+                    <div class="bg-gray-800 text-white p-4 rounded-t-lg">
+                        <div id="expression-display" class="text-right h-6 text-gray-400 text-lg break-all"></div>
+                        <div id="current-display" class="text-right text-5xl font-bold break-all">0</div>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-b-lg">
+                        <div class="flex justify-between items-center mb-4">
+                             <div class="inline-flex rounded-md shadow-sm">
+                                <button id="deg-btn" class="angle-btn active px-3 py-1 text-xs font-medium bg-white border border-gray-200 rounded-l-md">DEG</button>
+                                <button id="rad-btn" class="angle-btn -ml-px px-3 py-1 text-xs font-medium bg-white border border-gray-200 rounded-r-md">RAD</button>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="calc-btn px-3 py-1 text-xs bg-gray-300 rounded-md" data-action="memory-clear">MC</button>
+                                <button class="calc-btn px-3 py-1 text-xs bg-gray-300 rounded-md" data-action="memory-recall">MR</button>
+                                <button class="calc-btn px-3 py-1 text-xs bg-gray-300 rounded-md" data-action="memory-add">M+</button>
+                                <button class="calc-btn px-3 py-1 text-xs bg-gray-300 rounded-md" data-action="memory-subtract">M-</button>
+                            </div>
+                        </div>
+                        <div class="calculator-grid">
+                            <!-- Row 1 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="square">x²</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="inv">x⁻¹</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="sin">sin</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="cos">cos</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="tan">tan</button>
+                            <!-- Row 2 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="sqrt">√</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-action="parenthesis-left">(</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-action="parenthesis-right">)</button>
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="factorial">n!</button>
+                            <button class="calc-btn p-3 bg-yellow-500 text-white rounded-lg" data-operator="divide">÷</button>
+                            <!-- Row 3 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="pow" data-operator="pow">xʸ</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="7">7</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="8">8</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="9">9</button>
+                            <button class="calc-btn p-3 bg-yellow-500 text-white rounded-lg" data-operator="multiply">×</button>
+                            <!-- Row 4 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="ten-pow">10ˣ</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="4">4</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="5">5</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="6">6</button>
+                            <button class="calc-btn p-3 bg-yellow-500 text-white rounded-lg" data-operator="subtract">−</button>
+                            <!-- Row 5 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="log">log</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="1">1</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="2">2</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="3">3</button>
+                            <button class="calc-btn p-3 bg-yellow-500 text-white rounded-lg" data-operator="add">+</button>
+                             <!-- Row 6 -->
+                            <button class="calc-btn p-3 bg-gray-200 rounded-lg" data-function="ln">ln</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-action="plus-minus">+/-</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-number="0">0</button>
+                            <button class="calc-btn p-3 bg-white font-bold rounded-lg" data-action="decimal">.</button>
+                            <button class="calc-btn p-3 bg-indigo-600 text-white rounded-lg" data-action="equals">=</button>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- History Column -->
+                  <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-lg font-bold text-gray-700">History</h3>
+                          <button id="clear-history-btn" class="text-sm text-gray-500 hover:text-red-600">Clear</button>
+                      </div>
+                      <div id="history-list" class="space-y-2 max-h-[500px] overflow-y-auto">
+                          <p class="text-gray-500 text-center text-sm py-4">No calculations yet.</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to the Online Scientific Calculator</h2>
+      <p>Beyond basic arithmetic, the worlds of science, engineering, and advanced mathematics require more powerful tools for calculation. The <strong>scientific calculator</strong> is an indispensable device for students and professionals in these fields, offering functions far beyond simple addition and subtraction. This guide will explore the capabilities of a modern <strong>online scientific calculator</strong>, explain its key functions, and show you how to leverage our feature-rich tool for your complex calculations.</p>
+    
+      <h3>How to Use Our Scientific Calculator</h3>
+      <p>Our calculator combines the familiarity of a standard calculator with advanced scientific functions. Here’s a quick overview:</p>
+      <ol>
+          <li><strong>Basic Operations:</strong> Use the number pad and standard operators (`+`, `-`, `×`, `÷`) for basic arithmetic, just like a simple calculator.</li>
+          <li><strong>Scientific Functions:</strong> Use the buttons on the left and top for advanced operations.
+            <ul>
+              <li><strong>Trigonometry:</strong> Before using `sin`, `cos`, or `tan`, select your desired angle mode: **DEG** (Degrees) or **RAD** (Radians) using the toggle buttons.</li>
+              <li><strong>Powers and Roots:</strong> Use `xʸ` for exponents (e.g., `5` `xʸ` `3` for 5³), `√` for square root, and other functions for more specific needs.</li>
+              <li><strong>Logarithms:</strong> Use `log` for base-10 logarithm and `ln` for the natural logarithm.</li>
+            </ul>
+          </li>
+          <li><strong>Keyboard Support:</strong> Most functions are mapped to your keyboard for faster input. Use numbers, operators, `Enter` for equals, and `Backspace`.</li>
+          <li><strong>History:</strong> All your completed calculations are stored in the History panel for easy review and reuse.</li>
+      </ol>
+      
+      <h3>Key Functions of a Scientific Calculator Explained</h3>
+      <p>A true <strong>math calculator online</strong> provides a wide array of functions. Let's break down the most important ones.</p>
+      
+      <h4>Trigonometric Functions (sin, cos, tan)</h4>
+      <p>Trigonometry is the study of the relationships between the angles and sides of triangles. A <strong>trigonometry calculator</strong> is essential for solving these problems.</p>
+      <ul>
+        <li><strong>Sine (sin):</strong> In a right-angled triangle, the sine of an angle is the ratio of the length of the opposite side to the length of the hypotenuse.</li>
+        <li><strong>Cosine (cos):</strong> The cosine is the ratio of the length of the adjacent side to the length of the hypotenuse.</li>
+        <li><strong>Tangent (tan):</strong> The tangent is the ratio of the length of the opposite side to the length of the adjacent side.</li>
+      </ul>
+      <p>It's crucial to select the correct mode (**DEG** or **RAD**) before using these functions, as `sin(90)` in degrees is `1`, while in radians it is approximately `0.89`.</p>
+
+      <h4>Logarithmic Functions (log, ln)</h4>
+      <p>Logarithms are the inverse of exponentiation. A <strong>log calculator</strong> helps solve equations where the unknown is an exponent.</p>
+      <ul>
+        <li><strong>Common Logarithm (log):</strong> This refers to a base-10 logarithm. It answers the question, "To what power must 10 be raised to get this number?" For example, `log(100) = 2`, because 10² = 100.</li>
+        <li><strong>Natural Logarithm (ln):</strong> This refers to a base-`e` logarithm, where `e` is Euler's number (approximately 2.718). It is widely used in calculus, physics, and finance to model continuous growth.</li>
+      </ul>
+      
+      <h4>Exponents and Roots</h4>
+      <p>These functions are fundamental for solving a wide range of mathematical problems.</p>
+      <ul>
+          <li><strong>Power (xʸ):</strong> Allows you to raise a number (`x`) to any power (`y`).</li>
+          <li><strong>Square Root (√):</strong> Finds the number which, when multiplied by itself, gives the original number.</li>
+      </ul>
+
+      <h4>Other Essential Functions</h4>
+      <ul>
+          <li><strong>Factorial (n!):</strong> The product of all positive integers up to that number (e.g., `5! = 5 × 4 × 3 × 2 × 1 = 120`). Used in probability and combinatorics.</li>
+          <li><strong>Inverse (x⁻¹):</strong> Calculates `1 / x`. Useful for a variety of algebraic manipulations.</li>
+      </ul>
+
+      <h3>Who Needs a Scientific Calculator?</h3>
+      <ul>
+          <li><strong>Students:</strong> High school and college students studying algebra, geometry, trigonometry, calculus, physics, and chemistry rely heavily on scientific calculators.</li>
+          <li><strong>Engineers:</strong> For calculations in fields like civil, mechanical, and electrical engineering, from stress analysis to circuit design.</li>
+          <li><strong>Scientists:</strong> Physicists, chemists, and biologists use these functions for data analysis, modeling, and solving complex equations.</li>
+          <li><strong>Programmers:</strong> For implementing mathematical algorithms or working on scientific computing projects.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>What is the difference between a simple calculator and a scientific calculator?</h4>
+      <p>A simple calculator can only perform basic arithmetic operations (add, subtract, multiply, divide). A <strong>scientific calculator</strong> includes these functions plus a wide range of more advanced functions needed for science, engineering, and mathematics, such as trigonometric, logarithmic, and exponential functions.</p>
+      
+      <h4>What is the difference between DEG and RAD mode?</h4>
+      <p>Both are units for measuring angles. **Degrees (DEG)** divide a full circle into 360 parts. **Radians (RAD)** measure angles based on the radius of a circle; a full circle is 2π radians. Scientific and engineering calculations almost always use radians, while degrees are more common in introductory geometry and everyday contexts.</p>
+      
+      <h4>Is this online scientific calculator free?</h4>
+      <p>Yes, this tool is 100% free to use with no feature limitations.</p>
+      
+      <h4>Is my calculation data secure?</h4>
+      <p>Yes. All calculations are performed client-side, directly in your browser. No data is sent to our servers, ensuring your privacy.</p>
+
+      <h3>Conclusion</h3>
+      <p>The <strong>online scientific calculator</strong> is an essential tool for anyone engaged in technical or academic pursuits. It bridges the gap between simple arithmetic and complex problem-solving. Our feature-rich calculator provides a powerful, accessible, and free solution for all your advanced mathematical needs. With a clean interface, a useful history log, and full keyboard support, it's designed to be your go-to tool for tackling challenging calculations with ease and accuracy. Bookmark this page and simplify your scientific and engineering tasks today.</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentDisplay = document.getElementById('current-display');
+            const expressionDisplay = document.getElementById('expression-display');
+            const historyList = document.getElementById('history-list');
+            const clearHistoryBtn = document.getElementById('clear-history-btn');
+            const calculatorGrid = document.querySelector('.calculator-grid');
+            const degBtn = document.getElementById('deg-btn');
+            const radBtn = document.getElementById('rad-btn');
+
+            let state = {
+                currentOperand: '0',
+                previousOperand: '',
+                operation: null,
+                shouldResetDisplay: false,
+                angleMode: 'DEG',
+                memory: 0,
+                history: []
+            };
+
+            const updateDisplay = () => {
+                let displayValue = state.currentOperand;
+                if (displayValue.length > 15) {
+                     try { displayValue = parseFloat(displayValue).toExponential(9); } catch(e) {}
+                }
+                currentDisplay.textContent = displayValue;
+                
+                if (currentDisplay.textContent.length > 9) {
+                    currentDisplay.classList.replace('text-5xl', 'text-3xl');
+                } else {
+                    currentDisplay.classList.replace('text-3xl', 'text-5xl');
+                }
+                
+                expressionDisplay.textContent = state.previousOperand ? `${state.previousOperand} ${state.operation || ''}` : '';
+            };
+            
+            const calculate = () => {
+                let result;
+                const prev = parseFloat(state.previousOperand);
+                const current = parseFloat(state.currentOperand);
+                if (isNaN(prev) || isNaN(current) || !state.operation) return;
+                
+                const expression = `${state.previousOperand} ${state.operation} ${state.currentOperand}`;
+                
+                switch (state.operation) {
+                    case '+': result = prev + current; break;
+                    case '−': result = prev - current; break;
+                    case '×': result = prev * current; break;
+                    case '÷': result = current === 0 ? 'Error' : prev / current; break;
+                    case 'xʸ': result = Math.pow(prev, current); break;
+                    default: return;
+                }
+
+                if (result === 'Error') {
+                    state.currentOperand = 'Error';
+                } else {
+                    addToHistory(expression, result);
+                    state.currentOperand = result.toString();
+                }
+                
+                state.operation = null;
+                state.previousOperand = '';
+                state.shouldResetDisplay = true;
+            };
+            
+            const chooseOperation = (op) => {
+                 if (state.currentOperand === 'Error') return;
+                 if (state.previousOperand !== '') calculate();
+                 if (state.operation && !state.shouldResetDisplay) calculate();
+                 state.operation = op;
+                 state.previousOperand = state.currentOperand;
+                 state.shouldResetDisplay = true;
+            };
+
+            const handleFunction = (func) => {
+                const current = parseFloat(state.currentOperand);
+                if (isNaN(current)) return;
+                let result;
+                let expression = `${func}(${current})`;
+                
+                const toRad = deg => deg * Math.PI / 180;
+                
+                switch(func) {
+                    case 'sin': result = state.angleMode === 'DEG' ? Math.sin(toRad(current)) : Math.sin(current); break;
+                    case 'cos': result = state.angleMode === 'DEG' ? Math.cos(toRad(current)) : Math.cos(current); break;
+                    case 'tan': result = state.angleMode === 'DEG' ? Math.tan(toRad(current)) : Math.tan(current); break;
+                    case 'ln': result = Math.log(current); break;
+                    case 'log': result = Math.log10(current); break;
+                    case 'sqrt': result = Math.sqrt(current); expression = `√(${current})`; break;
+                    case 'inv': result = 1 / current; expression = `1/(${current})`; break;
+                    case 'square': result = Math.pow(current, 2); expression = `(${current})²`; break;
+                    case 'factorial': result = factorial(current); expression = `${current}!`; break;
+                    case 'ten-pow': result = Math.pow(10, current); expression = `10^(${current})`; break;
+                    case 'percent':
+                        if(state.previousOperand && state.operation) {
+                            const prev = parseFloat(state.previousOperand);
+                            result = prev * (current / 100);
+                        } else {
+                            result = current / 100;
+                        }
+                        break;
+                }
+
+                if (typeof result !== 'undefined' && !isNaN(result)) {
+                    addToHistory(expression, result);
+                    state.currentOperand = result.toString();
+                    state.shouldResetDisplay = true;
+                } else {
+                     state.currentOperand = 'Error';
+                }
+            };
+            
+            const factorial = (n) => {
+                if (n < 0 || n % 1 !== 0) return NaN;
+                if (n > 170) return Infinity; 
+                if (n === 0 || n === 1) return 1;
+                let result = 1;
+                for (let i = n; i > 1; i--) result *= i;
+                return result;
+            };
+
+            const clear = () => {
+                state.currentOperand = '0';
+                state.previousOperand = '';
+                state.operation = null;
+                state.shouldResetDisplay = false;
+            };
+            
+            const handleMemory = (action) => {
+                 const current = parseFloat(state.currentOperand);
+                 if(isNaN(current)) return;
+                 switch(action) {
+                     case 'memory-add': state.memory += current; break;
+                     case 'memory-subtract': state.memory -= current; break;
+                     case 'memory-recall': state.currentOperand = state.memory.toString(); break;
+                     case 'memory-clear': state.memory = 0; break;
+                 }
+            };
+            
+            const addToHistory = (expression, result) => {
+                 state.history.unshift({ expression, result });
+                 if (state.history.length > 50) state.history.pop();
+                 renderHistory();
+            };
+            
+            const renderHistory = () => {
+                historyList.innerHTML = '';
+                 if (state.history.length === 0) {
+                    historyList.innerHTML = '<p class="text-gray-500 text-center text-sm py-4">No calculations yet.</p>';
+                    return;
+                }
+                state.history.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'text-right p-2 rounded-md hover:bg-gray-200 cursor-pointer';
+                    li.innerHTML = `<div class="text-xs text-gray-500">${item.expression} =</div><div class="font-bold text-gray-800">${parseFloat(item.result).toLocaleString('en-US', { maximumFractionDigits: 10 })}</div>`;
+                    li.addEventListener('click', () => {
+                        state.currentOperand = item.result.toString();
+                        updateDisplay();
+                    });
+                    historyList.appendChild(li);
+                });
+            };
+
+            calculatorGrid.addEventListener('click', (e) => {
+                const button = e.target.closest('button');
+                if (!button) return;
+
+                const { number, operator, action, function: func } = button.dataset;
+
+                if (number) {
+                    if (state.shouldResetDisplay || state.currentOperand === '0' || state.currentOperand === 'Error') {
+                        state.currentOperand = number;
+                        state.shouldResetDisplay = false;
+                    } else if(state.currentOperand.length < 16) {
+                        state.currentOperand += number;
+                    }
+                }
+                if (operator) chooseOperation(button.textContent);
+                if (func) handleFunction(func);
+                if (action) {
+                    switch(action) {
+                        case 'decimal':
+                            if (state.shouldResetDisplay) { clear(); }
+                            if (!state.currentOperand.includes('.')) state.currentOperand += '.';
+                            break;
+                        case 'equals': calculate(); break;
+                        case 'clear': clear(); break;
+                        case 'backspace':
+                            if (state.currentOperand.length > 1) state.currentOperand = state.currentOperand.slice(0, -1);
+                            else state.currentOperand = '0';
+                            break;
+                        case 'plus-minus': state.currentOperand = (parseFloat(state.currentOperand) * -1).toString(); break;
+                    }
+                }
+                updateDisplay();
+            });
+            
+            clearHistoryBtn.addEventListener('click', () => { state.history = []; renderHistory(); });
+            degBtn.addEventListener('click', () => { state.angleMode = 'DEG'; degBtn.classList.add('active'); radBtn.classList.remove('active'); });
+            radBtn.addEventListener('click', () => { state.angleMode = 'RAD'; radBtn.classList.add('active'); degBtn.classList.remove('active'); });
+            document.querySelectorAll('[data-action^="memory"]').forEach(btn => btn.addEventListener('click', () => handleMemory(btn.dataset.action)));
+            
+            updateDisplay();
+            renderHistory();
+        });
+    </script>
+</body>
+</html>

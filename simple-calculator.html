@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags for Simple Calculator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator - Free Online Basic Math Calculator</title>
+    <meta name="description" content="A free, fast, and easy-to-use online simple calculator for your basic math needs. Includes a history tape, keyboard support, and a clean interface. Perfect for everyday calculations.">
+    <meta name="keywords" content="simple calculator, online calculator, basic calculator, free calculator, math calculator, calculator tool, addition, subtraction, multiplication, division">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="One Page Tools Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/simple-calculator.html">
+    <meta property="og:title" content="Simple Calculator - Free Online Basic Math Calculator">
+    <meta property="og:description" content="Perform quick calculations with our clean and simple online calculator. Features a calculation history and keyboard support.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Simple+Calculator">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/simple-calculator.html">
+    <meta property="twitter:title" content="Simple Calculator - Free Online Basic Math Calculator">
+    <meta property="twitter:description" content="Perform quick calculations with our clean and simple online calculator. Features a calculation history and keyboard support.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Simple+Calculator">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #f5f5fa; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out; }
+      .article-section { max-width: 800px; margin: 4rem auto; padding: 2rem; background-color: white; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+      .article-section h2, .article-section h3, .article-section h4, .article-section p, .article-section li, .article-section strong, .article-section code { text-align: left; }
+      .article-section h2 { font-size: 2rem; margin-bottom: 1rem; color: #1f2937; border-bottom: 2px solid #d1d5db; padding-bottom: 0.5rem; }
+      .article-section h3 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #111827; }
+      .article-section h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #1f2937; font-weight: 600; border-left: 3px solid #6366f1; padding-left: 0.75rem;}
+      .article-section p, .article-section li { margin-bottom: 1rem; line-height: 1.8; color: #374151; }
+      .article-section strong { color: #4f46e5; }
+      .article-section code { background-color: #e5e7eb; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color:#1e293b; }
+      
+      .calculator-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+      .calc-btn { transition: background-color 0.2s; }
+      .calc-btn:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+    <!-- HEADER FROM USER'S index.html -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://onepagetools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img style="height: 60px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li><a href="./index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+              <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a></li>
+              <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">ALL PDF TOOLS<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">PDF TO WORD</a></li>
+                    <li><a href="./wordtopdf.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word to PDF</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="textToolsDropdownLink" data-dropdown-toggle="textToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Text & Content Tools ✒️<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="textToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="textToolsDropdownLink">
+                    <li><a href="./textcaseconverter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Text Case Converter</a></li>
+                    <li><a href="./wordcounter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Word Counter</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button id="calculatorToolsDropdownLink" data-dropdown-toggle="calculatorToolsDropdown" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Calculators 🧮<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+                <div id="calculatorToolsDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="calculatorToolsDropdownLink">
+                    <li><a href="./age-calculator.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Age Calculator</a></li>
+                    <li><a href="./speed-converter.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Speed Converter</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF HEADER -->
+    
+    <!-- Main Tool Content -->
+    <main class="pt-24">
+        <div class="flex flex-col justify-center items-center py-10 px-4">
+            <div class="w-full max-w-4xl p-6 md:p-8 bg-white rounded-xl shadow-xl">
+              <!-- Tool Header -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Simple Calculator</h1>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto">A clean, easy-to-use online calculator for your everyday math needs.</p>
+              </div>
+        
+              <!-- Calculator Body -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="md:col-span-2">
+                    <div class="bg-gray-800 text-white p-4 rounded-t-lg">
+                        <div id="expression-display" class="text-right h-6 text-gray-400 text-lg break-all"></div>
+                        <div id="current-display" class="text-right text-5xl font-bold break-all">0</div>
+                    </div>
+                    <div class="calculator-grid p-4 bg-gray-100 rounded-b-lg">
+                        <button class="calc-btn p-4 bg-red-500 text-white text-xl font-bold rounded-lg" data-action="clear">C</button>
+                        <button class="calc-btn p-4 bg-gray-300 text-gray-800 text-xl font-bold rounded-lg" data-action="clear-entry">CE</button>
+                        <button class="calc-btn p-4 bg-gray-300 text-gray-800 text-xl font-bold rounded-lg" data-action="backspace">⌫</button>
+                        <button class="calc-btn p-4 bg-yellow-500 text-white text-xl font-bold rounded-lg" data-operator="divide">/</button>
+                        
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="7">7</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="8">8</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="9">9</button>
+                        <button class="calc-btn p-4 bg-yellow-500 text-white text-xl font-bold rounded-lg" data-operator="multiply">*</button>
+                        
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="4">4</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="5">5</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="6">6</button>
+                        <button class="calc-btn p-4 bg-yellow-500 text-white text-xl font-bold rounded-lg" data-operator="subtract">-</button>
+                        
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="1">1</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="2">2</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-number="3">3</button>
+                        <button class="calc-btn p-4 bg-yellow-500 text-white text-xl font-bold rounded-lg" data-operator="add">+</button>
+                        
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg col-span-2" data-number="0">0</button>
+                        <button class="calc-btn p-4 bg-white text-gray-800 text-xl font-bold rounded-lg" data-action="decimal">.</button>
+                        <button class="calc-btn p-4 bg-indigo-600 text-white text-xl font-bold rounded-lg" data-action="equals">=</button>
+                    </div>
+                  </div>
+                  
+                  <!-- History Column -->
+                  <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <div class="flex justify-between items-center mb-2">
+                          <h3 class="text-lg font-bold text-gray-700">History</h3>
+                          <button id="clear-history-btn" class="text-sm text-gray-500 hover:text-red-600">Clear</button>
+                      </div>
+                      <div id="history-list" class="space-y-2 max-h-96 overflow-y-auto">
+                          <p class="text-gray-500 text-center text-sm py-4">No calculations yet.</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO-Friendly Article -->
+    <div class="article-section">
+      <h2>The Ultimate Guide to the Online Simple Calculator</h2>
+      <p>In a world filled with complex devices, there's a timeless elegance and utility in a <strong>simple calculator</strong>. Whether you're a student checking homework, a professional needing a quick calculation, or just managing your daily budget, a reliable and easy-to-use calculator is an indispensable tool. This guide will not only show you how to use our powerful <strong>online calculator</strong> but will also delve into the fundamentals of calculation and its importance in our daily lives.</p>
+    
+      <h3>How to Use Our Simple Calculator</h3>
+      <p>Our calculator is designed to be intuitive, just like a physical one, but with added features for convenience.</p>
+      <ol>
+          <li><strong>Input Numbers:</strong> Use the number buttons (0-9) or your keyboard to enter the numbers for your calculation.</li>
+          <li><strong>Select an Operator:</strong> Click on one of the basic operators: addition (`+`), subtraction (`-`), multiplication (`*`), or division (`/`).</li>
+          <li><strong>Enter the Second Number:</strong> Input the next number in your calculation.</li>
+          <li><strong>Get the Result:</strong> Press the equals (`=`) button or the `Enter` key on your keyboard to see the result. The full expression and the result will be saved in the History panel.</li>
+      </ol>
+      <h4>Advanced Features of Our Basic Calculator:</h4>
+      <ul>
+          <li><strong>History Tape:</strong> Every calculation you make is automatically saved in the "History" panel on the right. This is perfect for reviewing your steps or reusing a previous result.</li>
+          <li><strong>Clear (C) vs. Clear Entry (CE):</strong> `C` (Clear) will erase the entire calculation, while `CE` (Clear Entry) will only erase the last number you entered, allowing you to correct a mistake without starting over.</li>
+          <li><strong>Backspace (⌫):</strong> Made a typo? The backspace button removes the last digit you entered.</li>
+          <li><strong>Keyboard Support:</strong> For faster use, the entire calculator is mapped to your keyboard. Use the number keys, operator keys (`+`, `-`, `*`, `/`), `Enter` for equals, and `Backspace` to delete.</li>
+      </ul>
+      
+      <h3>The Anatomy of a Calculator: Understanding the Keys</h3>
+      <p>A good <strong>math calculator</strong> has a standard layout. Here's what the key functions do:</p>
+      <ul>
+          <li><strong>Number Pad (0-9):</strong> The foundation of any calculation.</li>
+          <li><strong>Decimal Point (.):</strong> Allows you to work with decimal numbers instead of just integers.</li>
+          <li><strong>Operators (+, -, *, /):</strong> The core functions for performing arithmetic.</li>
+          <li><strong>Equals (=):</strong> Executes the current operation and displays the final answer.</li>
+          <li><strong>Clear (C):</strong> This is the "full reset" button. It clears any previous numbers and operations, preparing the calculator for a completely new calculation.</li>
+          <li><strong>Clear Entry (CE):</strong> This is one of the most useful but often misunderstood buttons. If you're calculating `123 + 456` but accidentally type `457`, you don't need to start over. Just press `CE` to clear `457`, and then you can type the correct number, `456`, and continue.</li>
+      </ul>
+      
+      <h3>Why Basic Math Skills and Calculators Go Hand-in-Hand</h3>
+      <p>While an <strong>online calculator tool</strong> is incredibly helpful, it's most powerful when used to complement, not replace, fundamental math skills. Understanding basic arithmetic helps you in several ways:</p>
+      <ul>
+          <li><strong>Estimation:</strong> Having a rough idea of the answer in your head before you use the calculator helps you spot obvious errors. If you're calculating `50 * 50` and the calculator shows `250`, you'll know something is wrong because you estimated the answer should be around `2500`.</li>
+          <li><strong>Understanding Concepts:</strong> A calculator gives you the "what" (the answer), but understanding the process gives you the "why." This is crucial for learning and applying math in real-world scenarios.</li>
+          <li><strong>Efficiency:</strong> For very simple calculations, mental math is often faster than reaching for a calculator.</li>
+      </ul>
+      <p>Think of a calculator as a reliable assistant that checks your work and handles complex or tedious calculations, freeing up your mental energy for more critical thinking.</p>
+
+      <h3>Practical, Everyday Uses for a Simple Calculator</h3>
+      <p>The need for quick calculations appears in many daily situations:</p>
+      <ul>
+          <li><strong>Shopping:</strong> Calculating discounts, sales tax, or the total cost of your groceries before heading to the checkout.</li>
+          <li><strong>Budgeting:</strong> Tracking monthly expenses, balancing your checkbook, and planning your savings.</li>
+          <li><strong>Cooking:</strong> Scaling a recipe up or down (e.g., halving or doubling ingredient quantities).</li>
+          <li><strong>DIY Projects:</strong> Calculating measurements for materials like paint, flooring, or fabric.</li>
+          <li><strong>Tipping:</strong> Quickly calculating a tip percentage at a restaurant.</li>
+          <li><strong>Education:</strong> A perfect tool for students to check their math homework without the distractions of a more complex scientific calculator.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions (FAQ)</h3>
+      
+      <h4>Is this online calculator free?</h4>
+      <p>Yes, this <strong>free calculator</strong> is available for anyone to use without any cost or limitations.</p>
+      
+      <h4>Is my calculation data saved?</h4>
+      <p>All calculations are performed within your browser. The history is stored locally on your device for your current session only. Nothing is sent to our servers, ensuring your privacy.</p>
+      
+      <h4>Can this calculator perform scientific functions like sine or cosine?</h4>
+      <p>No, this is a **basic calculator** designed for arithmetic operations. It does not include scientific, graphing, or financial functions. Its strength lies in its simplicity and ease of use for everyday tasks.</p>
+      
+      <h4>How does the history feature work?</h4>
+      <p>Every time you press the equals (`=`) button to complete a calculation, the full expression (e.g., `25 + 75`) and its result (`100`) are added to the top of the history list. This creates a running "tape" of your work that you can review. You can clear this list at any time with the "Clear" button in the history panel.</p>
+
+      <h3>Conclusion</h3>
+      <p>In a complex world, sometimes the simplest tools are the most effective. Our <strong>Simple Calculator</strong> offers a clean, fast, and reliable way to handle all your basic mathematical needs. With added conveniences like a history tape and full keyboard support, it's more powerful than a standard pocket calculator but just as easy to use. Bookmark this page and make it your go-to tool for quick and accurate calculations anytime, anywhere.</p>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="bg-gray-100"><!-- Footer content --></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const currentDisplay = document.getElementById('current-display');
+        const expressionDisplay = document.getElementById('expression-display');
+        const historyList = document.getElementById('history-list');
+        const clearHistoryBtn = document.getElementById('clear-history-btn');
+        const buttons = document.querySelector('.calculator-grid');
+
+        let currentOperand = '0';
+        let previousOperand = '';
+        let operation = null;
+        let shouldResetDisplay = false;
+        let history = [];
+
+        const updateDisplay = () => {
+            currentDisplay.textContent = parseFloat(currentOperand).toLocaleString('en-US', { maximumFractionDigits: 10 });
+            if (currentDisplay.textContent.length > 9) {
+                currentDisplay.classList.remove('text-5xl');
+                currentDisplay.classList.add('text-3xl');
+            } else {
+                currentDisplay.classList.remove('text-3xl');
+                currentDisplay.classList.add('text-5xl');
+            }
+            expressionDisplay.textContent = `${previousOperand} ${operation || ''}`;
+        };
+
+        const appendNumber = (number) => {
+            if (currentOperand === '0' || shouldResetDisplay) {
+                currentOperand = number;
+                shouldResetDisplay = false;
+            } else {
+                currentOperand += number;
+            }
+        };
+
+        const chooseOperation = (op) => {
+            if (currentOperand === '') return;
+            if (previousOperand !== '') {
+                calculate();
+            }
+            operation = op;
+            previousOperand = currentOperand;
+            shouldResetDisplay = true;
+        };
+
+        const calculate = () => {
+            let result;
+            const prev = parseFloat(previousOperand);
+            const current = parseFloat(currentOperand);
+            if (isNaN(prev) || isNaN(current)) return;
+
+            const expression = `${previousOperand} ${operation} ${currentOperand}`;
+
+            switch (operation) {
+                case '+': result = prev + current; break;
+                case '-': result = prev - current; break;
+                case '*': result = prev * current; break;
+                case '/': 
+                    if (current === 0) {
+                        currentOperand = 'Error';
+                        updateDisplay();
+                        return;
+                    }
+                    result = prev / current;
+                    break;
+                default: return;
+            }
+            addToHistory(expression, result);
+            currentOperand = result.toString();
+            operation = null;
+            previousOperand = '';
+            shouldResetDisplay = true;
+        };
+
+        const clear = () => {
+            currentOperand = '0';
+            previousOperand = '';
+            operation = null;
+            shouldResetDisplay = false;
+        };
+
+        const clearEntry = () => {
+            currentOperand = '0';
+        };
+
+        const backspace = () => {
+            currentOperand = currentOperand.slice(0, -1);
+            if (currentOperand === '') currentOperand = '0';
+        };
+
+        const appendDecimal = () => {
+            if (shouldResetDisplay) clear();
+            if (currentOperand.includes('.')) return;
+            currentOperand += '.';
+        };
+
+        const addToHistory = (expression, result) => {
+            if(history.length === 0) historyList.innerHTML = '';
+            history.unshift({ expression, result });
+            if (history.length > 20) history.pop();
+            renderHistory();
+        };
+
+        const renderHistory = () => {
+            historyList.innerHTML = '';
+            if (history.length === 0) {
+                historyList.innerHTML = '<p class="text-gray-500 text-center text-sm py-4">No calculations yet.</p>';
+                return;
+            }
+            history.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'text-right p-2 rounded-md hover:bg-gray-200';
+                li.innerHTML = `<div class="text-xs text-gray-500">${item.expression} =</div><div class="font-bold text-gray-800">${parseFloat(item.result).toLocaleString('en-US', { maximumFractionDigits: 10 })}</div>`;
+                historyList.appendChild(li);
+            });
+        };
+
+        const handleButtonClick = (e) => {
+            const button = e.target;
+            if (button.hasAttribute('data-number')) {
+                appendNumber(button.dataset.number);
+            }
+            if (button.hasAttribute('data-operator')) {
+                chooseOperation(button.textContent);
+            }
+            if (button.dataset.action === 'decimal') {
+                appendDecimal();
+            }
+            if (button.dataset.action === 'equals') {
+                calculate();
+            }
+            if (button.dataset.action === 'clear') {
+                clear();
+            }
+            if (button.dataset.action === 'clear-entry') {
+                clearEntry();
+            }
+            if (button.dataset.action === 'backspace') {
+                backspace();
+            }
+            updateDisplay();
+        };
+        
+        const handleKeyPress = (e) => {
+            if (e.key >= 0 && e.key <= 9) appendNumber(e.key);
+            if (e.key === '.') appendDecimal();
+            if (e.key === 'Enter' || e.key === '=') calculate();
+            if (e.key === 'Backspace') backspace();
+            if (e.key === 'Escape') clear();
+            if (['+', '-', '*', '/'].includes(e.key)) chooseOperation(e.key);
+            updateDisplay();
+        };
+
+        buttons.addEventListener('click', handleButtonClick);
+        document.addEventListener('keydown', handleKeyPress);
+        clearHistoryBtn.addEventListener('click', () => {
+            history = [];
+            renderHistory();
+        });
+        
+        updateDisplay();
+        renderHistory();
+      });
+    </script>
+</body>
+</html>

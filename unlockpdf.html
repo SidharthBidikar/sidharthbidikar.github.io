@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Password Remover - Free Online Tool to Unlock PDFs</title>
+  <meta name="description" content="Easily remove password protection from your PDF files online if you know the current password. Our free PDF unlocker tool decrypts secured PDFs quickly and securely in your browser. No file uploads.">
+  <meta name="keywords" content="PDF password remover, unlock PDF, remove PDF password, decrypt PDF, free PDF unlocker, PDF restriction remover, unsecure PDF, online PDF password removal, PDF unlock tool, remove security from PDF">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="OnePageTools PDF Team">
+  <meta property="og:title" content="PDF Password Remover - Free, Secure, and Online">
+  <meta property="og:description" content="Unlock your password-protected PDF files for free. If you have the password, our tool can remove the encryption and restrictions, making your PDF fully accessible. All done in your browser.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PDF+Password+Remover">
+  <meta property="og:url" content="https://onepagetools.com/remove-pdf-password.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover:not(:disabled) { transform: scale(1.05); }
+    .progress-bar-animated { background: linear-gradient(to right, #10B981, #059669); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #10B981; background-color: rgba(16, 185, 129, 0.1); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover:not(:disabled) { transform: translateY(-2px); }
+    .btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+    .gradient-bg { background: linear-gradient(135deg, #f0fdf4, #dcfce7); }
+    .password-input-container { position: relative; }
+    .password-toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; user-select: none;}
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation (जैसा पहले था) -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="OnePageTools Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" /></svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./lockpdf.html" class="block px-4 py-2 hover:bg-gray-100">Lock PDF</a></li>
+                <li><a href="./unlockpdf.html" class="block px-4 py-2 hover:bg-gray-100">Unlock PDF (Password Remover)</a></li>
+                <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Word</a></li>
+                {/* अन्य टूल्स */}
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content (जैसा पहले था) -->
+  <div class="flex justify-center items-center min-h-screen pt-20">
+    <div class="container max-w-4xl p-6 bg-white rounded-lg shadow-xl fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">PDF Password Remover</h1>
+      <p class="text-center text-gray-600 mb-8">Unlock your PDF files by removing password protection. If you know the current password (user or owner), this tool can decrypt the PDF and remove all restrictions, making it fully accessible. All processing is done securely in your browser.</p>
+
+      <div id="dropZone" class="drop-zone border-4 border-dashed border-gray-200 rounded-xl p-12 text-center mb-8 transition-colors duration-300 hover:border-green-400">
+        <label for="pdfFiles" class="inline-block w-full py-3 px-5 bg-green-600 text-white font-semibold rounded-full cursor-pointer hover:bg-green-700 btn hover-scale">
+          Choose PDF Files
+        </label>
+        <input type="file" id="pdfFiles" accept="application/pdf" multiple class="hidden">
+        <p class="text-gray-500 mt-2">or drag and drop PDF files here (max 50MB per file, multiple files supported)</p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg shadow mb-6">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Enter Current PDF Password</h3>
+          <div class="space-y-4">
+            <div>
+              <label for="pdfPassword" class="block text-sm font-medium text-gray-700 mb-1">Password for PDF(s)</label>
+              <div class="password-input-container">
+                <input type="password" id="pdfPassword" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Enter current user or owner password">
+                <span class="password-toggle" onclick="togglePasswordVisibility('pdfPassword', this)">👁️</span>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">The tool will attempt to remove all security using this password. The owner password is most effective for removing all restrictions.</p>
+            </div>
+          </div>
+      </div>
+      
+      <div id="previewContainer" class="mb-6"></div>
+
+      <div id="progressBarContainer" class="hidden bg-gray-200 rounded-full h-3 mb-4">
+        <div id="progressBar" class="progress-bar-animated h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button id="unlockButton" class="py-3 px-6 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale" disabled>
+          <svg class="inline w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2V7a5 5 0 00-5-5zm1 11H9v-2h2v2zm2-4h-4V7a3 3 0 016 0v2h-2z"></path></svg>
+          Remove Password(s)
+        </button>
+        <a id="downloadZipButton" href="#" download="unlocked-pdfs.zip" class="hidden py-3 px-6 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 btn hover-scale">
+          Download All as ZIP
+        </a>
+        <button id="resetButton" class="py-3 px-6 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn hover-scale">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article (जैसा पहले था) -->
+  <div class="article-section px-4 sm:px-0">
+    <h2 class="text-gray-800">The Ultimate Guide to Using a PDF Password Remover</h2>
+    <p>In today's digital age, PDF files are a universal standard for document sharing. They are valued for their ability to preserve formatting across various devices and operating systems. However, sometimes these PDF files come with password protection that can limit access or restrict actions like printing, copying, or editing. If you have legitimate access to a PDF and possess the necessary password, a <strong>PDF Password Remover</strong> tool can be incredibly useful. Our free online tool allows you to <strong>unlock PDF</strong> files and <strong>remove PDF password</strong> protection, making your documents fully accessible and free of restrictions. This comprehensive guide will explore why you might need a <strong>PDF unlock tool</strong>, how to use our service effectively, and important considerations for handling secured documents.</p>
+    <h3>Why Remove a Password from a PDF?</h3>
+    <p>There are numerous valid reasons why someone would want to use a <strong>PDF password remover</strong>:</p>
+    <ul>
+      <li><strong>Convenience:</strong> Constantly entering a password to open a frequently used PDF can be cumbersome. Removing the password (if you own the file or have permission) can streamline your workflow.</li>
+      <li><strong>Removing Restrictions:</strong> Owner passwords often come with restrictions on printing, copying text, or modifying the document. If you have the owner password, you can use a <strong>PDF restriction remover</strong> to lift these limitations for easier use.</li>
+      <li><strong>Collaboration:</strong> When working with a team, password-protected files can hinder collaboration. Removing security (with authorization) allows for seamless sharing and editing among team members.</li>
+      <li><strong>Archiving:</strong> For long-term storage, it's often advisable to <strong>unsecure PDF</strong> files. This prevents future access issues if passwords are forgotten or personnel change.</li>
+      <li><strong>Accessibility:</strong> Certain password protections or restrictions can interfere with assistive technologies like screen readers. Unlocking the PDF can make it more accessible to users with disabilities.</li>
+      <li><strong>Personal Backups:</strong> If you've secured your own files and want to create an unsecured backup copy, a <strong>free PDF unlocker</strong> is the perfect solution.</li>
+      <li><strong>Preparing for other PDF operations:</strong> Some PDF tools (e.g., converters, mergers) may not work well or at all with encrypted PDFs. Unlocking them first is often a necessary step.</li>
+    </ul>
+    <p>It's crucial to remember that such tools should only be used when you have the legal right and the correct password to modify the PDF's security.</p>
+    <h3>How Our Free PDF Password Remover Works (And How to Use It)</h3>
+    <p>Our online <strong>PDF password remover</strong> is designed to be user-friendly and secure, performing all operations directly within your web browser. Here’s a step-by-step guide:</p>
+    <ol>
+      <li><strong>Select Your PDF File(s):</strong> Click the "Choose PDF Files" button or use the drag-and-drop feature to upload the PDF file(s) you wish to unlock. Our tool supports batch processing, so you can <strong>remove PDF security</strong> from multiple files at once, provided they share the same password.</li>
+      <li><strong>Enter the Current Password:</strong> In the designated field, type the current password for the PDF(s). This can be either the User Password (required to open the file) or the Owner Password (which controls permissions).
+        <p class="text-sm"><em>For best results in removing all restrictions, it is highly recommended to use the Owner Password if one is set and known. If only the User Password is provided, the tool will remove the open password, but restrictions set by a different Owner Password might remain.</em></p>
+      </li>
+      <li><strong>Click "Remove Password(s)":</strong> Once you've uploaded your file(s) and entered the password, click the "Remove Password(s)" button. The tool will then begin processing your files.</li>
+      <li><strong>Processing:</strong> A progress bar will show the status of the unlocking process. Since all operations are client-side, your files are not uploaded to any server, ensuring privacy.</li>
+      <li><strong>Download Your Unlocked PDF(s):</strong> After the process is complete, download links for the successfully unlocked PDF files will appear. These files will typically have "_unlocked" or a similar suffix appended to their original names. If you processed multiple files, a "Download All as ZIP" button will also be available for convenience.</li>
+      <li><strong>Reset (Optional):</strong> If you wish to clear the uploaded files and password to start over, simply click the "Reset" button.</li>
+    </ol>
+    <p>This <strong>online PDF password removal</strong> process is designed to be quick, secure, and efficient, giving you access to your content without unnecessary hurdles.</p>
+    <h3>Understanding User Passwords vs. Owner Passwords in PDFs</h3>
+    <p>PDF files can have two types of passwords, and understanding their difference is key to effectively using a <strong>PDF unlock tool</strong>:</p>
+    <ul>
+      <li><strong>User Password (or Document Open Password):</strong> This password encrypts the entire PDF. If a User Password is set, no one can open or view the document's contents without first providing this password. When you supply the correct User Password to our tool, it can <strong>decrypt PDF</strong> content.</li>
+      <li><strong>Owner Password (or Permissions Password):</strong> This password doesn't necessarily prevent the PDF from being opened (a PDF can have an Owner Password but no User Password). Instead, it protects the PDF from certain actions, even if it can be opened. These restrictions can include:
+        <ul>
+          <li>Preventing printing.</li>
+          <li>Preventing copying of text, images, and other content.</li>
+          <li>Preventing modifications to the document (e.g., editing text, rotating pages, filling form fields unless specifically allowed).</li>
+          <li>Preventing the addition of comments or annotations.</li>
+        </ul>
+        If you provide the correct Owner Password to our tool, it can remove not only the Owner Password itself but also any associated User Password and all permission restrictions, resulting in a completely unsecured PDF. This is the most comprehensive way to <strong>unlock PDF</strong> files.
+      </li>
+    </ul>
+    <p>Our tool attempts to use the provided password as either the User or Owner password to gain the necessary access to resave the PDF without any security settings.</p>
+    <h3>Legality and Ethical Considerations of Unlocking PDFs</h3>
+    <p>Using a <strong>PDF password remover</strong> is perfectly legal and ethical under certain conditions:</p>
+    <ul>
+      <li>You are the original creator or owner of the PDF document and have simply forgotten the password or wish to remove protections you previously set.</li>
+      <li>You have been explicitly authorized by the document owner to remove the password and have been provided with the correct password.</li>
+      <li>You have a legal right to access and modify the document's security settings.</li>
+    </ul>
+    <p>However, it is illegal and unethical to attempt to <strong>remove PDF password</strong> from documents that you do not have the right to access or modify. This includes trying to bypass security on copyrighted materials, confidential documents, or any PDF for which you have not been given explicit permission and the password by the rightful owner. Our <strong>free PDF unlocker</strong> is intended for legitimate uses only.</p>
+    <h3>Advantages of Our Client-Side PDF Password Removal Tool</h3>
+    <p>Many online PDF tools require you to upload your files to their servers. Our tool offers a distinct advantage by performing all operations locally in your browser:</p>
+    <ul>
+      <li><strong>Maximum Privacy:</strong> Your PDF files never leave your computer. This is crucial for sensitive or confidential documents, as it eliminates the risk of data breaches or unauthorized access on third-party servers.</li>
+      <li><strong>Enhanced Security:</strong> Since the entire unlocking process is client-side, you maintain full control over your data.</li>
+      <li><strong>Speed and Efficiency:</strong> Without the need for uploads and downloads to a server, processing times are generally faster, especially for larger PDF files.</li>
+      <li><strong>No Software Installation:</strong> As a browser-based tool, there's no need to download or install any additional software on your device.</li>
+      <li><strong>Cross-Platform Compatibility:</strong> Access and use the tool from any device with a modern web browser (Windows, macOS, Linux, mobile devices).</li>
+    </ul>
+    <p>Choosing a client-side tool to <strong>unsecure PDF</strong> files is the safest way to handle potentially sensitive information.</p>
+    <h3>Troubleshooting: When PDF Unlocking Might Fail</h3>
+    <p>While our <strong>PDF unlock tool</strong> is designed to be robust, certain situations might prevent successful password removal:</p>
+    <ul>
+      <li><strong>Incorrect Password:</strong> This is the most frequent reason for failure. Double-check that you are entering the correct password, paying attention to case sensitivity.</li>
+      <li><strong>PDF Corruption:</strong> If the PDF file itself is corrupted or damaged, the tool may not be able to process it correctly, even with the right password.</li>
+      <li><strong>Unsupported Encryption Types:</strong> While `pdf-lib` (the library we use) supports standard PDF encryption (like AES-128, AES-256, and older RC4), some very old or obscure PDF files might use non-standard encryption methods that are not supported.</li>
+      <li><strong>Certificate-Based Security:</strong> Some PDFs are secured using digital certificates and digital signatures, not just passwords. This type of security is different and cannot be removed by a simple password removal tool.</li>
+      <li><strong>Complex PDF Structures:</strong> Extremely complex PDF files with unusual internal structures might occasionally pose challenges for any PDF processing library.</li>
+      <li><strong>Strong Owner Password with Unknown User Password:</strong> If a PDF has a very strong owner password that sets restrictions, and you only know a weaker user password, the user password might open the file, but the tool might not be able to strip all restrictions if the owner password is required for that level of modification by the PDF's internal security handler. Providing the owner password is always best.</li>
+    </ul>
+    <p>If you encounter an error, ensure your password is correct. If it persists, the PDF might have an issue that falls into one of the categories above.</p>
+    <h3>Best Practices for PDF Security Management</h3>
+    <ul>
+      <li><strong>Password Managers:</strong> For passwords you set, use a reliable password manager. This helps you create strong, unique passwords and keep track of them.</li>
+      <li><strong>Contextual Security:</strong> Only apply password protection when necessary. For general distribution of non-sensitive information, passwords can be an unnecessary barrier.</li>
+      <li><strong>Clear Communication:</strong> If sharing a password-protected PDF, ensure the recipient knows why it's protected and how to use the password responsibly.</li>
+      <li><strong>Regular Audits (for organizations):</strong> Periodically review which documents need to remain password-protected and which can have security removed for archival or accessibility.</li>
+    </ul>
+    <h3>Frequently Asked Questions (FAQs) about PDF Password Removers</h3>
+    <h4>1. Is this PDF Password Remover free?</h4>
+    <p>Yes, our online tool to <strong>remove PDF password</strong> is completely free to use, with no hidden costs or subscription requirements.</p>
+    <h4>2. Do I need to install any software?</h4>
+    <p>No, our tool is entirely browser-based. You do not need to download or install anything.</p>
+    <h4>3. Are my files uploaded to a server? Is it secure?</h4>
+    <p>Your files are NOT uploaded to any server. All processing, including decryption and password removal, happens locally in your web browser using JavaScript. This ensures maximum privacy and security for your documents.</p>
+    <h4>4. Can this tool find or crack a lost PDF password?</h4>
+    <p>No. This is a <strong>PDF password remover</strong>, not a password recovery or cracking tool. You MUST know the current password to successfully unlock the PDF.</p>
+    <h4>5. What if the PDF has both a user (open) password and an owner (permissions) password?</h4>
+    <p>Our tool will attempt to use the password you provide to fully unlock the PDF. Providing the Owner Password is the most effective way to remove all passwords and restrictions. If you only provide the User Password, the open password will be removed, but some usage restrictions might remain if a different Owner Password was also set.</p>
+    <h4>6. Will removing the password affect the PDF's content or layout?</h4>
+    <p>No, the visual content, formatting, and layout of your PDF will remain unchanged. The tool only modifies the security settings.</p>
+    <h4>7. Can I remove passwords from multiple PDFs at once?</h4>
+    <p>Yes, you can upload multiple PDF files. If they all share the same password that you provide, the tool will process them in batch. You can then download the unlocked files individually or as a ZIP archive.</p>
+    <h4>8. What kind of PDF encryption does this tool support?</h4>
+    <p>Our tool utilizes the `pdf-lib` library, which supports standard PDF encryption methods, including AES (128-bit and 256-bit) and RC4 (40-bit and 128-bit), provided the correct password is supplied.</p>
+    <h3>Conclusion: Take Back Control of Your PDF Files</h3>
+    <p>A <strong>PDF Password Remover</strong> is an essential utility for anyone who frequently works with secured PDF documents and has the legitimate authority to alter their security. Our free, secure, and client-side tool offers a simple way to <strong>decrypt PDF</strong> files and <strong>remove PDF restrictions</strong>, making your workflow smoother and your documents more accessible when needed. Always use such tools responsibly and ethically.</p>
+    <p>Ready to regain full access to your password-protected PDFs? <a href="#dropZone" class="text-green-600 hover:underline font-semibold">Upload your file and try our PDF Password Remover now!</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <script>
+    // Wrap all script logic in DOMContentLoaded to ensure libraries are loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        let PDFDocument, PasswordError, InvalidPDFError;
+        try {
+            // Attempt to destructure from the global PDFLib object
+            if (typeof PDFLib !== 'undefined') {
+                ({ PDFDocument, PasswordError, InvalidPDFError } = PDFLib);
+                console.log("PDFLib objects destructured successfully.");
+                console.log("PasswordError available:", !!PasswordError, "Type:", typeof PasswordError);
+                console.log("InvalidPDFError available:", !!InvalidPDFError, "Type:", typeof InvalidPDFError);
+            } else {
+                throw new Error("PDFLib is not defined. Ensure pdf-lib.min.js is loaded before this script.");
+            }
+        } catch (e) {
+            console.error("Initialization Error - Could not destructure PDFLib objects:", e);
+            Swal.fire("Library Error", "The PDF processing library (PDFLib) is not loaded correctly. Please check your internet connection and refresh the page. If the problem persists, the CDN might be temporarily unavailable.", "error");
+            // Disable functionality if library isn't loaded
+            const unlockBtn = document.getElementById('unlockButton');
+            if(unlockBtn) unlockBtn.disabled = true;
+            return; // Stop further script execution
+        }
+
+        let filesToProcess = [];
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('pdfFiles');
+        const previewContainer = document.getElementById('previewContainer');
+        const unlockButton = document.getElementById('unlockButton');
+        const resetButton = document.getElementById('resetButton');
+        const downloadZipButton = document.getElementById('downloadZipButton');
+        const progressBarContainer = document.getElementById('progressBarContainer');
+        const progressBar = document.getElementById('progressBar');
+        const pdfPasswordInput = document.getElementById('pdfPassword');
+
+        if (!dropZone || !fileInput || !unlockButton || !resetButton) {
+            console.error("One or more essential UI elements are missing from the DOM.");
+            return;
+        }
+
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); e.stopPropagation(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', (e) => { e.preventDefault(); e.stopPropagation(); dropZone.classList.remove('dragover'); });
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault(); e.stopPropagation(); dropZone.classList.remove('dragover');
+          const droppedFiles = e.dataTransfer.files;
+          if (droppedFiles.length) { fileInput.files = droppedFiles; handleFileSelection(); }
+        });
+        fileInput.addEventListener('change', handleFileSelection);
+
+        window.togglePasswordVisibility = function(inputId, eyeIcon) { // Make it global for inline HTML
+            const input = document.getElementById(inputId);
+            if (input.type === "password") { input.type = "text"; eyeIcon.textContent = "🙈"; }
+            else { input.type = "password"; eyeIcon.textContent = "👁️"; }
+        }
+
+        function handleFileSelection() {
+          filesToProcess = [];
+          previewContainer.innerHTML = '';
+          downloadZipButton.classList.add('hidden');
+          progressBarContainer.classList.add('hidden');
+          progressBar.style.width = '0%';
+          unlockButton.disabled = true;
+
+          const selectedFiles = Array.from(fileInput.files);
+          if (selectedFiles.length > 0) {
+            let validFilesFound = false;
+            selectedFiles.forEach((file, index) => {
+              if (file.type !== 'application/pdf') {
+                Swal.fire('Invalid File', `${file.name} is not a PDF. Please select PDF files only.`, 'error');
+                return;
+              }
+              if (file.size > 50 * 1024 * 1024) { // 50MB limit
+                Swal.fire('File Too Large', `${file.name} exceeds the 50MB size limit.`, 'error');
+                return;
+              }
+              const fileData = { file, name: file.name, id: `file-${Date.now()}-${index}`, status: 'Pending' };
+              filesToProcess.push(fileData);
+              renderFilePreview(fileData);
+              validFilesFound = true;
+            });
+            unlockButton.disabled = !validFilesFound;
+          }
+        }
+
+        function renderFilePreview(fileData) {
+          const div = document.createElement('div');
+          div.className = 'flex justify-between items-center bg-gray-100 p-3 rounded-lg mb-2 scale-in';
+          div.innerHTML = `
+            <div class="truncate w-3/4 pr-2">
+              <p class="text-gray-700 text-sm" title="${fileData.name}">${fileData.name} (${(fileData.file.size / 1024 / 1024).toFixed(2)}MB)</p>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <p id="${fileData.id}-status" class="text-sm text-gray-500">${fileData.status}</p>
+              <a id="${fileData.id}-download" href="#" download class="hidden text-blue-600 hover:underline text-sm">Download</a>
+            </div>
+          `;
+          previewContainer.appendChild(div);
+        }
+
+        unlockButton.addEventListener('click', async () => {
+          if (!PDFDocument || (typeof PasswordError === 'undefined' && typeof InvalidPDFError === 'undefined')) { // Check if specific errors are also undefined
+              Swal.fire("Library Error", "The PDF processing library is not fully initialized. Specific error types (PasswordError, InvalidPDFError) might be missing. Please refresh.", "error");
+              return;
+          }
+
+          if (filesToProcess.length === 0) {
+            Swal.fire('No Files', 'Please select PDF files to unlock.', 'warning');
+            return;
+          }
+
+          const password = pdfPasswordInput.value;
+          if (!password) {
+            Swal.fire('Password Required', 'Please enter the password for the PDF file(s).', 'warning');
+            return;
+          }
+          
+          unlockButton.disabled = true;
+          resetButton.disabled = true;
+          progressBarContainer.classList.remove('hidden');
+          progressBar.style.width = '0%';
+          downloadZipButton.classList.add('hidden');
+
+          const zip = new JSZip();
+          let processedCount = 0;
+          let successfulUnlocks = 0;
+          let overallErrorMessages = []; 
+
+          for (const fileData of filesToProcess) {
+            const statusEl = document.getElementById(`${fileData.id}-status`);
+            const downloadEl = document.getElementById(`${fileData.id}-download`);
+            statusEl.textContent = 'Processing...';
+            downloadEl.classList.add('hidden');
+
+            try {
+              console.log(`Attempting to unlock ${fileData.name}...`);
+              const existingPdfBytes = await fileData.file.arrayBuffer();
+              let pdfDoc;
+              try {
+                pdfDoc = await PDFDocument.load(existingPdfBytes, { 
+                    password: password,
+                    updateMetadata: false, 
+                });
+                console.log(`${fileData.name} loaded and decrypted successfully with the provided password.`);
+              } catch (loadError) {
+                console.error(`Error loading/decrypting ${fileData.name}:`, loadError, `Error name: ${loadError.name}`);
+                let specificLoadErrorMessage = `Failed to process ${fileData.name}.`; 
+                
+                // Prioritize checking by error.name, as instanceof can be tricky
+                if (loadError.name === 'PasswordError') {
+                     specificLoadErrorMessage = `Incorrect password provided for ${fileData.name}.`;
+                } else if (loadError.name === 'InvalidPDFError') {
+                     specificLoadErrorMessage = `Invalid PDF structure for ${fileData.name}. It might be corrupted.`;
+                } else if (PasswordError && loadError instanceof PasswordError) { // Fallback to instanceof if PasswordError is defined
+                     specificLoadErrorMessage = `Incorrect password provided (instanceof) for ${fileData.name}.`;
+                } else if (InvalidPDFError && loadError instanceof InvalidPDFError) { // Fallback for InvalidPDFError
+                     specificLoadErrorMessage = `Invalid PDF structure (instanceof) for ${fileData.name}. It might be corrupted.`;
+                } else if (loadError.message) {
+                    if (loadError.message.toLowerCase().includes('password') || loadError.message.toLowerCase().includes('encrypted')) {
+                         specificLoadErrorMessage = `Could not decrypt ${fileData.name}. Password might be incorrect or encryption unsupported.`;
+                    } else {
+                        specificLoadErrorMessage = `Error processing ${fileData.name}: ${loadError.message}`;
+                    }
+                } else {
+                     specificLoadErrorMessage = `An unknown error occurred while processing ${fileData.name}. (Error name: ${loadError.name || 'N/A'})`;
+                }
+                throw new Error(specificLoadErrorMessage); 
+              }
+              
+              const pdfBytes = await pdfDoc.save({ useObjectStreams: false }); 
+              console.log(`${fileData.name} saved successfully (unlocked), size: ${pdfBytes.length} bytes.`);
+              
+              const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+              const unlockedFileName = fileData.name.replace(/\.pdf$/i, '_unlocked.pdf');
+              downloadEl.href = URL.createObjectURL(blob);
+              downloadEl.download = unlockedFileName;
+              downloadEl.classList.remove('hidden');
+              statusEl.textContent = 'Unlocked ✔️';
+              zip.file(unlockedFileName, blob);
+              successfulUnlocks++;
+
+            } catch (error) {
+              console.error(`Outer catch for ${fileData.name}: ${error.message}`, error.stack ? error.stack : '');
+              statusEl.textContent = 'Error ❌';
+              overallErrorMessages.push(error.message);
+            }
+            processedCount++;
+            progressBar.style.width = `${(processedCount / filesToProcess.length) * 100}%`;
+          }
+
+          unlockButton.disabled = filesToProcess.length === 0;
+          resetButton.disabled = false;
+
+          if (successfulUnlocks > 0) {
+            let successMessageText = `${successfulUnlocks} of ${filesToProcess.length} PDF(s) unlocked successfully.`;
+            if (successfulUnlocks < filesToProcess.length && overallErrorMessages.length > 0) {
+                const failedMessagesList = overallErrorMessages.map(msg => `<li>${msg}</li>`).join('');
+                successMessageText += `<br/><br/>${filesToProcess.length - successfulUnlocks} file(s) failed. Errors:<ul>${failedMessagesList}</ul>Check console for detailed logs.`;
+            }
+            Swal.fire({
+                icon: 'success',
+                title: 'Processing Complete!',
+                html: successMessageText,
+            });
+            if (successfulUnlocks > 0) {
+                const zipBlob = await zip.generateAsync({ type: 'blob' });
+                downloadZipButton.href = URL.createObjectURL(zipBlob);
+                downloadZipButton.classList.remove('hidden');
+            }
+          } else if (filesToProcess.length > 0) {
+             const failedMessagesList = overallErrorMessages.length > 0 ? overallErrorMessages.map(msg => `<li>${msg}</li>`).join('') : '<li>Unknown error. Please check console for detailed logs.</li>';
+             Swal.fire({
+                icon:'error',
+                title:'Unlocking Failed',
+                html: `No PDF files were unlocked successfully. <br/>Errors encountered:<ul>${failedMessagesList}</ul><br/>Please check console for detailed logs.`,
+            });
+          }
+        });
+
+        resetButton.addEventListener('click', () => {
+          filesToProcess = [];
+          fileInput.value = ''; 
+          previewContainer.innerHTML = '';
+          unlockButton.disabled = true;
+          downloadZipButton.classList.add('hidden');
+          progressBarContainer.classList.add('hidden');
+          progressBar.style.width = '0%';
+          pdfPasswordInput.value = '';
+          
+          const passInput = document.getElementById('pdfPassword');
+          const passToggle = passInput.nextElementSibling;
+          if (passInput.type === 'text') {
+              passInput.type = 'password';
+              if(passToggle && passToggle.classList.contains('password-toggle')) passToggle.textContent = "👁️";
+          }
+          console.clear();
+          Swal.fire('Reset', 'All settings and files cleared.', 'info');
+        });
+    }); // End of DOMContentLoaded
+  </script>
+</body>
+</html>

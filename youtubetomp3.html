@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta name="google-site-verification" content="1j2lyC3ZbnmSQySbsIoQep4DWrnDkwLE2euIB_jOb-M" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-6275528006958350" />
+    
+    <!-- SEO Meta Tags -->
+    <title>YouTube to MP3 Converter – Download MP3 from YouTube Videos Online</title>
+    <meta name="description" content="Free and easy YouTube to MP3 Converter. Convert YouTube videos to high-quality MP3 audio online. No registration needed. Works on all devices.">
+    <meta name="keywords" content="YouTube to MP3, convert YouTube to MP3, download YouTube audio, YouTube audio extractor, YouTube MP3 online, free youtube mp3 converter, youtube video to mp3">
+
+    <!-- Favicon (replace with your actual favicon) -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- JSON-LD Structured Data (Replace 'yourdomain.com' with your actual domain) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YouTube to MP3 Converter",
+      "description": "Convert YouTube videos into high-quality MP3 files online. Fast, free, and mobile-friendly YouTube to MP3 converter.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "JavaScript, Modern Web Browser",
+      "url": "https://onepagetools.com/youtube-to-mp3-converter.html", 
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://onepagetools.com/youtube-to-mp3-converter.html" 
+       }
+    }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css" /> <!-- Your main CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+
+    <style>
+        /* Dark mode variables */
+        :root {
+            --bg-color-light: #f5f5fa;
+            --text-color-light: #1f2937; /* Tailwind gray-800 */
+            --card-bg-light: #ffffff;
+            --border-color-light: #e5e7eb; /* Tailwind gray-200 */
+            --primary-accent-light: #4F46E5; /* Indigo-600 */
+            --primary-accent-hover-light: #4338CA; /* Indigo-700 */
+            --primary-accent-disabled-light: #A5B4FC; /* Indigo-300 */
+
+            --bg-color-dark: #111827; /* Tailwind gray-900 */
+            --text-color-dark: #f3f4f6; /* Tailwind gray-100 */
+            --card-bg-dark: #1f2937; /* Tailwind gray-800 */
+            --border-color-dark: #374151; /* Tailwind gray-700 */
+            --primary-accent-dark: #818CF8; /* Indigo-400 */
+            --primary-accent-hover-dark: #6366F1; /* Indigo-500 */
+            --primary-accent-disabled-dark: #4338CA; /* Indigo-700 (darker disabled for contrast) */
+        }
+
+        body {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark-mode {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+        .converter-card, .article-content, .sticky-cta, nav.bg-white, .footer-bg {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body.dark-mode .converter-card, 
+        body.dark-mode .article-content,
+        body.dark-mode .sticky-cta {
+            background-color: var(--card-bg-dark);
+            border-color: var(--border-color-dark);
+        }
+        body.dark-mode .options-grid label,
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode .article-content p, body.dark-mode .article-content li,
+        body.dark-mode #fileName, body.dark-mode .text-xs { /* Target specific text elements */
+            color: var(--text-color-dark);
+        }
+         body.dark-mode .text-gray-600 { color: #9ca3af; } /* Tailwind gray-400 */
+         body.dark-mode .text-gray-800 { color: var(--text-color-dark); }
+         body.dark-mode .bg-gray-50 { background-color: #374151 !important; } /* Tailwind gray-700 */
+         body.dark-mode .border-gray-300 { border-color: #4b5563 !important; } /* Tailwind gray-600 */
+         body.dark-mode .text-gray-900 { color: var(--text-color-dark) !important; } /* For select text */
+         body.dark-mode input[type="text"], body.dark-mode input[type="time"], body.dark-mode select {
+            background-color: #374151 !important; /* Tailwind gray-700 */
+            border-color: #4b5563 !important; /* Tailwind gray-600 */
+            color: var(--text-color-dark) !important;
+         }
+         body.dark-mode input::placeholder { color: #9ca3af; } /* Tailwind gray-400 */
+         body.dark-mode nav.bg-white { background-color: var(--card-bg-dark) !important; border-bottom-color: var(--border-color-dark) !important; }
+         body.dark-mode nav a, body.dark-mode #darkModeToggle { color: var(--text-color-dark) !important; }
+         body.dark-mode .footer-bg { background-color: var(--card-bg-dark) !important; }
+         body.dark-mode .footer-bg .border-gray-300 { border-color: var(--border-color-dark) !important;}
+         body.dark-mode .footer-bg .text-gray-500 { color: #9ca3af !important; }
+         body.dark-mode .footer-bg .text-indigo-600 { color: var(--primary-accent-dark) !important; }
+         body.dark-mode .footer-bg a.hover\:text-indigo-600:hover { color: var(--primary-accent-hover-dark) !important; }
+
+
+        .converter-card {
+            background-color: var(--card-bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 2rem auto;
+            border: 1px solid var(--border-color-light);
+        }
+        .url-drop-area {
+            border: 2px dashed var(--primary-accent-light);
+            border-radius: 8px;
+            padding: 20px; 
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            margin-bottom: 1.5rem;
+            background-color: rgba(79, 70, 229, 0.05); /* Light indigo tint */
+        }
+        body.dark-mode .url-drop-area {
+            border-color: var(--primary-accent-dark);
+            background-color: rgba(129, 140, 248, 0.05); /* Lighter indigo tint for dark */
+        }
+        .url-drop-area.dragover {
+            background-color: rgba(79, 70, 229, 0.1);
+            border-color: #3B82F6; /* Blue-500 */
+        }
+        body.dark-mode .url-drop-area.dragover {
+             background-color: rgba(129, 140, 248, 0.1);
+             border-color: #60A5FA; /* Blue-400 */
+        }
+        #youtubeUrl {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color-light);
+            border-radius: 8px;
+            font-size: 1rem;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .btn-primary {
+            background-color: var(--primary-accent-light);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body.dark-mode .btn-primary { background-color: var(--primary-accent-dark); }
+        .btn-primary:disabled {
+            background-color: var(--primary-accent-disabled-light);
+            cursor: not-allowed;
+        }
+        body.dark-mode .btn-primary:disabled { background-color: var(--primary-accent-disabled-dark); }
+
+        .btn-primary:hover:not(:disabled) {
+            background-color: var(--primary-accent-hover-light);
+        }
+        body.dark-mode .btn-primary:hover:not(:disabled) { background-color: var(--primary-accent-hover-dark); }
+        
+        #downloadMp3Link.btn-primary { background-color: #16A34A; } /* Green-600 */
+        #downloadMp3Link.btn-primary:hover:not(:disabled) { background-color: #15803D; } /* Green-700 */
+        body.dark-mode #downloadMp3Link.btn-primary { background-color: #22C55E; } /* Green-500 */
+        body.dark-mode #downloadMp3Link.btn-primary:hover:not(:disabled) { background-color: #16A34A; } /* Green-600 */
+
+
+        .metadata-display {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border: 1px solid var(--border-color-light);
+            border-radius: 8px;
+            display: none; /* Initially hidden */
+            align-items: center;
+            gap: 1rem;
+        }
+        #videoThumbnail {
+            width: 120px; /* Fixed width */
+            height: 90px; /* Fixed height for 4:3 aspect ratio of typical thumbnails */
+            border-radius: 4px;
+            object-fit: cover; /* Ensure image covers the area without distortion */
+            background-color: #f0f0f0; /* Placeholder color */
+        }
+        body.dark-mode #videoThumbnail { background-color: #374151; }
+        #videoInfo p { margin: 0.25rem 0; }
+        #videoTitle { font-weight: 600; }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .options-grid label { display: block; margin-bottom: .5rem; font-weight: 500; }
+        .options-grid select, .options-grid input[type="time"] {
+            width: 100%; padding: .6rem; border: 1px solid var(--border-color-light); border-radius: 6px;
+        }
+        .trim-inputs { display: flex; gap: 0.5rem; align-items: center; }
+
+        .status-bar {
+            width: 100%; background-color: #e9ecef; border-radius: .5rem; margin-top: 1rem; display: none;
+            height: 24px; position: relative; overflow: hidden;
+        }
+        body.dark-mode .status-bar { background-color: #374151; }
+        .status-bar-fill {
+            height: 100%; width: 0%; background-color: var(--primary-accent-light); border-radius: .5rem;
+            text-align: center; color: white; line-height: 24px; font-size: 0.8rem;
+            transition: width 0.4s ease; white-space: nowrap;
+        }
+        body.dark-mode .status-bar-fill { background-color: var(--primary-accent-dark); }
+        .status-bar-text { /* This might not be needed if fill has text */
+            position: absolute; width: 100%; text-align: center; line-height: 24px; font-size: 0.8rem; color: white;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        }
+
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-bg-light); 
+            padding: 1rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: none; 
+            z-index: 100;
+            border-top: 1px solid var(--border-color-light);
+        }
+
+        .share-buttons { text-align: center; margin-top: 2rem; margin-bottom: 2rem; }
+        .share-buttons button {
+            background-color: transparent; border: 1px solid var(--primary-accent-light); color: var(--primary-accent-light);
+            padding: 0.5rem 1rem; margin: 0 0.25rem; border-radius: 20px;
+            font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease;
+        }
+        body.dark-mode .share-buttons button { border-color: var(--primary-accent-dark); color: var(--primary-accent-dark); }
+        .share-buttons button:hover { background-color: var(--primary-accent-light); color: white; }
+        body.dark-mode .share-buttons button:hover { background-color: var(--primary-accent-dark); color: var(--bg-color-dark); }
+
+
+        .dark-mode-toggle {
+            cursor: pointer; padding: 0.5rem; border-radius: 50%;
+        }
+        body.dark-mode #darkModeToggle:hover { background-color: #374151 !important; } /* Tailwind gray-700 */
+        #darkModeToggle:hover { background-color: #f3f4f6 !important; } /* Tailwind gray-100 */
+
+
+        /* Article styles */
+        .article-content { background-color: var(--card-bg-light); padding: 2rem; border-radius: 8px; margin-top: 3rem; border: 1px solid var(--border-color-light); }
+        .article-content h1, .article-content h2, .article-content h3 { margin-top: 1.5em; margin-bottom: 0.75em; font-weight: 600; }
+        .article-content h1 { font-size: 2em; }
+        .article-content h2 { font-size: 1.6em; }
+        .article-content h3 { font-size: 1.3em; }
+        .article-content p, .article-content li { line-height: 1.7; margin-bottom: 1em; }
+        .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1em; }
+        .article-content strong { font-weight: 600; }
+        .article-content a { color: var(--primary-accent-light); text-decoration: underline; }
+        body.dark-mode .article-content a { color: var(--primary-accent-dark); }
+        .article-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 1em auto; display:block; }
+        .toc { border: 1px solid var(--border-color-light); padding: 1rem; margin-bottom: 2rem; border-radius: 8px; background-color: rgba(79, 70, 229, 0.03); }
+        body.dark-mode .toc { background-color: rgba(129, 140, 248, 0.05); border-color: var(--border-color-dark); }
+        .toc h3 { margin-top: 0; }
+        .toc ul { list-style-type: none; padding-left: 0; }
+        .toc ul li a { text-decoration: none; color: #3B82F6; } /* Blue-500 */
+        body.dark-mode .toc ul li a { color: #93C5FD; } /* Blue-300 */
+        .toc ul li a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+            .converter-card { margin: 1rem; padding: 1.5rem; }
+            .options-grid { grid-template-columns: 1fr; } /* Stack options on mobile */
+            .metadata-display { flex-direction: column; align-items: center; text-align: center; }
+            #videoThumbnail { margin-bottom: 0.5rem; }
+        }
+    </style>
+</head>
+<body class="bg-color-light"> <!-- Default to light mode class -->
+    <!-- Navbar (Consistent with your other tools) -->
+    <nav class="bg-white fixed w-full z-30 top-0 start-0 border-b border-gray-200">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img style="height: 50px" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" /> 
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 rtl:space-x-reverse">
+            <button id="darkModeToggle" title="Toggle Dark Mode" class="dark-mode-toggle text-gray-500">
+                <i class="fas fa-moon"></i> <!-- Default to moon icon -->
+            </button>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path></svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+            <li><a href="./index.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Home</a></li>
+            <li><a href="./about.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+            <li><a href="./contact.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+            <!-- Add dropdown for all tools if needed -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-20 pb-16"> <!-- Padding for fixed navbar and sticky CTA -->
+        <div class="container mx-auto px-4 py-8">
+            <header class="text-center mb-10">
+                <h1 class="text-4xl sm:text-5xl font-bold">YouTube to MP3 Converter</h1>
+                <p class="text-lg text-gray-600 mt-4">Quickly convert YouTube videos to high-quality MP3 audio files online.</p>
+            </header>
+
+            <div class="converter-card">
+                <div id="urlDropArea" class="url-drop-area">
+                     <i class="fas fa-link fa-2x text-indigo-400 mb-2"></i>
+                    <p class="text-sm text-gray-600">Drag & drop a YouTube link here, or paste below</p>
+                </div>
+                <div class="mb-4">
+                    <label for="youtubeUrl" class="sr-only">YouTube URL</label>
+                    <input type="text" id="youtubeUrl" placeholder="Paste YouTube video URL (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ)">
+                </div>
+                <button id="fetchVideoButton" class="btn-primary w-full sm:w-auto">
+                    <i class="fas fa-search mr-2"></i>Fetch Video Info
+                </button>
+
+                <div id="metadataDisplay" class="metadata-display">
+                    <img id="videoThumbnail" src="#" alt="Video Thumbnail"> <!-- Placeholder src -->
+                    <div id="videoInfo">
+                        <p id="videoTitle" class="text-lg">Video Title Will Appear Here</p>
+                        <p id="videoDuration" class="text-sm text-gray-600">Duration: 0:00</p>
+                    </div>
+                </div>
+
+                <div id="conversionOptions" style="display: none;">
+                    <div class="options-grid">
+                        <div>
+                            <label for="audioQuality">Audio Quality:</label>
+                            <select id="audioQuality" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option value="64">64 kbps (Low)</option>
+                                <option value="128" selected>128 kbps (Standard)</option>
+                                <option value="192">192 kbps (Good)</option>
+                                <option value="320">320 kbps (High)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Trim Audio (Optional):</label>
+                            <div class="trim-inputs">
+                                <label for="startTime" class="sr-only">Start Time</label>
+                                <input type="time" id="startTime" value="00:00:00" step="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" title="Start Time">
+                                <span class="mx-1">-</span>
+                                <label for="endTime" class="sr-only">End Time</label>
+                                <input type="time" id="endTime" value="00:00:00" step="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" title="End Time">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="estimatedFileSize" class="text-sm text-gray-600 mt-3 text-center"></p>
+                    <button id="convertToMp3Button" class="btn-primary w-full mt-4">
+                        <i class="fas fa-music mr-2"></i>Convert to MP3
+                    </button>
+                </div>
+                
+                <div id="statusBar" class="status-bar">
+                    <div id="statusBarFill" class="status-bar-fill"></div>
+                    <div id="statusBarText" class="status-bar-text">Processing...</div>
+                </div>
+                
+                <div id="statusMessage" class="status-message mt-4"></div>
+
+                <div id="downloadSection" style="display:none;" class="text-center mt-6">
+                     <a id="downloadMp3Link" href="#" class="btn-primary text-lg py-3 px-6">
+                        <i class="fas fa-download mr-2"></i>Download MP3
+                    </a>
+                </div>
+            </div>
+
+            <div class="share-buttons">
+                <button id="shareWhatsapp" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                <button id="shareFacebook" title="Share on Facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                <button id="shareTwitter" title="Share on Twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                <button id="shareTelegram" title="Share on Telegram"><i class="fab fa-telegram-plane"></i> Telegram</button>
+            </div>
+
+
+            <!-- SEO Article Section -->
+            <article id="main-article" class="article-content">
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#what-is-yt-to-mp3">1. What is a YouTube to MP3 Converter?</a></li>
+                        <li><a href="#why-convert">2. Why Convert YouTube Videos to MP3?</a></li>
+                        <li><a href="#legal-ethical">3. Legal and Ethical Considerations</a></li>
+                        <li><a href="#tool-features">4. Features of Our YouTube to MP3 Converter</a></li>
+                        <li><a href="#formats-quality">5. Supported Formats & Quality Levels</a></li>
+                        <li><a href="#how-to-use">6. How to Use Our YouTube to MP3 Converter</a></li>
+                        <li><a href="#use-cases">7. Common Use Cases</a></li>
+                        <li><a href="#limitations-fair-use">8. Limitations and Fair Usage</a></li>
+                        <li><a href="#faq">9. Frequently Asked Questions (FAQs)</a></li>
+                        <li><a href="#conclusion">10. Conclusion</a></li>
+                    </ul>
+                </div>
+
+                <h2 id="what-is-yt-to-mp3">1. What is a YouTube to MP3 Converter?</h2>
+                <p>A <strong>YouTube to MP3 converter</strong> is an online tool or software application designed to extract the audio track from YouTube videos and convert it into the popular MP3 audio format. YouTube, being the world's largest video-sharing platform, hosts a vast library of content, including music videos, podcasts, lectures, interviews, and much more. While YouTube primarily offers video streaming, many users find the need to listen to the audio content offline or on devices that are more convenient for audio playback, such as MP3 players, smartphones, or car stereos. Our <strong>free YouTube MP3 converter</strong> provides a seamless way to achieve this, allowing users to <strong>download MP3 from YouTube</strong> videos quickly and easily.</p>
+                <p>These converters work by taking a YouTube video URL as input. The tool then processes this URL, accesses the video's audio stream, and transcodes it into an MP3 file that the user can download. Advanced converters, like the one offered here, may also provide options for selecting audio quality, trimming the audio, and automatically naming the downloaded file based on the video title. The core function is to make YouTube audio content accessible in a portable and widely compatible format, transforming a visual medium into an auditory one. Using an <strong>online YouTube to MP3</strong> tool means you don't need to install any software, making the process convenient for users across all devices.</p>
+                <img src="https://via.placeholder.com/600x300.png?text=YouTube+Video+Player+Interface" alt="Interface of a YouTube video player showing a music video">
+
+
+                <h2 id="why-convert">2. Why Convert YouTube Videos to MP3?</h2>
+                <p>There are numerous legitimate reasons why individuals choose to <strong>convert YouTube videos to MP3</strong>. The versatility of the MP3 format combined with the sheer volume of audio-rich content on YouTube makes this a popular activity for various purposes:</p>
+                <ul>
+                    <li><strong>Offline Music Listening:</strong> This is perhaps the most common reason. YouTube is a massive repository for official music videos, live performances, covers, and remixes. Converting these to MP3 allows users to build personal music libraries for offline playback, saving mobile data and ensuring uninterrupted listening during commutes, workouts, or in areas with poor internet connectivity. Many search for a "<strong>download mp3 from youtube</strong>" tool specifically for this.</li>
+                    <li><strong>Podcast Consumption:</strong> Many podcasters upload full episodes or clips to YouTube. Converting these to MP3 allows listeners to enjoy them on the go, just like traditional podcasts, using their preferred audio player. This is especially useful for long-form content where continuous video watching might not be practical.</li>
+                    <li><strong>Educational Content and Lectures:</strong> YouTube hosts a wealth of educational material, including university lectures, tutorials, language lessons, and informative talks. Converting these to MP3 enables students and lifelong learners to listen and learn while multitasking, commuting, or exercising, making learning more flexible and accessible.</li>
+                    <li><strong>Audiobooks and Storytelling:</strong> Numerous channels offer audiobooks, narrated stories, or spoken word performances. An <strong>online YouTube to MP3</strong> converter can transform these into an audiobook-like experience.</li>
+                    <li><strong>Reduced Data Usage:</strong> Streaming video consumes significantly more data than streaming or playing an MP3 file. For users with limited mobile data plans, converting to MP3 for repeated listening is a cost-effective solution.</li>
+                    <li><strong>Background Playback:</strong> While YouTube's mobile app often requires a Premium subscription for background playback, an MP3 file can be played in the background on any device without restrictions, allowing users to listen while using other apps or when their screen is off.</li>
+                    <li><strong>Creating Ringtones or Samples (for personal use):</strong> Users might extract short audio clips to use as custom ringtones or for personal creative projects (adhering to copyright is crucial here).</li>
+                    <li><strong>Accessibility:</strong> For individuals who prefer auditory learning or have visual impairments, converting video content to audio can make information more accessible.</li>
+                </ul>
+                <p>Ultimately, the desire to <strong>convert YouTube video to MP3</strong> stems from the convenience, portability, and flexibility that the MP3 format offers for audio content.</p>
+
+                <h2 id="legal-ethical">3. Legal and Ethical Considerations</h2>
+                <p>When using a <strong>YouTube to MP3 converter</strong>, it's crucial to be aware of the legal and ethical implications. The primary concern revolves around copyright law and YouTube's Terms of Service.</p>
+                <ul>
+                    <li><strong>Copyright Law:</strong> Most content on YouTube, especially music videos, commercially produced shows, and movies, is protected by copyright. Downloading and converting this copyrighted material into MP3 files without permission from the copyright holder is illegal in many countries. It infringes upon the rights of artists, creators, and production companies.</li>
+                    <li><strong>YouTube's Terms of Service:</strong> YouTube's ToS explicitly state that users should not download content unless YouTube provides a download button or link for that specific content. Using third-party tools to download or convert videos can be a violation of these terms.</li>
+                    <li><strong>Permissible Uses:</strong>
+                        <ul>
+                            <li><strong>Public Domain Content:</strong> Videos that are in the public domain can generally be downloaded and converted freely.</li>
+                            <li><strong>Creative Commons Licenses:</strong> Some creators license their work under Creative Commons (CC) licenses that may permit downloading and reuse, sometimes with specific conditions (e.g., attribution, non-commercial use). Always check the specific CC license terms.</li>
+                            <li><strong>Personal Backups of Your Own Content:</strong> If you have uploaded your own original content to YouTube, you are typically within your rights to download a copy of it, including in MP3 format, for personal backup or use.</li>
+                            <li><strong>Explicit Permission:</strong> If the copyright holder has given explicit permission for their content to be downloaded and converted, then it is permissible.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fair Use/Fair Dealing:</strong> In some jurisdictions, "fair use" (in the US) or "fair dealing" (in other countries) doctrines may allow limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, or research. However, whether downloading an entire MP3 for personal listening qualifies as fair use is highly debatable and often does not. Fair use is a complex legal concept and should not be broadly assumed.</li>
+                </ul>
+                <p><strong>User Responsibility:</strong> As a user of any <strong>YouTube audio extractor</strong>, the responsibility lies with you to respect copyright laws and YouTube's Terms of Service. Our tool is provided for users to convert content they have the legal right to access and convert, such as their own uploads, public domain material, or content with explicit permissions. We do not endorse or encourage the illegal downloading or conversion of copyrighted materials. Always ensure you have the necessary rights before converting any YouTube video to MP3.</p>
+                <p><strong>Disclaimer:</strong> OnePageTools.com is not responsible for how users utilize this tool. Users must comply with all applicable laws and terms of service of content platforms. This tool should only be used for content that you own the copyright to, have permission from the copyright owner, or is available in the public domain or under an open license permitting such use.</p>
+                 <img src="https://via.placeholder.com/600x300.png?text=Copyright+Symbol+and+Legal+Gavel" alt="Symbolic image representing copyright law and legal considerations">
+
+                <h2 id="tool-features">4. Features of Our YouTube to MP3 Converter</h2>
+                <p>Our <strong>YouTube to MP3 Converter</strong> is designed to be powerful, user-friendly, and packed with features to enhance your audio extraction experience:</p>
+                <ul>
+                    <li><strong>Easy URL Input:</strong> Simply paste the YouTube video URL into the input field. We also support drag-and-drop of YouTube links onto a designated area for quicker input.</li>
+                    <li><strong>Automatic Metadata Fetching:</strong> Once a valid URL is provided, the tool automatically fetches and displays the video's title, thumbnail image, and duration, allowing you to confirm you're converting the correct video.</li>
+                    <li><strong>Multiple Audio Quality Options:</strong> You have control over the output MP3 quality. Choose from various bitrates:
+                        <ul>
+                            <li>64 kbps (Low - smallest file size, suitable for speech)</li>
+                            <li>128 kbps (Standard - good balance of quality and size)</li>
+                            <li>192 kbps (Good - better audio fidelity)</li>
+                            <li>320 kbps (High - best quality, larger file size)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Direct MP3 Download:</strong> After successful conversion, you get a direct download link for the MP3 file. No complicated steps or redirects.</li>
+                    <li><strong>Optional Audio Trimming:</strong> Need only a specific part of the audio? Our tool allows you to specify start and end timestamps (HH:MM:SS format) to trim the audio before conversion. This is perfect for creating ringtones or extracting specific segments. <em>(Note: This functionality depends on backend processing capabilities.)</em></li>
+                    <li><strong>Automatic File Renaming:</strong> The downloaded MP3 file is automatically named based on the video's title, making it easy to organize your audio library. For example, a video titled "Amazing Song - Artist" will be saved as "Amazing Song - Artist.mp3".</li>
+                    <li><strong>Estimated File Size Display:</strong> Before initiating the download, the tool can provide an estimated file size based on the selected audio quality and duration (including trimming). This helps you manage storage and data. <em>(Note: Estimation accuracy depends on backend information.)</em></li>
+                    <li><strong>Loading and Progress Status:</strong> Clear visual indicators show the progress of metadata fetching, audio extraction, and conversion, so you're always informed about what's happening.</li>
+                    <li><strong>Support for Various YouTube Content:</strong> Our converter aims to support:
+                        <ul>
+                            <li>Regular YouTube videos</li>
+                            <li>YouTube Shorts</li>
+                            <li>Long videos (e.g., full concerts, podcasts, lectures)</li>
+                            <li>Recordings of livestreams (once they are processed and available as regular videos on YouTube)</li>
+                        </ul>
+                        <em>(Note: Support for specific types, especially very long videos or ongoing livestreams, depends heavily on the backend service's capabilities.)</em>
+                    </li>
+                    <li><strong>Responsive Design:</strong> The tool is fully responsive and works seamlessly on desktops, tablets, and mobile devices.</li>
+                    <li><strong>Dark/Light Mode Toggle:</strong> Switch between dark and light themes for comfortable viewing based on your preference or ambient lighting.</li>
+                    <li><strong>No Signup Required:</strong> Use the converter instantly without any registration or account creation. We value your privacy and convenience.</li>
+                    <li><strong>Clean and Fast UI:</strong> A minimalist and intuitive user interface ensures a smooth and quick conversion process.</li>
+                </ul>
+                <p>We continuously strive to improve our <strong>free YouTube MP3 converter</strong> by adding useful features and ensuring a reliable user experience.</p>
+
+                <h2 id="formats-quality">5. Supported Formats & Quality Levels</h2>
+                <p>Our <strong>YouTube to MP3 Converter</strong> focuses on providing the most popular and widely compatible audio format: MP3. Here's what you need to know about the output and quality:</p>
+                <ul>
+                    <li><strong>Output Format: MP3</strong>
+                        <p>MP3 (MPEG-1 Audio Layer III or MPEG-2 Audio Layer III) is the de facto standard for digital audio. Its widespread compatibility ensures that your downloaded files can be played on virtually any device, including smartphones (Android, iOS), computers (Windows, macOS, Linux), dedicated MP3 players, car audio systems, smart TVs, and more. It offers a good balance between audio quality and file size due to its lossy compression algorithm.</p>
+                    </li>
+                    <li><strong>Selectable Audio Quality (Bitrate):</strong>
+                        <p>The quality of an MP3 file is primarily determined by its bitrate, measured in kilobits per second (kbps). A higher bitrate generally means better audio quality but also a larger file size. Our tool offers the following options for your <strong>YouTube audio extractor</strong> needs:</p>
+                        <ul>
+                            <li><strong>64 kbps:</strong> This is a lower quality setting, resulting in the smallest file sizes. It's often acceptable for spoken word content like podcasts, lectures, or interviews where audio fidelity is less critical than intelligibility.</li>
+                            <li><strong>128 kbps:</strong> Considered standard quality for music by many. It provides a good compromise between decent sound and manageable file sizes. This is a popular choice for general music listening.</li>
+                            <li><strong>192 kbps:</strong> Offers noticeably better audio quality than 128 kbps, with more clarity and detail, especially in complex musical pieces. The file sizes are moderately larger.</li>
+                            <li><strong>320 kbps:</strong> This is generally the highest quality commonly available for MP3 files. It provides the best audio fidelity, closest to CD quality for many listeners, but results in the largest file sizes. Ideal for audiophiles or when sound quality is paramount.</li>
+                        </ul>
+                        <p>It's important to note that the maximum quality of the extracted MP3 can also be limited by the quality of the audio track in the source YouTube video. If a YouTube video only has a 128 kbps audio stream, selecting 320 kbps in the converter will not magically create higher quality audio; it will simply re-encode the 128 kbps audio into a larger 320 kbps file.</p>
+                         <img src="https://via.placeholder.com/600x300.png?text=Audio+Quality+Selector+UI" alt="User interface showing audio quality selection options like 128kbps, 320kbps">
+                    </li>
+                    <li><strong>Source Audio on YouTube:</strong>
+                        <p>YouTube uses various audio codecs and bitrates for its videos, often AAC (Advanced Audio Coding) at different quality levels. When you <strong>convert YouTube video to MP3</strong>, the backend process typically downloads the best available audio stream from YouTube and then transcodes it to your chosen MP3 bitrate. For optimal results, ensure the YouTube video itself has a good quality audio track.</p>
+                    </li>
+                </ul>
+                <p>By providing these quality options, our tool allows you to balance your desire for audio fidelity with considerations for file size and storage space.</p>
+
+                <h2 id="how-to-use">6. Step-by-Step Guide on How to Use Our YouTube to MP3 Converter</h2>
+                <p>Using our <strong>online YouTube to MP3</strong> tool is designed to be simple and intuitive. Here’s a step-by-step guide:</p>
+                <ol>
+                    <li><strong>Find Your YouTube Video:</strong> Open YouTube in your browser or app and find the video you wish to convert to MP3.</li>
+                    <li><strong>Copy the Video URL:</strong>
+                        <ul>
+                            <li><strong>Desktop:</strong> Copy the URL from your browser's address bar.</li>
+                            <li><strong>Mobile App:</strong> Tap the "Share" button below the video, then select "Copy link."</li>
+                        </ul>
+                    </li>
+                    <li><strong>Navigate to Our Converter:</strong> Open the OnePageTools.com <strong>YouTube to MP3 Converter</strong> page in your web browser.</li>
+                    <li><strong>Paste or Drop the URL:</strong>
+                        <ul>
+                            <li>Paste the copied YouTube URL into the input field provided on our tool's page.</li>
+                            <li>Alternatively, if you have a YouTube link (e.g., dragged from another browser tab), you can drag and drop it onto the designated "Drag & drop a YouTube link here" area.</li>
+                        </ul>
+                        <img src="https://via.placeholder.com/600x200.png?text=Step+4%3A+Paste+URL+Here" alt="Screenshot showing where to paste the YouTube URL into the converter input field">
+                    </li>
+                    <li><strong>Fetch Video Information:</strong> Click the "Fetch Video Info" button. The tool will connect to our (simulated/backend) service to retrieve the video's title, thumbnail, and duration. This information will be displayed, allowing you to verify it's the correct video.
+                        <img src="https://via.placeholder.com/600x250.png?text=Step+5%3A+Fetched+Video+Metadata" alt="Screenshot of converter displaying fetched video title, thumbnail, and duration">
+                    </li>
+                    <li><strong>Select Options (Optional):</strong>
+                        <ul>
+                            <li><strong>Audio Quality:</strong> Choose your desired MP3 bitrate from the dropdown menu (e.g., 128kbps, 320kbps).</li>
+                            <li><strong>Trim Audio:</strong> If you only want a portion of the audio, enter the start and end times in HH:MM:SS or MM:SS format. For example, to get audio from 1 minute 30 seconds to 2 minutes 45 seconds, you might enter `00:01:30` and `00:02:45`. Leave blank to convert the entire audio.</li>
+                        </ul>
+                         <img src="https://via.placeholder.com/600x200.png?text=Step+6%3A+Select+Conversion+Options" alt="Screenshot highlighting audio quality selection and trim time inputs">
+                    </li>
+                    <li><strong>Start Conversion:</strong> Click the "Convert to MP3" button. The tool will show a progress bar indicating the status of the audio extraction and conversion process. The estimated file size might also be displayed.</li>
+                    <li><strong>Download Your MP3:</strong> Once the conversion is complete (which typically involves server-side processing), a "Download MP3" button will appear. Click this button to save the MP3 file to your computer or mobile device. The file will usually be named after the video title.</li>
+                </ol>
+                <p>That's it! You've successfully used our <strong>free YouTube MP3 converter</strong> to get the audio you wanted. Enjoy your offline listening!</p>
+
+                <h2 id="use-cases">7. Common Use Cases</h2>
+                <p>The ability to <strong>download MP3 from YouTube</strong> caters to a wide array of user needs and scenarios. Here are some common use cases for a <strong>YouTube to MP3 converter</strong>:</p>
+                <ul>
+                    <li><strong>Music Aficionados:</strong>
+                        <ul>
+                            <li>Building personal offline music libraries of favorite tracks, live versions, or rare remixes not available on streaming platforms.</li>
+                            <li>Creating playlists for workouts, road trips, or parties without relying on an internet connection.</li>
+                            <li>Accessing music in regions where certain streaming services are unavailable or too expensive.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Podcast Enthusiasts:</strong>
+                        <ul>
+                            <li>Downloading podcast episodes published on YouTube for offline listening on commutes or during activities where video is impractical.</li>
+                            <li>Archiving favorite episodes that might be removed from the platform later.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Students and Educators:</strong>
+                        <ul>
+                            <li>Converting lectures, educational talks, and documentaries into audio format for easier review and study on the go.</li>
+                            <li>Language learners can download dialogues or lessons to practice listening comprehension repeatedly.</li>
+                            <li>Teachers might convert relevant YouTube audio for classroom use (respecting copyright).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Content Creators (for legitimate uses):</strong>
+                        <ul>
+                            <li>Downloading royalty-free background music or sound effects from YouTube channels that explicitly offer them for reuse.</li>
+                            <li>Archiving audio from their own YouTube videos for repurposing or backup.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Commuters and Travelers:</strong>
+                        <ul>
+                            <li>Loading up devices with music, podcasts, or audiobooks for long journeys where internet access might be spotty or expensive (e.g., flights, train rides).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Users with Limited Data:</strong>
+                        <ul>
+                            <li>Saving on mobile data by downloading audio once for repeated listening instead of streaming video multiple times.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Individuals Seeking Specific Audio Clips:</strong>
+                        <ul>
+                            <li>Extracting specific soundbites, quotes from interviews, or segments of talks for personal reference (fair use considerations apply).</li>
+                            <li>Using the trim feature to create short audio clips for personal (non-commercial, non-redistributable) use like custom notifications.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>The common thread across these use cases is the desire for portability, offline access, and the convenience of the MP3 format for audio consumption. Our <strong>YouTube audio extractor</strong> aims to fulfill these needs efficiently.</p>
+
+                <h2 id="limitations-fair-use">8. Limitations and Fair Usage</h2>
+                <p>While our <strong>YouTube to MP3 converter</strong> is a powerful tool, it's important for users to understand its limitations and practice fair usage:</p>
+                <ul>
+                    <li><strong>Dependence on YouTube:</strong> The tool relies on YouTube's platform. Any changes YouTube makes to its API or video delivery mechanisms could temporarily or permanently affect the tool's functionality. This is a common challenge for all similar converters.</li>
+                    <li><strong>Server-Side Processing:</strong> As explained, the actual conversion is a complex process. High server load (many users at once) or very long videos might lead to longer processing times or, in rare cases, timeouts. Our (simulated/backend) backend aims to handle this, but real-world backends have capacity limits.</li>
+                    <li><strong>Quality Limitations:</strong> The output MP3 quality is capped by the audio quality of the source YouTube video. Converting a low-quality YouTube audio stream to a 320kbps MP3 won't improve its inherent quality.</li>
+                    <li><strong>Copyright and Terms of Service:</strong> This is the most significant limitation. Users **must not** use this tool to download or convert copyrighted material without explicit permission from the copyright holder. Doing so violates copyright laws and YouTube's Terms of Service. The tool is intended for legally permissible uses only (e.g., public domain content, your own videos, Creative Commons licensed content allowing such use).</li>
+                    <li><strong>Fair Usage of the Tool:</strong>
+                        <ul>
+                            <li>Please use the service responsibly. Avoid submitting an excessive number of conversion requests in a short period, as this can strain server resources and affect the experience for other users.</li>
+                            <li>Do not use automated scripts or bots to interact with the converter.</li>
+                            <li>The tool is provided free of charge for personal, non-commercial use, adhering to legal and ethical guidelines.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Video Availability and Restrictions:</strong> The tool may not be able to process videos that are private, age-restricted (if not logged into an appropriate account on the backend), or subject to specific geographic restrictions imposed by YouTube or the uploader.</li>
+                    <li><strong>Trimming Accuracy:</strong> While a trimming feature is offered, the precision might depend on the video's keyframes and the backend processing. For frame-perfect trimming, dedicated audio editing software after download might be more suitable.</li>
+                    <li><strong>Livestreams:</strong> Converting ongoing livestreams is generally not possible until the stream has ended and YouTube has processed it into a standard video format.</li>
+                </ul>
+                <p>By understanding these limitations and adhering to fair usage principles, you can make the most of our <strong>free YouTube MP3 converter</strong> while respecting intellectual property rights and platform terms.</p>
+
+                <h2 id="faq">9. Frequently Asked Questions (FAQs)</h2>
+                <dl>
+                    <dt><strong>1. Is it legal to use a YouTube to MP3 converter?</strong></dt>
+                    <dd>It depends on the content. Converting copyrighted material without permission from the copyright holder is illegal. It's legal to convert videos you own, public domain content, or videos with Creative Commons licenses that permit such conversion. Always respect copyright.</dd>
+
+                    <dt><strong>2. Is this YouTube to MP3 converter free to use?</strong></dt>
+                    <dd>Yes, our online tool is completely free to use for converting YouTube videos to MP3.</dd>
+
+                    <dt><strong>3. Do I need to install any software or register an account?</strong></dt>
+                    <dd>No, our converter is entirely web-based. You don't need to install any software or create an account. Just paste the URL and convert.</dd>
+
+                    <dt><strong>4. What audio quality options are available?</strong></dt>
+                    <dd>We offer several MP3 quality options, typically ranging from 64kbps (low) to 128kbps (standard), 192kbps (good), and 320kbps (high).</dd>
+
+                    <dt><strong>5. Can I convert YouTube Shorts or long videos?</strong></dt>
+                    <dd>Yes, our tool aims to support YouTube Shorts, regular videos, and long videos (like podcasts or lectures). However, extremely long videos might take more time to process.</dd>
+
+                    <dt><strong>6. Can I convert private YouTube videos?</strong></dt>
+                    <dd>Generally, no. Converters can typically only access publicly available videos. Private videos or those requiring a login cannot be processed.</dd>
+
+                    <dt><strong>7. Is there a limit on the number of conversions I can do?</strong></dt>
+                    <dd>For fair usage, we don't impose strict limits for typical personal use. However, please avoid automated or excessively frequent requests that could strain our (simulated/backend) system.</dd>
+
+                    <dt><strong>8. How long does the conversion process take?</strong></dt>
+                    <dd>Conversion time depends on the video length, selected audio quality, and current server load. Shorter videos and lower quality settings convert faster. Our tool provides progress indicators.</dd>
+
+                    <dt><strong>9. Will the downloaded MP3 file contain any watermarks or ads?</strong></dt>
+                    <dd>No, the MP3 files downloaded through our converter are clean and do not contain any watermarks or injected advertisements.</dd>
+
+                    <dt><strong>10. Can I use this tool on my mobile phone (Android/iPhone)?</strong></dt>
+                    <dd>Yes, our <strong>YouTube to MP3 converter</strong> is designed to be fully responsive and works on all modern devices, including smartphones and tablets, through their web browsers.</dd>
+                    
+                    <dt><strong>11. What happens if the YouTube video has very low audio quality?</strong></dt>
+                    <dd>The converter cannot improve the audio quality beyond what is available in the source YouTube video. If the source audio is poor, the resulting MP3 will also reflect that, even if you select a high bitrate for conversion.</dd>
+
+                    <dt><strong>12. Does the tool support converting entire YouTube playlists?</strong></dt>
+                    <dd>Currently, our tool is designed to convert individual video URLs. Playlist conversion might be a feature considered for future updates, but it would significantly increase complexity and backend load.</dd>
+                </dl>
+
+                <h2 id="conclusion">10. Conclusion</h2>
+                <p>In a world brimming with digital content, having the right tools to manage and enjoy media in your preferred format is essential. Our <strong>YouTube to MP3 Converter</strong> offers a straightforward, free, and user-friendly solution for anyone looking to <strong>download audio from YouTube</strong> videos for offline listening, educational purposes, or any other legitimate personal use. With features like variable audio quality, optional trimming, and automatic metadata handling, we aim to provide a comprehensive and convenient experience.</p>
+                <p>While the convenience is undeniable, we strongly urge all users to be mindful of copyright laws and YouTube's Terms of Service. Use this tool responsibly and ethically, ensuring you have the right to convert the content you choose. For legally permissible content, our <strong>free YouTube MP3 converter</strong> is an excellent choice for transforming your favorite YouTube videos into portable audio files, ready to be enjoyed anytime, anywhere, on any device. Give it a try today and unlock the audio potential of YouTube!</p>
+                <p><strong>Ready to convert? Paste your YouTube URL above and start downloading your MP3s now!</strong></p>
+            </article>
+            <!-- End SEO Article -->
+        </div>
+    </main>
+
+    <!-- Sticky CTA for mobile -->
+    <div class="sticky-cta">
+        <button id="stickyFetchButton" class="btn-primary w-full">Paste URL & Convert</button>
+    </div>
+
+    <!-- Footer (Consistent with your other tools) -->
+    <footer class="bg-gray-100 footer-bg">
+      <div class="max-w-screen-lg py-10 px-4 sm:px-6 sm:flex justify-between mx-auto">
+          <div class="p-5 sm:w-2/12 border-r border-gray-300">
+            <h3 class="text-sm uppercase text-indigo-600 font-bold">Menu</h3>
+            <ul>
+              <li class="my-2"><a class="hover:text-indigo-600" href="./index.html">Home</a></li>
+              <li class="my-2"><a class="hover:text-indigo-600" href="./about.html">About</a></li>
+              <li class="my-2"><a class="hover:text-indigo-600" href="./contact.html">Contact</a></li>
+              <li class="my-2"><a class="hover:text-indigo-600" href="./privacy-policy.html">Privacy Policy</a></li>
+              <li class="my-2"><a class="hover:text-indigo-600" href="./disclaimer.html">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="p-5 sm:w-7/12 border-r border-gray-300 text-center">
+            <img style="height: 60px; margin: auto; margin-bottom: 20px;" src="./One_Page-removebg-preview.png" alt="OnePageTools Logo" />
+            <p class="text-gray-500 text-sm mb-10">
+              OnePageTools.com provides a suite of free online utilities, including this YouTube to MP3 converter, designed for simplicity and efficiency.
+            </p>
+          </div>
+          <div class="p-5 sm:w-3/12">
+            <h3 class="text-sm uppercase text-indigo-600 font-bold">Contact Us</h3>
+            <ul>
+              <li class="my-2"><a class="hover:text-indigo-600" href="#">FCI Colony, Bareilly</a></li>
+              <li class="my-2"><a class="hover:text-indigo-600" href="mailto:itceguru123@gmail.com">itceguru123@gmail.com</a></li>
+            </ul>
+          </div>
+      </div>
+        <div class="py-5 border-t border-gray-300">
+         <p class="text-center text-sm text-gray-500">Copyright © <span id="currentYear"></span> OnePageTools.com | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log("YouTube to MP3 DOM Ready");
+
+        const youtubeUrlInput = document.getElementById('youtubeUrl');
+        const urlDropArea = document.getElementById('urlDropArea');
+        const fetchVideoButton = document.getElementById('fetchVideoButton');
+        const metadataDisplay = document.getElementById('metadataDisplay');
+        const videoThumbnail = document.getElementById('videoThumbnail');
+        const videoTitle = document.getElementById('videoTitle');
+        const videoDuration = document.getElementById('videoDuration');
+        const conversionOptions = document.getElementById('conversionOptions');
+        const audioQualitySelect = document.getElementById('audioQuality');
+        const startTimeInput = document.getElementById('startTime');
+        const endTimeInput = document.getElementById('endTime');
+        const estimatedFileSizeP = document.getElementById('estimatedFileSize');
+        const convertToMp3Button = document.getElementById('convertToMp3Button');
+        const statusBar = document.getElementById('statusBar');
+        const statusBarFill = document.getElementById('statusBarFill');
+        const statusBarText = document.getElementById('statusBarText');
+        const statusMessageDiv = document.getElementById('statusMessage');
+        const downloadSection = document.getElementById('downloadSection');
+        const downloadMp3Link = document.getElementById('downloadMp3Link');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const currentYearSpan = document.getElementById('currentYear');
+        const stickyFetchButton = document.getElementById('stickyFetchButton');
+
+        if(currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
+
+        function showStatus(message, percentage = null) {
+            if (!statusBar || !statusBarText || !statusBarFill) return;
+            statusBar.style.display = 'block';
+            statusBarText.textContent = message;
+            if (percentage !== null) {
+                statusBarFill.style.width = percentage + '%';
+            } else {
+                 statusBarFill.style.width = '100%'; 
+            }
+        }
+
+        function hideStatus() {
+            if (statusBar) statusBar.style.display = 'none';
+            if (statusBarFill) statusBarFill.style.width = '0%';
+        }
+        
+        function showUserMessage(message, type = 'info') {
+            if (!statusMessageDiv) return;
+            statusMessageDiv.textContent = message;
+            statusMessageDiv.className = `status-message status-${type} mt-4`;
+            statusMessageDiv.style.display = 'block';
+        }
+
+        function hideUserMessage() {
+            if (statusMessageDiv) statusMessageDiv.style.display = 'none';
+        }
+
+        function resetTool() {
+            if(youtubeUrlInput) youtubeUrlInput.value = '';
+            if(metadataDisplay) metadataDisplay.style.display = 'none';
+            if(conversionOptions) conversionOptions.style.display = 'none';
+            if(downloadSection) downloadSection.style.display = 'none';
+            if(videoThumbnail) videoThumbnail.src = '#'; // Use a placeholder or empty
+            if(videoTitle) videoTitle.textContent = 'Video Title Will Appear Here';
+            if(videoDuration) videoDuration.textContent = 'Duration: 0:00';
+            if(startTimeInput) startTimeInput.value = '00:00:00';
+            if(endTimeInput) {
+                 endTimeInput.value = '00:00:00';
+                 endTimeInput.max = null; // Reset max
+            }
+            if(audioQualitySelect) audioQualitySelect.value = '128';
+            if(estimatedFileSizeP) estimatedFileSizeP.textContent = '';
+            if(fetchVideoButton) fetchVideoButton.disabled = false;
+            if(convertToMp3Button) convertToMp3Button.disabled = true;
+            hideStatus();
+            hideUserMessage();
+            console.log("Tool UI reset");
+        }
+        
+        if(stickyFetchButton && youtubeUrlInput && fetchVideoButton) {
+            stickyFetchButton.addEventListener('click', () => {
+                youtubeUrlInput.focus();
+                if (youtubeUrlInput.value.trim() !== '' && !fetchVideoButton.disabled) {
+                    fetchVideoButton.click();
+                }
+            });
+        }
+
+        // Dark Mode Toggle
+        if (darkModeToggle) {
+            const moonIcon = '<i class="fas fa-moon"></i>';
+            const sunIcon = '<i class="fas fa-sun"></i>';
+
+            const currentTheme = localStorage.getItem('darkModeYT'); // Use a unique key for this tool
+            if (currentTheme === 'enabled') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = sunIcon;
+            } else {
+                darkModeToggle.innerHTML = moonIcon;
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                let theme = 'disabled';
+                if (document.body.classList.contains('dark-mode')) {
+                    theme = 'enabled';
+                    darkModeToggle.innerHTML = sunIcon;
+                } else {
+                    darkModeToggle.innerHTML = moonIcon;
+                }
+                localStorage.setItem('darkModeYT', theme);
+            });
+        }
+
+
+        // Drag and Drop URL
+        if (urlDropArea && youtubeUrlInput) {
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                urlDropArea.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }, false);
+            });
+            urlDropArea.addEventListener('dragenter', () => urlDropArea.classList.add('dragover'));
+            urlDropArea.addEventListener('dragover', () => urlDropArea.classList.add('dragover')); 
+            urlDropArea.addEventListener('dragleave', (e) => {
+                if (e.target === urlDropArea) urlDropArea.classList.remove('dragover');
+            });
+            urlDropArea.addEventListener('drop', (e) => {
+                urlDropArea.classList.remove('dragover');
+                let url;
+                if (e.dataTransfer.types.includes('text/uri-list')) url = e.dataTransfer.getData('text/uri-list');
+                else if (e.dataTransfer.types.includes('text/plain')) url = e.dataTransfer.getData('text/plain');
+                
+                if (url) {
+                    youtubeUrlInput.value = url.trim();
+                    if(fetchVideoButton && !fetchVideoButton.disabled) fetchVideoButton.click();
+                } else {
+                    showUserMessage("Could not extract URL from dropped item.", "error");
+                }
+            });
+            urlDropArea.addEventListener('click', (e) => {
+                 if(e.target === urlDropArea || e.target.closest('.url-drop-area > svg, .url-drop-area > p')) {
+                     youtubeUrlInput.focus();
+                 }
+            });
+        }
+
+
+        // Fetch Video Info
+        if (fetchVideoButton && youtubeUrlInput) {
+            fetchVideoButton.addEventListener('click', async () => {
+                const url = youtubeUrlInput.value.trim();
+                if (!url) {
+                    showUserMessage("Please paste a YouTube URL.", "warning");
+                    return;
+                }
+                const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:\S+)?$/;
+                if (!youtubeRegex.test(url)) {
+                    showUserMessage("Invalid YouTube URL. Please use a valid video, shorts, or youtu.be link.", "error");
+                    return;
+                }
+
+                // Reset relevant UI parts before new fetch
+                if(metadataDisplay) metadataDisplay.style.display = 'none';
+                if(conversionOptions) conversionOptions.style.display = 'none';
+                if(downloadSection) downloadSection.style.display = 'none';
+                if(estimatedFileSizeP) estimatedFileSizeP.textContent = '';
+                hideStatus();
+                hideUserMessage();
+
+                showStatus("Fetching video info...", 20);
+                fetchVideoButton.disabled = true;
+                if(convertToMp3Button) convertToMp3Button.disabled = true;
+
+
+                await new Promise(resolve => setTimeout(resolve, 1500)); 
+                
+                const match = url.match(youtubeRegex);
+                const videoId = match ? match[1] : "dQw4w9WgXcQ"; 
+
+                const mockTitle = "Epic Nature Documentary Soundtrack";
+                const mockDurationSeconds = Math.floor(Math.random() * (7200 - 180 + 1)) + 180; // 3 mins to 2 hours
+
+                const mockData = {
+                    title: mockTitle,
+                    thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`, 
+                    duration: mockDurationSeconds, 
+                    author: "Discovery Channel HD" 
+                };
+                console.log("Mock metadata:", mockData);
+
+                if (metadataDisplay && videoThumbnail && videoTitle && videoDuration && conversionOptions) {
+                    videoThumbnail.src = mockData.thumbnailUrl;
+                    videoThumbnail.alt = mockData.title + " thumbnail";
+                    videoTitle.textContent = mockData.title;
+                    const totalSeconds = mockData.duration;
+                    const hours = Math.floor(totalSeconds / 3600);
+                    const minutes = Math.floor((totalSeconds % 3600) / 60);
+                    const seconds = totalSeconds % 60;
+                    
+                    let durationString = "";
+                    if (hours > 0) durationString += `${hours.toString().padStart(2, '0')}:`;
+                    durationString += `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    videoDuration.textContent = `Duration: ${durationString}`;
+                    
+                    metadataDisplay.style.display = 'flex';
+                    conversionOptions.style.display = 'block';
+                    hideStatus(); 
+
+                    if(endTimeInput) {
+                         endTimeInput.value = (hours > 0) 
+                            ? `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
+                            : `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+                         // For input type=time, if hours are 0, they might not display well unless explicitly formatted.
+                         // Simpler to just set value based on display. Reformat value for input:
+                         endTimeInput.value = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+                         endTimeInput.max = endTimeInput.value; 
+                    }
+                     if(startTimeInput) {
+                        startTimeInput.value = "00:00:00";
+                        if (endTimeInput) startTimeInput.max = endTimeInput.value;
+                     }
+
+                    calculateEstimatedSize();
+                    if(convertToMp3Button) convertToMp3Button.disabled = false;
+                } else {
+                    showUserMessage("Critical UI elements for metadata display are missing.", "error");
+                    hideStatus();
+                }
+                fetchVideoButton.disabled = false;
+            });
+        } else {
+            console.warn("Fetch video button or URL input not found.");
+        }
+
+
+        function calculateEstimatedSize() {
+            if (!estimatedFileSizeP || !audioQualitySelect || !videoDuration || !videoDuration.textContent) return;
+            
+            const durationText = videoDuration.textContent.replace('Duration: ', '');
+            if (!durationText.includes(':')) {
+                 if(estimatedFileSizeP) estimatedFileSizeP.textContent = '';
+                 return;
+            }
+
+            let totalOriginalSeconds = 0;
+            try { totalOriginalSeconds = timeToSeconds(durationText, true); }
+            catch(e) { if(estimatedFileSizeP) estimatedFileSizeP.textContent = ''; return; }
+
+
+            let effectiveSeconds = totalOriginalSeconds;
+            
+            if (startTimeInput && endTimeInput && startTimeInput.value && endTimeInput.value) {
+                try {
+                    const startSec = timeToSeconds(startTimeInput.value);
+                    const endSec = timeToSeconds(endTimeInput.value);
+
+                    if (endSec > startSec && endSec <= totalOriginalSeconds && startSec >= 0) {
+                        effectiveSeconds = endSec - startSec;
+                    } else if (endSec <= startSec && !(startSec === 0 && endTimeInput.value === startTimeInput.value)) { 
+                         estimatedFileSizeP.textContent = "Trim: End time must be after start time.";
+                         return;
+                    } else if (endSec > totalOriginalSeconds) {
+                        estimatedFileSizeP.textContent = "Trim: End time exceeds video duration.";
+                        return;
+                    }
+                } catch (e) { 
+                    estimatedFileSizeP.textContent = "Invalid trim time format.";
+                    return;
+                }
+            }
+
+            if (effectiveSeconds <= 0 && totalOriginalSeconds > 0) {
+                estimatedFileSizeP.textContent = ""; return;
+            }
+            if (totalOriginalSeconds === 0 && effectiveSeconds === 0 && durationText !== "00:00" && durationText !== "0:00" && durationText !== "00:00:00") { // check if duration was really zero
+                 estimatedFileSizeP.textContent = ""; return; // Duration not parsed yet
+            }
+
+
+            const qualityKbps = parseInt(audioQualitySelect.value);
+            const estimatedKB = (qualityKbps / 8) * effectiveSeconds;
+            const estimatedMB = estimatedKB / 1024;
+
+            if (estimatedMB < 0.01 && estimatedKB > 0) { // Very small files
+                 estimatedFileSizeP.textContent = `Estimated size: ~${estimatedKB.toFixed(1)} KB`;
+            } else if (estimatedMB < 1 && estimatedKB > 0) {
+                estimatedFileSizeP.textContent = `Estimated size: ~${Math.round(estimatedKB)} KB`;
+            } else if (estimatedMB >=1) {
+                estimatedFileSizeP.textContent = `Estimated size: ~${estimatedMB.toFixed(1)} MB`;
+            } else {
+                 estimatedFileSizeP.textContent = ""; 
+            }
+        }
+
+        function timeToSeconds(timeStr, isDuration = false) { 
+            const parts = timeStr.split(':').map(Number);
+            if (parts.some(isNaN)) throw new Error("Invalid time character");
+            if (isDuration) { // Duration string might not have hours
+                 if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+                 if (parts.length === 2) return parts[0] * 60 + parts[1];
+            } else { // Time input always HH:MM:SS
+                 if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+            }
+            throw new Error("Invalid time format for conversion to seconds");
+        }
+
+        if (audioQualitySelect) audioQualitySelect.addEventListener('change', calculateEstimatedSize);
+        if (startTimeInput) startTimeInput.addEventListener('input', calculateEstimatedSize);
+        if (endTimeInput) endTimeInput.addEventListener('input', calculateEstimatedSize);
+
+
+        if (convertToMp3Button) {
+            convertToMp3Button.addEventListener('click', async () => {
+                const url = youtubeUrlInput.value.trim();
+                if (!url || !metadataDisplay || metadataDisplay.style.display === 'none') {
+                    showUserMessage("Please fetch video info first by pasting a valid URL and clicking 'Fetch Video Info'.", "warning");
+                    return;
+                }
+
+                let trimStartSeconds = 0;
+                let trimEndSeconds = null; 
+                const originalDurationText = videoDuration.textContent.replace('Duration: ', '');
+                let originalTotalSeconds = 0;
+                try { originalTotalSeconds = timeToSeconds(originalDurationText, true); } 
+                catch(e) { showUserMessage("Could not parse video duration.", "error"); return; }
+
+                if (startTimeInput.value) {
+                    try { trimStartSeconds = timeToSeconds(startTimeInput.value); } 
+                    catch (e) { showUserMessage("Invalid start time format (HH:MM:SS).", "error"); return; }
+                }
+                if (endTimeInput.value) {
+                    try { trimEndSeconds = timeToSeconds(endTimeInput.value); } 
+                    catch (e) { showUserMessage("Invalid end time format (HH:MM:SS).", "error"); return; }
+                }
+
+                if (trimStartSeconds < 0) { showUserMessage("Start time cannot be negative.", "error"); return; }
+                if (trimEndSeconds !== null && trimEndSeconds <= trimStartSeconds) { showUserMessage("End time must be after start time.", "error"); return; }
+                if (trimEndSeconds !== null && trimEndSeconds > originalTotalSeconds) { showUserMessage("End time cannot exceed video duration.", "error"); return; }
+                if (trimStartSeconds >= originalTotalSeconds && originalTotalSeconds > 0) { showUserMessage("Start time cannot be at or beyond video duration.", "error"); return; }
+
+                const quality = audioQualitySelect.value;
+                const originalTitle = videoTitle.textContent || "youtube_audio";
+                const safeTitle = originalTitle.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_').substring(0, 100).trim() || "downloaded_audio";
+
+                showStatus("Preparing conversion...", 10);
+                convertToMp3Button.disabled = true;
+                if(downloadSection) downloadSection.style.display = 'none';
+                hideUserMessage();
+
+                console.log("Simulating conversion with params:", { url, quality, trimStartSeconds, trimEndSeconds, title: safeTitle });
+
+                let progress = 10;
+                const progressInterval = setInterval(() => {
+                    progress += Math.floor(Math.random() * 10) + 5; 
+                    if (progress >= 95) {
+                        progress = 95;
+                        clearInterval(progressInterval);
+                    }
+                    showStatus("Converting audio...", progress);
+                }, 300);
+
+                const effectiveDuration = trimEndSeconds !== null ? (trimEndSeconds - trimStartSeconds) : (originalTotalSeconds - trimStartSeconds);
+                const simulationTime = Math.max(2000, Math.min(8000, effectiveDuration * 10));
+
+                setTimeout(() => { 
+                    clearInterval(progressInterval);
+                    showStatus("Conversion complete!", 100);
+                    
+                    if(downloadSection && downloadMp3Link) {
+                        const dummyMp3Content = `Simulated MP3 for "${safeTitle}" at ${quality}kbps. Duration: ${effectiveDuration}s. Trim: ${trimStartSeconds}s to ${trimEndSeconds === null ? originalTotalSeconds : trimEndSeconds}s. OnePageTools.com`;
+                        const blob = new Blob([dummyMp3Content], { type: "audio/mpeg" });
+                        
+                        downloadMp3Link.href = URL.createObjectURL(blob);
+                        downloadMp3Link.download = `${safeTitle}_${quality}kbps.mp3`;
+                        downloadSection.style.display = 'block';
+                        showUserMessage("MP3 ready for download!", "success");
+
+                        downloadMp3Link.click(); 
+                        
+                        // It's good practice to revoke the object URL after some time
+                        setTimeout(() => {
+                             if (downloadMp3Link.href.startsWith('blob:')) {
+                                URL.revokeObjectURL(downloadMp3Link.href);
+                                console.log("Blob URL revoked:", downloadMp3Link.href);
+                             }
+                        }, 10000); // Revoke after 10 seconds 
+
+                        console.log("Simulated download initiated for:", downloadMp3Link.download);
+                    } else {
+                        showUserMessage("UI elements for download are missing.", "error");
+                    }
+                    
+                    convertToMp3Button.disabled = false;
+                    setTimeout(() => {
+                        hideStatus();
+                    }, 3000); 
+                }, simulationTime); 
+            });
+        }
+        
+        // Share buttons
+        const shareButtonsConf = {
+            shareWhatsapp: { base: `https://api.whatsapp.com/send?text=` },
+            shareFacebook: { base: `https://www.facebook.com/sharer/sharer.php?u=`},
+            shareTwitter: { base: `https://twitter.com/intent/tweet?url=`, textParam: `&text=` },
+            shareTelegram: { base: `https://t.me/share/url?url=`, textParam: `&text=` }
+        };
+
+        for (const id in shareButtonsConf) {
+            const button = document.getElementById(id);
+            if (button) {
+                button.addEventListener('click', () => {
+                    const pageUrl = window.location.href;
+                    const shareTitle = "Check out this awesome YouTube to MP3 Converter by OnePageTools!";
+                    let url = shareButtonsConf[id].base;
+                    if (id === 'shareFacebook') { 
+                        url += encodeURIComponent(pageUrl);
+                    } else if (id === 'shareWhatsapp') {
+                         url += encodeURIComponent(shareTitle + " " + pageUrl);
+                    }
+                    else { // Twitter, Telegram
+                        url += encodeURIComponent(pageUrl);
+                        if (shareButtonsConf[id].textParam) {
+                            url += shareButtonsConf[id].textParam + encodeURIComponent(shareTitle);
+                        }
+                    }
+                    window.open(url, '_blank', 'noopener,noreferrer,width=600,height=400');
+                });
+            }
+        }
+
+        resetTool(); 
+    }); 
+    </script>
+</body>
+</html>

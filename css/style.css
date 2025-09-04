@@ -1,0 +1,451 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(145deg, #e6fffa 0%, #a7f3d0 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+nav:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Tool Section */
+.toolsection {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: transparent;
+}
+
+/* Half Section */
+.half-section {
+  width: 80%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 50px;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.half-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.half-section:focus-within {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 4px;
+}
+
+/* Tool Heading */
+.toolheading {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 24px;
+  animation: fadeIn 1s ease-in;
+  letter-spacing: -0.5px;
+}
+
+/* Description */
+.description {
+  width: 85%;
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+  font-size: 1.15rem;
+  color: #4b5563;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Tool Box */
+.toolbox {
+  width: 70%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s ease;
+}
+
+.toolbox:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.toolbox:focus-within {
+  outline: 2px solid #2dd4bf;
+}
+
+/* Download Button */
+.downloadbutton {
+  background: linear-gradient(90deg, #2dd4bf, #34d399);
+  color: #ffffff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.downloadbutton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.downloadbutton:hover::after {
+  width: 200px;
+  height: 200px;
+}
+
+.downloadbutton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.downloadbutton:active {
+  transform: scale(0.95);
+}
+
+.downloadbutton:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.downloadbutton:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* Dropdown Menu */
+.mydrop {
+  width: 100% !important;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.4s ease;
+}
+
+.mydrop ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.mydrop ul li a {
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: #f1f5f9;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.mydrop ul li a:hover {
+  background: #2dd4bf;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.mydrop ul li a:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* Tool List */
+.toollist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 5%;
+  margin-top: 30px;
+}
+
+/* Single Tool */
+.singletools {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.singletools:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.singletools:focus-within {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 4px;
+}
+
+.singletools a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.singletools a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.singletools a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.singletools a img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.singletools a:hover img {
+  transform: scale(1.15);
+}
+
+.singletools a h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 18px 0 12px;
+  line-height: 1.4;
+}
+
+.singletools a p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Image Box */
+.imgbox {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Features Section */
+#features {
+  padding: 100px 30px;
+  background: #ffffff;
+  margin-top: 0;
+}
+
+#features h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in;
+}
+
+#features .relative {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features .relative:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+#features .relative:focus-within {
+  outline: 2px solid #2dd4bf;
+}
+
+/* Animation Keyframes */
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.myanime {
+  animation: animate 5s alternate infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility Enhancements */
+:focus {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 1068px) {
+  .toollist {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 710px) {
+  .toolsection {
+    gap: 25px;
+    padding: 20px;
+  }
+  .half-section {
+    width: 95%;
+    padding: 30px;
+  }
+  .toolbox {
+    width: 95%;
+    padding: 25px;
+  }
+  .description {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .herobutton {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+  }
+  .herobutton a {
+    width: 85%;
+    text-align: center;
+    padding: 12px;
+  }
+  #features {
+    padding: 50px 15px;
+  }
+  .toolheading {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+}
+
+@media (max-width: 567px) {
+  .mydrop {
+    padding: 15px;
+  }
+  #dropdownNavbar {
+    transform: translate3d(0px, 80px, 0px) !important;
+  }
+  .half-section {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .toolbox {
+    width: 100%;
+    gap: 8px;
+    padding: 20px;
+  }
+  .mydrop ul li a {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  .MYIMG {
+    width: 100% !important;
+  }
+  .singletools {
+    padding: 20px;
+  }
+  .singletools a h2 {
+    font-size: 1.2rem;
+  }
+  .singletools a p {
+    font-size: 0.9rem;
+  }
+}

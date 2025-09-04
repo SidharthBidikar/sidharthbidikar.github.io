@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to TEXT Converter Online - Free Tool to Extract Text from PDFs</title>
+  <meta name="description" content="Convert PDF to TEXT online for free with our advanced PDF to TEXT converter. Extract text from PDFs for editing, searching, or data processing with customizable options.">
+  <meta name="keywords" content="PDF to TEXT converter, convert PDF to TEXT online, free PDF to TEXT tool, PDF to TEXT extractor, PDF to TEXT free, PDF text extraction">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PDF Converter Team">
+  <meta property="og:title" content="PDF to TEXT Converter Online - Free Tool">
+  <meta property="og:description" content="Easily extract text from PDF files with our free online tool. Customize page ranges, text format, and download as text files or ZIP archives.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PDF+to+TEXT+Converter">
+  <meta property="og:url" content="https://onepagetools.com/pdftotext.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .fade-in { animation: fadeIn 0.5s ease-out; }
+    .scale-in { animation: scaleIn 0.3s ease-out; }
+    .hover-scale { transition: transform 0.2s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .progress-bar { background: linear-gradient(to right, #4f46e5, #7c3aed); }
+    .drop-zone { transition: all 0.3s ease; }
+    .drop-zone.dragover { border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.1); }
+    .btn { transition: all 0.3s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .article-section { max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+    .article-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .article-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .article-section p { margin-bottom: 1rem; line-height: 1.6; }
+    .article-section ul, .article-section ol { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    .article-section ol { list-style-type: decimal; }
+    .preview-text { white-space: pre-wrap; background: #f9fafb; padding: 1rem; border-radius: 8px; max-height: 300px; overflow-y: auto; }
+    .gradient-bg { background: linear-gradient(135deg, #f3f4f6, #e0e7ff); }
+  </style>
+</head>
+<body class="gradient-bg">
+  <!-- Navigation -->
+  <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://onepagetools.com/" class="flex items-center space-x-3">
+        <img src="One_Page-removebg-preview.png" alt="PDF Converter Logo" style="height: 60px" />
+      </a>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li><a href="./index.html" class="block py-2 px-3 text-black rounded md:bg-transparent md:p-0">Home</a></li>
+          <li><a href="./about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a></li>
+          <li><a href="./contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+              ALL PDF TOOLS
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                <li><a href="./imageresizer.html" class="block px-4 py-2 hover:bg-gray-100">Image Resizer</a></li>
+                <li><a href="./imagecompression.html" class="block px-4 py-2 hover:bg-gray-100">Image Compressor</a></li>
+                <li><a href="./pdftocsv.html" class="block px-4 py-2 hover:bg-gray-100">PDF to CSV</a></li>
+                <li><a href="./pdftoexcel.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Excel</a></li>
+                <li><a href="./pdftohtml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to HTML</a></li>
+                <li><a href="./pdftojpg.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JPG</a></li>
+                <li><a href="./pdftojson.html" class="block px-4 py-2 hover:bg-gray-100">PDF to JSON</a></li>
+                <li><a href="./pdftopng.html" class="block px-4 py-2 hover:bg-gray-100">PDF to PNG</a></li>
+                <li><a href="./pdftoword.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Word</a></li>
+                <li><a href="./pdftoxml.html" class="block px-4 py-2 hover:bg-gray-100">PDF to XML</a></li>
+                <li><a href="./pdftozip.html" class="block px-4 py-2 hover:bg-gray-100">PDF to ZIP</a></li>
+                <li><a href="./pdftowebp.html" class="block px-4 py-2 hover:bg-gray-100">PDF to WEBP</a></li>
+                <li><a href="./pdftotext.html" class="block px-4 py-2 hover:bg-gray-100">PDF to Text</a></li>
+                <li><a href="./csvto.html" class="block px-4 py-2 hover:bg-gray-100">CSV to PDF</a></li>
+                <li><a href="./excelto.html" class="block px-4 py-2 hover:bg-gray-100">Excel to PDF</a></li>
+                <li><a href="./htmlto.html" class="block px-4 py-2 hover:bg-gray-100">HTML to PDF</a></li>
+                <li><a href="./jpgto.html" class="block px-4 py-2 hover:bg-gray-100">JPG to PDF</a></li>
+                <li><a href="./jsonto.html" class="block px-4 py-2 hover:bg-gray-100">JSON to PDF</a></li>
+                <li><a href="./pngto.html" class="block px-4 py-2 hover:bg-gray-100">PNG to PDF</a></li>
+                <li><a href="./speechto.html" class="block px-4 py-2 hover:bg-gray-100">Speech to PDF</a></li>
+                <li><a href="./textto.html" class="block px-4 py-2 hover:bg-gray-100">Text to PDF</a></li>
+                <li><a href="./webpto.html" class="block px-4 py-2 hover:bg-gray-100">WEBP to PDF</a></li>
+                <li><a href="./xmlto.html" class="block px-4 py-2 hover:bg-gray-100">XML to PDF</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-20">
+    <div class="container max-w-4xl p-6 bg-white rounded-lg shadow-lg fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4 text-center">PDF to TEXT Converter</h1>
+      <p class="text-center text-gray-500 mb-6">Extract text from PDF files for editing, searching, or data processing, with customizable page ranges and output formats, all in a user-friendly interface.</p>
+
+      <!-- File Upload Section -->
+      <div class="drop-zone border-4 border-dashed border-gray-200 rounded-xl p-12 text-center mb-8 transition-colors duration-300 hover:border-blue-400" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+        <label for="pdfFiles" class="inline-block w-full py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full cursor-pointer hover:bg-indigo-700 btn hover-scale">
+          Choose PDFs
+        </label>
+        <input type="file" id="pdfFiles" accept="application/pdf" multiple class="hidden" onchange="previewFiles()">
+        <p class="text-gray-500 mt-2">or drag and drop PDF files here (supports multiple files, max 25MB each)</p>
+      </div>
+
+      <!-- Conversion Settings -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Conversion Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Page Range (e.g., 1-3, 5)</label>
+              <input type="text" id="pageRange" class="w-full p-2 border rounded-lg" placeholder="All pages">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Output Format</label>
+              <select id="outputFormat" class="w-full p-2 border rounded-lg">
+                <option value="plain">Plain Text</option>
+                <option value="structured">Structured with Line Breaks</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold mb-3">Output Options</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="previewText">
+              <label class="text-gray-600">Preview Text Before Download</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="downloadZip">
+              <label class="text-gray-600">Download as ZIP Archive</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="previewContainer" class="mb-6"></div>
+      <div id="textPreview" class="hidden preview-text bg-gray-50 p-4 rounded-lg mb-6"></div>
+
+      <!-- Progress Bar -->
+      <div id="progressBar" class="hidden bg-gray-200 rounded-full h-2.5 mb-4">
+        <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-300 progress-bar" style="width: 0%"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button onclick="convertPDFs()" class="py-3 px-5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 btn hover-scale" id="convertButton" disabled>
+          Convert to TEXT
+        </button>
+        <a id="downloadZipButton" href="#" download class="hidden py-3 px-5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 btn hover-scale">
+          Download ZIP
+        </a>
+        <button onclick="resetAll()" class="py-3 px-5 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 btn hover-scale">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO-Friendly Article -->
+  <div class="article-section">
+    <h2>Ultimate Guide to Using a PDF to TEXT Converter Online</h2>
+    <p>PDF files are widely used for sharing documents, but extracting their text for editing, searching, or data processing can be challenging. A <strong>PDF to TEXT converter</strong> extracts text from PDFs into plain or structured text formats, simplifying content manipulation. Our <a href="#pdfFiles">free PDF to TEXT tool</a> offers a fast, user-friendly solution to <strong>convert PDF to TEXT online</strong>. This comprehensive guide explores the benefits of using a <strong>PDF to TEXT converter online</strong>, how to use it effectively, and tips to optimize your text extraction for various purposes.</p>
+
+    <h3>Why Use a PDF to TEXT Converter?</h3>
+    <p>Extracting text from PDFs provides numerous advantages for professionals, students, and data analysts. Here’s why you should use a <strong>free PDF to TEXT tool</strong>:</p>
+    <ul>
+      <li><strong>Editable Content</strong>: Convert PDFs to text for easy editing in text editors or word processors.</li>
+      <li><strong>Searchable Data</strong>: Make PDF content searchable for quick reference or analysis.</li>
+      <li><strong>Batch Processing</strong>: Extract text from multiple PDFs simultaneously, saving time for large projects.</li>
+      <li><strong>No Software Installation</strong>: Our <strong>PDF to TEXT converter online</strong> works in your browser, requiring no downloads.</li>
+      <li><strong>Data Extraction</strong>: Pull text for data processing, scripting, or database integration.</li>
+      <li><strong>Versatile Use Cases</strong>: Ideal for research, archiving, or repurposing content.</li>
+    </ul>
+    <p>By using our <strong>PDF to TEXT converter</strong>, you can streamline text extraction for any use case.</p>
+
+    <h3>How to Use Our Free PDF to TEXT Converter</h3>
+    <p>Our <strong>PDF to TEXT tool</strong> is designed for simplicity and flexibility. Follow these steps to <strong>convert PDF to TEXT online</strong>:</p>
+    <ol>
+      <li><strong>Upload PDFs</strong>: Click “Choose PDFs” or drag and drop files into the upload area. Supports multiple PDFs, each up to 25MB.</li>
+      <li><strong>Configure Settings</strong>: Specify page ranges and output format (plain text or structured with line breaks).</li>
+      <li><strong>Preview Text</strong>: Enable the preview option to review extracted text before downloading.</li>
+      <li><strong>Convert and Download</strong>: Click “Convert to TEXT” to process the files. Download individual text files or a ZIP archive.</li>
+      <li><strong>Reset as Needed</strong>: Use the “Reset” button to clear inputs and start over.</li>
+    </ol>
+    <p>With these steps, you can <strong>convert PDF to TEXT free</strong> in minutes, making our tool a top choice for <strong>PDF to TEXT extraction</strong>.</p>
+
+    <h3>Who Benefits from a PDF to TEXT Converter?</h3>
+    <p>Our <strong>PDF to TEXT converter online</strong> serves a wide range of users:</p>
+    <ul>
+      <li><strong>Researchers</strong>: Extract text from academic papers or reports for analysis or summarization.</li>
+      <li><strong>Students</strong>: Convert study materials to text for note-taking or quoting.</li>
+      <li><strong>Data Analysts</strong>: Pull text from PDFs for data processing or scripting.</li>
+      <li><strong>Business Professionals</strong>: Extract contract details, invoices, or reports for editing or archiving.</li>
+      <li><strong>Writers</strong>: Repurpose PDF content for articles, blogs, or documentation.</li>
+      <li><strong>Archivists</strong>: Convert scanned documents to searchable text for digital libraries.</li>
+    </ul>
+    <p>Our <strong>free PDF to TEXT tool</strong> simplifies text extraction for all users, regardless of technical expertise.</p>
+
+    <h3>Key Features of Our PDF to TEXT Converter</h3>
+    <p>Our <strong>PDF to TEXT converter online</strong> offers robust features to meet diverse needs:</p>
+    <ul>
+      <li><strong>Batch Conversion</strong>: Process multiple PDFs at once and download as individual files or a ZIP archive.</li>
+      <li><strong>Customizable Output</strong>: Choose plain text or structured format and specify page ranges.</li>
+      <li><strong>Text Preview</strong>: Review extracted text before downloading to ensure accuracy.</li>
+      <li><strong>Drag-and-Drop Interface</strong>: Streamline uploads with an intuitive design.</li>
+      <li><strong>ZIP Download Option</strong>: Bundle multiple text files into a single archive for convenience.</li>
+      <li><strong>Multilingual Support</strong>: Extract text in various languages with UTF-8 encoding.</li>
+      <li><strong>Secure Processing</strong>: Files are processed in the browser for data privacy.</li>
+    </ul>
+    <p>These features make our tool ideal for anyone looking to <strong>convert PDF to TEXT online</strong> efficiently.</p>
+
+    <h3>Tips for Optimizing PDF to TEXT Conversion</h3>
+    <p>To maximize the effectiveness of our <strong>PDF to TEXT converter</strong>, consider these tips:</p>
+    <ul>
+      <li><strong>Choose Output Format</strong>: Use structured format for documents with clear sections or plain text for raw data.</li>
+      <li><strong>Specify Page Ranges</strong>: Focus on relevant pages to reduce processing time and output size.</li>
+      <li><strong>Preview Text</strong>: Verify extracted text to ensure all content is captured accurately.</li>
+      <li><strong>Use ZIP for Bulk Downloads</strong>: Download multiple text files as a ZIP for easier management.</li>
+      <li><strong>Check PDF Quality</strong>: Use high-quality PDFs to improve text extraction accuracy.</li>
+      <li><strong>Combine with Other Tools</strong>: Use our <a href="./pdftoword.html">PDF to Word</a> converter for formatted outputs.</li>
+    </ul>
+
+    <h3>Why TEXT is Ideal for PDF Extraction</h3>
+    <p>Plain text is a universal format for extracted content. Here’s why it’s ideal for PDF conversion:</p>
+    <ul>
+      <li><strong>Universal Compatibility</strong>: Text files can be opened on any device or platform.</li>
+      <li><strong>Small File Size</strong>: Text files are lightweight, making them easy to store and share.</li>
+      <li><strong>Editable Format</strong>: Easily edit text in any text editor or word processor.</li>
+      <li><strong>Searchable Content</strong>: Text is fully searchable, ideal for research or analysis.</li>
+      <li><strong>Data Processing</strong>: Text can be parsed or scripted for automation or integration.</li>
+    </ul>
+    <p>Our <strong>PDF to TEXT converter online</strong> leverages text’s strengths to deliver flexible, usable outputs.</p>
+
+    <h3>Comparing PDF to TEXT Converters</h3>
+    <p>Not all <strong>PDF to TEXT converters</strong> offer the same functionality. Here’s how our tool stands out:</p>
+    <ul>
+      <li><strong>Free Access</strong>: No subscriptions or hidden fees, unlike some premium tools.</li>
+      <li><strong>Browser-Based</strong>: No software installation required, unlike desktop applications.</li>
+      <li><strong>Batch Processing</strong>: Extract text from multiple PDFs at once, a feature not always available in free tools.</li>
+      <li><strong>Customizable Output</strong>: Options for format, page ranges, and ZIP downloads provide flexibility.</li>
+      <li><strong>User-Friendly Interface</strong>: Intuitive design with drag-and-drop, previews, and bulk downloads.</li>
+      <li><strong>Secure Processing</strong>: Local browser processing ensures data privacy.</li>
+    </ul>
+    <p>Our <strong>free PDF to TEXT tool</strong> offers a balance of functionality, ease of use, and performance, making it ideal for all users.</p>
+
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <p>Here are answers to common questions about using a <strong>PDF to TEXT converter online</strong>:</p>
+    <h4>1. Is the PDF to TEXT converter free?</h4>
+    <p>Yes, our <strong>PDF to TEXT free</strong> tool has no subscriptions or hidden costs.</p>
+    <h4>2. Can I extract text from multiple PDFs?</h4>
+    <p>Absolutely! Upload multiple PDFs and extract text in one go.</p>
+    <h4>3. Does text extraction preserve formatting?</h4>
+    <p>Our tool offers plain text or structured formats, but complex layouts may not be fully preserved.</p>
+    <h4>4. Can I extract specific pages?</h4>
+    <p>Yes, specify page ranges to extract only the content you need.</p>
+    <h4>5. Is my data secure?</h4>
+    <p>All processing is done in your browser, ensuring your files remain private.</p>
+    <h4>6. What if I need a different format?</h4>
+    <p>Try our <a href="./pdftoword.html">PDF to Word</a> or <a href="./pdftojson.html">PDF to JSON</a> converters for alternative outputs.</p>
+
+    <h3>Advanced Use Cases for PDF to TEXT Conversion</h3>
+    <p>Our <strong>PDF to TEXT converter</strong> supports a variety of advanced scenarios:</p>
+    <ul>
+      <li><strong>Data Analysis</strong>: Extract text for scripting, parsing, or database integration.</li>
+      <li><strong>Content Repurposing</strong>: Convert PDF articles or reports to text for blogs or documentation.</li>
+      <li><strong>Archiving</strong>: Create searchable text archives from scanned documents.</li>
+      <li><strong>Research</strong>: Pull text from academic papers for summarization or citation.</li>
+      <li><strong>Automation</strong>: Extract text for automated workflows or text processing pipelines.</li>
+    </ul>
+
+    <h3>How PDF to TEXT Conversion Enhances Productivity</h3>
+    <p>Productivity is a priority for professionals handling documents. Our <strong>PDF to TEXT converter online</strong> boosts efficiency by:</p>
+    <ul>
+      <li>Automating text extraction for multiple PDFs.</li>
+      <li>Enabling batch processing for high-volume tasks.</li>
+      <li>Providing customizable outputs for specific needs.</li>
+      <li>Offering previews to ensure accuracy before downloading.</li>
+      <li>Supporting ZIP downloads for bulk text management.</li>
+    </ul>
+    <p>With our tool, you can focus on text utilization rather than extraction.</p>
+
+    <h3>Best Practices for PDF to TEXT Conversion</h3>
+    <p>To achieve optimal results, follow these best practices:</p>
+    <ul>
+      <li><strong>Ensure Clear PDFs</strong>: Use high-quality PDFs with readable text for better extraction accuracy.</li>
+      <li><strong>Validate Text</strong>: Use the preview feature to check extracted text before downloading.</li>
+      <li><strong>Choose Format</strong>: Select structured format for documents with clear sections or plain text for raw data.</li>
+      <li><strong>Specify Pages</strong>: Extract only necessary pages to reduce output size.</li>
+      <li><strong>Test Outputs</strong>: Verify text files for completeness and readability.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>Extracting text from PDFs doesn’t have to be a complex task. With our <strong>PDF to TEXT converter online</strong>, you can <strong>convert PDF to TEXT free</strong>, customize your output, and create editable, searchable text files for any purpose. Whether you’re a researcher, student, or professional, our <strong>free PDF to TEXT tool</strong> offers the features and flexibility you need. Try it now and simplify your text extraction!</p>
+    <p><a href="https://onepagetools.com/pdftotext.html" class="text-indigo-600 hover:underline">Start converting your PDFs to TEXT today</a> and streamline your document workflow.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    let files = [];
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.currentTarget.classList.add('dragover');
+    }
+
+    function handleDragLeave(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      e.currentTarget.classList.remove('dragover');
+      const uploadedFiles = e.dataTransfer.files;
+      if (uploadedFiles.length) {
+        document.getElementById('pdfFiles').files = uploadedFiles;
+        previewFiles();
+      }
+    }
+
+    function previewFiles() {
+      const fileInput = document.getElementById('pdfFiles');
+      const previewContainer = document.getElementById('previewContainer');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      files = [];
+      previewContainer.innerHTML = '';
+      downloadZipButton.classList.add('hidden');
+
+      if (fileInput.files.length) {
+        Array.from(fileInput.files).forEach((file, index) => {
+          if (file.type !== 'application/pdf') {
+            Swal.fire('Invalid File', `${file.name} is not a PDF file.`, 'error');
+            return;
+          }
+          if (file.size > 25 * 1024 * 1024) {
+            Swal.fire('File Too Large', `${file.name} exceeds 25MB.`, 'error');
+            return;
+          }
+          const fileData = {
+            file,
+            name: file.name,
+            id: `file-${index}`,
+            status: 'Pending',
+            text: []
+          };
+          files.push(fileData);
+          renderPreview(fileData);
+        });
+      }
+      document.getElementById('convertButton').disabled = files.length === 0;
+    }
+
+    function renderPreview(fileData) {
+      const previewContainer = document.getElementById('previewContainer');
+      const div = document.createElement('div');
+      div.className = 'flex justify-between items-center bg-gray-50 p-4 rounded-lg mb-2 scale-in';
+      div.innerHTML = `
+        <p class="text-gray-600">${fileData.name} (${(fileData.file.size / 1024 / 1024).toFixed(2)}MB)</p>
+        <div class="flex items-center gap-2">
+          <p id="${fileData.id}-status" class="text-gray-500">${fileData.status}</p>
+        </div>
+      `;
+      previewContainer.appendChild(div);
+    }
+
+    async function convertPDFs() {
+      if (!files.length) {
+        Swal.fire('No Files', 'Please upload at least one PDF file.', 'error');
+        return;
+      }
+
+      const progressBar = document.getElementById('progressBar');
+      const progressFill = progressBar.querySelector('div');
+      const downloadZipButton = document.getElementById('downloadZipButton');
+      const pageRange = document.getElementById('pageRange').value;
+      const outputFormat = document.getElementById('outputFormat').value;
+      const previewText = document.getElementById('previewText').checked;
+      const downloadZip = document.getElementById('downloadZip').checked;
+      const zip = new JSZip();
+      let progress = 0;
+      let hasValidOutputs = false;
+      progressBar.classList.remove('hidden');
+      progressFill.style.width = '0%';
+
+      function updateProgress() {
+        progress += 100 / files.length / 10;
+        progressFill.style.width = `${Math.min(progress, 100)}%`;
+        if (progress < 100) {
+          requestAnimationFrame(updateProgress);
+        }
+      }
+
+      requestAnimationFrame(updateProgress);
+
+      for (let i = 0; i < files.length; i++) {
+        const fileData = files[i];
+        try {
+          document.getElementById(`${fileData.id}-status`).textContent = 'Processing...';
+          const fileReader = new FileReader();
+          fileReader.onload = async function () {
+            const typedarray = new Uint8Array(this.result);
+            const pdfDoc = await pdfjsLib.getDocument(typedarray).promise;
+            const totalPages = pdfDoc.numPages;
+            const pagesToProcess = pageRange ? parsePageRange(pageRange, totalPages) : Array.from({ length: totalPages }, (_, i) => i + 1);
+            fileData.text = [];
+
+            const textPreview = document.getElementById('textPreview');
+            if (previewText && i === 0) {
+              textPreview.innerHTML = '';
+              textPreview.classList.remove('hidden');
+            }
+
+            let combinedText = '';
+            for (const pageNum of pagesToProcess) {
+              const page = await pdfDoc.getPage(pageNum);
+              const textItems = (await page.getTextContent()).items;
+              let pageText = '';
+              textItems.forEach((item) => {
+                pageText += item.str + (outputFormat === 'structured' ? ' ' : '');
+              });
+              if (outputFormat === 'structured') {
+                pageText = `Page ${pageNum}:\n${pageText}\n\n`;
+              }
+              combinedText += pageText;
+              fileData.text.push({ page: pageNum, content: pageText });
+
+              if (previewText && i === 0) {
+                const previewDiv = document.createElement('div');
+                previewDiv.textContent = pageText.slice(0, 200) + (pageText.length > 200 ? '...' : '');
+                textPreview.appendChild(previewDiv);
+              }
+            }
+
+            const fileName = `${fileData.name.replace('.pdf', '')}.txt`;
+            const blob = new Blob([combinedText], { type: 'text/plain;charset=utf-8' });
+            fileData.text.push({ name: fileName, blob });
+
+            if (downloadZip) {
+              zip.file(fileName, blob);
+            } else {
+              const link = document.createElement('a');
+              link.href = URL.createObjectURL(blob);
+              link.download = fileName;
+              link.click();
+            }
+
+            const statusDiv = document.getElementById(`${fileData.id}-status`).parentElement;
+            statusDiv.innerHTML = `<p id="${fileData.id}-status" class="text-gray-500">Converted</p>`;
+            fileData.text.forEach(({ name, blob }) => {
+              if (name) {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = name;
+                link.className = 'text-blue-600 hover:underline';
+                link.textContent = name;
+                statusDiv.appendChild(link);
+                statusDiv.appendChild(document.createTextNode(' '));
+              }
+            });
+
+            document.getElementById(`${fileData.id}-status`).textContent = 'Converted';
+            hasValidOutputs = true;
+
+            if (i === files.length - 1 && hasValidOutputs && downloadZip) {
+              const zipBlob = await zip.generateAsync({ type: 'blob' });
+              downloadZipButton.href = URL.createObjectURL(zipBlob);
+              downloadZipButton.download = 'text_files.zip';
+              downloadZipButton.classList.remove('hidden');
+              Swal.fire('Success!', 'All files converted successfully.', 'success');
+            } else if (i === files.length - 1 && hasValidOutputs) {
+              Swal.fire('Success!', 'All files converted successfully.', 'success');
+            }
+          };
+          fileReader.readAsArrayBuffer(fileData.file);
+        } catch (error) {
+          console.error(`Error processing ${fileData.name}:`, error);
+          document.getElementById(`${fileData.id}-status`).textContent = 'Error';
+          Swal.fire('Error', `Failed to process ${fileData.name}.`, 'error');
+        }
+      }
+
+      progressBar.classList.add('hidden');
+      progressFill.style.width = '0%';
+    }
+
+    function parsePageRange(range, totalPages) {
+      const pages = new Set();
+      const parts = range.split(',');
+      for (const part of parts) {
+        if (part.includes('-')) {
+          const [start, end] = part.split('-').map(Number);
+          for (let i = Math.max(1, start); i <= Math.min(totalPages, end); i++) {
+            pages.add(i);
+          }
+        } else {
+          const page = Number(part);
+          if (page >= 1 && page <= totalPages) {
+            pages.add(page);
+          }
+        }
+      }
+      return Array.from(pages).sort((a, b) => a - b);
+    }
+
+    function resetAll() {
+      files = [];
+      document.getElementById('previewContainer').innerHTML = '';
+      document.getElementById('pdfFiles').value = '';
+      document.getElementById('pageRange').value = '';
+      document.getElementById('outputFormat').value = 'plain';
+      document.getElementById('previewText').checked = false;
+      document.getElementById('downloadZip').checked = false;
+      document.getElementById('textPreview').innerHTML = '';
+      document.getElementById('textPreview').classList.add('hidden');
+      document.getElementById('downloadZipButton').classList.add('hidden');
+      document.getElementById('progressBar').classList.add('hidden');
+      document.getElementById('convertButton').disabled = true;
+    }
+  </script>
+</body>
+</html>

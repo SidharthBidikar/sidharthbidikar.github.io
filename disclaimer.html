@@ -1,0 +1,276 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XBFN03XMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XBFN03XMN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - NeuroTools</title>
+    <meta name="description" content="Read the disclaimer for NeuroTools.com to understand the terms of use, limitations, and responsibilities when using our free online tools, including the Image Resizer.">
+    <meta name="keywords" content="disclaimer, neurotools disclaimer, online tools disclaimer, image resizer disclaimer, terms of use">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NeuroTools Team">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animated-entry { animation: fadeIn 0.5s ease-out; }
+        .nav-transition { transition: all 0.3s ease; }
+        .nav-link:hover { color: #4F46E5; transform: translateY(-2px); }
+        .disclaimer-section { max-width: 800px; margin: 0 auto; }
+        .disclaimer-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .disclaimer-section h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
+        .disclaimer-section p { margin-bottom: 1rem; line-height: 1.6; }
+        .disclaimer-section ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 animated-entry">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="./index.html" class="flex-shrink-0">
+                        <img class="h-12 w-auto" src="https://via.placeholder.com/60?text=Logo" alt="NeuroTools Logo">
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="./index.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Home</a>
+                        <a href="./about.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">About</a>
+                        <a href="./contact.html" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium nav-transition">Contact</a>
+                        <!-- Dropdown for Tools -->
+                        <div class="relative">
+                            <button id="toolsDropdown" class="nav-link text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium flex items-center nav-transition" aria-expanded="false" aria-haspopup="true">
+                                Tools
+                                <i class="fas fa-chevron-down ml-2"></i>
+                            </button>
+                            <div id="toolsDropdownMenu" class="absolute hidden mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="toolsDropdown">
+                                    <a href="./imageresizer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                                    <a href="./imagecompressor.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                                    <a href="./jpgtopng.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                                    <a href="./pngtojpg.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobileMenuButton" type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="./index.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">Home</a>
+                <a href="./about.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">About</a>
+                <a href="./contact.html" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium nav-transition">Contact</a>
+                <!-- Mobile Dropdown for Tools -->
+                <div>
+                    <button id="mobileToolsDropdown" class="nav-link text-gray-900 hover:bg-gray-100 hover:text-blue-500 flex items-center w-full px-3 py-2 rounded-md text-base font-medium nav-transition">
+                        Tools
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div id="mobileToolsDropdownMenu" class="hidden pl-4 space-y-1">
+                        <a href="./imageresizer.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Resizer</a>
+                        <a href="./imagecompressor.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">Image Compressor</a>
+                        <a href="./jpgtopng.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">JPG to PNG</a>
+                        <a href="./pngtojpg.html" class="block px-3 py-2 text-base text-gray-700 hover:bg-gray-100" role="menuitem">PNG to JPG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-20">
+        <div class="disclaimer-section bg-white rounded-xl shadow-lg p-8 animated-entry">
+            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Disclaimer</h1>
+            <p class="text-gray-600 mb-6">Last Updated: May 20, 2025</p>
+
+            <h2>General Information</h2>
+            <p>The information and tools provided on NeuroTools.com ("we," "us," or "our") are intended for general use and informational purposes only. Our website offers free online tools, including the Image Resizer, Image Compressor, and format conversion tools, which are provided "as is" without any warranties or guarantees. By using our website and tools, you agree to the terms outlined in this Disclaimer.</p>
+
+            <h3>1. No Warranty</h3>
+            <p>We strive to ensure that our tools function as intended, but we do not guarantee their accuracy, reliability, or suitability for any specific purpose. The tools are provided on an "as is" and "as available" basis without any express or implied warranties, including but not limited to:</p>
+            <ul>
+                <li>Warranties of merchantability or fitness for a particular purpose.</li>
+                <li>Guarantees that the tools will be error-free, uninterrupted, or free from viruses or other harmful components.</li>
+                <li>Assurances that the results of using our tools will meet your expectations or requirements.</li>
+            </ul>
+            <p>You use our tools at your own risk, and we are not responsible for any issues arising from their use.</p>
+
+            <h3>2. Limitation of Liability</h3>
+            <p>To the fullest extent permitted by law, NeuroTools.com, its affiliates, and its team members shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from or in connection with:</p>
+            <ul>
+                <li>Your use of or inability to use our website or tools.</li>
+                <li>Errors, interruptions, or inaccuracies in the tools’ functionality.</li>
+                <li>Loss of data, including images processed through our tools.</li>
+                <li>Any other issues related to the performance or availability of our website.</li>
+            </ul>
+            <p>Since our tools operate client-side (processing images in your browser), we do not store or access your images, and any loss or corruption of data is your responsibility.</p>
+
+            <h3>3. Client-Side Processing</h3>
+            <p>Our tools, such as the Image Resizer and Image Compressor, process images entirely within your browser. No image data is transmitted to or stored on our servers. As a result:</p>
+            <ul>
+                <li>You are responsible for ensuring that your device and browser are secure and capable of handling the processing requirements of our tools.</li>
+                <li>We are not liable for any data loss, corruption, or security issues that occur on your device during or after using our tools.</li>
+                <li>You should back up important images before processing them with our tools.</li>
+            </ul>
+
+            <h3>4. External Links</h3>
+            <p>Our website may contain links to third-party websites or services (e.g., analytics providers or content delivery networks). These external sites are not under our control, and we are not responsible for their content, functionality, or privacy practices. Accessing these links is at your own risk, and we encourage you to review the terms and policies of any third-party sites.</p>
+
+            <h3>5. Accuracy of Information</h3>
+            <p>We make reasonable efforts to ensure the accuracy of the information provided on our website, including tutorials, guides, and tool descriptions. However, we do not guarantee that all content is accurate, complete, or up-to-date. You should verify any information before relying on it for critical purposes. We are not liable for any losses or damages resulting from errors or omissions in our content.</p>
+
+            <h3>6. User Responsibility</h3>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Ensuring that your use of our tools complies with applicable laws and regulations.</li>
+                <li>Verifying that the output of our tools (e.g., resized or compressed images) meets your needs before use in professional or commercial contexts.</li>
+                <li>Maintaining the security and integrity of your device and data while using our tools.</li>
+            </ul>
+            <p>We are not responsible for any misuse of our tools or for the consequences of using processed images in ways that violate laws, intellectual property rights, or other regulations.</p>
+
+            <h3>7. Changes to This Disclaimer</h3>
+            <p>We may update this Disclaimer to reflect changes in our practices or legal requirements. Updates will be posted on this page with a revised "Last Updated" date. We encourage you to review this Disclaimer periodically to stay informed.</p>
+
+            <h3>8. Contact Us</h3>
+            <p>If you have questions or concerns about this Disclaimer or our tools, please contact us:</p>
+            <ul>
+                <li><strong>Email</strong>: <a href="mailto:fast.deals017@gmaol.com" class="text-blue-500 hover:underline">fast.deals017@gmaol.com</a></li>
+                <li><strong>Website</strong>: <a href="./contact.html" class="text-blue-500 hover:underline">Contact Form</a></li>
+            </ul>
+            <p>We aim to respond to all inquiries within 7 business days.</p>
+        </div>
+    </div>
+
+    <script>
+        // Header Navigation
+        function initNavigation() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const toolsDropdown = document.getElementById('toolsDropdown');
+            const toolsDropdownMenu = document.getElementById('toolsDropdownMenu');
+            const mobileToolsDropdown = document.getElementById('mobileToolsDropdown');
+            const mobileToolsDropdownMenu = document.getElementById('mobileToolsDropdownMenu');
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-bars');
+                mobileMenuButton.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Toggle desktop tools dropdown
+            toolsDropdown.addEventListener('click', () => {
+                const isExpanded = toolsDropdown.getAttribute('aria-expanded') === 'true';
+                toolsDropdown.setAttribute('aria-expanded', !isExpanded);
+                toolsDropdownMenu.classList.toggle('hidden');
+            });
+
+            // Toggle mobile tools dropdown
+            mobileToolsDropdown.addEventListener('click', () => {
+                mobileToolsDropdownMenu.classList.toggle('hidden');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-down');
+                mobileToolsDropdown.querySelector('i').classList.toggle('fa-chevron-up');
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toolsDropdown.contains(e.target)) {
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                }
+                if (!mobileToolsDropdown.contains(e.target)) {
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    toolsDropdownMenu.classList.add('hidden');
+                    toolsDropdown.setAttribute('aria-expanded', 'false');
+                    mobileToolsDropdownMenu.classList.add('hidden');
+                    mobileToolsDropdown.querySelector('i').classList.add('fa-chevron-down');
+                    mobileToolsDropdown.querySelector('i').classList.remove('fa-chevron-up');
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            initNavigation();
+        }
+
+        init();
+    </script>
+</body>
+</html>
