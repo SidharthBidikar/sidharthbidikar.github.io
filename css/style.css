@@ -10,17 +10,20 @@ html {
 }
 
 body {
-  background: linear-gradient(145deg, #e6fffa 0%, #a7f3d0 100%);
+  /* Warm energetic gradient based on your palette */
+  background: linear-gradient(135deg, #FF7130 0%, #FF3C68 55%, #872B97 100%);
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  color: #171721; /* Base text on light surfaces */
 }
 
 /* Navigation */
 nav {
-  background: rgba(255, 255, 255, 0.95);
+  /* Switch to dark glass to complement the bright background */
+  background: rgba(23, 23, 33, 0.92);
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -29,7 +32,7 @@ nav {
 
 nav:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 1);
+  background: rgba(23, 23, 33, 1);
 }
 
 /* Tool Section */
@@ -48,9 +51,9 @@ nav:hover {
 .half-section {
   width: 80%;
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   padding: 50px;
   border-radius: 20px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -58,11 +61,11 @@ nav:hover {
 
 .half-section:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
 }
 
 .half-section:focus-within {
-  outline: 2px solid #2dd4bf;
+  outline: 2px solid #FF7130; /* primary accent for focus */
   outline-offset: 4px;
 }
 
@@ -70,7 +73,7 @@ nav:hover {
 .toolheading {
   font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 700;
-  color: #1e3a8a;
+  color: #171721; /* dark charcoal */
   text-align: center;
   margin-bottom: 24px;
   animation: fadeIn 1s ease-in;
@@ -84,9 +87,9 @@ nav:hover {
   text-align: center;
   margin: auto;
   font-size: 1.15rem;
-  color: #4b5563;
+  color: #3F3F46; /* neutral paragraph text */
   line-height: 1.7;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* Tool Box */
@@ -95,28 +98,28 @@ nav:hover {
   max-width: 800px;
   margin: 30px auto;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.90);
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   flex-wrap: wrap;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
   transition: all 0.4s ease;
 }
 
 .toolbox:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 1);
 }
 
 .toolbox:focus-within {
-  outline: 2px solid #2dd4bf;
+  outline: 2px solid #FF3C68; /* secondary accent for focus */
 }
 
 /* Download Button */
 .downloadbutton {
-  background: linear-gradient(90deg, #2dd4bf, #34d399);
+  background: linear-gradient(90deg, #FF7130, #FF3C68);
   color: #ffffff;
   padding: 14px 36px;
   border: none;
@@ -136,7 +139,7 @@ nav:hover {
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease;
@@ -149,7 +152,8 @@ nav:hover {
 
 .downloadbutton:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+  background: linear-gradient(90deg, #FF3C68, #872B97);
 }
 
 .downloadbutton:active {
@@ -163,7 +167,7 @@ nav:hover {
 }
 
 .downloadbutton:focus {
-  outline: 2px solid #1e3a8a;
+  outline: 2px solid #872B97; /* purple focus for CTAs */
   outline-offset: 2px;
 }
 
@@ -189,7 +193,7 @@ nav:hover {
   padding: 12px 24px;
   border-radius: 50px;
   background: #f1f5f9;
-  color: #1e3a8a;
+  color: #872B97; /* link color to purple */
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
@@ -198,13 +202,13 @@ nav:hover {
 }
 
 .mydrop ul li a:hover {
-  background: #2dd4bf;
+  background: #FF7130; /* orange hover */
   color: #ffffff;
   transform: translateY(-3px);
 }
 
 .mydrop ul li a:focus {
-  outline: 2px solid #1e3a8a;
+  outline: 2px solid #872B97; /* purple focus */
   outline-offset: 2px;
 }
 
@@ -234,7 +238,7 @@ nav:hover {
 }
 
 .singletools:focus-within {
-  outline: 2px solid #2dd4bf;
+  outline: 2px solid #FF7130; /* orange focus */
   outline-offset: 4px;
 }
 
@@ -250,7 +254,7 @@ nav:hover {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #1e3a8a;
+  background: #171721; /* dark tooltip for contrast */
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -279,14 +283,14 @@ nav:hover {
 .singletools a h2 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1e3a8a;
+  color: #171721; /* headings on white cards */
   margin: 18px 0 12px;
   line-height: 1.4;
 }
 
 .singletools a p {
   font-size: 0.95rem;
-  color: #6b7280;
+  color: #5B606A; /* muted body on white */
   line-height: 1.6;
   margin: 0;
 }
@@ -308,7 +312,7 @@ nav:hover {
 #features h2 {
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 700;
-  color: #1e3a8a;
+  color: #171721;
   text-align: center;
   margin-bottom: 50px;
   animation: fadeIn 1s ease-in;
@@ -327,7 +331,7 @@ nav:hover {
 }
 
 #features .relative:focus-within {
-  outline: 2px solid #2dd4bf;
+  outline: 2px solid #FF7130;
 }
 
 /* Animation Keyframes */
@@ -365,7 +369,7 @@ nav:hover {
 
 /* Accessibility Enhancements */
 :focus {
-  outline: 2px solid #2dd4bf;
+  outline: 2px solid #FF7130; /* global focus color */
   outline-offset: 2px;
 }
 
@@ -449,3 +453,4 @@ nav:hover {
     font-size: 0.9rem;
   }
 }
+
