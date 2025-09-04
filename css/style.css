@@ -449,3 +449,73 @@ nav:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Global background */
+body {
+  background: #f9fafb;
+  color: #111827;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+nav {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+nav a {
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+/* Tool cards */
+.singletools {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.singletools:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Tool heading */
+.toolheading {
+  color: #2563eb;
+}
+
+/* Buttons */
+.downloadbutton {
+  background: linear-gradient(90deg, #2563eb, #14b8a6);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.downloadbutton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Search bar */
+.search-bar {
+  max-width: 700px;
+  height: 45px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0 15px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+}
