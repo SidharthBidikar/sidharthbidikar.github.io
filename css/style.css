@@ -519,3 +519,21 @@ nav a:hover {
   border: 1px solid #d1d5db;
   background: #ffffff;
 }
+
+/* Ad container placeholder styling — keeps space for ads */
+.ad-container {
+  margin: 20px auto;
+  text-align: center;
+  min-height: 90px;           /* reserve space for the ad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: small visual outline while testing (remove later) */
+.ad-container.testing {
+  outline: 1px dashed rgba(0,0,0,0.08);
+  background: rgba(0,0,0,0.01);
+}
