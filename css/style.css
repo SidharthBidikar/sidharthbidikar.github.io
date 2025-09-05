@@ -537,3 +537,44 @@ nav a:hover {
   outline: 1px dashed rgba(0,0,0,0.08);
   background: rgba(0,0,0,0.01);
 }
+/* Header logo styling - responsive and prevents layout shifts */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  max-height: 100px;       /* ensures container doesn't grow taller than this */
+}
+
+/* Actual image: use max-height so height can scale down on small screens */
+.site-logo {
+  display: block;
+  height: auto;
+  max-height: 88px;        /* change this to 80/90/100 as you prefer */
+  width: auto;
+  object-fit: contain;     /* preserve aspect ratio */
+  vertical-align: middle;
+  margin-right: 12px;      /* small spacing from nav items - tweak if needed */
+}
+
+/* Smaller screens: reduce logo height so it fits the nav */
+@media (max-width: 768px) {
+  .site-logo {
+    max-height: 58px;
+    margin-right: 8px;
+  }
+}
+
+/* Very small / mobile: keep it compact */
+@media (max-width: 420px) {
+  .site-logo {
+    max-height: 44px;
+    margin-right: 6px;
+  }
+}
+
+/* If header uses flex and space distribution, ensure logo doesn't force wrapping */
+header, .navbar, .max-w-screen-xl { 
+  /* Adjust selector to match your header nav container if different */
+  align-items: center;
+  flex-wrap: nowrap;   /* prevents items wrapping to new line */
+}
