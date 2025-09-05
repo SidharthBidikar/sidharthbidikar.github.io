@@ -25,33 +25,7 @@
   <title>Neuro Tools - Smart Online PDF & AI Tools</title>
   <link rel="stylesheet" href="./css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-      <!-- ✅ Inline styles for logo -->
-  <style>
-    /* Logo container pinned left */
-    .logo-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex: 0 0 auto; /* prevent shrinking */
-      padding-left: 10px; /* spacing from left edge */
-    }
-
-    /* Logo sizing */
-    .site-logo {
-      height: 80px; /* adjust logo size */
-      width: auto;
-      object-fit: contain;
-      cursor: pointer;
-    }
-
-    /* Keep nav aligned next to logo */
-    nav, .navbar, .max-w-screen-xl {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* logo left, nav right */
-      flex-wrap: nowrap;
-    }
-  </style>
+      
 </head>
 
   </head>
@@ -62,9 +36,29 @@
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
-        <a href="https://Neurotools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img style="height: 100px" src="./images/neuro-logo.png" alt="NeuroTools Logo" />
-        </a>
+       <a href="https://Neurotools.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <img style="height: 100px" src="./images/neuro-logo.png" alt="Neuro Logo" />
+</a>
+<style>
+  .logo-container {
+    position: absolute;   /* force logo to top-left */
+    top: 10px;            /* adjust vertical spacing */
+    left: 20px;           /* adjust horizontal spacing */
+    z-index: 1000;        /* make sure it's above nav */
+  }
+
+  .site-logo {
+    height: 80px;         /* adjust size */
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* prevent navbar from shifting */
+  nav, .navbar, .max-w-screen-xl {
+    padding-left: 120px;  /* leave space so text doesn’t overlap logo */
+  }
+</style>
+
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             data-collapse-toggle="navbar-sticky"
